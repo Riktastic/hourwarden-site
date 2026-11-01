@@ -1,0 +1,55 @@
+---
+title: "HourWarden — elke declarabele minuut, zonder timer"
+description: "HourWarden ziet voor welke klant je werkt en houdt je uren bij: op Windows, Linux en je telefoon. Privé, met end-to-end versleutelde synchronisatie."
+hero:
+  title: "Elke declarabele minuut. Zonder een timer te starten."
+  text: "HourWarden ziet voor welke klant je werkt — aan het browserprofiel, het extern bureaublad, het document of het Teams-gesprek — en houdt je uren bij terwijl je werkt. Aan het eind van de week staat je urenstaat al klaar."
+  shot: "today.png"
+  alt: "Het scherm Vandaag van HourWarden, dat tijd bijhoudt voor Northwind Traders"
+features:
+  - icon: "radar"
+    title: "Herkent de klant"
+    text: "Browserprofielen, extern bureaublad, SSH-servers, mappen, maildomeinen en deelnemers aan vergaderingen wijzen naar een klant. Regels die je één keer toevoegt, blijven werken."
+  - icon: "bar"
+    title: "Een balk die je niet in de weg zit"
+    text: "Een kleine balk boven of naast je scherm toont de klant en de tijd. Maak hem minimaal — alleen een gekleurde stip — en hij vraagt alleen iets als hij het echt niet weet."
+  - icon: "sheet"
+    title: "Je urenstaat in seconden"
+    text: "Weektotalen per klant, afgerond zoals je urenstaat wil, gekopieerd als decimalen of naar Excel. Een maandoverzicht per klant is één klik."
+  - icon: "phone"
+    title: "Ook op je telefoon"
+    text: "Zie en wissel wat je computer bijhoudt, start een timer voor een bezoek op locatie, en maak van telefoongesprekken met klanten tijd."
+  - icon: "tasks"
+    title: "Taken en focus"
+    text: "Een takenlijst per klant, Pomodoro's, pauzes met rekoefeningen en een vriendelijk duwtje als er te veel tijd naar afleiding gaat."
+  - icon: "lock"
+    title: "Privé vanaf de basis"
+    text: "Venstertitels verlaten je computer nooit. Synchronisatie is end-to-end versleuteld met een sleutel die alleen jij hebt: de server bewaart je uren maar kan ze niet lezen."
+shots:
+  - file: "week.png"
+    title: "Je week in één oogopslag"
+    text: "Uren per klant per dag, klaar om in elke urenstaat te plakken."
+  - file: "reports.png"
+    title: "Rapporten die vragen beantwoorden"
+    text: "Waar ging de tijd naartoe — per klant, project, taak of programma."
+  - file: "tasks.png"
+    title: "Taken die zichzelf bijhouden"
+    text: "Start een taak en de tijd wordt bijgehouden, ook als je even iets anders doet."
+security:
+  title: "Jouw uren zijn jouw zaak"
+  points:
+    - "Alles werkt offline, op je eigen apparaat."
+    - "Venstertitels en ruwe activiteit verlaten je computer nooit."
+    - "End-to-end versleutelde synchronisatie: AES-256 met een sleutel die alleen jouw apparaten hebben."
+    - "Inloggen in twee stappen voor je account."
+    - "Gehost in de EU, of draai de server zelf."
+steps:
+  title: "In vijf minuten aan de slag"
+  items:
+    - "Installeer HourWarden op Windows of Linux."
+    - "Voeg je klanten toe — terwijl je werkt, stelt hij regels voor."
+    - "Optioneel: maak een account om je laptop, pc en telefoon te synchroniseren."
+cta:
+  title: "Nooit meer op vrijdagmiddag je week reconstrueren."
+  text: "Maak een account voor synchronisatie tussen je apparaten, of installeer alleen de app — die werkt prima op zichzelf."
+---

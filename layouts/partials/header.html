@@ -1,0 +1,12 @@
+<header class="top">
+  <div class="wrap row">
+    <a class="brand" href="{{ site.Home.RelPermalink }}"><img src="{{ "favicon.svg" | absURL }}" alt="" width="30" height="30"> HourWarden</a>
+    <nav>
+      <a href="{{ site.Home.RelPermalink }}#features">{{ i18n "features" }}</a>
+      <a href="{{ site.Home.RelPermalink }}#screenshots">{{ i18n "screenshots" }}</a>
+      <a href="{{ site.Home.RelPermalink }}#privacy">{{ i18n "privacy" }}</a>
+      {{ range .Translations }}<a href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}">{{ .Language.LanguageName }}</a>{{ end }}
+      <a class="btn small" href="{{ site.Params.app }}/login">{{ i18n "signIn" }}</a>
+    </nav>
+  </div>
+</header>

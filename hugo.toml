@@ -1,0 +1,25 @@
+baseURL = "https://hourwarden.com/"
+title = "HourWarden"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+  # The hosted sync service.
+  app = "https://app.hourwarden.com"
+  # Download links; empty shows "coming soon".
+  downloadWindows = ""
+  downloadAndroid = ""
+  contact = ""
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+  [languages.nl]
+    languageName = "Nederlands"
+    weight = 2
+
+[markup.goldmark.renderer]
+  unsafe = false

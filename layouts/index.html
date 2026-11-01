@@ -1,0 +1,70 @@
+{{ define "main" }}
+{{ $p := .Params }}
+{{ $img := "img/" | relURL }}
+<section class="hero">
+  <div class="wrap">
+    <h1>{{ $p.hero.title }}</h1>
+    <p class="lead">{{ $p.hero.text }}</p>
+    <div class="actions">
+      <a class="btn" href="{{ site.Params.app }}/register">{{ i18n "createAccount" }}</a>
+      {{ with site.Params.downloadWindows }}<a class="btn ghost" href="{{ . }}">{{ i18n "downloadWindows" }}</a>
+      {{ else }}<span class="btn ghost disabled">{{ i18n "downloadWindows" }} · {{ i18n "comingSoon" }}</span>{{ end }}
+    </div>
+    <img class="topbar-shot" src="{{ $img }}topbar.png" alt="" width="582" height="40">
+    <figure class="screen"><img src="{{ $img }}{{ $p.hero.shot }}" alt="{{ $p.hero.alt }}" width="1280" height="800"></figure>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="wrap grid">
+    {{ range $p.features }}
+    <article class="feature">
+      <div class="badge">{{ partial "icon.html" .icon }}</div>
+      <h3>{{ .title }}</h3>
+      <p>{{ .text }}</p>
+    </article>
+    {{ end }}
+  </div>
+</section>
+
+<section id="screenshots" class="shots">
+  <div class="wrap">
+    {{ range $i, $s := $p.shots }}
+    <div class="shot{{ if modBool $i 2 }}{{ else }} flip{{ end }}">
+      <div class="copy"><h2>{{ $s.title }}</h2><p>{{ $s.text }}</p></div>
+      <figure class="screen"><img src="{{ $img }}{{ $s.file }}" alt="{{ $s.title }}" loading="lazy" width="1280" height="800"></figure>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<section id="privacy" class="privacy">
+  <div class="wrap two">
+    <div>
+      <div class="badge big">{{ partial "icon.html" "lock" }}</div>
+      <h2>{{ $p.security.title }}</h2>
+    </div>
+    <ul class="checks">
+      {{ range $p.security.points }}<li>{{ partial "icon.html" "check" }}<span>{{ . }}</span></li>{{ end }}
+    </ul>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h2>{{ $p.steps.title }}</h2>
+    <ol>{{ range $p.steps.items }}<li>{{ . }}</li>{{ end }}</ol>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>{{ $p.cta.title }}</h2>
+    <p>{{ $p.cta.text }}</p>
+    <div class="actions">
+      <a class="btn light" href="{{ site.Params.app }}/register">{{ i18n "createAccount" }}</a>
+      {{ with site.Params.downloadAndroid }}<a class="btn ghost light" href="{{ . }}">{{ i18n "downloadAndroid" }}</a>{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

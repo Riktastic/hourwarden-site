@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- HourWarden: a clock whose ring is two arcs, amber and teal, with the hands
+       in the middle. The same icon on Windows, Linux and Android. -->
+  <!-- A white face, so the hands show on dark taskbars and home screens. -->
+  <circle cx="512" cy="512" r="300" fill="#FFFFFF"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M512 152 A360 360 0 0 1 823.8 692" stroke="#FFB82E" stroke-width="128"/>
+    <path d="M750 782 A360 360 0 1 1 430 160" stroke="#1FB5C9" stroke-width="128"/>
+  </g>
+  <g stroke="#1F3A52" stroke-width="72" stroke-linecap="round">
+    <line x1="512" y1="512" x2="512" y2="330"/>
+    <line x1="512" y1="512" x2="640" y2="590"/>
+  </g>
+  <circle cx="512" cy="512" r="58" fill="#1F3A52"/>
+</svg>

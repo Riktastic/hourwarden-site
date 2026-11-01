@@ -1,0 +1,55 @@
+---
+title: "HourWarden — every billable minute, without the timer"
+description: "HourWarden sees which customer you are working for and keeps your hours: on Windows, Linux and your phone. Private by design, end-to-end encrypted sync."
+hero:
+  title: "Every billable minute. Without starting a timer."
+  text: "HourWarden notices which customer you are working for — from the browser profile, the remote desktop, the document or the Teams call — and keeps your hours while you work. At the end of the week your timesheet is already filled in."
+  shot: "today.png"
+  alt: "The HourWarden Today screen tracking Northwind Traders"
+features:
+  - icon: "radar"
+    title: "Recognises the customer"
+    text: "Browser profiles, remote desktops, SSH hosts, folders, mail domains and meeting participants point to a customer. Rules you add once keep working."
+  - icon: "bar"
+    title: "A bar that stays out of the way"
+    text: "A small bar at the top or side of your screen shows the customer and the time. Make it minimal — just a coloured dot — and it only asks when it really does not know."
+  - icon: "sheet"
+    title: "Timesheets in seconds"
+    text: "Week totals per customer, rounded the way your timesheet wants, copied as decimals or exported to Excel. A monthly report per customer is one click."
+  - icon: "phone"
+    title: "Your phone too"
+    text: "See and switch what your computer tracks, start a timer for a site visit, and turn phone calls with customers into time."
+  - icon: "tasks"
+    title: "Tasks and focus"
+    text: "A task list per customer, Pomodoros, breaks with stretching exercises and a gentle nudge when slack time creeps in."
+  - icon: "lock"
+    title: "Private by design"
+    text: "Window titles never leave your computer. Sync is end-to-end encrypted with a key only you have: the server stores your hours but cannot read them."
+shots:
+  - file: "week.png"
+    title: "Your week at a glance"
+    text: "Hours per customer per day, ready to copy into any timesheet."
+  - file: "reports.png"
+    title: "Reports that answer questions"
+    text: "Where did the hours go — per customer, project, task or application."
+  - file: "tasks.png"
+    title: "Tasks that track themselves"
+    text: "Start a task and its time is kept, also when you switch away and back."
+security:
+  title: "Your hours are your business"
+  points:
+    - "Everything works offline, on your own device."
+    - "Window titles and raw activity never leave your computer."
+    - "End-to-end encrypted sync: AES-256 with a key only your devices have."
+    - "Two-step sign-in for your account."
+    - "Hosted in the EU, or run the server yourself."
+steps:
+  title: "Up and running in five minutes"
+  items:
+    - "Install HourWarden on Windows or Linux."
+    - "Add your customers — it suggests rules as you work."
+    - "Optional: create an account to sync your laptop, desktop and phone."
+cta:
+  title: "Stop reconstructing your week on Friday afternoon."
+  text: "Create an account for sync between your devices, or just install the app — it works fine on its own."
+---
