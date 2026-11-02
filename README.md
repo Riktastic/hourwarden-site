@@ -8,7 +8,7 @@ The sales site of HourWarden, built with [Hugo](https://gohugo.io) (no theme) an
 - Texts: `content/_index.md` (English) and `content/_index.nl.md` (Dutch); button labels in `i18n/`.
 - Download links and the app address: `[params]` in `hugo.toml`.
 - Screenshots in `static/img/` come from the demo build of the app with fictional customers
-  (`cargo run -p timekeeper-core --example demo_data` in the app repository).
+  (`cargo run -p hourwarden-core --example demo_data` in the app repository).
 
 ## Publishing
 

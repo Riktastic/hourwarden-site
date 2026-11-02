@@ -16,6 +16,7 @@ With an account on app.hourwarden.com your devices share customers, rules, tasks
 - The connection is always encrypted (HTTPS).
 - With **end-to-end encryption** turned on, your data is encrypted on your devices with a key only you have. The server stores it but cannot read it — neither can we.
 - The server keeps your account name, a hash of your password, your devices and when they last synced.
+- For security, sign-ins, registrations and newly connected devices are logged with the internet address they came from. These logs are deleted after 30 days.
 - The server is hosted in the European Union.
 
 ## No tracking

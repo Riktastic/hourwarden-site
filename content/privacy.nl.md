@@ -16,6 +16,7 @@ Met een account op app.hourwarden.com delen je apparaten klanten, regels, taken 
 - De verbinding is altijd versleuteld (HTTPS).
 - Met **end-to-end versleuteling** aan worden je gegevens op je apparaten versleuteld met een sleutel die alleen jij hebt. De server bewaart ze maar kan ze niet lezen — wij ook niet.
 - De server bewaart je accountnaam, een hash van je wachtwoord, je apparaten en wanneer die voor het laatst synchroniseerden.
+- Voor de beveiliging worden inloggen, registreren en het koppelen van een nieuw apparaat gelogd met het internetadres waar het vandaan kwam. Die logs worden na 30 dagen verwijderd.
 - De server staat in de Europese Unie.
 
 ## Geen tracking
