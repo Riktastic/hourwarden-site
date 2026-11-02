@@ -1,0 +1,43 @@
+# Watches the sync server and the website from outside. A failed run makes
+# GitHub email you (Settings → Notifications → Actions: "Send notifications
+# for failed workflows only" is the default). Runs every 15 minutes, and by
+# hand from the Actions tab.
+#
+# GitHub pauses scheduled workflows in a repository without commits for 60
+# days; a push (or "Enable workflow" in the Actions tab) starts it again.
+name: Uptime
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Sync server answers
+        run: |
+          for attempt in 1 2 3; do
+            if body=$(curl -fsS --max-time 20 https://app.hourwarden.com/api/v1/health) && echo "$body" | grep -q '"status":"ok"'; then
+              echo "ok: $body"; exit 0
+            fi
+            echo "attempt $attempt failed: ${body:-no answer}"; sleep 20
+          done
+          echo "::error::app.hourwarden.com does not answer its health check"; exit 1
+
+      - name: Sync server certificate is valid for 14 more days
+        run: |
+          end=$(echo | openssl s_client -servername app.hourwarden.com -connect app.hourwarden.com:443 2>/dev/null | openssl x509 -noout -enddate | cut -d= -f2)
+          days=$(( ($(date -d "$end" +%s) - $(date +%s)) / 86400 ))
+          echo "certificate ends $end ($days days)"
+          if [ "$days" -lt 14 ]; then echo "::error::the certificate of app.hourwarden.com ends in $days days"; exit 1; fi
+
+      - name: Website answers
+        run: |
+          curl -fsS --max-time 20 -o /dev/null https://hourwarden.com/ || { echo "::error::hourwarden.com does not answer"; exit 1; }
+          curl -fsS --max-time 20 -o /dev/null https://hourwarden.com/updates/latest.json || { echo "::error::the update feed is missing"; exit 1; }

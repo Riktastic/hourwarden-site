@@ -9,8 +9,8 @@ disableKinds = ["taxonomy", "term", "RSS"]
   # The hosted sync service.
   app = "https://app.hourwarden.com"
   # Download links; empty shows "coming soon".
-  downloadWindows = ""
-  downloadAndroid = ""
+  downloadWindows = "/downloads/HourWarden-setup.exe"
+  downloadAndroid = "/downloads/HourWarden.apk"
   contact = ""
 
 [languages]
