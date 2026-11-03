@@ -1,11 +1,11 @@
 {
-  "version": "0.25.0",
-  "notes": "Plugins run inside the app; Each plugin only gets what its manifest lists; Plugins on Linux without PowerShell",
-  "pub_date": "2026-11-03T18:11:53Z",
+  "version": "0.26.0",
+  "notes": "Settings in tabs; Quotes that cheer you on; Your own quotes",
+  "pub_date": "2026-11-03T23:01:08Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSWmNra2MyZVNuaUl5d3R2RUhoTkVFS3F1eXpYaitFQ0J6MnprdnZTeVZXSE4wbFg4TWtFVHN2eDQ2MWtJKzlPL3RJYS9mMEFJTmFGQVBkQW45VzRFaWlGaEpGeWlLQ3cwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzI5NDM3CWZpbGU6SG91cldhcmRlbl8wLjI1LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMjUuMApmRTZPY214Qis3ek5YQ054ZndnTDN3VG00cjdZV3dGU3Q2OW1VbUY5MEVOU0t0Uk9CREZEemg1ZHNIVnNzOXVTd2VRbEZvaFQ4OXhkOElYaEJSaENBdz09Cg==",
-      "url": "https://github.com/Riktastic/hourwarden-site/releases/download/v0.25.0/HourWarden_0.25.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSWmNra2MyZVNuaUw2RmRWL29nNmM5OW9DazRJN3gra3czeEdLdld3U3ZNYzNXUzRTSXN6N1VyeDR3K0dGc1pNZlNPRDVQd2hoaDBMUHBnZWpuUmltODNSRlhVdHAwY3d3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzQ2NzU3CWZpbGU6SG91cldhcmRlbl8wLjI2LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMjYuMApUQ0U2WUsvc3F3Q2pNK0hUVjdxKzl3VnhOMnFNUitSWUNXcTd5TUVaYi95TlNVd2xsM3h1U0JFTUZsY3YwbW9ITzB4Q0pQU2w5L1M4MGRiZDhtVUVBQT09Cg==",
+      "url": "https://github.com/Riktastic/hourwarden-site/releases/download/v0.26.0/HourWarden_0.26.0_x64-setup.exe"
     }
   }
 }
