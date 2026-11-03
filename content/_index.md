@@ -20,11 +20,11 @@ features:
     title: "Android app"
     text: "The phone shows what the computer is recording and can pause or switch it. It runs a timer for site visits, adds meetings in a few taps, and turns calls from a customer's phone numbers into time."
   - icon: "tasks"
-    title: "Tasks, Pomodoro and breaks"
-    text: "Time on a task is recorded against its estimate. The Pomodoro timer runs 25 minutes of focus and 5 minutes of rest. After every 20 minutes of keyboard and mouse use it asks you to look 6 metres away for 20 seconds (the 20-20-20 rule)."
-  - icon: "lock"
-    title: "Window titles stay on your computer"
-    text: "Window titles, paths and sites are used on the computer and never sent. Only the resulting hours sync. With end-to-end encryption on, the server stores them encrypted with AES-256 and has no key to read them."
+    title: "Tasks and Pomodoro"
+    text: "Time on a task is recorded against its estimate. The Pomodoro timer runs 25 minutes of focus and 5 minutes of rest, and the top bar counts down."
+  - icon: "heart"
+    title: "Breaks with exercises"
+    text: "Micro-breaks follow the 20-20-20 eye rule: every 20 minutes, look 20 feet away for 20 seconds. Longer rest breaks show animated exercises for your eyes, hands, neck and back."
 demo:
   title: "Try it in your browser"
   text: "These are the real screens of HourWarden, running on a made-up week with fictional customers. Click around: switch customers, open the week, edit an entry. Nothing is saved, and nothing leaves this page."
@@ -35,12 +35,12 @@ demo:
 security:
   title: "What is stored where"
   points:
-    - "All data is in a database on your own computer and phone. Tracking, reports and backups work without internet."
-    - "Window titles, file paths and site addresses do not leave the computer. Sync sends customers, tasks and hours."
-    - "End-to-end encryption uses AES-256-GCM with a 256-bit key that only your devices hold."
-    - "Sign-in supports a second step with any authenticator app. Passwords are stored as Argon2id hashes."
-    - "The sync server runs in the EU. You can also run it on your own server with one install script."
-    - "No ads, no analytics, no third-party trackers in the app or on this site."
+    - "Your data lives on your own computer and phone, and everything works offline."
+    - "What you work on stays on your computer. Only customers, tasks and hours are synced."
+    - "Synced data is end-to-end encrypted with a key only your devices have."
+    - "Sign in with a password and, if you like, an authenticator app."
+    - "Use our hosted sync in the EU, or host it yourself on your own server."
+    - "No ads, no tracking."
 steps:
   title: "Getting started"
   items:

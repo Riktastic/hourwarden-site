@@ -1,0 +1,10 @@
+{{/* The download buttons for every platform, in the hero and the closing call.
+     The context is the extra button class ("" or "light"). */}}
+{{ $cls := . }}
+<div class="downloads">
+  <span class="downloads-label">{{ i18n "download" }}</span>
+  {{ with site.Params.downloadWindows }}<a class="btn ghost small {{ $cls }}" href="{{ . }}">Windows</a>{{ end }}
+  {{ with site.Params.downloadDeb }}<a class="btn ghost small {{ $cls }}" href="{{ . }}" title=".deb (Debian, Ubuntu)">Linux</a>{{ end }}
+  {{ with site.Params.downloadAndroid }}<a class="btn ghost small {{ $cls }}" href="{{ . }}">Android</a>{{ end }}
+  {{ with site.GetPage "/releases" }}<a class="downloads-more" href="{{ .RelPermalink }}">{{ i18n "otherDownloads" }}</a>{{ end }}
+</div>

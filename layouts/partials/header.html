@@ -5,7 +5,17 @@
       <a href="{{ site.Home.RelPermalink }}#features">{{ i18n "features" }}</a>
       <a href="{{ site.Home.RelPermalink }}#demo">{{ i18n "demo" }}</a>
       <a href="{{ site.Home.RelPermalink }}#privacy">{{ i18n "privacy" }}</a>
-      {{ range .Translations }}<a href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}">{{ .Language.LanguageName }}</a>{{ end }}
+      {{/* Every language, also on pages without a translation (then its home page). */}}
+      {{ $page := . }}
+      <span class="langs">
+        {{ range site.Languages }}
+        {{ $lang := .Lang }}
+        {{ $to := "" }}
+        {{ range where site.Sites "Language.Lang" $lang }}{{ $to = .Home }}{{ end }}
+        {{ range where $page.AllTranslations "Lang" $lang }}{{ $to = . }}{{ end }}
+        <a href="{{ $to.RelPermalink }}" hreflang="{{ $lang }}" lang="{{ $lang }}" title="{{ .LanguageName }}" aria-current="{{ eq $lang $page.Lang }}">{{ upper $lang }}</a>
+        {{ end }}
+      </span>
       <a class="btn small" href="{{ site.Params.app }}/login">{{ i18n "signIn" }}</a>
     </nav>
   </div>

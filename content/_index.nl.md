@@ -20,11 +20,11 @@ features:
     title: "Android-app"
     text: "De telefoon toont wat de computer registreert en kan dat pauzeren of wisselen. Hij draait een timer voor een bezoek op locatie, voegt een vergadering toe in een paar tikken en maakt van gesprekken met de telefoonnummers van een klant tijd."
   - icon: "tasks"
-    title: "Taken, Pomodoro en pauzes"
-    text: "Tijd op een taak wordt geregistreerd tegen de schatting. De Pomodoro-timer geeft 25 minuten focus en 5 minuten rust. Na elke 20 minuten gebruik van toetsenbord en muis vraagt hij je 20 seconden naar iets op 6 meter afstand te kijken (de 20-20-20-regel)."
-  - icon: "lock"
-    title: "Venstertitels blijven op je computer"
-    text: "Venstertitels, paden en sites worden op de computer gebruikt en nooit verstuurd. Alleen de uren die eruit volgen synchroniseren. Met end-to-end versleuteling aan bewaart de server ze versleuteld met AES-256 en heeft hij geen sleutel om ze te lezen."
+    title: "Taken en Pomodoro"
+    text: "Tijd op een taak wordt geregistreerd tegen de schatting. De Pomodoro-timer geeft 25 minuten focus en 5 minuten rust, en de bovenbalk telt af."
+  - icon: "heart"
+    title: "Pauzes met oefeningen"
+    text: "Micropauzes volgen de 20-20-20-regel voor je ogen: elke 20 minuten 20 seconden naar iets op 6 meter afstand kijken. Langere rustpauzes tonen geanimeerde oefeningen voor ogen, handen, nek en rug."
 demo:
   title: "Probeer het in je browser"
   text: "Dit zijn de echte schermen van HourWarden, met een verzonnen week en verzonnen klanten. Klik rond: wissel van klant, open de week, pas een registratie aan. Er wordt niets bewaard en er gaat niets van deze pagina af."
@@ -35,12 +35,12 @@ demo:
 security:
   title: "Wat waar wordt bewaard"
   points:
-    - "Alle gegevens staan in een database op je eigen computer en telefoon. Registreren, rapporten en back-ups werken zonder internet."
-    - "Venstertitels, bestandspaden en adressen van sites verlaten de computer niet. Synchronisatie verstuurt klanten, taken en uren."
-    - "End-to-end versleuteling gebruikt AES-256-GCM met een sleutel van 256 bits die alleen je eigen apparaten hebben."
-    - "Inloggen kan met een tweede stap via elke authenticator-app. Wachtwoorden worden bewaard als Argon2id-hash."
-    - "De synchronisatieserver staat in de EU. Je kunt hem ook op je eigen server draaien met één installatiescript."
-    - "Geen advertenties, geen analytics en geen trackers van derden in de app of op deze site."
+    - "Je gegevens staan op je eigen computer en telefoon, en alles werkt offline."
+    - "Waar je aan werkt blijft op je computer. Alleen klanten, taken en uren worden gesynchroniseerd."
+    - "Gesynchroniseerde gegevens zijn end-to-end versleuteld met een sleutel die alleen je eigen apparaten hebben."
+    - "Inloggen met een wachtwoord en, als je wilt, een authenticator-app."
+    - "Gebruik onze gehoste synchronisatie in de EU, of host hem zelf op je eigen server."
+    - "Geen advertenties, geen tracking."
 steps:
   title: "Zo begin je"
   items:
