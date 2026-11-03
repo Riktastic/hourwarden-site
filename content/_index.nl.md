@@ -25,19 +25,13 @@ features:
   - icon: "lock"
     title: "Venstertitels blijven op je computer"
     text: "Venstertitels, paden en sites worden op de computer gebruikt en nooit verstuurd. Alleen de uren die eruit volgen synchroniseren. Met end-to-end versleuteling aan bewaart de server ze versleuteld met AES-256 en heeft hij geen sleutel om ze te lezen."
-shots:
-  - file: "week.png"
-    title: "Weekweergave"
-    text: "Uren per klant per dag, met het totaal tegenover je weekdoel. Eén klik op een dag opent die om te corrigeren."
-  - file: "reports.png"
-    title: "Rapporten"
-    text: "Uren per klant, project, taak of programma voor elke periode, uren per dag, en elke registratie, doorzoekbaar op ticketnummer."
-  - file: "tasks.png"
-    title: "Takenlijst"
-    text: "Typ Mailboxen migreren @contoso ~3h #CON-88 !vr en de taak krijgt zijn klant, schatting, ticket en deadline."
-  - file: "customers.png"
-    title: "Klanten"
-    text: "Klanten per categorie, met de dag waarop je voor het laatst voor ze werkte en de uren van deze maand. Mappen, domeinen, regels en telefoonnummers staan op de eigen pagina van elke klant."
+demo:
+  title: "Probeer het in je browser"
+  text: "Dit zijn de echte schermen van HourWarden, met een verzonnen week en verzonnen klanten. Klik rond: wissel van klant, open de week, pas een registratie aan. Er wordt niets bewaard en er gaat niets van deze pagina af."
+  desktop: "Windows en Linux"
+  phone: "Android"
+  note: "De demo draait in je browser en vergeet alles als je hem sluit."
+  fullscreen: "Open hem op volledig scherm."
 security:
   title: "Wat waar wordt bewaard"
   points:

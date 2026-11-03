@@ -7,6 +7,7 @@
     <p class="lead">{{ $p.hero.text }}</p>
     <div class="actions">
       <a class="btn" href="{{ site.Params.app }}/register">{{ i18n "createAccount" }}</a>
+      <a class="btn ghost" href="#demo">{{ i18n "tryDemo" }}</a>
       {{ with site.Params.downloadWindows }}<a class="btn ghost" href="{{ . }}">{{ i18n "downloadWindows" }}</a>
       {{ else }}<span class="btn ghost disabled">{{ i18n "downloadWindows" }} · {{ i18n "comingSoon" }}</span>{{ end }}
     </div>
@@ -27,16 +28,37 @@
   </div>
 </section>
 
-<section id="screenshots" class="shots">
+{{/* The real app screens with a demo backend and fictional data (built from
+     the app repositories into static/demo/). Nothing is saved or sent. */}}
+{{ $lang := site.Language.Lang }}
+<section id="demo" class="demo">
   <div class="wrap">
-    {{ range $i, $s := $p.shots }}
-    <div class="shot{{ if modBool $i 2 }}{{ else }} flip{{ end }}">
-      <div class="copy"><h2>{{ $s.title }}</h2><p>{{ $s.text }}</p></div>
-      <figure class="screen"><img src="{{ $img }}{{ $s.file }}" alt="{{ $s.title }}" loading="lazy" width="1280" height="800"></figure>
+    <h2>{{ $p.demo.title }}</h2>
+    <p class="lead">{{ $p.demo.text }}</p>
+    <div class="demo-tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-demo="desktop">{{ $p.demo.desktop }}</button>
+      <button role="tab" aria-selected="false" data-demo="phone">{{ $p.demo.phone }}</button>
     </div>
-    {{ end }}
+    <div class="demo-frame desktop" data-frame="desktop">
+      <iframe src="{{ "demo/desktop/index.html" | relURL }}?lang={{ $lang }}" title="{{ $p.demo.desktop }}" loading="lazy"></iframe>
+    </div>
+    <div class="demo-frame phone" data-frame="phone" hidden>
+      <iframe data-src="{{ "demo/phone/index.html" | relURL }}?lang={{ $lang }}" title="{{ $p.demo.phone }}"></iframe>
+    </div>
+    <p class="demo-note">{{ $p.demo.note }} <a href="{{ "demo/desktop/index.html" | relURL }}?lang={{ $lang }}" target="_blank" rel="noopener">{{ $p.demo.fullscreen }}</a></p>
   </div>
 </section>
+<script>
+  // The phone demo loads when its tab is first opened.
+  document.querySelectorAll(".demo-tabs button").forEach((b) => b.addEventListener("click", () => {
+    document.querySelectorAll(".demo-tabs button").forEach((x) => x.setAttribute("aria-selected", x === b));
+    document.querySelectorAll(".demo-frame").forEach((f) => {
+      f.hidden = f.dataset.frame !== b.dataset.demo;
+      const i = f.querySelector("iframe[data-src]");
+      if (!f.hidden && i) { i.src = i.dataset.src; i.removeAttribute("data-src"); }
+    });
+  }));
+</script>
 
 <section id="privacy" class="privacy">
   <div class="wrap two">

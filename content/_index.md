@@ -25,19 +25,13 @@ features:
   - icon: "lock"
     title: "Window titles stay on your computer"
     text: "Window titles, paths and sites are used on the computer and never sent. Only the resulting hours sync. With end-to-end encryption on, the server stores them encrypted with AES-256 and has no key to read them."
-shots:
-  - file: "week.png"
-    title: "Week view"
-    text: "Hours per customer per day, with the total against your weekly target. One click on a day opens it for corrections."
-  - file: "reports.png"
-    title: "Reports"
-    text: "Hours by customer, project, task or program for any period, hours per day, and every entry, searchable by ticket number."
-  - file: "tasks.png"
-    title: "Task list"
-    text: "Type Migrate mailboxes @contoso ~3h #CON-88 !fri and the task gets its customer, estimate, ticket and due date."
-  - file: "customers.png"
-    title: "Customers"
-    text: "Customers grouped by category, with the day you last worked for each and the hours of this month. Folders, domains, rules and phone numbers are on each customer's own page."
+demo:
+  title: "Try it in your browser"
+  text: "These are the real screens of HourWarden, running on a made-up week with fictional customers. Click around: switch customers, open the week, edit an entry. Nothing is saved, and nothing leaves this page."
+  desktop: "Windows and Linux"
+  phone: "Android"
+  note: "The demo runs in your browser; it forgets everything when you close it."
+  fullscreen: "Open it full screen."
 security:
   title: "What is stored where"
   points:

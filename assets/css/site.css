@@ -70,12 +70,20 @@ nav a:hover { color: var(--ink); }
 .badge.big { width: 56px; height: 56px; margin-bottom: 14px; }
 @media (prefers-color-scheme: dark) { .badge { color: var(--amber); background: color-mix(in srgb, var(--amber) 14%, transparent); } }
 
-.shots { padding: 80px 0 40px; }
-.shot { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: center; margin-bottom: 80px; }
-.shot.flip { grid-template-columns: 2fr 1fr; }
-.shot.flip .copy { order: 2; }
-.shot .copy p { color: var(--muted); }
-@media (max-width: 800px) { .shot, .shot.flip { grid-template-columns: 1fr; } .shot.flip .copy { order: 0; } }
+/* The live demo: the real app screens in a frame. */
+.demo { padding: 80px 0 40px; text-align: center; }
+.demo .lead { margin: 0 auto 24px; max-width: 640px; }
+.demo-tabs { display: inline-flex; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 999px; margin-bottom: 20px; }
+.demo-tabs button { font: inherit; border: 0; background: none; color: var(--muted); padding: 8px 18px; border-radius: 999px; cursor: pointer; }
+.demo-tabs button[aria-selected="true"] { background: var(--accent); color: #fff; }
+.demo-frame { margin: 0 auto; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--soft); box-shadow: 0 20px 50px rgba(18, 32, 47, .14); }
+.demo-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.demo-frame.desktop { max-width: 1180px; height: 720px; }
+.demo-frame.phone { width: 375px; max-width: 100%; height: 760px; border-radius: 36px; border-width: 10px; border-color: var(--navy); }
+.demo-note { color: var(--muted); font-size: .95rem; margin-top: 16px; }
+@media (max-width: 760px) {
+  .demo-frame.desktop { height: 560px; }
+}
 
 .privacy { padding: 70px 0; background: var(--navy); color: #fff; }
 .privacy .badge { color: var(--navy); background: var(--amber); }
