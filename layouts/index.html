@@ -46,7 +46,7 @@
     <div class="demo-frame desktop" data-frame="desktop" hidden>
       <iframe data-src="{{ "demo/desktop/index.html" | relURL }}?lang={{ $lang }}" title="{{ $p.demo.desktop }}"></iframe>
     </div>
-    <p class="demo-note">{{ $p.demo.note }} <a href="{{ "demo/desktop/index.html" | relURL }}?lang={{ $lang }}" target="_blank" rel="noopener">{{ $p.demo.fullscreen }}</a></p>
+    <p class="demo-note">{{ $p.demo.note }} <a class="demo-full" href="{{ "demo/phone/index.html" | relURL }}?lang={{ $lang }}" target="_blank" rel="noopener">{{ $p.demo.fullscreen }}</a></p>
   </div>
 </section>
 <script>
@@ -58,6 +58,9 @@
       const i = f.querySelector("iframe[data-src]");
       if (!f.hidden && i) { i.src = i.dataset.src; i.removeAttribute("data-src"); }
     });
+    // "Full screen" opens the demo of the open tab.
+    const full = document.querySelector(".demo-full");
+    full.href = full.href.replace(/demo\/\w+\//, `demo/${b.dataset.demo}/`);
   }));
 </script>
 
