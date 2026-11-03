@@ -16,1299 +16,1299 @@ import{B as po,p as Kt,c as en,i as $,a as v,s as Tt,b as F,f,I as Ht,d as Un,o 
 `)),x(t("Copied. Paste it into a spreadsheet or timesheet."))}catch(E){g(z,t("Cannot copy: {e}",{e:E}),!0)}}let k=C(()=>[{key:"name",label:e(_)==="project"?t("Customer / project"):t("Customer"),value:E=>E.label},...e(b).map((E,I)=>({key:`d${I}`,label:S(E)+(E===e(P)?t(" · today"):""),tip:`${new Date(E).toLocaleDateString(un(),{weekday:"long",day:"numeric",month:"long"})}`,num:!0,value:te=>te.cells[I]||null,text:te=>te.cells[I]?xt(te.cells[I]):""})),{key:"total",label:t("Total"),num:!0,value:E=>E.total,text:E=>xt(E.total)}]),q=C(()=>[[t("Total"),...e(vt).map(E=>E?xt(E):""),xt(e(G))],...Le(e(we))>0?[[t("Unknown"),...e(we).map(E=>E?xt(E):""),xt(Le(e(we)))]]:[]]),N=C(()=>{const[E,...I]=dr(e(Ee),e(b),e(_)==="project"?t("Customer / project"):t("Customer"));return{header:E,rows:I.map(([te,...R])=>[te,...R.map(Number)])}});var pe=_d(),Ke=at(pe),ae=p(Ke),W=l(ae,!0),Y=n(ae,2),re=p(Y);{let E=C(()=>t("Previous week"));Ht(re,{icon:"prev",get label(){return e(E)},onclick:()=>g(a,Vt(e(a),-7),!0)})}var Me=n(re,2),Ue=l(Me),ce=n(Me,2);{let E=C(()=>t("Next week"));Ht(ce,{icon:"next",get label(){return e(E)},onclick:()=>g(a,Vt(e(a),7),!0)})}var ne=n(ce,2),Q=l(ne,!0),ve=n(Ke,2);{var Te=E=>{var I=vd(),te=l(I,!0);h(()=>o(te,e(z))),v(E,I)};$(ve,E=>{e(z)&&E(Te)})}var Pe=n(ve,2);{var Be=E=>{var I=pd(),te=l(I,!0);h(()=>o(te,e(w))),v(E,I)};$(Pe,E=>{e(w)&&E(Be)})}var he=n(Pe,2),Re=p(he),He=p(Re),Ye=l(He,!0),H=n(He,2),V=l(H,!0),je=n(Re,2);{var qe=E=>{var I=md(),te=p(I);let R;h((ie,ge)=>{F(I,"title",ie),R=Lt(te,"",R,{width:ge})},[()=>t("{x}% of your weekly target",{x:Math.round(e(G)/e(le)*100)}),()=>`${Math.min(100,e(G)/e(le)*100)}%`]),v(E,I)};$(je,E=>{e(le)&&E(qe)})}var ze=n(je,2),it=p(ze);let K;var De=l(it,!0),ye=n(it,2);let Ze;var mt=l(ye,!0),Ne=n(ye,2);{var lt=E=>{var I=hd(),te=p(I),R=n(te);h(ie=>o(R,` ${ie??""}`),[()=>t("Round to {roundTo} min",{roundTo:e(c)})]),qn(te,()=>e(m),ie=>g(m,ie)),v(E,I)};$(Ne,E=>{e(c)&&E(lt)})}var U=n(Ne,2);{let E=C(()=>t("Copy week")),I=C(()=>t("Copy the week as decimal hours, ready to paste into a spreadsheet or timesheet")),te=C(()=>!e(Ie).length);Ht(U,{icon:"copy",get text(){return e(E)},get label(){return e(I)},onclick:O,get disabled(){return e(te)}})}var oe=n(he,2),ke=p(oe);{const E=(ie,ge=rn,Ae=rn)=>{var nt=en(),st=at(nt);{var dt=Ve=>{var A=gd(),B=p(A);let X;var We=n(B);h(()=>{X=Lt(B,"",X,{background:ge().colour}),o(We,` ${ge().label??""}`)}),v(Ve,A)},Fe=Ve=>{var A=fd(),B=l(A,!0);h(X=>o(B,X),[()=>xt(ge().total)]),v(Ve,A)},Xe=Ve=>{const A=C(()=>Number(Ae().key.slice(1)));var B=en(),X=at(B);{var We=ut=>{var et=cr(),pt=l(et,!0);h((ft,ct)=>{F(et,"title",ft),o(pt,ct)},[()=>t("Recorded {raw}. Open {days} in the day review",{raw:xt(ge().raw[e(A)]),days:S(e(b)[e(A)])}),()=>xt(ge().cells[e(A)])]),ee("click",et,()=>r.onopenday?.(e(b)[e(A)])),v(ut,et)};$(X,ut=>{ge().raw[e(A)]&&ut(We)})}v(Ve,B)};$(st,Ve=>{Ae().key==="name"?Ve(dt):Ae().key==="total"?Ve(Fe,1):Ve(Xe,-1)})}v(ie,nt)};let I=C(()=>`timesheet-${Ft(e(a))}`),te=C(()=>ur(e(a))),R=C(()=>t("No customer time this week."));Hn(ke,{get columns(){return e(k)},get rows(){return e(Ie)},rowKey:ie=>ie.key,get footer(){return e(q)},get exportTable(){return e(N)},get exportName(){return e(I)},get caption(){return`Week ${e(te)??""}`},get empty(){return e(R)},cell:E,$$slots:{cell:!0}})}var me=n(ke,2);{var M=E=>{var I=kd(),te=p(I),R=n(te);ot(R,17,()=>e(we),Et,(ie,ge,Ae)=>{var nt=en(),st=at(nt);{var dt=Fe=>{var Xe=cr(),Ve=l(Xe);h((A,B,X)=>{F(Xe,"title",A),o(Ve,`${B??""} ${X??""}`)},[()=>t("Assign it in the day review"),()=>S(e(b)[Ae]),()=>xt(e(ge))]),ee("click",Xe,()=>r.onopenday?.(e(b)[Ae])),v(Fe,Xe)};$(st,Fe=>{e(ge)&&Fe(dt)})}v(ie,nt)}),h(ie=>o(te,`${ie??""} `),[()=>t("Unknown time this week:")]),v(E,I)},D=C(()=>Le(e(we))>0);$(me,E=>{e(D)&&E(M)})}var J=n(oe,2),$e=l(J,!0);h((E,I,te,R,ie,ge,Ae,nt,st,dt)=>{o(W,E),o(Ue,`${I??""} · ${te??""} – ${R??""}`),o(Q,ie),o(Ye,ge),o(V,Ae),K=Tt(it,1,"",null,K,{primary:e(_)==="customer"}),o(De,nt),Ze=Tt(ye,1,"",null,Ze,{primary:e(_)==="project"}),o(mt,st),o($e,dt)},[()=>t("Timesheet"),()=>t("Week {n}",{n:ur(e(a))}),()=>new Date(e(a)).toLocaleDateString(un(),{day:"numeric",month:"short"}),()=>new Date(Vt(e(a),6)).toLocaleDateString(un(),{day:"numeric",month:"short"}),()=>t("This week"),()=>xt(e(G)),()=>e(le)?t("of {time} target",{time:xt(e(le))}):t("this week"),()=>t("Customers"),()=>t("Projects"),()=>t("Click a day to open it in the daily review. Copy week puts the hours as decimals on the clipboard, ready to paste.")]),ee("click",ne,()=>g(a,Zn(Date.now()),!0)),ee("click",it,()=>g(_,"customer")),ee("click",ye,()=>g(_,"project")),v(i,pe),Jt()}Gt(["click"]);var bd=f("<button> </button>"),yd=f('<p class="error"> </p>'),xd=f('<p class="muted"> </p>'),jd=f('<span class="ticket svelte-mqeg1y"> </span> ',1),zd=f('<div class="row task svelte-mqeg1y"><span class="name svelte-mqeg1y"><!></span> <span class="num hours svelte-mqeg1y"> </span></div>'),Td=f('<button class="row project svelte-mqeg1y"><span class="chev svelte-mqeg1y"> </span> <span class="name svelte-mqeg1y"> </span> <span class="num hours svelte-mqeg1y"> </span></button> <!>',1),Sd=f('<button class="row customer svelte-mqeg1y"><span class="chev svelte-mqeg1y"> </span> <span class="dot"></span> <span class="name svelte-mqeg1y"> </span> <span class="bar svelte-mqeg1y"><span class="svelte-mqeg1y"></span></span> <span class="num hours svelte-mqeg1y"> </span></button> <!>',1),Dd=f('<div class="row customer unknown svelte-mqeg1y"><span class="chev svelte-mqeg1y"></span> <span class="dot"></span> <span class="name svelte-mqeg1y"> </span> <span class="bar svelte-mqeg1y"><span class="svelte-mqeg1y"></span></span> <span class="num hours svelte-mqeg1y"> </span></div>'),Cd=f('<div class="total svelte-mqeg1y"><span class="num big svelte-mqeg1y"> </span> <span class="muted"> </span></div> <!> <div class="rows svelte-mqeg1y"><!> <!></div>',1),Ad=f('<header class="svelte-mqeg1y"><h1 class="svelte-mqeg1y"> </h1> <div class="periods svelte-mqeg1y"></div></header> <!> <!>',1);function Ed(i,r){Yt(r,!0);const a=[["today",t("Today")],["this_week",t("This week")],["this_month",t("This month")],["last_month",t("Last month")]];let s=Z("this_week"),d=Z(null),u=Z(""),c=jt({});async function m(){try{g(d,await be("hours",{period:e(s)}),!0),g(u,"")}catch(we){g(u,String(we),!0)}}function _(we){c[we]=!c[we]}function z(we){const vt=e(d)?.customers?.[0]?.ms||1;return Math.max(2,Math.round(we/vt*100))}bn(()=>{e(s),m()}),on(()=>{const we=setInterval(m,3e4);return()=>clearInterval(we)});var w=Ad(),b=at(w),P=p(b),de=l(P,!0),xe=n(P,2);ot(xe,21,()=>a,Et,(we,vt)=>{var G=C(()=>hn(e(vt),2));let le=()=>e(G)[0],S=()=>e(G)[1];var T=bd();let x;var O=l(T,!0);h(()=>{x=Tt(T,1,"",null,x,{primary:e(s)===le()}),o(O,S())}),ee("click",T,()=>g(s,le(),!0)),v(we,T)});var _e=n(b,2);{var Le=we=>{var vt=yd(),G=l(vt,!0);h(()=>o(G,e(u))),v(we,vt)};$(_e,we=>{e(u)&&we(Le)})}var Ee=n(_e,2);{var Ie=we=>{var vt=Cd(),G=at(vt),le=p(G),S=l(le,!0),T=n(le,2),x=l(T,!0),O=n(G,2);{var k=ae=>{var W=xd(),Y=l(W,!0);h(re=>o(Y,re),[()=>t("No time recorded in this period yet.")]),v(ae,W)};$(O,ae=>{e(d).customers.length===0&&e(d).unknown_ms===0&&ae(k)})}var q=n(O,2),N=p(q);ot(N,17,()=>e(d).customers,ae=>ae.id,(ae,W)=>{var Y=Sd(),re=at(Y),Me=p(re),Ue=l(Me,!0),ce=n(Me,2);let ne;var Q=n(ce,2),ve=l(Q,!0),Te=n(Q,2),Pe=p(Te);let Be;var he=n(Te,2),Re=l(he,!0),He=n(re,2);{var Ye=H=>{var V=en(),je=at(V);ot(je,17,()=>e(W).children,qe=>qe.id,(qe,ze)=>{var it=Td(),K=at(it),De=p(K),ye=l(De,!0),Ze=n(De,2),mt=l(Ze,!0),Ne=n(Ze,2),lt=l(Ne,!0),U=n(K,2);{var oe=ke=>{var me=en(),M=at(me);ot(M,17,()=>e(ze).children,D=>D.id,(D,J)=>{var $e=zd(),E=p($e),I=p(E);{var te=Ae=>{var nt=jd(),st=at(nt),dt=l(st,!0),Fe=n(st,1,!0);h(Xe=>{o(dt,e(J).ticket_id),o(Fe,Xe)},[()=>e(J).name.slice(e(J).ticket_id.length)]),v(Ae,nt)},R=Ae=>{var nt=_n();h(()=>o(nt,e(J).name)),v(Ae,nt)};$(I,Ae=>{e(J).ticket_id?Ae(te):Ae(R,-1)})}var ie=n(E,2),ge=l(ie,!0);h(Ae=>o(ge,Ae),[()=>xt(e(J).ms)]),v(D,$e)}),v(ke,me)};$(U,ke=>{c[e(W).id+e(ze).id]&&ke(oe)})}h(ke=>{F(K,"aria-expanded",!!c[e(W).id+e(ze).id]),o(ye,c[e(W).id+e(ze).id]?"▾":"▸"),o(mt,e(ze).name),o(lt,ke)},[()=>xt(e(ze).ms)]),ee("click",K,()=>_(e(W).id+e(ze).id)),v(qe,it)}),v(H,V)};$(He,H=>{c[e(W).id]&&H(Ye)})}h((H,V)=>{F(re,"aria-expanded",!!c[e(W).id]),o(Ue,c[e(W).id]?"▾":"▸"),ne=Lt(ce,"",ne,{background:e(W).colour}),o(ve,e(W).name),Be=Lt(Pe,"",Be,{width:H,background:e(W).colour}),o(Re,V)},[()=>`${z(e(W).ms)??""}%`,()=>xt(e(W).ms)]),ee("click",re,()=>_(e(W).id)),v(ae,Y)});var pe=n(N,2);{var Ke=ae=>{var W=Dd(),Y=n(p(W),2);Lt(Y,"",{},{background:"var(--amber)"});var re=n(Y,2),Me=l(re,!0),Ue=n(re,2),ce=p(Ue);let ne;var Q=n(Ue,2),ve=l(Q,!0);h((Te,Pe,Be)=>{o(Me,Te),ne=Lt(ce,"",ne,{width:Pe,background:"var(--amber)"}),o(ve,Be)},[()=>t("Unknown"),()=>`${z(e(d).unknown_ms)??""}%`,()=>xt(e(d).unknown_ms)]),v(ae,W)};$(pe,ae=>{e(d).unknown_ms>0&&ae(Ke)})}h((ae,W)=>{o(S,ae),o(x,W)},[()=>xt(e(d).total_ms),()=>t("total")]),v(we,vt)};$(Ee,we=>{e(d)&&we(Ie)})}h(we=>o(de,we),[()=>t("Hours")]),v(i,w),Jt()}Gt(["click"]);function Pd(i,r){const a=(r||"").trim().toLowerCase();return!a||[i.task,i.ticket_id,i.detected,i.app].some(s=>(s||"").toLowerCase().includes(a))}function qd(i,r=""){const a=new Map;for(const s of i.filter(d=>!r||d.customer_id===r)){const d=a.get(s.customer_id)||{id:s.customer_id,sent:0,received:0};s.metric==="mail_sent"&&(d.sent+=s.count),s.metric==="mail_received"&&(d.received+=s.count),a.set(s.customer_id,d)}return[...a.values()].sort((s,d)=>d.sent+d.received-(s.sent+s.received))}const Mn=i=>Math.round(i/36e5*100)/100;function Zr(i){const[r,a]=i.split("-").map(Number);return[new Date(r,a-1,1).getTime(),new Date(r,a,1).getTime()]}function Wd(i=new Date){const r=i.getDate()<=7?new Date(i.getFullYear(),i.getMonth()-1,1):i;return`${r.getFullYear()}-${String(r.getMonth()+1).padStart(2,"0")}`}function $d({entries:i,customers:r,projects:a=[],company:s="",month:d}){const[u,c]=Zr(d),m=i.map(G=>({...G,start:Math.max(G.start,u),end:Math.min(G.end,c)})).filter(G=>G.end>G.start),_=G=>r.find(le=>le.id===G)?.name||t("Unknown"),z=G=>G?G===s?t("Internal"):t("Customer"):t("Unknown"),w=new Map;for(const G of m)w.set(G.customer_id||"",(w.get(G.customer_id||"")||0)+(G.end-G.start));const b=[...w.keys()].sort((G,le)=>{const S=T=>T?T===s?1:0:2;return S(G)-S(le)||w.get(le)-w.get(G)||_(G).localeCompare(_(le))}),P=[...w.values()].reduce((G,le)=>G+le,0),de=b.filter(G=>G&&G!==s).reduce((G,le)=>G+w.get(le),0),xe={name:t("Summary"),header:[t("Customer"),t("Kind"),t("Hours")],rows:[...b.map(G=>[_(G),z(G),Mn(w.get(G))]),["","",""],[t("Customers together"),"",Mn(de)],[t("Total"),"",Mn(P)]]},_e=[];for(let G=new Date(u);G.getTime()<c;G.setDate(G.getDate()+1))_e.push(new Date(G));const Le=G=>Ft(G),Ee=new Map(b.map(G=>[G,new Map]));for(const G of m){const le=Ee.get(G.customer_id||"");le.set(Le(G.start),(le.get(Le(G.start))||0)+(G.end-G.start))}const Ie={name:t("Per day"),header:[t("Customer"),..._e.map(G=>G.toLocaleDateString(un(),{day:"numeric",month:"numeric"})),t("Total")],rows:b.map(G=>[_(G),..._e.map(le=>Mn(Ee.get(G).get(Le(le.getTime()))||0)||""),Mn(w.get(G))])},we=G=>a.find(le=>le.id===G)?.name||"",vt={name:t("Entries"),header:[t("Date"),t("Start"),t("End"),t("Hours"),t("Customer"),t("Project"),t("Task"),t("Ticket ID"),t("Notes")],rows:[...m].sort((G,le)=>G.start-le.start).map(G=>[Ft(G.start),an(G.start),an(G.end),Mn(G.end-G.start),_(G.customer_id),we(G.project_id),G.task||"",G.ticket_id||"",G.notes||""])};return[xe,Ie,vt]}var vr=f("<button> </button>"),Md=f('<div class="row custom svelte-htvcku"><input type="date"/> <input type="date"/></div>'),Id=f('<p class="error"> </p>'),Hd=f('<p class="notice svelte-htvcku"> </p>'),Nd=f("<option> </option>"),Od=f("<span></span>"),Ld=f('<div class="bar svelte-htvcku"><span class="label svelte-htvcku"> </span> <span class="track svelte-htvcku"><span class="fill svelte-htvcku"></span></span> <span class="num value svelte-htvcku"> </span> <span class="num share muted svelte-htvcku"> </span></div>'),Bd=f('<p class="muted"> </p>'),Rd=f('<section class="card svelte-htvcku"><!> <p class="muted small svelte-htvcku"> </p></section>'),Kd=f('<span class="svelte-htvcku"></span>'),Ud=f('<div class="day svelte-htvcku"><div class="stack svelte-htvcku"></div> <div class="dlabel muted svelte-htvcku"> </div></div>'),Fd=f('<section class="card svelte-htvcku"><!></section>'),Vd=f('<header class="svelte-htvcku"><h1 class="svelte-htvcku"> </h1> <div class="row monthly svelte-htvcku"><input type="month"/> <button class="primary"> </button></div> <div class="row svelte-htvcku"></div></header> <!> <!> <!> <section class="summary svelte-htvcku"><div class="svelte-htvcku"><span class="num big svelte-htvcku"> </span><span class="muted"> </span></div> <div class="svelte-htvcku"><span class="num big svelte-htvcku"> </span><span class="muted"> </span></div> <div class="svelte-htvcku"><span> </span><span class="muted"> </span></div> <div class="filters svelte-htvcku"><input type="search"/> <select><option> </option><!><option> </option></select></div></section> <section class="card svelte-htvcku"><div class="row head svelte-htvcku"><h3 class="svelte-htvcku"> </h3> <!></div> <!> <!></section> <!> <section class="card svelte-htvcku"><h3 class="svelte-htvcku"> </h3> <div class="days svelte-htvcku"></div></section> <!> <section class="card svelte-htvcku"><!></section>',1);function Gd(i,r){Yt(r,!0);const a=[["this_week",t("This week")],["last_week",t("Last week")],["this_month",t("This month")],["last_month",t("Last month")],["custom",t("Custom")]],s=[["customer",t("Customer")],["project",t("Project")],["task",t("Task")],["app",t("Application")],["source",t("Source")]],d={automatic:t("Automatic tracking"),manual_switch:t("Manual switch"),manual_entry:t("Entered or answered by you"),call:t("Phone calls")};let u=Z("this_week"),c=Z(jt(Ft(Vt(Date.now(),-30)))),m=Z(jt(Ft(Date.now()))),_=Z("customer"),z=Z(""),w=Z(""),b=Z(jt([])),P=Z(jt([])),de=Z(jt({customers:[],projects:[]})),xe=Z(""),_e=Z("");function Le(y){const se=cn(Date.now()),fe=Vt(se,-((new Date(se).getDay()+6)%7)),Je=Se=>{const Ce=new Date(se);return Ce.setDate(1),Ce.setMonth(Ce.getMonth()+Se),Ce.getTime()};switch(y){case"this_week":return[fe,Vt(fe,7)];case"last_week":return[Vt(fe,-7),fe];case"this_month":return[Je(0),Je(1)];case"last_month":return[Je(-1),Je(0)];default:return[cn(e(c)+"T00:00"),Vt(cn(e(m)+"T00:00"),1)]}}let Ee=C(()=>Le(e(u)==="custom"?`custom:${e(c)}:${e(m)}`:e(u)));async function Ie(){try{g(de,await be("overview"),!0);const[y,se]=e(Ee);g(P,await be("metric_counts",{from:y,to:se}),!0),g(b,(await be("entries",{from:y,to:Math.min(se,Date.now()+1)})).entries.map(fe=>({...fe,start:Math.max(fe.start,y),end:Math.min(fe.end,se)})),!0),g(xe,"")}catch(y){g(xe,String(y),!0)}}bn(()=>{e(Ee),Ie()});const we=y=>e(de).customers.find(se=>se.id===y),vt=y=>e(de).projects.find(se=>se.id===y),G=y=>Math.max(0,y.end-y.start);let le=C(()=>e(b).filter(y=>(!e(z)||(e(z)==="unknown"?!y.customer_id:y.customer_id===e(z)))&&Pd(y,e(w)))),S=C(()=>e(le).reduce((y,se)=>y+G(se),0)),T=C(()=>e(le).filter(y=>!y.customer_id).reduce((y,se)=>y+G(se),0)),x=C(()=>new Set(e(le).filter(y=>G(y)>0).map(y=>Ft(y.start))).size);function O(y){switch(e(_)){case"customer":return[y.customer_id||"",we(y.customer_id)?.name||t("Unknown")];case"project":return[y.project_id||"",y.customer_id?`${we(y.customer_id)?.name||"?"} / ${vt(y.project_id)?.name||t("No project")}`:t("Unknown")];case"task":return y.ticket_id?[`t:${y.customer_id}:${y.ticket_id.toLowerCase()}`,`${y.ticket_id} ${y.task||""}`.trim()]:y.task?[`d:${y.customer_id}:${y.task.toLowerCase()}`,y.task]:["",t("Other work")];case"app":return[y.app||"",y.app||t("Unknown application")];default:return[y.source,d[y.source]||y.source]}}let k=C(()=>{const y=new Map;for(const se of e(le)){const[fe,Je]=O(se),Se=y.get(fe)||{key:fe,label:Je,ms:0,parts:new Map};Se.ms+=G(se);const Ce=se.customer_id||"";Se.parts.set(Ce,(Se.parts.get(Ce)||0)+G(se)),y.set(fe,Se)}return[...y.values()].filter(se=>se.ms>0).sort((se,fe)=>fe.ms-se.ms)}),q=C(()=>{const[y,se]=e(Ee),fe=[];for(let Je=y;Je<se&&fe.length<62;Je=Vt(Je,1)){const Se=new Map;for(const Ce of e(le)){const Qe=Math.max(0,Math.min(Ce.end,Vt(Je,1))-Math.max(Ce.start,Je));Qe&&Se.set(Ce.customer_id||"",(Se.get(Ce.customer_id||"")||0)+Qe)}fe.push({day:Je,ms:[...Se.values()].reduce((Ce,Qe)=>Ce+Qe,0),parts:Se})}return fe}),N=C(()=>Math.max(36e5,...e(q).map(y=>y.ms))),pe=C(()=>qd(e(P),e(z)==="unknown"?"-":e(z)));const Ke=y=>we(y)?.colour||"var(--amber)",ae=(y,se)=>`${Math.max(.5,y/se*100)}%`,W=()=>`${Ft(e(Ee)[0])}-${Ft(e(Ee)[1]-1)}`,Y=y=>Math.round(y/36e5*100)/100;let re=[{key:"start",label:t("Date"),value:y=>y.start,text:y=>`${new Date(y.start).toLocaleDateString(un(),{weekday:"short",day:"numeric",month:"short"})} ${an(y.start)}`,exportValue:y=>`${Ft(y.start)} ${an(y.start)}`},{key:"dur",label:t("Time"),num:!0,value:y=>G(y),text:y=>xt(G(y)),exportValue:y=>Y(G(y))},{key:"customer",label:t("Customer"),value:y=>we(y.customer_id)?.name||t("Unknown")},{key:"project",label:t("Project"),value:y=>vt(y.project_id)?.name||""},{key:"task",label:t("Task"),value:y=>[y.ticket_id,y.task].filter(Boolean).join(" ")},{key:"app",label:t("Application"),value:y=>y.app||""},{key:"detected",label:t("Detected"),value:y=>y.detected||""},{key:"source",label:t("Recorded"),value:y=>d[y.source]||y.source}],Me=C(()=>Yr(e(le),we,vt)),Ue=C(()=>[...e(le).filter(y=>y.ticket_id).reduce((y,se)=>{const fe=`${se.customer_id}|${se.ticket_id.toLowerCase()}`,Je=y.get(fe)||{id:fe,customer:we(se.customer_id)?.name||t("Unknown"),ticket:se.ticket_id,task:"",ms:0,first:se.start,last:se.end};return Je.ms+=G(se),Je.first=Math.min(Je.first,se.start),Je.last=Math.max(Je.last,se.end),!Je.task&&se.task&&(Je.task=se.task),y.set(fe,Je)},new Map).values()]);const ce=[{key:"ticket",label:t("Ticket ID")},{key:"task",label:t("Task")},{key:"customer",label:t("Customer")},{key:"ms",label:t("Hours"),num:!0,text:y=>xt(y.ms),exportValue:y=>Y(y.ms)},{key:"first",label:t("First worked"),value:y=>y.first,text:y=>Ft(y.first),exportValue:y=>Ft(y.first)},{key:"last",label:t("Last worked"),value:y=>y.last,text:y=>Ft(y.last),exportValue:y=>Ft(y.last)}],ne=[{key:"customer",label:t("Customer"),value:y=>we(y.id)?.name||"?"},{key:"sent",label:t("Sent"),num:!0},{key:"received",label:t("Received"),num:!0},{key:"total",label:t("Total"),num:!0,value:y=>y.sent+y.received}];let Q=Z(jt(Wd()));async function ve(){try{const[y,se]=Zr(e(Q)),[fe,Je,Se]=await Promise.all([be("entries",{from:y,to:se}),be("overview"),be("settings_list")]),Ce=$d({entries:fe.entries,customers:Je.customers,projects:Je.projects,company:Se.values.own_company||"",month:e(Q)}),Qe=await Ni(`${t("Hours")} ${e(Q)}`,Ce);Qe&&g(_e,t("Saved {path}",{path:Qe}),!0)}catch(y){g(xe,String(y),!0)}}var Te=Vd(),Pe=at(Te),Be=p(Pe),he=l(Be,!0),Re=n(Be,2),He=p(Re),Ye=n(He,2),H=l(Ye,!0),V=n(Re,2);ot(V,21,()=>a,Et,(y,se)=>{var fe=C(()=>hn(e(se),2));let Je=()=>e(fe)[0],Se=()=>e(fe)[1];var Ce=vr();let Qe;var rt=l(Ce,!0);h(()=>{Qe=Tt(Ce,1,"",null,Qe,{primary:e(u)===Je()}),o(rt,Se())}),ee("click",Ce,()=>g(u,Je(),!0)),v(y,Ce)});var je=n(Pe,2);{var qe=y=>{var se=Md(),fe=p(se),Je=n(fe),Se=n(Je);h((Ce,Qe,rt)=>{F(fe,"aria-label",Ce),o(Je,` ${Qe??""} `),F(Se,"aria-label",rt)},[()=>t("From"),()=>t("to"),()=>t("To")]),Wt(fe,()=>e(c),Ce=>g(c,Ce)),Wt(Se,()=>e(m),Ce=>g(m,Ce)),v(y,se)};$(je,y=>{e(u)==="custom"&&y(qe)})}var ze=n(je,2);{var it=y=>{var se=Id(),fe=l(se,!0);h(()=>o(fe,e(xe))),v(y,se)};$(ze,y=>{e(xe)&&y(it)})}var K=n(ze,2);{var De=y=>{var se=Hd(),fe=l(se,!0);h(()=>o(fe,e(_e))),v(y,se)};$(K,y=>{e(_e)&&y(De)})}var ye=n(K,2),Ze=p(ye),mt=p(Ze),Ne=l(mt,!0),lt=n(mt),U=l(lt,!0),oe=n(Ze,2),ke=p(oe),me=l(ke,!0),M=n(ke),D=l(M,!0),J=n(oe,2),$e=p(J);let E;var I=l($e,!0),te=n($e),R=l(te,!0),ie=n(J,2),ge=p(ie),Ae=n(ge,2),nt=p(Ae),st=l(nt,!0);nt.value=nt.__value="";var dt=n(nt);ot(dt,17,()=>e(de).customers,Et,(y,se)=>{var fe=Nd(),Je=l(fe,!0),Se={};h(()=>{o(Je,e(se).name),Se!==(Se=e(se).id)&&(fe.value=(fe.__value=Se)??"")}),v(y,fe)});var Fe=n(dt),Xe=l(Fe,!0);Fe.value=Fe.__value="unknown",gn(Ae);var Ve=n(ye,2),A=p(Ve),B=p(A),X=l(B,!0),We=n(B,2);ot(We,17,()=>s,Et,(y,se)=>{var fe=C(()=>hn(e(se),2));let Je=()=>e(fe)[0],Se=()=>e(fe)[1];var Ce=vr();let Qe;var rt=l(Ce,!0);h(()=>{Qe=Tt(Ce,1,"",null,Qe,{primary:e(_)===Je()}),o(rt,Se())}),ee("click",Ce,()=>g(_,Je(),!0)),v(y,Ce)});var ut=n(A,2);ot(ut,17,()=>e(k),y=>y.key,(y,se)=>{var fe=Ld(),Je=p(fe),Se=l(Je,!0),Ce=n(Je,2),Qe=p(Ce);let rt;ot(Qe,21,()=>[...e(se).parts.entries()].sort((Dt,yt)=>yt[1]-Dt[1]),Et,(Dt,yt)=>{var At=C(()=>hn(e(yt),2));let Nt=()=>e(At)[0],qt=()=>e(At)[1];var $t=Od();let Ut;h((Qt,sn,ht)=>{F($t,"title",`${Qt??""} ${sn??""}`),Ut=Lt($t,"",Ut,{flex:qt(),background:ht})},[()=>we(Nt())?.name||"Unknown",()=>xt(qt()),()=>Ke(Nt())]),v(Dt,$t)});var kt=n(Ce,2),bt=l(kt,!0),Pt=n(kt,2),wt=l(Pt);h((Dt,yt,At)=>{F(Je,"title",e(se).label),o(Se,e(se).label),rt=Lt(Qe,"",rt,{width:Dt}),o(bt,yt),o(wt,`${At??""}%`)},[()=>ae(e(se).ms,e(k)[0].ms),()=>xt(e(se).ms),()=>e(S)?Math.round(e(se).ms/e(S)*100):0]),v(y,fe)});var et=n(ut,2);{var pt=y=>{var se=Bd(),fe=l(se,!0);h(Je=>o(fe,Je),[()=>t("No time in this period.")]),v(y,se)};$(et,y=>{e(k).length||y(pt)})}var ft=n(Ve,2);{var ct=y=>{var se=Rd(),fe=p(se);{let Ce=C(()=>t("Mail")),Qe=C(()=>`hourwarden-mail-${W()}`);Hn(fe,{get columns(){return ne},get rows(){return e(pe)},sort:{key:"total",direction:"desc"},get caption(){return e(Ce)},get exportName(){return e(Qe)}})}var Je=n(fe,2),Se=l(Je,!0);h(Ce=>o(Se,Ce),[()=>t("Counted by the Outlook plugin and matched by the mail domains on each customer page.")]),v(y,se)};$(ft,y=>{e(pe).length&&y(ct)})}var Ct=n(ft,2),Ge=p(Ct),j=l(Ge,!0),L=n(Ge,2);ot(L,21,()=>e(q),y=>y.day,(y,se)=>{var fe=Ud(),Je=p(fe);ot(Je,21,()=>[...e(se).parts.entries()],Et,(Qe,rt)=>{var kt=C(()=>hn(e(rt),2));let bt=()=>e(kt)[0],Pt=()=>e(kt)[1];var wt=Kd();let Dt;h((yt,At)=>Dt=Lt(wt,"",Dt,{height:yt,background:At}),[()=>ae(Pt(),e(N)),()=>Ke(bt())]),v(Qe,wt)});var Se=n(Je,2),Ce=l(Se,!0);h((Qe,rt,kt)=>{F(fe,"title",`${Qe??""} ${rt??""}`),o(Ce,kt)},[()=>Ft(e(se).day),()=>xt(e(se).ms),()=>new Date(e(se).day).toLocaleDateString(un(),e(q).length>14?{day:"numeric"}:{weekday:"short",day:"numeric"})]),v(y,fe)});var ue=n(Ct,2);{var tt=y=>{var se=Fd(),fe=p(se);{let Je=C(()=>t("Hours per ticket")),Se=C(()=>`hourwarden-tickets-${W()}`);Hn(fe,{get columns(){return ce},get rows(){return e(Ue)},sort:{key:"ms",direction:"desc"},get caption(){return e(Je)},get exportName(){return e(Se)}})}v(y,se)};$(ue,y=>{e(Ue).length&&y(tt)})}var gt=n(ue,2),Oe=p(gt);{let y=C(()=>t("Entries")),se=C(()=>`hourwarden-entries-${W()}`),fe=C(()=>t("No time in this period."));Hn(Oe,{get columns(){return re},get rows(){return e(le)},sort:{key:"start",direction:"asc"},get caption(){return e(y)},get exportName(){return e(se)},get exportTable(){return e(Me)},maxRows:300,get empty(){return e(fe)}})}h((y,se,fe,Je,Se,Ce,Qe,rt,kt,bt,Pt,wt,Dt,yt,At,Nt,qt)=>{o(he,y),F(He,"aria-label",se),F(Ye,"title",fe),o(H,Je),o(Ne,Se),o(U,Ce),o(me,Qe),o(D,rt),E=Tt($e,1,"num big svelte-htvcku",null,E,{warn:e(T)>0}),o(I,kt),o(R,bt),F(ge,"placeholder",Pt),F(ge,"aria-label",wt),F(Ae,"aria-label",Dt),o(st,yt),o(Xe,At),o(X,Nt),o(j,qt)},[()=>t("Reports"),()=>t("Month"),()=>t("Hours per customer for the month, per day and every entry, as an Excel workbook"),()=>t("Monthly report"),()=>xt(e(S)),()=>t("total"),()=>e(x)?xt(e(S)/e(x)):"0:00",()=>t("per working day ({days} days)",{days:e(x)}),()=>xt(e(T)),()=>t("unknown"),()=>t("Find task, ticket, title…"),()=>t("Find task, ticket ID, title or application"),()=>t("Filter on customer"),()=>t("All customers"),()=>t("Unknown time"),()=>t("Hours by"),()=>t("Hours per day")]),Wt(He,()=>e(Q),y=>g(Q,y)),ee("click",Ye,ve),Wt(ge,()=>e(w),y=>g(w,y)),kn(Ae,()=>e(z),y=>g(z,y)),v(i,Te),Jt()}Gt(["click"]);var Yd=f("<button><!> </button>"),Jd=f('<div class="time"><nav class="tabs svelte-1iwx4pi"><h1 class="svelte-1iwx4pi"> </h1> <!></nav> <div class="body svelte-1iwx4pi"><!></div></div>');function Qd(i,r){Yt(r,!0);let a=Kt(r,"day",3,null);const s=[["day",t("Day"),"calendar",t("Check and fix one day: timeline, split, join, add time")],["week",t("Week"),"grid",t("Timesheet: a week per customer, to copy or export")],["hours",t("Hours"),"clock",t("Totals per customer, project and task")],["reports",t("Reports"),"chart",t("Charts, all entries and exports for any period")]];var d=Jd(),u=p(d),c=p(u),m=l(c,!0),_=n(c,2);ot(_,17,()=>s,Et,(_e,Le)=>{var Ee=C(()=>hn(e(Le),4));let Ie=()=>e(Ee)[0],we=()=>e(Ee)[1],vt=()=>e(Ee)[2],G=()=>e(Ee)[3];var le=Yd();let S;var T=p(le);It(T,{get name(){return vt()},size:14});var x=n(T);h(()=>{F(le,"title",G()),S=Tt(le,1,"svelte-1iwx4pi",null,S,{active:r.tab===Ie()}),o(x,` ${we()??""}`)}),ee("click",le,()=>r.ongo(`time/${Ie()}`)),v(_e,le)});var z=n(u,2),w=p(z);{var b=_e=>{var Le=en(),Ee=at(Le);ua(Ee,a,Ie=>{dd(Ie,{get start(){return a()}})}),v(_e,Le)},P=_e=>{wd(_e,{onopenday:Le=>r.ongo("time/day",{day:Le})})},de=_e=>{Ed(_e,{})},xe=_e=>{Gd(_e,{})};$(w,_e=>{r.tab==="day"?_e(b):r.tab==="week"?_e(P,1):r.tab==="hours"?_e(de,2):_e(xe,-1)})}h((_e,Le)=>{F(u,"aria-label",_e),o(m,Le)},[()=>t("Time"),()=>t("Time")]),v(i,d),Jt()}Gt(["click"]);function Zd(i){return i.map(({name:r,url:a,key:s,enabled:d})=>({name:r,url:a,key:s,enabled:d}))}function pr(i,r){const a=r.trim();if(!a)return i;if(i.some(s=>s.url.toLowerCase()===a.toLowerCase()))throw new Error(t("{url} is already in the list",{url:a}));return[...i,{name:"",url:a,key:"",enabled:!0}]}function Xd(i,r,a){const s=r+a;if(s<0||s>=i.length)return i;const d=[...i];return[d[r],d[s]]=[d[s],d[r]],d}const eu={windows:"Windows",linux:"Linux"};function ya(i=[]){const r=i.map(a=>eu[a]||a);return r.length?r.length===1?t("{name} only",{name:r[0]}):t("{list} and {last}",{list:r.slice(0,-1).join(", "),last:r.at(-1)}):t("no operating system")}function tu(i=[]){return i.length===1}var nu=f('<p class="error"> </p>'),au=f('<p class="notice svelte-q3p56z"> </p>'),ru=f('<div class="error small svelte-q3p56z"> </div>'),ou=f('<div class="small okline svelte-q3p56z"><!> <code class="svelte-q3p56z"> </code></div>'),su=f('<div class="small warnline svelte-q3p56z"> <code class="svelte-q3p56z"> </code> <button class="link"> </button>.</div>'),iu=f('<div class="small warnline svelte-q3p56z"> </div>'),lu=f('<div><input type="checkbox" class="svelte-q3p56z"/> <span class="kind svelte-q3p56z"><!></span> <div class="rinfo svelte-q3p56z"><div><strong> </strong> <span class="muted small svelte-q3p56z"> <!></span></div> <code class="url svelte-q3p56z"> </code> <!></div> <div class="ractions svelte-q3p56z"><!> <!> <span class="del svelte-q3p56z"><!></span></div></div>'),du=f('<p class="muted small svelte-q3p56z"> </p>'),mr=f('<span class="badge svelte-q3p56z"> </span>'),hr=f('<button class="primary"> </button>'),uu=f('<span class="badge ok svelte-q3p56z"> </span>'),cu=f("<li> </li>"),vu=f('<article class="card svelte-q3p56z"><div class="top svelte-q3p56z"><div><h3 class="svelte-q3p56z"> </h3> <div class="muted small svelte-q3p56z"> </div> <div><!> </div> <div class="muted small from svelte-q3p56z"> </div></div> <!></div> <p> </p> <div class="perm svelte-q3p56z"><div class="small muted svelte-q3p56z"> </div> <ul class="svelte-q3p56z"></ul></div></article>'),pu=f('<section class="card repos svelte-q3p56z"><div class="top svelte-q3p56z"><div><h3 class="svelte-q3p56z"> </h3> <div class="muted small svelte-q3p56z"> </div></div> <!></div> <!> <form class="addrepo svelte-q3p56z"><input class="svelte-q3p56z"/> <!> <!> <!></form></section> <div class="grid svelte-q3p56z"></div>',1),mu=f('<p class="muted"> </p>'),hu=f("<p> </p>"),gu=f('<p class="error small svelte-q3p56z"> </p>'),fu=f('<input type="checkbox"/>'),ku=f('<input type="number" class="svelte-q3p56z"/>'),gr=f("<input/>"),_u=f('<div class="setting svelte-q3p56z"><div><div class="label svelte-q3p56z"> </div> <div class="muted small svelte-q3p56z"> </div></div> <!></div>'),wu=f('<div class="settings svelte-q3p56z"><!> <button> </button></div>'),bu=f('<pre class="log svelte-q3p56z"> </pre>'),yu=f('<article class="card wide svelte-q3p56z"><div class="top svelte-q3p56z"><div><h3 class="svelte-q3p56z"> <!></h3> <div class="muted small svelte-q3p56z"> <!></div></div> <div class="actions svelte-q3p56z"><span> </span> <label class="switch svelte-q3p56z"><input type="checkbox"/> </label></div></div> <!> <!> <!> <div class="foot svelte-q3p56z"><button class="link"> </button> <button class="link danger svelte-q3p56z"> </button></div> <!></article>'),xu=f("<!> <!>",1),ju=f('<header class="svelte-q3p56z"><h1 class="svelte-q3p56z"> </h1> <div class="tabs svelte-q3p56z"><button> </button> <button> </button></div></header> <!> <!> <!>',1);function zu(i,r){Yt(r,!0);let a=Z("installed"),s=Z(jt({repositories:[],items:[]})),d=Z(""),u=Z(!1),c=Z(jt([])),m=Z(""),_=Z(""),z=Z(""),w=jt({}),b=jt({});async function P(){try{await(async H=>{var V=hn(H,2);g(s,V[0],!0),g(c,V[1],!0)})(await Promise.all([be("plugin_store"),be("plugins_installed")]));for(const H of e(c))b[H.state.id]||(b[H.state.id]={...H.state.settings});!e(c).length&&e(a)==="installed"&&!e(m)&&g(a,"store")}catch(H){g(_,String(H),!0)}}async function de(H,V){g(m,H,!0),g(_,"");try{await V(),await P()}catch(je){g(_,String(je),!0)}finally{g(m,"")}}const xe=(H,V="")=>de("repos",async()=>{await be("set_setting",{key:"plugin_repositories",value:H(Zd(e(s).repositories))}),V&&S(V)}),_e=(H,V)=>xe(je=>je.map((qe,ze)=>ze===H?{...qe,key:V}:qe),t("From now on only plugins signed with this key are installed from this repository")),Le=(H,V)=>xe(je=>je.map((qe,ze)=>ze===H?{...qe,enabled:V}:qe)),Ee=H=>xe(V=>V.filter((je,qe)=>qe!==H),t("Repository removed")),Ie=(H,V)=>xe(je=>Xd(je,H,V));async function we(){const H=e(d).trim();H&&(await xe(V=>pr(V,H),t("Repository added")),e(_)||g(d,""))}async function vt(){const H=await la({directory:!0,title:t("Plugin repository folder (with index.json)")});H&&await xe(V=>pr(V,H),t("Repository added"))}async function G(){g(u,!0),g(_,"");try{g(s,await be("plugin_refresh"),!0),S(t("Repositories refreshed"))}catch(H){g(_,String(H),!0)}finally{g(u,!1)}}const le=H=>{const V=Math.round((Date.now()-H)/6e4);return V<1?t("just now"):V<60?t("{m} min ago",{m:V}):t("{h} h ago",{h:Math.round(V/60)})};function S(H){g(z,H,!0),setTimeout(()=>g(z,""),3e3)}const T=H=>de(H.id,async()=>{await be("plugin_install",{id:H.id}),b[H.id]=void 0,S(t("{name} installed and started",{name:H.name}))}),x=H=>de(H.state.id,()=>be("plugin_uninstall",{id:H.state.id})),O=(H,V)=>de(H.state.id,()=>be("plugin_set_enabled",{id:H.state.id,enabled:V}));async function k(H){await de(H.state.id,async()=>{b[H.state.id]=await be("plugin_save_settings",{id:H.state.id,settings:b[H.state.id]}),S(t("Settings saved"))})}async function q(H){w[H]=w[H]?null:await be("plugin_log",{id:H})}async function N(){const H=await la({directory:!0,title:t("Plugin folder (with plugin.toml)")});H&&await de("local",async()=>{await be("plugin_install_local",{folder:H}),S(t("Local plugin installed"))})}const pe={running:t("Running"),degraded:t("Partly working"),failing:t("Not working"),starting:t("Starting"),stopped:t("Off")};on(()=>{P();const H=setInterval(async()=>{g(c,await be("plugins_installed"),!0);for(const V of Object.keys(w))w[V]&&(w[V]=await be("plugin_log",{id:V}))},3e3);return()=>clearInterval(H)});var Ke=ju(),ae=at(Ke),W=p(ae),Y=l(W,!0),re=n(W,2),Me=p(re);let Ue;var ce=l(Me,!0),ne=n(Me,2);let Q;var ve=l(ne,!0),Te=n(ae,2);{var Pe=H=>{var V=nu(),je=l(V,!0);h(()=>o(je,e(_))),v(H,V)};$(Te,H=>{e(_)&&H(Pe)})}var Be=n(Te,2);{var he=H=>{var V=au(),je=l(V,!0);h(()=>o(je,e(z))),v(H,V)};$(Be,H=>{e(z)&&H(he)})}var Re=n(Be,2);{var He=H=>{var V=pu(),je=at(V),qe=p(je),ze=p(qe),it=p(ze),K=l(it,!0),De=n(it,2),ye=l(De,!0),Ze=n(ze,2);{let M=C(()=>e(u)?t("Refreshing…"):t("Refresh")),D=C(()=>t("Download the web repositories again for new plugins and updates"));Ht(Ze,{icon:"auto",get text(){return e(M)},get label(){return e(D)},onclick:G,get disabled(){return e(u)}})}var mt=n(qe,2);ot(mt,19,()=>e(s).repositories,M=>M.url,(M,D,J)=>{var $e=lu();let E;var I=p($e),te=n(I,2),R=p(te);{let j=C(()=>e(D).web?"open":"folder");It(R,{get name(){return e(j)},size:14})}var ie=n(te,2),ge=p(ie),Ae=p(ge),nt=l(Ae,!0),st=n(Ae,2),dt=p(st),Fe=n(dt);{var Xe=j=>{var L=_n();h(ue=>o(L,ue),[()=>t("· downloaded {fetchedat}",{fetchedat:le(e(D).fetched_at)})]),v(j,L)};$(Fe,j=>{e(D).web&&e(D).fetched_at&&j(Xe)})}var Ve=n(ge,2),A=l(Ve,!0),B=n(Ve,2);{var X=j=>{var L=ru(),ue=l(L,!0);h(()=>o(ue,e(D).error)),v(j,L)},We=j=>{var L=ou(),ue=p(L);It(ue,{name:"ok",size:12});var tt=n(ue),gt=n(tt),Oe=l(gt);h((y,se)=>{o(tt,` ${y??""} `),o(Oe,`${se??""}…`)},[()=>t("Signed with the trusted key"),()=>e(D).signing.key.slice(0,12)]),v(j,L)},ut=j=>{var L=su(),ue=p(L),tt=n(ue),gt=l(tt),Oe=n(tt),y=n(Oe),se=l(y,!0);h((fe,Je,Se,Ce)=>{o(ue,`${fe??""} `),o(gt,`${Je??""}…`),o(Oe,`${Se??""} `),o(se,Ce)},[()=>t("Signed with key"),()=>e(D).signing.key.slice(0,12),()=>t(", which you do not trust yet. Check it is the right key, then"),()=>t("trust it")]),ee("click",y,()=>_e(e(J),e(D).signing.key)),v(j,L)},et=j=>{var L=iu(),ue=l(L,!0);h(tt=>o(ue,tt),[()=>t("Not signed. Only install plugins from a repository you control.")]),v(j,L)};$(B,j=>{e(D).error?j(X):e(D).signing?.state==="signed"&&e(D).signing.trusted?j(We,1):e(D).signing?.state==="signed"?j(ut,2):e(D).signing?.state==="unsigned"&&j(et,3)})}var pt=n(ie,2),ft=p(pt);{let j=C(()=>t("Move up (preferred when versions are equal)")),L=C(()=>e(J)===0);Ht(ft,{icon:"sort-up",variant:"ghost",size:12,get label(){return e(j)},onclick:()=>Ie(e(J),-1),get disabled(){return e(L)}})}var ct=n(ft,2);{let j=C(()=>t("Move down")),L=C(()=>e(J)===e(s).repositories.length-1);Ht(ct,{icon:"sort-down",variant:"ghost",size:12,get label(){return e(j)},onclick:()=>Ie(e(J),1),get disabled(){return e(L)}})}var Ct=n(ct,2),Ge=p(Ct);{let j=C(()=>t("Remove {name}",{name:e(D).name}));Ht(Ge,{icon:"trash",variant:"ghost",size:13,get label(){return e(j)},onclick:()=>Ee(e(J))})}h((j,L,ue)=>{E=Tt($e,1,"repo svelte-q3p56z",null,E,{off:!e(D).enabled}),Sn(I,e(D).enabled),F(I,"aria-label",j),F(I,"title",L),F(te,"title",ue),o(nt,e(D).name),o(dt,`${e(D).plugins??""} plugin${e(D).plugins===1?"":"s"}`),F(Ve,"title",e(D).url),o(A,e(D).url)},[()=>t("Use {name}",{name:e(D).name}),()=>e(D).enabled?t("Used; untick to stop using it"):t("Not used; tick to use it"),()=>e(D).web?t("Downloaded from the web"):t("A folder on this computer")]),ee("change",I,j=>Le(e(J),j.currentTarget.checked)),v(M,$e)},M=>{var D=du(),J=l(D,!0);h($e=>o(J,$e),[()=>t("No repositories. Add one below to get plugins.")]),v(M,D)});var Ne=n(mt,2),lt=p(Ne),U=n(lt,2);{let M=C(()=>t("Add")),D=C(()=>t("Add this GitHub repository or web address")),J=C(()=>!e(d).trim());Ht(U,{icon:"plus",get text(){return e(M)},get label(){return e(D)},onclick:we,get disabled(){return e(J)}})}var oe=n(U,2);{let M=C(()=>t("Add folder…")),D=C(()=>t("Add a plugin repository folder on this computer"));Ht(oe,{icon:"folder",get text(){return e(M)},get label(){return e(D)},onclick:vt})}var ke=n(oe,2);{let M=C(()=>t("Install from folder…")),D=C(()=>t("Install one plugin from its folder, for writing your own"));Ht(ke,{icon:"download",get text(){return e(M)},get label(){return e(D)},onclick:N})}var me=n(je,2);ot(me,21,()=>e(s).items,M=>M.manifest.id,(M,D)=>{const J=C(()=>e(D).manifest);var $e=vu(),E=p($e),I=p(E),te=p(I),R=l(te,!0),ie=n(te,2),ge=l(ie),Ae=n(ie,2);let nt;var st=p(Ae);It(st,{name:"pc",size:11});var dt=n(st),Fe=n(Ae,2),Xe=l(Fe,!0),Ve=n(I,2);{var A=Ge=>{var j=mr(),L=l(j,!0);h((ue,tt)=>{F(j,"title",ue),o(L,tt)},[()=>t("This plugin does not work on this computer's operating system"),()=>ya(e(J).platforms)]),v(Ge,j)},B=Ge=>{var j=hr(),L=l(j,!0);h(ue=>{j.disabled=e(m)===e(J).id,o(L,ue)},[()=>t("Update to {version}",{version:e(J).version})]),ee("click",j,()=>T(e(J))),v(Ge,j)},X=Ge=>{var j=uu(),L=l(j,!0);h(ue=>o(L,ue),[()=>t("Installed")]),v(Ge,j)},We=Ge=>{var j=hr(),L=l(j,!0);h(ue=>{j.disabled=e(m)===e(J).id,o(L,ue)},[()=>e(m)===e(J).id?t("Installing…"):t("Install")]),ee("click",j,()=>T(e(J))),v(Ge,j)};$(Ve,Ge=>{e(D).compatible?e(D).update_available?Ge(B,1):e(D).installed_version?Ge(X,2):Ge(We,-1):Ge(A)})}var ut=n(E,2),et=l(ut,!0),pt=n(ut,2),ft=p(pt),ct=l(ft,!0),Ct=n(ft,2);ot(Ct,21,()=>e(J).permissions,Et,(Ge,j)=>{var L=cu(),ue=l(L,!0);h(()=>o(ue,e(j))),v(Ge,L)}),h((Ge,j,L,ue,tt)=>{o(R,e(J).name),o(ge,`${e(J).category??""} · ${e(J).version??""} · ${e(J).author??""}`),nt=Tt(Ae,1,"small os svelte-q3p56z",null,nt,{single:Ge}),F(Ae,"title",j),o(dt,` ${L??""}`),F(Fe,"title",e(D).repository_url),o(Xe,ue),o(et,e(J).description),o(ct,tt)},[()=>tu(e(J).platforms),()=>t("Operating systems this plugin works on"),()=>ya(e(J).platforms),()=>t("from {repository}",{repository:e(D).repository}),()=>t("This plugin:")]),v(M,$e)}),h((M,D,J,$e)=>{o(K,M),o(ye,D),F(lt,"placeholder",J),F(lt,"aria-label",$e)},[()=>t("Repositories"),()=>t("Plugins come from these GitHub repositories, web addresses and folders. When more than one has a plugin, the newest version is used; with equal versions, the one higher in the list."),()=>t("https://github.com/owner/repository"),()=>t("Repository address")]),dn("submit",Ne,M=>{M.preventDefault(),we()}),Wt(lt,()=>e(d),M=>g(d,M)),v(H,V)},Ye=H=>{var V=xu(),je=at(V);{var qe=it=>{var K=mu(),De=l(K,!0);h(ye=>o(De,ye),[()=>t("No plugins installed yet. Open the store to add Teams, Outlook, Remote Desktop Manager and more.")]),v(it,K)};$(je,it=>{e(c).length||it(qe)})}var ze=n(je,2);ot(ze,17,()=>e(c),it=>it.state.id,(it,K)=>{const De=C(()=>e(K).manifest),ye=C(()=>e(K).status?.state||(e(K).state.enabled?"starting":"stopped"));var Ze=yu(),mt=p(Ze),Ne=p(mt),lt=p(Ne),U=p(lt),oe=n(U);{var ke=et=>{var pt=mr(),ft=l(pt,!0);h(ct=>o(ft,ct),[()=>t("Local")]),v(et,pt)};$(oe,et=>{e(K).state.source==="local"&&et(ke)})}var me=n(lt,2),M=p(me),D=n(M);{var J=et=>{var pt=_n();h(ft=>o(pt,`· ${ft??""}`),[()=>ya(e(De).platforms)]),v(et,pt)};$(D,et=>{e(De)&&et(J)})}var $e=n(Ne,2),E=p($e),I=l(E,!0),te=n(E,2),R=p(te),ie=n(R),ge=n(mt,2);{var Ae=et=>{var pt=hu(),ft=l(pt,!0);h(ct=>{Tt(pt,1,`small ${e(ye)==="failing"?"error":"muted"}`,"svelte-q3p56z"),o(ft,ct)},[()=>ia(e(K).status.message)]),v(et,pt)};$(ge,et=>{e(K).status?.message&&et(Ae)})}var nt=n(ge,2);{var st=et=>{var pt=gu(),ft=l(pt,!0);h(ct=>o(ft,ct),[()=>t("The plugin files are missing; reinstall it from the store.")]),v(et,pt)};$(nt,et=>{e(De)||et(st)})}var dt=n(nt,2);{var Fe=et=>{var pt=wu(),ft=p(pt);ot(ft,17,()=>e(De).settings,Et,(Ge,j)=>{var L=_u(),ue=p(L),tt=p(ue),gt=l(tt,!0),Oe=n(tt,2),y=l(Oe,!0),se=n(ue,2);{var fe=Qe=>{var rt=fu();h(()=>F(rt,"aria-label",e(j).label)),qn(rt,()=>b[e(K).state.id][e(j).key],kt=>b[e(K).state.id][e(j).key]=kt),v(Qe,rt)},Je=Qe=>{var rt=ku();h(()=>{F(rt,"min",e(j).min),F(rt,"max",e(j).max),F(rt,"aria-label",e(j).label)}),Wt(rt,()=>b[e(K).state.id][e(j).key],kt=>b[e(K).state.id][e(j).key]=kt),v(Qe,rt)},Se=Qe=>{var rt=gr();h(kt=>{Tn(rt,kt),F(rt,"aria-label",e(j).label)},[()=>(b[e(K).state.id][e(j).key]||[]).join(", ")]),ee("change",rt,kt=>b[e(K).state.id][e(j).key]=Pn(kt.currentTarget.value)),v(Qe,rt)},Ce=Qe=>{var rt=gr();h(()=>F(rt,"aria-label",e(j).label)),Wt(rt,()=>b[e(K).state.id][e(j).key],kt=>b[e(K).state.id][e(j).key]=kt),v(Qe,rt)};$(se,Qe=>{e(j).type==="bool"?Qe(fe):e(j).type==="number"?Qe(Je,1):e(j).type==="list"?Qe(Se,2):Qe(Ce,-1)})}h(()=>{o(gt,e(j).label),o(y,e(j).description)}),v(Ge,L)});var ct=n(ft,2),Ct=l(ct,!0);h(Ge=>o(Ct,Ge),[()=>t("Save settings")]),ee("click",ct,()=>k(e(K))),v(et,pt)};$(dt,et=>{e(De)?.settings?.length&&b[e(K).state.id]&&et(Fe)})}var Xe=n(dt,2),Ve=p(Xe),A=l(Ve,!0),B=n(Ve,2),X=l(B,!0),We=n(Xe,2);{var ut=et=>{var pt=bu(),ft=l(pt,!0);h(ct=>o(ft,ct),[()=>w[e(K).state.id].join(`
 `)||t("Nothing logged yet.")]),v(et,pt)};$(We,et=>{w[e(K).state.id]&&et(ut)})}h((et,pt,ft,ct)=>{o(U,`${(e(De)?.name||e(K).state.id)??""} `),o(M,e(K).state.version),Tt(E,1,`state ${e(ye)??""}`,"svelte-q3p56z"),F(E,"title",et),o(I,pe[e(ye)]||e(ye)),Sn(R,e(K).state.enabled),o(ie,` ${pt??""}`),o(A,ft),o(X,ct)},[()=>ia(e(K).status?.message),()=>t("On"),()=>w[e(K).state.id]?t("Hide log"):t("Show log"),()=>t("Uninstall")]),ee("change",R,et=>O(e(K),et.currentTarget.checked)),ee("click",Ve,()=>q(e(K).state.id)),ee("click",B,()=>x(e(K))),v(it,Ze)}),v(H,V)};$(Re,H=>{e(a)==="store"?H(He):H(Ye,-1)})}h((H,V,je)=>{o(Y,H),Ue=Tt(Me,1,"",null,Ue,{primary:e(a)==="installed"}),o(ce,V),Q=Tt(ne,1,"",null,Q,{primary:e(a)==="store"}),o(ve,je)},[()=>t("Plugins"),()=>t("Installed ({installed})",{installed:e(c).length}),()=>t("Store ({items})",{items:e(s).items.length})]),ee("click",Me,()=>g(a,"installed")),ee("click",ne,()=>g(a,"store")),v(i,Ke),Jt()}Gt(["click","change"]);const Tu=new Set(["ControlLeft","ControlRight","AltLeft","AltRight","ShiftLeft","ShiftRight","MetaLeft","MetaRight","OSLeft","OSRight"]),Ea=["Ctrl","Alt","Shift","Super"];function Su(i){return Tu.has(i.code)||["Control","Alt","Shift","Meta","OS","AltGraph"].includes(i.key)}function Pa(i){return Ea.filter(r=>({Ctrl:i.ctrlKey,Alt:i.altKey,Shift:i.shiftKey,Super:i.metaKey})[r])}function Xr(i){return/^Key[A-Z]$/.test(i)?i.slice(3):/^Digit\d$/.test(i)?i.slice(5):i}function Du(i){return Su(i)||!i.code?null:[...Pa(i),Xr(i.code)].join("+")}function Oa(i){const r=String(i||"").split("+").map(u=>u.trim()).filter(Boolean),a={control:"Ctrl",ctrl:"Ctrl",alt:"Alt",option:"Alt",shift:"Shift",super:"Super",win:"Super",meta:"Super",cmd:"Super",command:"Super",cmdorctrl:"Ctrl",commandorcontrol:"Ctrl"},s=[],d=[];for(const u of r){const c=a[u.toLowerCase()];c?s.includes(c)||s.push(c):d.push(u.length===1||u===u.toLowerCase()?u.charAt(0).toUpperCase()+u.slice(1):u)}return s.sort((u,c)=>Ea.indexOf(u)-Ea.indexOf(c)),{mods:s,keys:d}}function eo(i){const{mods:r,keys:a}=Oa(i);return[...r,...a].join("+")}const Cu={Super:"Win",ArrowUp:"↑",ArrowDown:"↓",ArrowLeft:"←",ArrowRight:"→",Backquote:"`",Minus:"-",Equal:"=",BracketLeft:"[",BracketRight:"]",Backslash:"\\",Semicolon:";",Quote:"'",Comma:",",Period:".",Slash:"/"};function xa(i){const{mods:r,keys:a}=Oa(i);return[...r,...a].map(s=>Cu[s]||s.replace(/^Numpad/,"Num "))}const fr={"Ctrl+Alt+Delete":t("Windows uses it for the security screen"),"Ctrl+Shift+Escape":t("Windows uses it for Task Manager"),"Ctrl+Escape":t("Windows uses it for the Start menu"),"Alt+Tab":t("Windows uses it to switch windows"),"Alt+F4":t("Windows uses it to close windows"),"Alt+Escape":t("Windows uses it to switch windows"),"Alt+Space":t("Windows uses it for the window menu"),"Ctrl+C":t("it is Copy in every app"),"Ctrl+V":t("it is Paste in every app"),"Ctrl+X":t("it is Cut in every app"),"Ctrl+Z":t("it is Undo in every app"),"Ctrl+Y":t("it is Redo in many apps"),"Ctrl+A":t("it is Select all in every app"),"Ctrl+S":t("it is Save in every app"),"Ctrl+P":t("it is Print in every app"),"Ctrl+F":t("it is Find in every app"),"Ctrl+N":t("it is New in most apps"),"Ctrl+O":t("it is Open in most apps"),"Ctrl+W":t("it closes tabs in most apps"),"Ctrl+T":t("it opens tabs in browsers"),"Ctrl+Tab":t("it switches tabs in most apps")},Au=new Set(["E","2","3","4","5","7","8","9","0","Q","Minus","Equal","BracketLeft","BracketRight","Backslash"]),Eu=/^F([1-9]|1\d|2[0-4])$/;function Pu(i,r=[]){const{mods:a,keys:s}=Oa(i),d=[...a,...s].join("+");if(!s.length)return{error:t("Press a key together with Ctrl, Alt, Shift or Win."),warning:""};if(s.length>1)return{error:t("A hotkey has one key besides Ctrl, Alt, Shift and Win."),warning:""};const u=s[0],c=/^F(1[3-9]|2[0-4])$/.test(u);if(!a.length&&!c)return{error:t("A global hotkey needs Ctrl, Alt or Win, otherwise it takes the key away from every app."),warning:""};if(a.length===1&&a[0]==="Shift"&&!Eu.test(u))return{error:t("Shift with a key is just typing. Add Ctrl, Alt or Win."),warning:""};if(a.length===1&&a[0]==="Super")return{error:t("Windows uses Win with a single key for itself. Add Ctrl, Alt or Shift."),warning:""};if(fr[d])return{error:t("{key} cannot be used: {why}.",{key:d,why:fr[d]}),warning:""};if(r.map(eo).includes(d))return{error:t("{key} is already another HourWarden hotkey.",{key:d}),warning:""};const m=a.length===2&&a.includes("Ctrl")&&a.includes("Alt")&&Au.has(u)?t("On many European keyboards Ctrl+Alt+{key} types a character (like € or @); you may lose that character.",{key:Xr(u)}):a.length===1&&a[0]==="Alt"&&/^[A-Z]$/.test(u)?t("Alt+{key} opens menus in many apps.",{key:u}):"";return{error:t(""),warning:m}}var ra=f('<span class="plus svelte-1uxexft">+</span>'),oa=f('<!><kbd class="svelte-1uxexft"> </kbd>',1),qu=f('<span class="keys svelte-1uxexft"></span> <button class="svelte-1uxexft"> </button>',1),Wu=f('<span class="keys svelte-1uxexft"><!><span class="plus svelte-1uxexft">+</span><span class="muted svelte-1uxexft">…</span></span>'),kr=f('<span class="keys svelte-1uxexft"></span>'),$u=f('<span class="muted pulse svelte-1uxexft"> </span>'),Mu=f('<button class="primary svelte-1uxexft"> </button> <button class="svelte-1uxexft"> </button>',1),Iu=f('<div role="status" aria-live="polite"><!></div> <!> <button class="link svelte-1uxexft"> </button>',1),Hu=f("<div> </div>"),Nu=f('<div class="small muted svelte-1uxexft"> </div>'),Ou=f('<div class="hotkey svelte-1uxexft"><!></div> <!>',1);function Lu(i,r){Yt(r,!0);let a=Kt(r,"others",19,()=>[]),s=Z("idle"),d=Z(jt([])),u=Z(""),c=Z(""),m=Z(""),_=Z(!1);function z(le){if(le.preventDefault(),le.stopImmediatePropagation(),le.type==="keyup"){e(s)==="recording"&&g(d,Pa(le),!0);return}if(le.key==="Escape"&&!le.ctrlKey&&!le.altKey&&!le.shiftKey&&!le.metaKey)return P();g(d,Pa(le),!0);const S=Du(le);if(!S||le.repeat)return;const T=Pu(S,a());g(u,S,!0),g(c,T.error,!0),g(m,T.warning,!0),e(c)||(g(s,"confirm"),w(!1))}function w(le){for(const S of["keydown","keyup"])le?window.addEventListener(S,z,{capture:!0}):window.removeEventListener(S,z,{capture:!0})}async function b(){await be("hotkeys_suspend",{suspend:!0}),g(u,""),g(c,""),g(m,""),g(d,[],!0),g(s,"recording"),w(!0)}async function P(){w(!1),g(s,"idle"),g(d,[],!0),await be("hotkeys_suspend",{suspend:!1})}async function de(){g(_,!0);try{await r.onsave(eo(e(u))),g(c,""),await P()}catch(le){g(c,String(le),!0),g(s,"recording"),w(!0)}finally{g(_,!1)}}go(()=>{e(s)!=="idle"&&P()});var xe=Ou(),_e=at(xe),Le=p(_e);{var Ee=le=>{var S=qu(),T=at(S);ot(T,21,()=>xa(r.value),Et,(k,q,N)=>{var pe=oa(),Ke=at(pe);{var ae=re=>{var Me=ra();v(re,Me)};$(Ke,re=>{N&&re(ae)})}var W=n(Ke),Y=l(W,!0);h(()=>o(Y,e(q))),v(k,pe)});var x=n(T,2),O=l(x,!0);h(k=>{F(T,"aria-label",`${r.label??""}: ${r.value??""}`),o(O,k)},[()=>t("Change…")]),ee("click",x,b),v(le,S)},Ie=le=>{var S=Iu(),T=at(S);let x;var O=p(T);{var k=W=>{var Y=en(),re=at(Y);{var Me=ne=>{var Q=Wu(),ve=p(Q);ot(ve,17,()=>e(d),Et,(Te,Pe,Be)=>{var he=oa(),Re=at(he);{var He=V=>{var je=ra();v(V,je)};$(Re,V=>{Be&&V(He)})}var Ye=n(Re),H=l(Ye,!0);h(V=>o(H,V),[()=>e(Pe)==="Super"?t("Win"):e(Pe)]),v(Te,he)}),v(ne,Q)},Ue=ne=>{var Q=kr();ot(Q,21,()=>xa(e(u)),Et,(ve,Te,Pe)=>{var Be=oa(),he=at(Be);{var Re=H=>{var V=ra();v(H,V)};$(he,H=>{Pe&&H(Re)})}var He=n(he),Ye=l(He,!0);h(()=>o(Ye,e(Te))),v(ve,Be)}),v(ne,Q)},ce=ne=>{var Q=$u(),ve=l(Q,!0);h(Te=>o(ve,Te),[()=>t("Press the new hotkey…")]),v(ne,Q)};$(re,ne=>{e(d).length?ne(Me):e(u)&&e(c)?ne(Ue,1):ne(ce,-1)})}v(W,Y)},q=W=>{var Y=kr();ot(Y,21,()=>xa(e(u)),Et,(re,Me,Ue)=>{var ce=oa(),ne=at(ce);{var Q=Pe=>{var Be=ra();v(Pe,Be)};$(ne,Pe=>{Ue&&Pe(Q)})}var ve=n(ne),Te=l(ve,!0);h(()=>o(Te,e(Me))),v(re,ce)}),v(W,Y)};$(O,W=>{e(s)==="recording"?W(k):W(q,-1)})}var N=n(T,2);{var pe=W=>{var Y=Mu(),re=at(Y),Me=l(re,!0),Ue=n(re,2),ce=l(Ue,!0);h((ne,Q)=>{re.disabled=e(_),o(Me,ne),Ue.disabled=e(_),o(ce,Q)},[()=>t("Use this"),()=>t("Again")]),ee("click",re,de),ee("click",Ue,b),v(W,Y)};$(N,W=>{e(s)==="confirm"&&W(pe)})}var Ke=n(N,2),ae=l(Ke,!0);h(W=>{x=Tt(T,1,"recorder svelte-1uxexft",null,x,{bad:e(c)}),o(ae,W)},[()=>t("Cancel")]),ee("click",Ke,P),v(le,S)};$(Le,le=>{e(s)==="idle"?le(Ee):le(Ie,-1)})}var we=n(_e,2);{var vt=le=>{var S=Hu();let T;var x=l(S,!0);h(()=>{T=Tt(S,1,"small svelte-1uxexft",null,T,{error:e(c),warn:!e(c)}),o(x,e(c)||e(m))}),v(le,S)},G=le=>{var S=Nu(),T=l(S,!0);h(x=>o(T,x),[()=>t("Hold Ctrl, Alt, Shift or Win and press a key. Esc cancels. Your current hotkeys are off while you record.")]),v(le,S)};$(we,le=>{e(s)!=="idle"&&(e(c)||e(m))?le(vt):e(s)==="recording"&&le(G,1)})}v(i,xe),Jt()}Gt(["click"]);var Bu=f('<div class="error small svelte-1v8xn86"> </div>'),Ru=f('<div class="column svelte-1v8xn86"><!></div>'),Ku=f('<input type="checkbox"/>'),Uu=f('<input type="number" class="svelte-1v8xn86"/> <span class="muted small svelte-1v8xn86"> </span>',1),Fu=f("<option> </option>"),Vu=f("<select></select>"),Gu=f('<span class="muted small svelte-1v8xn86"> </span> <button> </button>',1),_r=f("<input/>"),Yu=f('<input type="password" autocomplete="new-password"/>'),Ju=f('<button class="link"> </button>'),Qu=f('<span class="muted small svelte-1v8xn86"> </span>'),Zu=f('<div class="setting svelte-1v8xn86"><div class="text svelte-1v8xn86"><div class="label svelte-1v8xn86"> </div> <div class="muted small svelte-1v8xn86"> </div> <!></div> <div class="control svelte-1v8xn86"><!> <!> <!></div></div>'),Xu=f('<section class="card svelte-1v8xn86"><h3 class="svelte-1v8xn86"> </h3> <!></section>'),ec=f('<p class="small svelte-1v8xn86"> </p>'),tc=f('<div class="backup small svelte-1v8xn86"><span> <span class="muted"> <!></span></span> <button class="link"> </button></div>'),wr=f('<div class="muted small svelte-1v8xn86"> </div>'),nc=f('<section class="card svelte-1v8xn86"><h3 class="svelte-1v8xn86"> </h3> <p class="muted small svelte-1v8xn86"> <code> </code> <em> </em> </p> <div class="actions svelte-1v8xn86"><button> </button> <button> </button> <button> </button></div> <!> <!> <!></section>'),ac=f('<span class="error"> </span>'),rc=f('<section class="card svelte-1v8xn86"><h3 class="svelte-1v8xn86"> </h3> <p> </p> <p> </p> <p> <!></p></section>'),oc=f('<h1 class="svelte-1v8xn86"> </h1> <input class="search svelte-1v8xn86"/> <section class="card guide svelte-1v8xn86"><div class="text svelte-1v8xn86"><div class="label svelte-1v8xn86"> </div> <div class="muted small svelte-1v8xn86"> </div></div> <button> </button></section> <!> <!> <!>',1);function sc(i,r){Yt(r,!0);let a=Z(jt([])),s=Z(jt({})),d=jt({}),u=Z(""),c=Z(null),m=Kt(r,"query",3,""),_=Z(jt(Cn(()=>m()))),z=Z(null),w=Z("");async function b(){const ce=await be("settings_list");g(a,ce.defs.filter(ne=>ne.key!=="own_company").map(Er),!0),g(s,ce.values,!0),g(c,await be("sources"),!0),g(z,await be("backups"),!0)}async function P(){try{const ce=await be("backup_now");g(w,t("Saved {path}",{path:ce}),!0),g(z,await be("backups"),!0)}catch(ce){g(w,String(ce),!0)}}async function de(ce){if(await Nn(t("Replace all customers, rules, settings and hours with the backup {name}? A backup of what you have now is made first.",{name:ce.name}),{title:t("Restore backup"),kind:"warning"}))try{const Q=await be("restore_backup",{name:ce.name});g(w,t("Restored {name}. Your data from before is in {safety}.",{name:ce.name,safety:Q}),!0),await b()}catch(Q){g(w,String(Q),!0)}}const xe=ce=>ce>1048576?`${(ce/1048576).toFixed(1)} MB`:`${Math.max(1,Math.round(ce/1024))} kB`;async function _e(ce,ne){try{await be("set_setting",{key:ce,value:ne}),d[ce]="",g(u,ce,!0),setTimeout(()=>g(u,""),1500),await b()}catch(Q){d[ce]=String(Q)}}async function Le(ce,ne){await be("set_setting",{key:ce,value:ne}),d[ce]="",g(u,ce,!0),setTimeout(()=>g(u,""),1500),await b()}async function Ee(ce){await be("reset_setting",{key:ce}),d[ce]="",await b()}let Ie=C(()=>e(a).filter(ce=>!e(_)||(ce.label+" "+ce.description+" "+ce.group).toLowerCase().includes(e(_).toLowerCase()))),we=C(()=>[...new Set(e(Ie).map(ce=>ce.group))]);const vt=ce=>JSON.stringify(e(s)[ce.key])===JSON.stringify(ce.default);on(b);var G=oc(),le=at(G),S=l(le,!0),T=n(le,2),x=n(T,2),O=p(x),k=p(O),q=l(k,!0),N=n(k,2),pe=l(N,!0),Ke=n(O,2),ae=l(Ke,!0),W=n(x,2);ot(W,17,()=>e(we),Et,(ce,ne)=>{var Q=Xu(),ve=p(Q),Te=l(ve,!0),Pe=n(ve,2);ot(Pe,17,()=>e(Ie).filter(Be=>Be.group===e(ne)),Be=>Be.key,(Be,he)=>{var Re=Zu(),He=p(Re),Ye=p(He),H=l(Ye,!0),V=n(Ye,2),je=l(V,!0),qe=n(V,2);{var ze=E=>{var I=Bu(),te=l(I,!0);h(()=>o(te,d[e(he).key])),v(E,I)};$(qe,E=>{d[e(he).key]&&E(ze)})}var it=n(He,2),K=p(it);{var De=E=>{var I=Ru(),te=p(I);{let R=C(()=>e(a).filter(ie=>ie.key.startsWith("hotkey_")&&ie.key!==e(he).key).map(ie=>e(s)[ie.key]));Lu(te,{get value(){return e(s)[e(he).key]},get label(){return e(he).label},get others(){return e(R)},onsave:ie=>Le(e(he).key,ie)})}v(E,I)},ye=C(()=>e(he).key.startsWith("hotkey_")),Ze=E=>{var I=Ku();h(()=>{Sn(I,e(s)[e(he).key]),F(I,"aria-label",e(he).label)}),ee("change",I,te=>_e(e(he).key,te.currentTarget.checked)),v(E,I)},mt=E=>{var I=Uu(),te=at(I),R=n(te,2),ie=l(R,!0);h(()=>{F(te,"min",e(he).kind.min),F(te,"max",e(he).kind.max),Tn(te,e(s)[e(he).key]),F(te,"aria-label",e(he).label),o(ie,e(he).kind.unit)}),ee("change",te,ge=>_e(e(he).key,Number(ge.currentTarget.value))),v(E,I)},Ne=E=>{var I=Vu();ot(I,21,()=>e(he).kind.options,([R,ie])=>R,(R,ie)=>{var ge=C(()=>hn(e(ie),2));let Ae=()=>e(ge)[0],nt=()=>e(ge)[1];var st=Fu(),dt=l(st,!0),Fe={};h(()=>{o(dt,nt()),Fe!==(Fe=Ae())&&(st.value=(st.__value=Fe)??"")}),v(R,st)});var te;gn(I),h(()=>{F(I,"aria-label",e(he).label),te!==(te=e(s)[e(he).key])&&(I.value=(I.__value=te)??"",Ma(I,te))}),ee("change",I,R=>_e(e(he).key,R.currentTarget.value)),v(E,I)},lt=E=>{var I=Gu(),te=at(I),R=l(te,!0),ie=n(te,2),ge=l(ie,!0);h((Ae,nt)=>{o(R,Ae),o(ge,nt)},[()=>Dn((e(s)[e(he).key]||[]).length,"1 repository","{n} repositories"),()=>t("Manage on the Plugins screen")]),ee("click",ie,()=>Do("navigate","plugins")),v(E,I)},U=E=>{var I=_r();h(te=>{Tn(I,te),F(I,"aria-label",e(he).label)},[()=>(e(s)[e(he).key]||[]).join(", ")]),ee("change",I,te=>_e(e(he).key,te.currentTarget.value)),v(E,I)},oe=E=>{var I=Yu();h(()=>{Tn(I,e(s)[e(he).key]),F(I,"aria-label",e(he).label)}),ee("change",I,te=>_e(e(he).key,te.currentTarget.value)),v(E,I)},ke=E=>{var I=_r();h(()=>{Tn(I,e(s)[e(he).key]),F(I,"aria-label",e(he).label)}),ee("change",I,te=>_e(e(he).key,te.currentTarget.value)),v(E,I)};$(K,E=>{e(ye)?E(De):e(he).kind.type==="bool"?E(Ze,1):e(he).kind.type==="number"?E(mt,2):e(he).kind.type==="choice"?E(Ne,3):e(he).kind.type==="repositories"?E(lt,4):e(he).kind.type==="list"?E(U,5):e(he).key==="backup_password"?E(oe,6):E(ke,-1)})}var me=n(K,2);{var M=E=>{var I=Ju(),te=l(I,!0);h(R=>o(te,R),[()=>t("Reset")]),ee("click",I,()=>Ee(e(he).key)),v(E,I)},D=C(()=>!vt(e(he)));$(me,E=>{e(D)&&E(M)})}var J=n(me,2);{var $e=E=>{var I=Qu(),te=l(I,!0);h(R=>o(te,R),[()=>t("Saved")]),v(E,I)};$(J,E=>{e(u)===e(he).key&&E($e)})}h(()=>{o(H,e(he).label),o(je,e(he).description)}),v(Be,Re)}),h(()=>o(Te,e(ne))),v(ce,Q)});var Y=n(W,2);{var re=ce=>{var ne=nc(),Q=p(ne),ve=l(Q,!0),Te=n(Q,2),Pe=p(Te),Be=n(Pe),he=l(Be,!0),Re=n(Be),He=n(Re),Ye=l(He,!0),H=n(He),V=n(Te,2),je=p(V),qe=l(je,!0),ze=n(je,2),it=l(ze,!0),K=n(ze,2),De=l(K,!0),ye=n(V,2);{var Ze=U=>{var oe=ec(),ke=l(oe,!0);h(()=>o(ke,e(w))),v(U,oe)};$(ye,U=>{e(w)&&U(Ze)})}var mt=n(ye,2);ot(mt,17,()=>e(z).backups.slice(0,8),U=>U.name,(U,oe)=>{var ke=tc(),me=p(ke),M=p(me),D=n(M),J=p(D),$e=n(J);{var E=R=>{var ie=_n();h(ge=>o(ie,`· ${ge??""}`),[()=>t("encrypted")]),v(R,ie)};$($e,R=>{e(oe).encrypted&&R(E)})}var I=n(me,2),te=l(I,!0);h((R,ie)=>{o(M,`${e(oe).name??""} `),o(J,`· ${R??""}`),o(te,ie)},[()=>xe(e(oe).bytes),()=>t("Restore")]),ee("click",I,()=>de(e(oe))),v(U,ke)},U=>{var oe=wr(),ke=l(oe,!0);h(me=>o(ke,me),[()=>t("No backups yet.")]),v(U,oe)});var Ne=n(mt,2);{var lt=U=>{var oe=wr(),ke=l(oe,!0);h(me=>o(ke,me),[()=>t("and {x} older",{x:e(z).backups.length-8})]),v(U,oe)};$(Ne,U=>{e(z).backups.length>8&&U(lt)})}h((U,oe,ke,me,M,D,J,$e)=>{o(ve,U),o(Pe,`${oe??""} `),o(he,e(z).folder),o(Re,`${ke??""} `),o(Ye,me),o(H,` ${M??""}`),o(qe,D),o(it,J),o(De,$e)},[()=>t("Backups"),()=>t("A copy of all your customers, rules, settings and hours is made once a day in"),()=>t(". Set"),()=>t("Backup folder"),()=>t("above to keep them on another disk or in a synced folder."),()=>t("Back up now"),()=>t("Open backups folder"),()=>t("Open log folder")]),ee("click",je,P),ee("click",ze,()=>be("open_folder",{which:"backups"})),ee("click",K,()=>be("open_folder",{which:"logs"})),v(ce,ne)};$(Y,ce=>{e(z)&&ce(re)})}var Me=n(Y,2);{var Ue=ce=>{var ne=rc(),Q=p(ne),ve=l(Q,!0),Te=n(Q,2),Pe=l(Te,!0),Be=n(Te,2),he=l(Be,!0),Re=n(Be,2),He=p(Re),Ye=n(He);{var H=V=>{var je=ac(),qe=l(je,!0);h(ze=>o(qe,ze),[()=>t('— limit reached, raise "Maximum files in the folder index"')]),v(V,je)};$(Ye,V=>{e(c).index_truncated&&V(H)})}h((V,je,qe,ze)=>{o(ve,V),o(Pe,je),o(he,qe),o(He,`${ze??""} `)},[()=>t("Status"),()=>t("Edge profiles found: {list}",{list:e(c).edge_profiles.length?e(c).edge_profiles.join(", "):t("none")}),()=>t("Obsidian vaults found: {list}",{list:e(c).vaults.length?e(c).vaults.map(V=>V[0]).join(", "):t("none")}),()=>t("Files in the customer-folder index: {indexedfiles}",{indexedfiles:e(c).indexed_files})]),v(ce,ne)};$(Me,ce=>{e(c)&&ce(Ue)})}h((ce,ne,Q,ve,Te,Pe)=>{o(S,ce),F(T,"placeholder",ne),F(T,"aria-label",Q),o(q,ve),o(pe,Te),o(ae,Pe)},[()=>t("Settings"),()=>t("Find a setting"),()=>t("Find a setting"),()=>t("Setup guide"),()=>t("Customers, your company and internal time, detection and the phone, step by step."),()=>t("Open the setup guide")]),Wt(T,()=>e(_),ce=>g(_,ce)),ee("click",Ke,()=>window.dispatchEvent(new CustomEvent("hw-welcome"))),v(i,G),Jt()}Gt(["click","change"]);const Ln=function(i,r){let d=i;const u=Vn[r];let c=null,m=0,_=null;const z=[],w={},b=function(S,T){m=d*4+17,c=(function(x){const O=new Array(x);for(let k=0;k<x;k+=1){O[k]=new Array(x);for(let q=0;q<x;q+=1)O[k][q]=null}return O})(m),P(0,0),P(m-7,0),P(0,m-7),_e(),xe(),Ee(S,T),d>=7&&Le(S),_==null&&(_=vt(d,u,z)),Ie(_,T)},P=function(S,T){for(let x=-1;x<=7;x+=1)if(!(S+x<=-1||m<=S+x))for(let O=-1;O<=7;O+=1)T+O<=-1||m<=T+O||(0<=x&&x<=6&&(O==0||O==6)||0<=O&&O<=6&&(x==0||x==6)||2<=x&&x<=4&&2<=O&&O<=4?c[S+x][T+O]=!0:c[S+x][T+O]=!1)},de=function(){let S=0,T=0;for(let x=0;x<8;x+=1){b(!0,x);const O=jn.getLostPoint(w);(x==0||S>O)&&(S=O,T=x)}return T},xe=function(){for(let S=8;S<m-8;S+=1)c[S][6]==null&&(c[S][6]=S%2==0);for(let S=8;S<m-8;S+=1)c[6][S]==null&&(c[6][S]=S%2==0)},_e=function(){const S=jn.getPatternPosition(d);for(let T=0;T<S.length;T+=1)for(let x=0;x<S.length;x+=1){const O=S[T],k=S[x];if(c[O][k]==null)for(let q=-2;q<=2;q+=1)for(let N=-2;N<=2;N+=1)q==-2||q==2||N==-2||N==2||q==0&&N==0?c[O+q][k+N]=!0:c[O+q][k+N]=!1}},Le=function(S){const T=jn.getBCHTypeNumber(d);for(let x=0;x<18;x+=1){const O=!S&&(T>>x&1)==1;c[Math.floor(x/3)][x%3+m-8-3]=O}for(let x=0;x<18;x+=1){const O=!S&&(T>>x&1)==1;c[x%3+m-8-3][Math.floor(x/3)]=O}},Ee=function(S,T){const x=u<<3|T,O=jn.getBCHTypeInfo(x);for(let k=0;k<15;k+=1){const q=!S&&(O>>k&1)==1;k<6?c[k][8]=q:k<8?c[k+1][8]=q:c[m-15+k][8]=q}for(let k=0;k<15;k+=1){const q=!S&&(O>>k&1)==1;k<8?c[8][m-k-1]=q:k<9?c[8][15-k-1+1]=q:c[8][15-k-1]=q}c[m-8][8]=!S},Ie=function(S,T){let x=-1,O=m-1,k=7,q=0;const N=jn.getMaskFunction(T);for(let pe=m-1;pe>0;pe-=2)for(pe==6&&(pe-=1);;){for(let Ke=0;Ke<2;Ke+=1)if(c[O][pe-Ke]==null){let ae=!1;q<S.length&&(ae=(S[q]>>>k&1)==1),N(O,pe-Ke)&&(ae=!ae),c[O][pe-Ke]=ae,k-=1,k==-1&&(q+=1,k=7)}if(O+=x,O<0||m<=O){O-=x,x=-x;break}}},we=function(S,T){let x=0,O=0,k=0;const q=new Array(T.length),N=new Array(T.length);for(let W=0;W<T.length;W+=1){const Y=T[W].dataCount,re=T[W].totalCount-Y;O=Math.max(O,Y),k=Math.max(k,re),q[W]=new Array(Y);for(let ne=0;ne<q[W].length;ne+=1)q[W][ne]=255&S.getBuffer()[ne+x];x+=Y;const Me=jn.getErrorCorrectPolynomial(re),ce=ea(q[W],Me.getLength()-1).mod(Me);N[W]=new Array(Me.getLength()-1);for(let ne=0;ne<N[W].length;ne+=1){const Q=ne+ce.getLength()-N[W].length;N[W][ne]=Q>=0?ce.getAt(Q):0}}let pe=0;for(let W=0;W<T.length;W+=1)pe+=T[W].totalCount;const Ke=new Array(pe);let ae=0;for(let W=0;W<O;W+=1)for(let Y=0;Y<T.length;Y+=1)W<q[Y].length&&(Ke[ae]=q[Y][W],ae+=1);for(let W=0;W<k;W+=1)for(let Y=0;Y<T.length;Y+=1)W<N[Y].length&&(Ke[ae]=N[Y][W],ae+=1);return Ke},vt=function(S,T,x){const O=br.getRSBlocks(S,T),k=yr();for(let N=0;N<x.length;N+=1){const pe=x[N];k.put(pe.getMode(),4),k.put(pe.getLength(),jn.getLengthInBits(pe.getMode(),S)),pe.write(k)}let q=0;for(let N=0;N<O.length;N+=1)q+=O[N].dataCount;if(k.getLengthInBits()>q*8)throw"code length overflow. ("+k.getLengthInBits()+">"+q*8+")";for(k.getLengthInBits()+4<=q*8&&k.put(0,4);k.getLengthInBits()%8!=0;)k.putBit(!1);for(;!(k.getLengthInBits()>=q*8||(k.put(236,8),k.getLengthInBits()>=q*8));)k.put(17,8);return we(k,O)};w.addData=function(S,T){T=T||"Byte";let x=null;switch(T){case"Numeric":x=ic(S);break;case"Alphanumeric":x=lc(S);break;case"Byte":x=dc(S);break;case"Kanji":x=uc(S);break;default:throw"mode:"+T}z.push(x),_=null},w.isDark=function(S,T){if(S<0||m<=S||T<0||m<=T)throw S+","+T;return c[S][T]},w.getModuleCount=function(){return m},w.make=function(){if(d<1){let S=1;for(;S<40;S++){const T=br.getRSBlocks(S,u),x=yr();for(let k=0;k<z.length;k++){const q=z[k];x.put(q.getMode(),4),x.put(q.getLength(),jn.getLengthInBits(q.getMode(),S)),q.write(x)}let O=0;for(let k=0;k<T.length;k++)O+=T[k].dataCount;if(x.getLengthInBits()<=O*8)break}d=S}b(!1,de())},w.createTableTag=function(S,T){S=S||2,T=typeof T>"u"?S*4:T;let x="";x+='<table style="',x+=" border-width: 0px; border-style: none;",x+=" border-collapse: collapse;",x+=" padding: 0px; margin: "+T+"px;",x+='">',x+="<tbody>";for(let O=0;O<w.getModuleCount();O+=1){x+="<tr>";for(let k=0;k<w.getModuleCount();k+=1)x+='<td style="',x+=" border-width: 0px; border-style: none;",x+=" border-collapse: collapse;",x+=" padding: 0px; margin: 0px;",x+=" width: "+S+"px;",x+=" height: "+S+"px;",x+=" background-color: ",x+=w.isDark(O,k)?"#000000":"#ffffff",x+=";",x+='"/>';x+="</tr>"}return x+="</tbody>",x+="</table>",x},w.createSvgTag=function(S,T,x,O){let k={};typeof arguments[0]=="object"&&(k=arguments[0],S=k.cellSize,T=k.margin,x=k.alt,O=k.title),S=S||2,T=typeof T>"u"?S*4:T,x=typeof x=="string"?{text:x}:x||{},x.text=x.text||null,x.id=x.text?x.id||"qrcode-description":null,O=typeof O=="string"?{text:O}:O||{},O.text=O.text||null,O.id=O.text?O.id||"qrcode-title":null;const q=w.getModuleCount()*S+T*2;let N,pe,Ke,ae,W="",Y;for(Y="l"+S+",0 0,"+S+" -"+S+",0 0,-"+S+"z ",W+='<svg version="1.1" xmlns="http://www.w3.org/2000/svg"',W+=k.scalable?"":' width="'+q+'px" height="'+q+'px"',W+=' viewBox="0 0 '+q+" "+q+'" ',W+=' preserveAspectRatio="xMinYMin meet"',W+=O.text||x.text?' role="img" aria-labelledby="'+G([O.id,x.id].join(" ").trim())+'"':"",W+=">",W+=O.text?'<title id="'+G(O.id)+'">'+G(O.text)+"</title>":"",W+=x.text?'<description id="'+G(x.id)+'">'+G(x.text)+"</description>":"",W+='<rect width="100%" height="100%" fill="white" cx="0" cy="0"/>',W+='<path d="',Ke=0;Ke<w.getModuleCount();Ke+=1)for(ae=Ke*S+T,N=0;N<w.getModuleCount();N+=1)w.isDark(Ke,N)&&(pe=N*S+T,W+="M"+pe+","+ae+Y);return W+='" stroke="transparent" fill="black"/>',W+="</svg>",W},w.createDataURL=function(S,T){S=S||2,T=typeof T>"u"?S*4:T;const x=w.getModuleCount()*S+T*2,O=T,k=x-T;return mc(x,x,function(q,N){if(O<=q&&q<k&&O<=N&&N<k){const pe=Math.floor((q-O)/S),Ke=Math.floor((N-O)/S);return w.isDark(Ke,pe)?0:1}else return 1})},w.createImgTag=function(S,T,x){S=S||2,T=typeof T>"u"?S*4:T;const O=w.getModuleCount()*S+T*2;let k="";return k+="<img",k+=' src="',k+=w.createDataURL(S,T),k+='"',k+=' width="',k+=O,k+='"',k+=' height="',k+=O,k+='"',x&&(k+=' alt="',k+=G(x),k+='"'),k+="/>",k};const G=function(S){let T="";for(let x=0;x<S.length;x+=1){const O=S.charAt(x);switch(O){case"<":T+="&lt;";break;case">":T+="&gt;";break;case"&":T+="&amp;";break;case'"':T+="&quot;";break;default:T+=O;break}}return T},le=function(S){S=typeof S>"u"?2:S;const x=w.getModuleCount()*1+S*2,O=S,k=x-S;let q,N,pe,Ke,ae;const W={"██":"█","█ ":"▀"," █":"▄","  ":" "},Y={"██":"▀","█ ":"▀"," █":" ","  ":" "};let re="";for(q=0;q<x;q+=2){for(pe=Math.floor((q-O)/1),Ke=Math.floor((q+1-O)/1),N=0;N<x;N+=1)ae="█",O<=N&&N<k&&O<=q&&q<k&&w.isDark(pe,Math.floor((N-O)/1))&&(ae=" "),O<=N&&N<k&&O<=q+1&&q+1<k&&w.isDark(Ke,Math.floor((N-O)/1))?ae+=" ":ae+="█",re+=S<1&&q+1>=k?Y[ae]:W[ae];re+=`
 `}return x%2&&S>0?re.substring(0,re.length-x-1)+Array(x+1).join("▀"):re.substring(0,re.length-1)};return w.createASCII=function(S,T){if(S=S||1,S<2)return le(T);S-=1,T=typeof T>"u"?S*2:T;const x=w.getModuleCount()*S+T*2,O=T,k=x-T;let q,N,pe,Ke;const ae=Array(S+1).join("██"),W=Array(S+1).join("  ");let Y="",re="";for(q=0;q<x;q+=1){for(pe=Math.floor((q-O)/S),re="",N=0;N<x;N+=1)Ke=1,O<=N&&N<k&&O<=q&&q<k&&w.isDark(pe,Math.floor((N-O)/S))&&(Ke=0),re+=Ke?ae:W;for(pe=0;pe<S;pe+=1)Y+=re+`
-`}return Y.substring(0,Y.length-1)},w.renderTo2dContext=function(S,T){T=T||2;const x=w.getModuleCount();for(let O=0;O<x;O++)for(let k=0;k<x;k++)S.fillStyle=w.isDark(O,k)?"black":"white",S.fillRect(k*T,O*T,T,T)},w};Ln.stringToBytes=function(i){const r=[];for(let a=0;a<i.length;a+=1){const s=i.charCodeAt(a);r.push(s&255)}return r};Ln.createStringToBytes=function(i,r){const a=(function(){const d=vc(i),u=function(){const _=d.read();if(_==-1)throw"eof";return _};let c=0;const m={};for(;;){const _=d.read();if(_==-1)break;const z=u(),w=u(),b=u(),P=String.fromCharCode(_<<8|z),de=w<<8|b;m[P]=de,c+=1}if(c!=r)throw c+" != "+r;return m})(),s=63;return function(d){const u=[];for(let c=0;c<d.length;c+=1){const m=d.charCodeAt(c);if(m<128)u.push(m);else{const _=a[d.charAt(c)];typeof _=="number"?(_&255)==_?u.push(_):(u.push(_>>>8),u.push(_&255)):u.push(s)}}return u}};const ln={MODE_NUMBER:1,MODE_ALPHA_NUM:2,MODE_8BIT_BYTE:4,MODE_KANJI:8},Vn={L:1,M:0,Q:3,H:2},xn={PATTERN000:0,PATTERN001:1,PATTERN010:2,PATTERN011:3,PATTERN100:4,PATTERN101:5,PATTERN110:6,PATTERN111:7},jn=(function(){const i=[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],r=1335,a=7973,s=21522,d={},u=function(c){let m=0;for(;c!=0;)m+=1,c>>>=1;return m};return d.getBCHTypeInfo=function(c){let m=c<<10;for(;u(m)-u(r)>=0;)m^=r<<u(m)-u(r);return(c<<10|m)^s},d.getBCHTypeNumber=function(c){let m=c<<12;for(;u(m)-u(a)>=0;)m^=a<<u(m)-u(a);return c<<12|m},d.getPatternPosition=function(c){return i[c-1]},d.getMaskFunction=function(c){switch(c){case xn.PATTERN000:return function(m,_){return(m+_)%2==0};case xn.PATTERN001:return function(m,_){return m%2==0};case xn.PATTERN010:return function(m,_){return _%3==0};case xn.PATTERN011:return function(m,_){return(m+_)%3==0};case xn.PATTERN100:return function(m,_){return(Math.floor(m/2)+Math.floor(_/3))%2==0};case xn.PATTERN101:return function(m,_){return m*_%2+m*_%3==0};case xn.PATTERN110:return function(m,_){return(m*_%2+m*_%3)%2==0};case xn.PATTERN111:return function(m,_){return(m*_%3+(m+_)%2)%2==0};default:throw"bad maskPattern:"+c}},d.getErrorCorrectPolynomial=function(c){let m=ea([1],0);for(let _=0;_<c;_+=1)m=m.multiply(ea([1,zn.gexp(_)],0));return m},d.getLengthInBits=function(c,m){if(1<=m&&m<10)switch(c){case ln.MODE_NUMBER:return 10;case ln.MODE_ALPHA_NUM:return 9;case ln.MODE_8BIT_BYTE:return 8;case ln.MODE_KANJI:return 8;default:throw"mode:"+c}else if(m<27)switch(c){case ln.MODE_NUMBER:return 12;case ln.MODE_ALPHA_NUM:return 11;case ln.MODE_8BIT_BYTE:return 16;case ln.MODE_KANJI:return 10;default:throw"mode:"+c}else if(m<41)switch(c){case ln.MODE_NUMBER:return 14;case ln.MODE_ALPHA_NUM:return 13;case ln.MODE_8BIT_BYTE:return 16;case ln.MODE_KANJI:return 12;default:throw"mode:"+c}else throw"type:"+m},d.getLostPoint=function(c){const m=c.getModuleCount();let _=0;for(let b=0;b<m;b+=1)for(let P=0;P<m;P+=1){let de=0;const xe=c.isDark(b,P);for(let _e=-1;_e<=1;_e+=1)if(!(b+_e<0||m<=b+_e))for(let Le=-1;Le<=1;Le+=1)P+Le<0||m<=P+Le||_e==0&&Le==0||xe==c.isDark(b+_e,P+Le)&&(de+=1);de>5&&(_+=3+de-5)}for(let b=0;b<m-1;b+=1)for(let P=0;P<m-1;P+=1){let de=0;c.isDark(b,P)&&(de+=1),c.isDark(b+1,P)&&(de+=1),c.isDark(b,P+1)&&(de+=1),c.isDark(b+1,P+1)&&(de+=1),(de==0||de==4)&&(_+=3)}for(let b=0;b<m;b+=1)for(let P=0;P<m-6;P+=1)c.isDark(b,P)&&!c.isDark(b,P+1)&&c.isDark(b,P+2)&&c.isDark(b,P+3)&&c.isDark(b,P+4)&&!c.isDark(b,P+5)&&c.isDark(b,P+6)&&(_+=40);for(let b=0;b<m;b+=1)for(let P=0;P<m-6;P+=1)c.isDark(P,b)&&!c.isDark(P+1,b)&&c.isDark(P+2,b)&&c.isDark(P+3,b)&&c.isDark(P+4,b)&&!c.isDark(P+5,b)&&c.isDark(P+6,b)&&(_+=40);let z=0;for(let b=0;b<m;b+=1)for(let P=0;P<m;P+=1)c.isDark(P,b)&&(z+=1);const w=Math.abs(100*z/m/m-50)/5;return _+=w*10,_},d})(),zn=(function(){const i=new Array(256),r=new Array(256);for(let s=0;s<8;s+=1)i[s]=1<<s;for(let s=8;s<256;s+=1)i[s]=i[s-4]^i[s-5]^i[s-6]^i[s-8];for(let s=0;s<255;s+=1)r[i[s]]=s;const a={};return a.glog=function(s){if(s<1)throw"glog("+s+")";return r[s]},a.gexp=function(s){for(;s<0;)s+=255;for(;s>=256;)s-=255;return i[s]},a})(),ea=function(i,r){if(typeof i.length>"u")throw i.length+"/"+r;const a=(function(){let d=0;for(;d<i.length&&i[d]==0;)d+=1;const u=new Array(i.length-d+r);for(let c=0;c<i.length-d;c+=1)u[c]=i[c+d];return u})(),s={};return s.getAt=function(d){return a[d]},s.getLength=function(){return a.length},s.multiply=function(d){const u=new Array(s.getLength()+d.getLength()-1);for(let c=0;c<s.getLength();c+=1)for(let m=0;m<d.getLength();m+=1)u[c+m]^=zn.gexp(zn.glog(s.getAt(c))+zn.glog(d.getAt(m)));return ea(u,0)},s.mod=function(d){if(s.getLength()-d.getLength()<0)return s;const u=zn.glog(s.getAt(0))-zn.glog(d.getAt(0)),c=new Array(s.getLength());for(let m=0;m<s.getLength();m+=1)c[m]=s.getAt(m);for(let m=0;m<d.getLength();m+=1)c[m]^=zn.gexp(zn.glog(d.getAt(m))+u);return ea(c,0).mod(d)},s},br=(function(){const i=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12,7,37,13],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]],r=function(d,u){const c={};return c.totalCount=d,c.dataCount=u,c},a={},s=function(d,u){switch(u){case Vn.L:return i[(d-1)*4+0];case Vn.M:return i[(d-1)*4+1];case Vn.Q:return i[(d-1)*4+2];case Vn.H:return i[(d-1)*4+3];default:return}};return a.getRSBlocks=function(d,u){const c=s(d,u);if(typeof c>"u")throw"bad rs block @ typeNumber:"+d+"/errorCorrectionLevel:"+u;const m=c.length/3,_=[];for(let z=0;z<m;z+=1){const w=c[z*3+0],b=c[z*3+1],P=c[z*3+2];for(let de=0;de<w;de+=1)_.push(r(b,P))}return _},a})(),yr=function(){const i=[];let r=0;const a={};return a.getBuffer=function(){return i},a.getAt=function(s){const d=Math.floor(s/8);return(i[d]>>>7-s%8&1)==1},a.put=function(s,d){for(let u=0;u<d;u+=1)a.putBit((s>>>d-u-1&1)==1)},a.getLengthInBits=function(){return r},a.putBit=function(s){const d=Math.floor(r/8);i.length<=d&&i.push(0),s&&(i[d]|=128>>>r%8),r+=1},a},ic=function(i){const r=ln.MODE_NUMBER,a=i,s={};s.getMode=function(){return r},s.getLength=function(c){return a.length},s.write=function(c){const m=a;let _=0;for(;_+2<m.length;)c.put(d(m.substring(_,_+3)),10),_+=3;_<m.length&&(m.length-_==1?c.put(d(m.substring(_,_+1)),4):m.length-_==2&&c.put(d(m.substring(_,_+2)),7))};const d=function(c){let m=0;for(let _=0;_<c.length;_+=1)m=m*10+u(c.charAt(_));return m},u=function(c){if("0"<=c&&c<="9")return c.charCodeAt(0)-48;throw"illegal char :"+c};return s},lc=function(i){const r=ln.MODE_ALPHA_NUM,a=i,s={};s.getMode=function(){return r},s.getLength=function(u){return a.length},s.write=function(u){const c=a;let m=0;for(;m+1<c.length;)u.put(d(c.charAt(m))*45+d(c.charAt(m+1)),11),m+=2;m<c.length&&u.put(d(c.charAt(m)),6)};const d=function(u){if("0"<=u&&u<="9")return u.charCodeAt(0)-48;if("A"<=u&&u<="Z")return u.charCodeAt(0)-65+10;switch(u){case" ":return 36;case"$":return 37;case"%":return 38;case"*":return 39;case"+":return 40;case"-":return 41;case".":return 42;case"/":return 43;case":":return 44;default:throw"illegal char :"+u}};return s},dc=function(i){const r=ln.MODE_8BIT_BYTE,a=Ln.stringToBytes(i),s={};return s.getMode=function(){return r},s.getLength=function(d){return a.length},s.write=function(d){for(let u=0;u<a.length;u+=1)d.put(a[u],8)},s},uc=function(i){const r=ln.MODE_KANJI,a=Ln.stringToBytes;(function(u,c){const m=a(u);if(m.length!=2||(m[0]<<8|m[1])!=c)throw"sjis not supported."})("友",38726);const s=a(i),d={};return d.getMode=function(){return r},d.getLength=function(u){return~~(s.length/2)},d.write=function(u){const c=s;let m=0;for(;m+1<c.length;){let _=(255&c[m])<<8|255&c[m+1];if(33088<=_&&_<=40956)_-=33088;else if(57408<=_&&_<=60351)_-=49472;else throw"illegal char at "+(m+1)+"/"+_;_=(_>>>8&255)*192+(_&255),u.put(_,13),m+=2}if(m<c.length)throw"illegal char at "+(m+1)},d},to=function(){const i=[],r={};return r.writeByte=function(a){i.push(a&255)},r.writeShort=function(a){r.writeByte(a),r.writeByte(a>>>8)},r.writeBytes=function(a,s,d){s=s||0,d=d||a.length;for(let u=0;u<d;u+=1)r.writeByte(a[u+s])},r.writeString=function(a){for(let s=0;s<a.length;s+=1)r.writeByte(a.charCodeAt(s))},r.toByteArray=function(){return i},r.toString=function(){let a="";a+="[";for(let s=0;s<i.length;s+=1)s>0&&(a+=","),a+=i[s];return a+="]",a},r},cc=function(){let i=0,r=0,a=0,s="";const d={},u=function(m){s+=String.fromCharCode(c(m&63))},c=function(m){if(m<0)throw"n:"+m;if(m<26)return 65+m;if(m<52)return 97+(m-26);if(m<62)return 48+(m-52);if(m==62)return 43;if(m==63)return 47;throw"n:"+m};return d.writeByte=function(m){for(i=i<<8|m&255,r+=8,a+=1;r>=6;)u(i>>>r-6),r-=6},d.flush=function(){if(r>0&&(u(i<<6-r),i=0,r=0),a%3!=0){const m=3-a%3;for(let _=0;_<m;_+=1)s+="="}},d.toString=function(){return s},d},vc=function(i){const r=i;let a=0,s=0,d=0;const u={};u.read=function(){for(;d<8;){if(a>=r.length){if(d==0)return-1;throw"unexpected end of file./"+d}const _=r.charAt(a);if(a+=1,_=="=")return d=0,-1;if(_.match(/^\s$/))continue;s=s<<6|c(_.charCodeAt(0)),d+=6}const m=s>>>d-8&255;return d-=8,m};const c=function(m){if(65<=m&&m<=90)return m-65;if(97<=m&&m<=122)return m-97+26;if(48<=m&&m<=57)return m-48+52;if(m==43)return 62;if(m==47)return 63;throw"c:"+m};return u},pc=function(i,r){const a=i,s=r,d=new Array(i*r),u={};u.setPixel=function(z,w,b){d[w*a+z]=b},u.write=function(z){z.writeString("GIF87a"),z.writeShort(a),z.writeShort(s),z.writeByte(128),z.writeByte(0),z.writeByte(0),z.writeByte(0),z.writeByte(0),z.writeByte(0),z.writeByte(255),z.writeByte(255),z.writeByte(255),z.writeString(","),z.writeShort(0),z.writeShort(0),z.writeShort(a),z.writeShort(s),z.writeByte(0);const w=2,b=m(w);z.writeByte(w);let P=0;for(;b.length-P>255;)z.writeByte(255),z.writeBytes(b,P,255),P+=255;z.writeByte(b.length-P),z.writeBytes(b,P,b.length-P),z.writeByte(0),z.writeString(";")};const c=function(z){const w=z;let b=0,P=0;const de={};return de.write=function(xe,_e){if(xe>>>_e)throw"length over";for(;b+_e>=8;)w.writeByte(255&(xe<<b|P)),_e-=8-b,xe>>>=8-b,P=0,b=0;P=xe<<b|P,b=b+_e},de.flush=function(){b>0&&w.writeByte(P)},de},m=function(z){const w=1<<z,b=(1<<z)+1;let P=z+1;const de=_();for(let Ie=0;Ie<w;Ie+=1)de.add(String.fromCharCode(Ie));de.add(String.fromCharCode(w)),de.add(String.fromCharCode(b));const xe=to(),_e=c(xe);_e.write(w,P);let Le=0,Ee=String.fromCharCode(d[Le]);for(Le+=1;Le<d.length;){const Ie=String.fromCharCode(d[Le]);Le+=1,de.contains(Ee+Ie)?Ee=Ee+Ie:(_e.write(de.indexOf(Ee),P),de.size()<4095&&(de.size()==1<<P&&(P+=1),de.add(Ee+Ie)),Ee=Ie)}return _e.write(de.indexOf(Ee),P),_e.write(b,P),_e.flush(),xe.toByteArray()},_=function(){const z={};let w=0;const b={};return b.add=function(P){if(b.contains(P))throw"dup key:"+P;z[P]=w,w+=1},b.size=function(){return w},b.indexOf=function(P){return z[P]},b.contains=function(P){return typeof z[P]<"u"},b};return u},mc=function(i,r,a){const s=pc(i,r);for(let m=0;m<r;m+=1)for(let _=0;_<i;_+=1)s.setPixel(_,m,a(_,m));const d=to();s.write(d);const u=cc(),c=d.toByteArray();for(let m=0;m<c.length;m+=1)u.writeByte(c[m]);return u.flush(),"data:image/gif;base64,"+u};Ln.stringToBytes;function hc(i,r=Date.now()){return i?.connected?i.busy?"Syncing…":i.error?i.last_ok?t("Not synced since {ago}: {error}",{ago:Xn(i.last_ok,r),error:ia(i.error)}):t("Not synced yet: {error}",{error:ia(i.error)}):i.last_ok?t("Synced {ago}",{ago:Xn(i.last_ok,r)}):t("Waiting for the first sync"):t("Not connected")}function xr(i){return!i?.connected||!i.backlog?"":Dn(i.backlog,"1 change waiting to be sent","{n} changes waiting to be sent")}function jr(i,r=Date.now()){const a=Math.max(0,Math.floor((i-r)/1e3));return a?`${Math.floor(a/60)}:${String(a%60).padStart(2,"0")}`:""}function gc(i,r=5){const a=Ln(0,"M");return a.addData(i),a.make(),a.createSvgTag({cellSize:r,margin:r*2,scalable:!0})}function fc(i){return{windows:"Windows",linux:"Linux",android:"Android",macos:"macOS",ios:"iOS"}[i]||i||""}var kc=f('<p> </p> <form class="row svelte-qm4dwe"><input class="key-input svelte-qm4dwe" placeholder="ABCD-EFGH-…" autocomplete="off" autocapitalize="characters" spellcheck="false"/> <button class="primary" type="submit"> </button></form>',1),_c=f('<p> </p> <button class="primary"> </button>',1),wc=f('<label class="check no-print svelte-qm4dwe"><input type="checkbox" class="svelte-qm4dwe"/> </label>'),bc=f('<div class="sheet svelte-qm4dwe"><h2 class="print-only svelte-qm4dwe"> </h2> <p class="print-only svelte-qm4dwe"> </p> <div class="key svelte-qm4dwe"> </div> <div class="advice svelte-qm4dwe"><strong> </strong> </div></div> <div class="row no-print svelte-qm4dwe"><button><!> </button> <button><!> </button></div> <!> <div class="row no-print svelte-qm4dwe"><button class="primary"> </button></div>',1),yc=f('<div class="row svelte-qm4dwe"><button> </button> <button class="link danger svelte-qm4dwe"> </button></div>'),xc=f('<p><span class="on svelte-qm4dwe"> </span> </p> <!>',1),jc=f('<p class="muted"> </p> <button> </button>',1),zc=f('<p class="error"> </p>'),Tc=f('<section class="card svelte-qm4dwe"><h3 class="svelte-qm4dwe"><!> </h3> <!> <!></section>');function Sc(i,r){Yt(r,!0);let a=C(()=>r.status?.encryption||{}),s=Z(!1),d=Z(""),u=Z(""),c=Z(""),m=Z(!1),_=Z(!1),z=Z(!1);async function w(q,N){g(s,!0),g(d,"");try{return await be(q,N)}catch(pe){return g(d,String(pe),!0),null}finally{g(s,!1)}}async function b(){if(!await Nn(t("Turn on end-to-end encryption? Your data on the server is replaced by an encrypted copy that only your devices can read. You get a key to store safely: without it, a new device cannot read your data and the server cannot help you get it back."),{title:t("End-to-end encryption"),kind:"warning"}))return;const N=await w("sync_encryption_on");N&&(g(c,N,!0),g(m,!0),g(_,!1),r.onchange?.())}async function P(q){if(q?.preventDefault(),!e(u).trim())return;const N=await w("sync_encryption_key",{key:e(u)});N&&(g(u,""),r.onchange?.(N))}async function de(){const N=e(a).turned_off?t("Turn encryption off on this computer too? It then takes the server's data again."):t("Turn off end-to-end encryption? The encrypted copy on the server is replaced by a readable one, and your other devices are asked to turn it off too.");if(!await Nn(N,{title:t("End-to-end encryption"),kind:"warning"}))return;const pe=await w("sync_encryption_off");pe&&(g(c,""),r.onchange?.(pe))}async function xe(){try{await navigator.clipboard.writeText(e(c)),g(z,!0),setTimeout(()=>g(z,!1),2e3)}catch{g(d,t("Copying did not work; select the key and copy it yourself."),!0)}}function _e(){window.print()}let Le=new Date().toLocaleDateString();var Ee=Tc(),Ie=p(Ee),we=p(Ie);It(we,{name:"lock"});var vt=n(we),G=n(Ie,2);{var le=q=>{var N=kc(),pe=at(N),Ke=l(pe,!0),ae=n(pe,2),W=p(ae),Y=n(W,2),re=l(Y,!0);h((Me,Ue,ce,ne)=>{o(Ke,Me),F(W,"aria-label",Ue),Y.disabled=ce,o(re,ne)},[()=>t("This account's data is encrypted. Enter its encryption key to sync this device. It is in the password manager or on the recovery sheet where you stored it, or shown under Sync on a device that already has it."),()=>t("Encryption key"),()=>e(s)||!e(u).trim(),()=>t("Unlock")]),dn("submit",ae,P),Wt(W,()=>e(u),Me=>g(u,Me)),v(q,N)},S=q=>{var N=_c(),pe=at(N),Ke=l(pe,!0),ae=n(pe,2),W=l(ae,!0);h((Y,re)=>{o(Ke,Y),ae.disabled=e(s),o(W,re)},[()=>t("Encryption was turned off on another device. Turn it off here too to keep syncing."),()=>t("Turn off here too")]),ee("click",ae,de),v(q,N)},T=q=>{var N=xc(),pe=at(N),Ke=p(pe),ae=l(Ke,!0),W=n(Ke),Y=n(pe,2);{var re=Ue=>{var ce=bc(),ne=at(ce),Q=p(ne),ve=l(Q,!0),Te=n(Q,2),Pe=l(Te),Be=n(Te,2),he=l(Be,!0),Re=n(Be,2),He=p(Re),Ye=l(He,!0),H=n(He),V=n(ne,2),je=p(V),qe=p(je);It(qe,{name:"copy",size:13});var ze=n(qe),it=n(je,2),K=p(it);It(K,{name:"print",size:13});var De=n(K),ye=n(V,2);{var Ze=U=>{var oe=wc(),ke=p(oe),me=n(ke);h(M=>o(me,` ${M??""}`),[()=>t("I stored the key somewhere safe")]),qn(ke,()=>e(_),M=>g(_,M)),v(U,oe)};$(ye,U=>{e(m)&&U(Ze)})}var mt=n(ye,2),Ne=p(mt),lt=l(Ne,!0);h((U,oe,ke,me,M,D,J,$e)=>{o(ve,U),o(Pe,`${oe??""}: ${r.status.server??""} · ${Le??""}`),F(Be,"aria-label",ke),o(he,e(c)),o(Ye,me),o(H,` ${M??""}`),o(ze,` ${D??""}`),o(De,` ${J??""}`),Ne.disabled=e(m)&&!e(_),o(lt,$e)},[()=>t("HourWarden encryption key"),()=>t("Server"),()=>t("Encryption key"),()=>t("Store this key somewhere safe."),()=>t("Put it in your password manager (Bitwarden, 1Password, KeePass…), or save the recovery sheet as a PDF and keep it apart from this computer. New devices need it, and if you lose it while no device has it any more, nobody can read the data on the server — not even the server's administrator."),()=>e(z)?t("Copied"):t("Copy"),()=>t("Save as PDF"),()=>t("Done")]),ee("click",je,xe),ee("click",it,_e),ee("click",Ne,()=>(g(c,""),g(m,!1))),v(Ue,ce)},Me=Ue=>{var ce=yc(),ne=p(ce),Q=l(ne,!0),ve=n(ne,2),Te=l(ve,!0);h((Pe,Be)=>{o(Q,Pe),ve.disabled=e(s),o(Te,Be)},[()=>t("Show the key"),()=>t("Turn off")]),ee("click",ne,()=>g(c,e(a).key,!0)),ee("click",ve,de),v(Ue,ce)};$(Y,Ue=>{e(c)?Ue(re):Ue(Me,-1)})}h((Ue,ce)=>{o(ae,Ue),o(W,` ${ce??""}`)},[()=>t("On"),()=>t("Your data leaves this computer encrypted with your own key; the server stores it but cannot read it.")]),v(q,N)},x=q=>{var N=jc(),pe=at(N),Ke=l(pe,!0),ae=n(pe,2),W=l(ae,!0);h((Y,re)=>{o(Ke,Y),ae.disabled=e(s),o(W,re)},[()=>t("Encrypt your data on your devices with a key only you have, so the server stores it but cannot read it. New devices get the key from the pairing QR code."),()=>e(s)?t("Encrypting…"):t("Turn on end-to-end encryption")]),ee("click",ae,b),v(q,N)};$(G,q=>{e(a).needs_key?q(le):e(a).turned_off?q(S,1):e(a).key?q(T,2):q(x,-1)})}var O=n(G,2);{var k=q=>{var N=zc(),pe=l(N,!0);h(()=>o(pe,e(d))),v(q,N)};$(O,q=>{e(d)&&q(k)})}h(q=>o(vt,` ${q??""}`),[()=>t("End-to-end encryption")]),v(i,Ee),Jt()}Gt(["click"]);var zr=f('<p class="error"> </p>'),Dc=f('<section class="card svelte-1a80mlk"><h3 class="svelte-1a80mlk"><!> </h3> <p class="muted"> </p> <form class="svelte-1a80mlk"><label for="sync-server" class="svelte-1a80mlk"> </label> <input id="sync-server" placeholder="app.hourwarden.com" autocomplete="url"/> <label for="sync-user" class="svelte-1a80mlk"> <span class="optional svelte-1a80mlk"> </span></label> <input id="sync-user" autocomplete="username" autocapitalize="off"/> <label for="sync-secret" class="svelte-1a80mlk"> </label> <input id="sync-secret" type="password" autocomplete="off"/> <label for="sync-name" class="svelte-1a80mlk"> </label> <input id="sync-name"/> <div class="actions svelte-1a80mlk"><button class="primary" type="submit"> </button> <span class="muted small svelte-1a80mlk"> <em> </em> </span></div></form> <!></section>'),ja=f('<p class="muted small svelte-1a80mlk"> </p>'),Cc=f('<div class="pairing svelte-1a80mlk"><div class="qr svelte-1a80mlk"></div> <div><p> <strong> </strong> </p> <p class="muted small svelte-1a80mlk"> <code> </code> </p> <div class="code svelte-1a80mlk"> </div> <p class="muted small svelte-1a80mlk"> </p> <!></div></div>'),Ac=f('<p class="muted"> </p> <button> </button>',1),Ec=f('<span class="badge svelte-1a80mlk"> </span>'),Pc=f('<button class="link danger svelte-1a80mlk"> </button>'),qc=f('<div class="device svelte-1a80mlk"><!> <div class="dinfo svelte-1a80mlk"><strong> </strong> <!> <div class="muted small svelte-1a80mlk"> </div></div> <!></div>'),Wc=f('<section class="card svelte-1a80mlk"><h3 class="svelte-1a80mlk"><!> </h3> <p> </p> <!> <p class="muted small svelte-1a80mlk"> <strong> </strong> </p> <div class="actions svelte-1a80mlk"><button class="primary"><!> </button> <button> </button></div> <!></section> <!> <section class="card svelte-1a80mlk"><h3 class="svelte-1a80mlk"><!> </h3> <!></section> <section class="card svelte-1a80mlk"><h3 class="svelte-1a80mlk"> </h3> <!></section>',1),$c=f('<h1 class="svelte-1a80mlk"> </h1> <!>',1);function Mc(i,r){Yt(r,!0);let a=Z(null),s=Z(""),d=Z(""),u=Z(""),c=Z(""),m=Z(!1),_=Z(""),z=Z(null),w=Z(jt([])),b=Z(jt(Date.now()));async function P(){g(a,await be("sync_status"),!0),e(a).connected?de():(g(s,e(s)||e(a).server||"app.hourwarden.com",!0),g(c,e(c)||e(a).device_name||await be("sync_device_name"),!0))}async function de(){try{g(w,await be("sync_devices"),!0)}catch{g(w,[],!0)}}async function xe(x){if(x?.preventDefault(),!(!e(s).trim()||!e(u).trim())){g(m,!0),g(_,"");try{g(a,await be("sync_connect",{server:e(s),user:e(d),secret:e(u),deviceName:e(c)}),!0),g(u,""),de()}catch(O){g(_,String(O),!0)}finally{g(m,!1)}}}async function _e(){g(_,"");try{g(a,await be("sync_now"),!0),de()}catch(x){g(_,String(x),!0),g(a,await be("sync_status"),!0)}}async function Le(){await Nn(t("Stop syncing this computer? Everything stays on this computer; you can connect again later."),{title:t("Disconnect"),kind:"warning"})&&(g(a,await be("sync_disconnect"),!0),g(z,null),g(w,[],!0))}async function Ee(){g(_,"");try{g(z,await be("sync_pairing_code"),!0)}catch(x){g(_,String(x),!0)}}async function Ie(x){if(await Nn(t('Remove "{name}"? It stops syncing at once. Its own data stays on it.',{name:x.name}),{title:t("Remove device"),kind:"warning"}))try{await be("sync_revoke",{id:x.id}),de()}catch(O){g(_,String(O),!0)}}on(()=>{P();const x=setInterval(()=>{g(b,Date.now(),!0),e(z)&&!jr(e(z).expires_at,e(b))&&g(z,null)},1e3),O=Qn("sync",k=>g(a,k.payload,!0));return()=>{clearInterval(x),O.then(k=>k())}});var we=$c(),vt=at(we),G=l(vt,!0),le=n(vt,2);{var S=x=>{var O=Dc(),k=p(O),q=p(k);It(q,{name:"cloud"});var N=n(q),pe=n(k,2),Ke=l(pe,!0),ae=n(pe,2),W=p(ae),Y=l(W,!0),re=n(W,2),Me=n(re,2),Ue=p(Me),ce=n(Ue),ne=l(ce,!0),Q=n(Me,2),ve=n(Q,2),Te=l(ve,!0),Pe=n(ve,2),Be=n(Pe,2),he=l(Be,!0),Re=n(Be,2),He=n(Re,2),Ye=p(He),H=l(Ye,!0),V=n(Ye,2),je=p(V),qe=n(je),ze=l(qe,!0),it=n(qe),K=n(ae,2);{var De=ye=>{var Ze=zr(),mt=l(Ze,!0);h(()=>o(mt,e(_))),v(ye,Ze)};$(K,ye=>{e(_)&&ye(De)})}h((ye,Ze,mt,Ne,lt,U,oe,ke,me,M,D,J,$e)=>{o(N,` ${ye??""}`),o(Ke,Ze),o(Y,mt),o(Ue,`${Ne??""} `),o(ne,lt),o(Te,U),F(Pe,"placeholder",oe),o(he,ke),Ye.disabled=me,o(H,M),o(je,`${D??""} `),o(ze,J),o(it,` ${$e??""}`)},[()=>t("Connect to your server"),()=>t("With your own HourWarden server, this computer, a second computer and your phone share customers, rules, tasks and hours, and the phone can see and steer what this computer tracks. Everything keeps working without a connection; changes are exchanged when it is back."),()=>t("Server address"),()=>t("User name"),()=>t("(only when the server has several users)"),()=>t("Your password, or a pairing code from another device"),()=>t("password or ABCD-EFGH"),()=>t("Name of this computer"),()=>e(m)||!e(s).trim()||!e(u).trim(),()=>e(m)?t("Connecting…"):t("Connect"),()=>t("No server yet? See"),()=>t("Sync"),()=>t("in the help for Uberspace and Docker.")]),dn("submit",ae,xe),Wt(re,()=>e(s),ye=>g(s,ye)),Wt(Q,()=>e(d),ye=>g(d,ye)),Wt(Pe,()=>e(u),ye=>g(u,ye)),Wt(Re,()=>e(c),ye=>g(c,ye)),v(x,O)},T=x=>{var O=Wc(),k=at(O),q=p(k),N=p(q);It(N,{name:"cloud"});var pe=n(N),Ke=n(q,2);let ae;var W=l(Ke,!0),Y=n(Ke,2);{var re=U=>{var oe=ja(),ke=l(oe,!0);h(me=>o(ke,me),[()=>xr(e(a))]),v(U,oe)},Me=C(()=>xr(e(a)));$(Y,U=>{e(Me)&&U(re)})}var Ue=n(Y,2),ce=p(Ue),ne=n(ce),Q=l(ne,!0),ve=n(ne,1,!0),Te=n(Ue,2),Pe=p(Te),Be=p(Pe);It(Be,{name:"sync",size:13});var he=n(Be),Re=n(Pe,2),He=l(Re,!0),Ye=n(Te,2);{var H=U=>{var oe=zr(),ke=l(oe,!0);h(()=>o(ke,e(_))),v(U,oe)};$(Ye,U=>{e(_)&&U(H)})}var V=n(k,2);Sc(V,{get status(){return e(a)},onchange:U=>U?g(a,U,!0):P()});var je=n(V,2),qe=p(je),ze=p(qe);It(ze,{name:"phone"});var it=n(ze),K=n(qe,2);{var De=U=>{var oe=Cc(),ke=p(oe);Dr(ke,()=>gc(e(z).link),!0);var me=n(ke,2),M=p(me),D=p(M),J=n(D),$e=l(J,!0),E=n(J),I=n(M,2),te=p(I),R=n(te),ie=l(R,!0),ge=n(R),Ae=n(I,2),nt=l(Ae,!0),st=n(Ae,2),dt=l(st,!0),Fe=n(st,2);{var Xe=Ve=>{var A=ja(),B=l(A,!0);h(X=>o(B,X),[()=>t("The QR code also carries your encryption key. When you type the code instead, the other device asks for the key too.")]),v(Ve,A)};$(Fe,Ve=>{e(a).encryption?.key&&Ve(Xe)})}h((Ve,A,B,X,We,ut,et)=>{F(ke,"aria-label",Ve),o(D,`${A??""} `),o($e,B),o(E,` ${X??""}`),o(te,`${We??""} `),o(ie,e(z).server),o(ge,` ${ut??""}`),o(nt,e(z).code),o(dt,et)},[()=>t("QR code for the HourWarden app"),()=>t("In the HourWarden app on your phone, tap"),()=>t("Scan code"),()=>t("and point the camera here."),()=>t("Or enter the server address"),()=>t("and this code:"),()=>t("Works once, for {expiresat} more.",{expiresat:jr(e(z).expires_at,e(b))})]),v(U,oe)},ye=U=>{var oe=Ac(),ke=at(oe),me=l(ke,!0),M=n(ke,2),D=l(M,!0);h((J,$e)=>{o(me,J),o(D,$e)},[()=>t("A pairing code lets another device join without the password. It works once, for 10 minutes."),()=>t("Show a pairing code")]),ee("click",M,Ee),v(U,oe)};$(K,U=>{e(z)?U(De):U(ye,-1)})}var Ze=n(je,2),mt=p(Ze),Ne=l(mt,!0),lt=n(mt,2);ot(lt,17,()=>e(w),U=>U.id,(U,oe)=>{var ke=qc(),me=p(ke);{let ge=C(()=>e(oe).platform==="android"||e(oe).platform==="ios"?"phone":"pc");It(me,{get name(){return e(ge)}})}var M=n(me,2),D=p(M),J=l(D,!0),$e=n(D,2);{var E=ge=>{var Ae=Ec(),nt=l(Ae,!0);h(st=>o(nt,st),[()=>t("this computer")]),v(ge,Ae)};$($e,ge=>{e(oe).this_device&&ge(E)})}var I=n($e,2),te=l(I),R=n(M,2);{var ie=ge=>{var Ae=Pc(),nt=l(Ae,!0);h(st=>o(nt,st),[()=>t("Remove")]),ee("click",Ae,()=>Ie(e(oe))),v(ge,Ae)};$(R,ge=>{e(oe).this_device||ge(ie)})}h((ge,Ae)=>{o(J,e(oe).name),o(te,`${ge??""} · ${Ae??""}`)},[()=>fc(e(oe).platform),()=>e(oe).last_seen?t("synced {ago}",{ago:Xn(e(oe).last_seen,e(b))}):t("not synced yet")]),v(U,ke)},U=>{var oe=ja(),ke=l(oe,!0);h(me=>o(ke,me),[()=>t("The device list appears once the server can be reached.")]),v(U,oe)}),h((U,oe,ke,me,M,D,J)=>{o(pe,` ${e(a).server??""}`),ae=Tt(Ke,1,"",null,ae,{error:e(a).warn,muted:!e(a).warn}),o(W,U),o(ce,`${oe??""} `),o(Q,e(a).device_name),o(ve,ke),Pe.disabled=e(a).busy,o(he,` ${me??""}`),o(He,M),o(it,` ${D??""}`),o(Ne,J)},[()=>hc(e(a),e(b)),()=>t("This computer is"),()=>t(". Changes are sent within a quarter of a minute and others' changes fetched every minute."),()=>t("Sync now"),()=>t("Disconnect"),()=>t("Add a phone or computer"),()=>t("Devices")]),ee("click",Pe,_e),ee("click",Re,Le),v(x,O)};$(le,x=>{e(a)&&!e(a).connected?x(S):e(a)&&x(T,1)})}h(x=>o(G,x),[()=>t("Sync")]),v(i,we),Jt()}Gt(["click"]);const Ic=`# Getting started\r
-\r
-HourWarden keeps your hours per customer while you work. It looks at what you are doing (the window in front, your Edge profile, files, meetings), decides which customer that is for, and records the time. You correct it when it is unsure; it learns from that.\r
-\r
-Everything stays on this computer. Nothing is sent anywhere.\r
-\r
-## The first ten minutes\r
-\r
-On a new installation, *Today* opens with a short welcome that does the first steps with you: your customers (with their mail or web domains if you like), the plugins that are useful on this computer (ticked for you, installed with one click), and optionally your phone. After that HourWarden works by itself: it starts with your computer, tracks in the background and makes a backup every day.\r
-\r
-To do it by hand, or to add more later:\r
-\r
-1. **Add your customers** under *Customers*. A name is enough to start. Each customer gets a colour, used for the border around your screen and the top bar.\r
-2. **Tell HourWarden how to recognise them.** On the customer page, under *Recognition*, add what is specific to that customer:\r
-   - its **Edge profile**, if you use one browser profile per customer (the strongest signal);\r
-   - its **folders**, where you keep that customer's files;\r
-   - **aliases**: abbreviations and project names that appear in window titles;\r
-   - **domains and Microsoft IDs**: mail domains, web domains, the tenant ID.\r
-3. **Work as usual.** The top bar shows which customer the time goes to. When HourWarden does not know, it asks after a few minutes; your answer can be remembered for that folder, Edge profile or program.\r
-4. **At the end of the day** open *Time → Day* to check the day and fix anything that is off.\r
-\r
-## Finding your way\r
-\r
-The menu on the left is grouped:\r
-\r
-| Group | Screen | What it is for |\r
-|---|---|---|\r
-| | Today | Home: what you are doing now, today's hours, this week, your tasks, Pomodoro and breaks |\r
-| Work | Tasks | Your task list: today's work, a board, the backlog |\r
-| | Customers | Customers, projects and how they are recognised, with their activity |\r
-| Time | Day | One day as a timeline; split, join, change and add time |\r
-| | Week | The timesheet: a week per customer, to copy or export |\r
-| | Hours | Totals per customer, project and task |\r
-| | Reports | Charts, all entries and exports for any period |\r
-| Setup | Plugins | Extra detection (Teams meetings, Outlook, servers, tickets) |\r
-| | Settings | All settings, backups and the log |\r
-| | Help | This documentation, including that of the plugins you installed |\r
-\r
-- **Search** (Ctrl+K) finds any screen, customer, task, setting or help page, and runs actions such as *Pause*, *Switch customer* or *Back up now*.\r
-- The **status** at the top of the menu shows the customer and task now; click it to go to Today.\r
-- The arrow next to *HourWarden* makes the menu narrow (icons only, with their names as tooltips).\r
-- Hover any icon to see what it does.\r
-\r
-## Language and appearance\r
-\r
-Under *Settings → Appearance* you choose the language (English or Dutch, or the system's), light or dark, and a theme: HourWarden, Windows 11 (with your Windows accent colour), High contrast, Nord, Solarized, Forest and Paper. A new theme or light/dark shows at once; a new language reloads the windows.\r
-\r
-## Tables and exports\r
-\r
-Click a column heading to sort a table (again for the other direction, a third time to stop sorting). The icons above a table export it as **CSV** or as an **Excel workbook**, with hours as numbers so a spreadsheet can add them up. *Time → Reports* exports all entries of any period; *Time → Day* exports one day.\r
-\r
-## Where things are\r
-\r
-- The **top bar** at the top of your screen (or docked at a side): customer, task, time, Pomodoro and breaks.\r
-- The **tray icon** (next to the clock): a menu with the current hours, pause, switch and the screens.\r
-- Closing a window does not stop HourWarden; it keeps running in the tray. *Quit* in the tray menu stops it.\r
-`,Hc=`# How time is tracked\r
-\r
-Once a second HourWarden looks at the window in front and decides which customer it belongs to. Time is recorded in entries: a stretch of time for one customer (or unknown), with the reason it was chosen.\r
-\r
-## How a customer is chosen\r
-\r
-HourWarden tries these in order and uses the first that decides:\r
-\r
-1. **A manual switch** you made in the top bar.\r
-2. **Folders**: a file or folder inside a customer folder.\r
-3. **Rules** on the customer page: Edge profile, program, text in the window title, remote server.\r
-4. **Domains and Microsoft IDs**: mail and web domains, tenant, subscription and workspace IDs (with the Outlook and web addresses plugins).\r
-5. **Names**: the customer's name or an alias as a whole word in the window title, file or folder name.\r
-6. **Recent files** saved in a customer folder.\r
-7. **Network**: the Wi-Fi or VPN, only when nothing else decides.\r
-\r
-If nothing matches, the time is **unknown** (amber border). When two customers match equally, HourWarden asks.\r
-\r
-A meeting for a known customer (Teams meetings plugin) takes the time whatever is in front, also while you only listen.\r
-\r
-## Glances, interruptions and switches\r
-\r
-- **Glances**: a look at another customer's window shorter than 10 seconds (*Ignore switches shorter than*) counts for the customer you were working for.\r
-- **Short interruptions**: while you work for a customer, something without a customer (answering a colleague in Teams, the inbox) shorter than 5 minutes still counts for that customer (*Short interruptions count for the customer*). When it lasts longer, the time from its start becomes unknown.\r
-- **Another customer** is a real switch after those 10 seconds.\r
-\r
-## Away and idle\r
-\r
-Without keyboard or mouse input for 5 minutes (*Idle after*) the time stops counting, from your last input. Two things count as activity without input: a Teams meeting for a customer (Teams meetings plugin), and a video playing in the browser, a video player or a meeting app in front, for up to two hours (Windows; on Linux not yet).\r
-\r
-- **A short pause** (reading a document, thinking, a word with a colleague) shorter than 10 minutes counts for the customer when you carry on with the **same** customer afterwards. When you carry on with another customer, it does not count.\r
-- **A longer pause:** when you come back after 10 minutes or more (*Ask about time away after*), the top bar asks what that time was: a customer (a call, a visit) or a break. Time away during a rest break or a Pomodoro break that HourWarden suggested is not asked about.\r
-\r
-## Questions\r
-\r
-When the customer has been unknown for 3 minutes while you work (*Ask when unknown after*), the top bar asks which customer it is. You can:\r
-\r
-- pick a customer (the unknown time so far goes to it);\r
-- remember the answer for this folder, this Edge profile or this program, so it is not asked again;\r
-- create a new customer: choose **Other…** and type its name;\r
-- say **Later**.\r
-\r
-## Manual switch\r
-\r
-Press **⇄** in the top bar (or **Ctrl+Alt+K**) and pick a customer, optionally with a task: \`fab: ticket triage\`. A manual switch holds until you press **Auto**, pause, or are away. *Started 15 min ago* moves the switch back when you notice late that you switched (for example a phone call); that time is taken from what was recorded in between.\r
-\r
-## Pause\r
-\r
-**❚❚** in the top bar, the tray menu or **Ctrl+Alt+P** pauses tracking until you resume.\r
-`,Nc=`# The top bar\r
-\r
-A small bar at the top of your screen shows where your time goes right now, and stays out of the way. Its edge and the border around your screen have the customer's colour; amber means unknown, grey means paused. The bar is as wide as what it shows. Hover anything on it for what it does.\r
-\r
-## What it shows\r
-\r
-- the **grip** (it shows when you hover the bar): drag it to move the bar;\r
-- a softly pulsing **dot** and the **customer**, with the project when it is not the default one. Click to switch customer; hover to see why this customer was chosen;\r
-- the **task**: click it to pick a task or type what you are doing. When you work on a task from your task list, a checkbox in front of it checks it off;\r
-- **Manual** after you switched by hand: click it to go back to automatic tracking;\r
-- an amber **dot** when today has 10 minutes or more of unknown time: click it to fix that in *Time → Day*;\r
-- a **ring** while a Pomodoro runs, emptying as time passes (red while focusing, green in a break), with the minutes left. Click it for the Pomodoro options;\r
-- the **time** since the last switch (hover for today's total and the task's time against its estimate);\r
-- **pause or resume**, **switch customer**, and **⋯** for everything else.\r
-\r
-## The ⋯ menu\r
-\r
-- start a Pomodoro, or skip or stop the running one, with today's count;\r
-- take a rest break now (with when the next one is due);\r
-- the task list, today's time (with the unknown time), and HourWarden itself;\r
-- the bar size: **Full**, **Small** (the customer and the time) or **Minimal** (a coloured dot and the time; questions wait behind an amber dot). Click a small or minimal bar to see everything until the mouse leaves it. The same choice is in *Settings → Top bar size*.\r
-\r
-The menu closes when you pick something, press Esc, or move the mouse away from the bar.\r
-\r
-Below the bar you may see a **ticket ID** seen in the window in front (with *Use as task*), a **question**, **time away**, a **break** with exercises or a **notice**. Questions and breaks always open the full bar.\r
-\r
-## Docking at the side of the screen\r
-\r
-Drag the bar by its grip and let go close to the **left or right edge** of a screen and it docks there, upright: the customer's name, the time, the Pomodoro ring, pause and ⋯, one below the other. Questions, the switcher, the menu and breaks open beside it. Drag it away from the edge to make it horizontal again.\r
-\r
-HourWarden remembers where the bar was, docked or not, also after a restart. *Put the top bar back* in the tray menu returns it to the top centre.\r
-\r
-## Hiding the top bar\r
-\r
-*Hide top bar* in the tray menu (or the setting *Show the top bar*) hides it. The hotkeys and the tray menu keep working, and breaks and the daily limit still show it for a moment.\r
-\r
-If the bar ends up (partly) off screen, for example after unplugging a monitor, it is moved back onto a screen.\r
-`,Oc=`# Tasks\r
-\r
-The task list holds what you have to do, per customer. When you work on a task, the time goes to it automatically: you see per task how long it took, against your estimate, and how many Pomodoros it cost.\r
-\r
-## Adding tasks\r
-\r
-Type in the box at the top of the *Tasks* screen and press Enter. A few marks fill in the details:\r
-\r
-| Write | Means | Example |\r
-|---|---|---|\r
-| \`@name\` | the customer (name or alias; the start of a word is enough, \`-\` for a space) | \`@contoso\`, \`@fabrikam-ltd\` |\r
-| \`~time\` | the estimate | \`~45m\`, \`~1h30m\`, \`~2h\` |\r
-| \`#ID\` | the ticket ID | \`#CON-123\` |\r
-| \`!day\` | the due date | \`!today\`, \`!tomorrow\`, \`!fri\`, \`!2026-11-20\` |\r
-\r
-Example: \`Migrate mailboxes @contoso ~3h #CON-88 !fri\`.\r
-\r
-A word like \`CON-123\` in the title is taken as the ticket ID too. With a customer chosen in the filter, new tasks are for that customer.\r
-\r
-You can also add a task from the top bar: click the task, type and press Enter. It is added to your task list and started.\r
-\r
-## Today, Board, Backlog, Done\r
-\r
-- **Today**: tasks in progress, tasks planned for today, and backlog tasks that are due. Below, what you finished today.\r
-- **Board**: four columns — *Backlog*, *To do*, *In progress*, *Done*. **Drag** cards between columns and up and down to put them in order.\r
-- **Backlog**: everything for later. *Plan for today* moves a task to *To do*. Tasks with a due date appear on *Today* when they are due.\r
-- **Done**: finished tasks per day.\r
-\r
-The filter limits everything to one customer (or tasks without one); search looks in titles, ticket IDs and notes.\r
-\r
-## Working on a task\r
-\r
-Press **▶** on a task (or pick it in the top bar). It moves to *In progress* and the time goes to it:\r
-\r
-- When the task is for a customer and you are not working for that customer now, HourWarden switches to it, as a manual switch does.\r
-- When you then work for another customer, that time is not the task's. The top bar shows **⏸ task**; the task picks up again when you are back at its customer.\r
-- A task without a customer takes all time until you stop it.\r
-- A task with a project puts its time on that project.\r
-\r
-**■** stops working on the task. Checking it off (in the list or in the top bar) finishes it and stops it.\r
-\r
-A typed text that is not a task (↺ in the top bar) only labels the time, as in earlier versions.\r
-\r
-## Task details\r
-\r
-Click a task's title to open its details: title, customer and project, ticket ID, estimate, due date, notes and a **checklist** of steps. The details also show the time spent (all time and today) and the Pomodoros on it. **Delete** removes the task; the time recorded on it stays, with its title.\r
-\r
-## Tickets on screen\r
-\r
-With the *Ticket IDs* plugin, a ticket ID seen in the window in front (Jira, TopDesk, ServiceNow) is offered in the top bar. **Use as task** starts the open task with that ticket ID for the current customer, or adds one.\r
-`,Lc=`# Pomodoro and breaks\r
-\r
-Two things help you work in a healthy rhythm: the Pomodoro timer for focus, and breaks against RSI (repetitive strain injury) with exercises.\r
-\r
-## Pomodoro\r
-\r
-A Pomodoro is 25 minutes of focused work followed by a 5 minute break; after every fourth one, a 15 minute break. All lengths are settings (*Pomodoro*).\r
-\r
-- Start one with **Start** next to 🍅 in the top bar or **Start Pomodoro** on the *Tasks* screen.\r
-- The top bar counts down. In a break it shows exercises (short ones in a short break, a series in a long break).\r
-- When the break is over, the top bar asks to start the next one.\r
-- **⏭** ends the focus period early (it then does not count) or skips the break; **■** stops the timer.\r
-- 🍅 shows how many Pomodoros you finished today. Each one is also counted on the task you were working on.\r
-\r
-The Pomodoro timer does not change how time is tracked; it only helps you focus.\r
-\r
-## Breaks against RSI\r
-\r
-Typing and using the mouse for hours strains hands, arms, neck and eyes. HourWarden counts how long you actually use the keyboard and mouse (time without input does not count) and suggests breaks:\r
-\r
-| Break | Default | What to do |\r
-|---|---|---|\r
-| Micro-break | 20 seconds after every 20 minutes of use | The 20-20-20 eye rule: look at something at least 6 metres (20 feet) away |\r
-| Rest break | 10 minutes after every 50 minutes of use | Stand up, stretch, walk |\r
-| Daily limit | a notice after 8 hours of use in a day | Call it a day |\r
-\r
-The **20-20-20 eye rule** (*Settings → Breaks*, on by default) sets the micro-breaks: every 20 minutes, 20 seconds looking 20 feet away, which relaxes the eye muscles that strain to focus close by. Turn it off to choose your own micro-break length and interval, with eye and hand exercises in turn.\r
-\r
-A break counts while you do **not** touch the keyboard or mouse; the bar below the title fills up. Pausing on your own counts too: reading without touching anything for half a minute is a micro-break, being away for ten minutes is a rest break, and the timers start over.\r
-\r
-- **Later** asks again in a few minutes (2 for a micro-break, 5 for a rest break).\r
-- **Skip** skips it; the timer starts over.\r
-- **Next exercise** shows another exercise.\r
-- **☕** in the top bar starts a rest break now.\r
-\r
-Breaks wait while a Teams meeting runs or a presentation or full-screen program is in front. Time away during a rest break is not asked about afterwards.\r
-\r
-Every break can be changed or turned off under *Settings → Breaks* (0 turns a break off). *Show exercises* turns the animations off.\r
-\r
-## The exercises\r
-\r
-Each exercise has an animated figure and a cue below it that follows the movement (*Lean to the left*, *Hold*, *Back to the middle*). The figure faces you like a mirror: when it leans to your left, lean to your left. When you chose less motion in Windows, the figure stands still in its main position and only the cues move on.\r
-\r
-| Exercise | For |\r
-|---|---|\r
-| Look far away | Eyes: focus at six metres or more |\r
-| Move your eyes | Eyes: up, right, down, left |\r
-| Blink | Dry eyes |\r
-| Loosen your hands | Hands and forearms |\r
-| Neck stretch | Neck and upper back |\r
-| Shoulder rolls | Shoulders |\r
-| Wrist stretch | Wrists and forearms |\r
-| Spread your fingers | Fingers and hands |\r
-| Reach up | Back and sides |\r
-| Open your chest | Chest and shoulder blades |\r
-| Turn your back | Lower back |\r
-| Stand up and walk | Everything: moving does the most |\r
-\r
-Stop an exercise when it hurts. If you have complaints, ask a doctor or physiotherapist.\r
-\r
-## Standing desk\r
-\r
-With a standing desk, turn on *Settings → Standing desk → Remind me to stand up*. After a while of sitting at the computer (45 minutes unless you change it), the top bar asks you to stand up:\r
-\r
-- **I'm standing**: the reminder closes; sitting counts again after the standing time (15 minutes unless you change it);\r
-- **Later**: asks again in 10 minutes;\r
-- **No standing desk today**: no more reminders until tomorrow, for days you work elsewhere. *Stand-up reminders back on* in the top bar's **⋯** menu (or on *Today*) undoes it.\r
-\r
-The reminder only runs while your laptop is **docked**: when an external screen is connected. Walking away from the computer for five minutes counts as getting up.\r
-`,Bc=`# Time: day, week, hours and reports\r
-\r
-Everything about recorded time is on one screen, *Time*, with four tabs: **Day**, **Week**, **Hours** and **Reports**. Each is also in the menu on the left. All tables sort on a click on a column heading and export to CSV or Excel.\r
-\r
-## Day\r
-\r
-*Day* shows a day as a timeline with the totals per customer. Use it at the end of the day to check what was recorded.\r
-\r
-- **Open** an entry by clicking it. Change the customer, project, task, ticket ID, start and end, and press **Save** (Esc or **Close** keeps it as it was). Changed time is yours and wins over automatic time.\r
-- **Times**: click a time for the picker. Type it (7:30, 0730, 19h), pick an hour and minute, or step 5 minutes with **−5** and **+5**; the arrow keys step a minute (with Shift 5).\r
-- **Notes**: write what you did, agreed or found out. The editor shows formatting as you type and keeps it as Markdown: the toolbar, Ctrl+B and Ctrl+I, or type \`- \` for a list, \`1. \` for a numbered list, \`## \` for a heading and \`> \` for a quote at the start of a line. Notes show under the entry in the list. The entry being recorded can get notes too.\r
-- **Add** time that was not on the computer: a visit, a phone call.\r
-- **Split** an entry at a time of your choice, for example to give part of it to another customer.\r
-- **Join** an entry with the next one for the same customer, including the gap.\r
-- **Delete** an entry.\r
-- **From your calendar** (Outlook calendar plugin): appointments are offered as time for the customer of the attendees or subject.\r
-- **Export** the day's entries as CSV or Excel with the icons next to the date.\r
-\r
-Unknown time is shown in amber. The top bar reminds you when today has 10 minutes or more of it.\r
-\r
-## Week\r
-\r
-The timesheet: a week per customer (or per project) and day, with totals, the unknown time and your weekly target (*Hours per week*).\r
-\r
-- *Round hours to* rounds each customer's day to the nearest 6, 15 or 30 minutes, as many timesheets want.\r
-- **Copy week** puts decimal hours on the clipboard, for pasting into a spreadsheet or a customer's timesheet. The icons above the table export it as CSV or Excel.\r
-- Click the hours of a day to open it in *Day*.\r
-\r
-## Hours\r
-\r
-Hours per customer for today, this week, this month or last month, expandable to projects and tasks (grouped by ticket ID).\r
-\r
-## Reports\r
-\r
-Choose a period (or a custom range) and optionally a customer. Reports show the hours by customer, project, task, application and how it was recorded, the hours per day, mail counts (Outlook plugin), **hours per ticket**, and a table of **all entries**. Search finds entries by task, ticket ID, window title or application. Each table exports to CSV or Excel; the entries export has every entry of the period, with hours as numbers.\r
-`,Rc=`# Customers and projects\r
-\r
-## The customer list\r
-\r
-The *Customers* screen lists your customers with the hours this month and when you last worked for them.\r
-\r
-- **Search** finds customers by name, alias, domain, category or notes. Enter opens the first one, Esc clears the search.\r
-- **Categories** group customers, such as *Managed services*, *Projects* or *Internal*. Sorted A–Z, the list shows a heading per category; the category filter shows one category (or the customers without one).\r
-- **Sort** A–Z, by most hours this month, or by who you worked for most recently. The sort order is remembered.\r
-- **Show archived** includes customers you no longer work for.\r
-- At the bottom: how many customers are shown and their hours this month together.\r
-- Edge profiles without a customer are offered: one click makes a customer with an Edge profile rule.\r
-\r
-## A customer's page\r
-\r
-The page has four tabs.\r
-\r
-### Overview\r
-\r
-What the recorded time says about this customer:\r
-\r
-- the total for the period (this month, last month or the last 12 months) compared with the period before, today, this week, when you last worked for them, open tasks and mails (Outlook plugin);\r
-- hours per day (or per month), weekends shaded;\r
-- time per project, per task or ticket, per application, and how it was recorded (automatically, by a manual switch, or added and changed by you);\r
-- open tasks, with ▶ to start one, and the latest time recorded;\r
-- the customer's notes.\r
-\r
-### Recognition\r
-\r
-How HourWarden recognises the customer:\r
-\r
-- **Abbreviations and other names**: found as whole words in window titles, file and folder names, Remote Desktop Manager folders and Obsidian tags. Names shorter than 3 letters only count in file and folder names.\r
-- **Domains and Microsoft IDs**:\r
-  - mail domains (\`contoso.com\`): mail from or to them counts for the customer (Outlook plugin);\r
-  - web domains (\`contoso.sharepoint.com\`, \`portal.contoso.com\`): pages on them count (web addresses plugin);\r
-  - the Microsoft tenant (\`contoso.onmicrosoft.com\` or the tenant ID), Azure subscription IDs and Power BI or Fabric workspace IDs: found in Azure portal, Entra, Power BI and Fabric addresses. The web addresses plugin writes each ID it sees to its log, so you can copy it here.\r
-  Subdomains count too.\r
-- **Phone numbers**: calls with these numbers count for the customer in the HourWarden app on your phone. A shorter number is a prefix: \`+31 20 555\` matches everyone at that office. Numbers you assign on the phone with "remember" are added here.\r
-- **Folders**: files and folders inside them count for the customer, also when the window only shows a file name.\r
-- **Rules**: an Edge profile, a program, text in the window title, a remote server or a network that means this customer. Rules are saved at once; names, domains and folders with **Save**.\r
-\r
-### Projects\r
-\r
-Each customer has a default project, *General*, where its time goes when no project is recognised. Add projects with their own abbreviations and folders to split a customer's time further. A task can have a project; working on it puts the time there.\r
-\r
-### Settings\r
-\r
-Name, category, border colour and **notes** (contacts, contract, rates, agreements). **Archive** a customer you no longer work for: it is no longer recognised, but its hours stay.\r
-\r
-## Internal time: studying, internal meetings\r
-\r
-Time that is not for a customer goes to **your own company**, so it stays apart from billable hours. Set it up in the setup guide (*Settings → Open the setup guide*, step 2), or by hand: add your company as a customer and tick **This is my own company** on its page.\r
-\r
-- **Kinds of internal time are projects** of your company: *Internal meetings*, *Study and training*, *Administration*, *Sales and quotes*, or your own. Add more on its page under projects.\r
-- **Switching:** in the top bar's switcher your company's kinds are always listed ("Lumen IT · Study and training"); pick one, or type its name. Other customers' projects show up once you type part of a name.\r
-- **Recognised automatically:** give your company rules like any customer, such as the folder with your course material, your intranet's site or your own mail domain, so internal work is booked without switching.\r
-- **Unrecognised time** can count as internal: *Time for which no customer is recognised counts as internal* (setup guide, or your company's page).\r
-- **Reports** list your company like a customer, so the hours by customer show billable and internal time side by side, and *Hours by project* splits internal time by kind. The monthly report per customer leaves it out of customers' sheets.\r
-\r
-## New customers\r
-\r
-**+ Customer** opens the Settings tab; after **Create customer** you continue on Recognition. In the top bar, type a new name in the switcher (also via **Other…** in the questions) and choose **+ New customer “name”**: it gets a free colour and the time goes to it straight away. **More…** (or Ctrl+Enter) does the same and then opens its page on Recognition, to fill in the rest. In the switcher, **More…** next to a customer opens its page.\r
-`,Kc=`# Plugins\r
-\r
-Plugins add detection that is specific to a program or way of working: Teams meetings, the Outlook item you read, the server in SQL Server Management Studio, a ticket ID in the window title. Each plugin you installed adds its own documentation to this help, under *Your plugins*; uninstalling it removes it again.\r
-\r
-## The plugin store\r
-\r
-The plugins come with HourWarden (*Built-in plugins*): they work offline and are signed, like any repository. When a new version of HourWarden brings newer plugins, the ones you installed are updated by themselves.\r
-\r
-*Plugins → Store* lists the plugins of all your plugin repositories. Each plugin card says which repository it comes from. Before installing you see what the plugin reads and does. Every file is checked against its repository's index, and checked again before each start; a plugin that was changed after installing does not start.\r
-\r
-Each card also says where the plugin works: **Windows and Linux**, or **Windows only** for plugins that use Outlook, Office or other parts of Windows. A plugin for another operating system shows that label instead of an Install button. On Linux, plugins need PowerShell 7 (\`pwsh\`); the plugin's status says so when it is missing.\r
-\r
-## Plugin repositories\r
-\r
-At the top of the store you manage where plugins come from. HourWarden starts with its built-in plugins. You can add more:\r
-\r
-- a **GitHub repository**: paste its address, like \`https://github.com/owner/repository\` (add \`/tree/branch\` for another branch than the default);\r
-- any **web address** (https) of a folder with an \`index.json\`;\r
-- a **folder** on this computer or a network share, with **Add folder…**.\r
-\r
-Web repositories are downloaded the first time you open the store, and again when you press **Refresh**; until then HourWarden works from its copy, also offline. Untick a repository to stop using it without removing it, or use the arrows to change the order. When two repositories have the same plugin, the newest version is installed; with equal versions, the one higher in the list.\r
-\r
-Each repository's index is signed. Press **trust it** once for a repository; from then on HourWarden only installs from it when it is signed with that key. The HourWarden repository on GitHub is trusted from the start.\r
-\r
-## Installed plugins\r
-\r
-Each installed plugin shows its status, its settings and its log. Plugins run as separate programs, are restarted after a crash and stopped after repeated crashes. When group policy blocks PowerShell scripts, the plugin says so.\r
-\r
-**Install from folder** is for writing your own plugin: see \`docs/protocol.md\` in the plugin repository.\r
-\r
-## Writing documentation for a plugin\r
-\r
-A plugin names its documentation in \`plugin.toml\`:\r
-\r
-\`\`\`toml\r
-docs = "README.md"\r
-\`\`\`\r
-\r
-The file is Markdown inside the plugin folder. Once the plugin is installed, it appears here in the help.\r
-`,Uc=`# Your data and backups\r
-\r
-All data stays on this computer, in \`%APPDATA%\\nl.hourwarden.desktop\` (on Linux \`~/.local/share/nl.hourwarden.desktop\`):\r
-\r
-| File or folder | What |\r
-|---|---|\r
-| \`hourwarden.db\` | Customers, projects, rules, time, tasks, Pomodoros, settings |\r
-| \`backups\\\` | Daily copies of the database |\r
-| \`logs\\hourwarden.log\` | Errors, crashes and plugin problems |\r
-| \`plugins\\\` | Installed plugins |\r
-\r
-## Backups\r
-\r
-Once a day HourWarden copies its database to the backups folder and keeps the last 14 copies (*Backups to keep*).\r
-\r
-- *Backup folder* puts the copies on another disk or in a synced folder (Proton Drive, OneDrive), so a broken disk does not take your hours with it.\r
-- *Back up now* makes a copy straight away.\r
-- **Restore** next to a backup replaces all data with it, after making a backup of the current data first.\r
-- *Backup password* encrypts the copies (AES-256-GCM, key from the password with Argon2id; files end in \`.tkb\`). Without the password nobody can read them, also not in a cloud folder. Restoring one needs the same password, also on another computer, so keep it in your password manager. Copies made before you set it stay plain.\r
-\r
-## Encryption\r
-\r
-- **Sync:** the connection to your server is HTTPS; the server keeps each user's data apart and only lets active accounts sync.\r
-- **Backups:** encrypted with the backup password (above).\r
-- **This computer:** the database itself is protected by your Windows account. To protect it if the laptop is stolen, turn on disk encryption: *Settings → Privacy & security → Device encryption* (or BitLocker on Windows Pro).\r
-- **The phone:** Android encrypts its storage by default when the phone has a screen lock; set a PIN or password.\r
-\r
-## The log\r
-\r
-*Settings → Open log folder* opens the folder with \`hourwarden.log\`. It records errors, crashes (with details), plugins that stop working and why HourWarden quit. Include it when you report a problem.\r
-`,Fc=`# Keys and the tray menu\r
-\r
-## Hotkeys\r
-\r
-These work everywhere, also when HourWarden is not in front.\r
-\r
-| Keys | Does |\r
-|---|---|\r
-| Ctrl+Alt+P | Pause or resume tracking |\r
-| Ctrl+Alt+K | Open the switcher in the top bar |\r
-\r
-### Changing a hotkey\r
-\r
-Under *Settings → Hotkeys*, press **Change…** and then the new combination: hold Ctrl, Alt, Shift or Win and press a key. Your current hotkeys are off while you record. **Use this** saves it, **Again** records another, Esc or **Cancel** keeps the old one. **Reset** goes back to the default.\r
-\r
-HourWarden checks the combination first:\r
-\r
-- it needs Ctrl, Alt or Win (F13–F24 may be used alone), and Shift with a letter is just typing;\r
-- combinations Windows or every app uses (Ctrl+C, Ctrl+S, Alt+Tab, Win with one key) are refused;\r
-- both HourWarden hotkeys must differ;\r
-- a warning appears when it may get in the way, such as Ctrl+Alt+E, which types € on many European keyboards.\r
-\r
-When another program already has the combination, Windows refuses it; HourWarden says so and keeps your old hotkey.\r
-\r
-On Linux the hotkeys are KDE global shortcuts: the keys set here are used the first time, after which KDE remembers them; change them in *System Settings → Keyboard → Shortcuts* under KWin. See *HourWarden on Linux*.\r
-\r
-## In the top bar\r
-\r
-| Keys | Does |\r
-|---|---|\r
-| Enter | Switch to the first customer, start the task, or create the customer |\r
-| Esc | Close the switcher or task box |\r
-\r
-## In the HourWarden window\r
-\r
-| Keys | Does |\r
-|---|---|\r
-| Ctrl+K | Search: go to any screen, customer, task, setting or help page, or run an action |\r
-| F1 | Open this help |\r
-| Ctrl+C, Ctrl+V | Copy and paste in text fields |\r
-\r
-Browser keys (print, find, reload, zoom) do nothing: HourWarden is an app, not a web page.\r
-\r
-## The tray menu\r
-\r
-Right-click the HourWarden icon next to the clock:\r
-\r
-- the current customer with today's, this week's and this month's hours;\r
-- **Open HourWarden** (on Today), **Tasks**, **Daily review**, **Timesheet**;\r
-- **Switch customer**, **Pause / Resume**;\r
-- **Hide top bar / Show top bar**, **Put the top bar back**;\r
-- **Quit**.\r
-\r
-The menu follows the language you choose under *Settings → Appearance*.\r
-`,Vc=`# Troubleshooting\r
-\r
-## Time goes to the wrong customer\r
-\r
-Look at the reason below the top bar (or in the daily review): it says why that customer was chosen, for example \`'CTS' in window title\` or \`rule: Edge profile 'Contoso'\`. Then:\r
-\r
-- remove or change the alias or rule that matched;\r
-- add a more specific signal for the right customer (an Edge profile or a folder beats a name);\r
-- for a one-off, fix it in the daily review.\r
-\r
-## It keeps asking which customer it is\r
-\r
-Choose *Remember for this folder / Edge profile / program* when you answer, or add a rule on the customer page. If the program is used for all customers (Teams, Outlook), install the matching plugin instead of a program rule.\r
-\r
-## The top bar is gone\r
-\r
-- *Show top bar* in the tray menu (it may be hidden).\r
-- *Put the top bar back* in the tray menu moves it to the top centre of the main screen.\r
-\r
-## A plugin does not work\r
-\r
-Open *Plugins* and look at its status and log. Common reasons: the program it reads is not running, group policy blocks PowerShell scripts, or the plugin was changed after installing (install it again from the store).\r
-\r
-## Breaks come at a bad moment\r
-\r
-Breaks wait during Teams meetings and presentations. Press **Later**, change the times under *Settings → Breaks*, or set a break to 0 to turn it off.\r
-\r
-## Something else\r
-\r
-*Settings → Open log folder* and look at \`hourwarden.log\`; it records errors and crashes with details.\r
-`,Gc=`# Slack time\r
-\r
-HourWarden counts the time you spend on social media, video, news, shopping and games: Reddit, X, Facebook, Instagram, TikTok, YouTube, Netflix, Twitch, NU.nl, Tweakers, Bol, Steam, Epic Games, Discord, and any game installed through Steam, Epic, GOG, Xbox or Riot. It counts only while you use the computer, not after you walked away.\r
-\r
-Slack is not wrong. In the evening or at the weekend it is your own time, and HourWarden only counts it. Only the site or game and the minutes are kept, on this computer.\r
-\r
-## Today\r
-\r
-The **Slack** card on *Today* shows today's total, the sites and games it went to, and the last seven days. The top bar's **⋯** menu shows today's total too.\r
-\r
-## The reminder during work\r
-\r
-During your **work hours** (or while a Pomodoro runs), after a few minutes of slack in a row the top bar asks you to choose:\r
-\r
-- **Back to work**: the reminder closes, and stays away for 15 minutes;\r
-- **Take a walk**: starts a rest break. Stand up, walk around, get some water, and come back with new energy;\r
-- **Continue my course**: opens the course you are following, so the time goes to learning instead.\r
-\r
-A minute of work closes the reminder by itself.\r
-\r
-## Settings\r
-\r
-Under *Settings → Slack*:\r
-\r
-- **Count slack time**: turns the counter off;\r
-- **Remind me during work after**: the minutes of slack before the reminder (0 turns the reminder off);\r
-- **Work days** and **work hours**: when the reminder may come up;\r
-- **Your course**: the web address of the course you are following (Microsoft Learn, Udemy, Pluralsight...);\r
-- **Also slack**: more sites (as their name shows in the browser tab) or programs (\`game.exe\`);\r
-- **Not slack for me**: sites or programs that are work or learning for you, such as YouTube or Discord.`,Yc=`# HourWarden on Linux\r
-\r
-HourWarden on Linux is the same app as on Windows: the same screens, settings, customers, rules and plugins. Only the way it asks the system which window is in front differs. It is made for **KDE Plasma** (5.27 or 6, Wayland or X11).\r
-\r
-## Installing\r
-\r
-Install the \`.deb\` (Debian, Ubuntu, KDE neon) or \`.rpm\` (Fedora, openSUSE) package. HourWarden appears in the application menu and, when *Start at login* is on, starts with your session.\r
-\r
-Plugins are PowerShell scripts; on Linux they need **PowerShell 7** (\`pwsh\`), from your distribution or Microsoft's package repository. Without it the app works, but plugins report that PowerShell is missing.\r
-\r
-## How it sees the active window\r
-\r
-Wayland does not let apps see other windows. HourWarden therefore loads a small **KWin script** into Plasma when it starts. The script tells HourWarden which window is active and its title, keeps the top bar above other windows and registers the hotkeys. It is loaded into the running session only: nothing is installed in KDE and no settings are changed. When Plasma restarts, HourWarden loads it again within half a minute.\r
-\r
-Program names are shown as on Windows: Firefox is \`firefox.exe\`, VS Code \`code.exe\`. Rules you make for a program therefore work on both systems.\r
-\r
-Idle time comes from Plasma's idle notifications; a playing video does not count as activity.\r
-\r
-## Differences from Windows\r
-\r
-| | Linux (KDE Plasma) |\r
-|---|---|\r
-| Hotkeys | KDE global shortcuts. HourWarden's hotkey settings give the keys the first time; after that KDE remembers them, so change them in *System Settings → Keyboard → Shortcuts → KWin* (search for "HourWarden"). |\r
-| Top bar | Kept above other windows and centred at the top by KWin. Docking to the side is not available on Wayland, as apps cannot place their own windows there. |\r
-| Border | Drawn above all windows, also full-screen ones; clicks go through it. It hides when the active window is full screen. |\r
-| Screen sharing | Wayland cannot hide windows from a screen share; the top bar and border are visible in shared screens. Hide them with the tray menu while presenting. |\r
-| Docked | An external screen is connected (the standing desk reminder uses this). |\r
-| Plugins | Outlook, Office, Teams desktop, Remote Desktop and web addresses are Windows only. Ticket IDs, SSH terminals, VS Code, networks, file changes and remote workplaces work. |\r
-| Windows 11 theme | Uses the KDE accent colour. |\r
-\r
-## Your data\r
-\r
-Data and backups are in \`~/.local/share/nl.hourwarden.desktop\`, the log in its \`logs\` folder.\r
-\r
-## When tracking does not work\r
-\r
-- **Not KDE Plasma:** on GNOME and other desktops HourWarden starts, but cannot see the active window. Manual switching, tasks, Pomodoro and the timesheet still work.\r
-- **Check the log** in \`~/.local/share/nl.hourwarden.desktop/logs/hourwarden.log\`: it says "KWin script loaded" and "KWin script reports the active window" when all is well, or why not.\r
-- **See what HourWarden sees:** start it from a terminal with \`HOURWARDEN_DEBUG_PLATFORM=1 hourwarden-desktop\`; the log then shows the active window, idle time and docking every few seconds.\r
-`,Jc=`# Sync and the phone app\r
-\r
-With your own HourWarden server, your computers and your phone share customers, rules, tasks, hours and what you are working on right now. Each device keeps everything itself and works without a connection; changes are exchanged when it is back.\r
-\r
-## What syncs\r
-\r
-- Customers, projects and rules.\r
-- Tasks, entries (with their task text and notes) and Pomodoros.\r
-- What you are working on right now: the phone shows it and can pause, resume or switch it, and the computer follows.\r
-- Settings that are about how you work: tracking, questions, Pomodoro, breaks, slack and timesheet.\r
-\r
-What stays on each device: hotkeys, the top bar and border, plugins, backups, file settings, the standing desk, and language and theme. Window titles and other raw activity never leave the computer.\r
-\r
-When the same thing was changed on two devices, the latest change wins, per field: a task text changed on the laptop and an end time changed on the phone both survive. A deleted entry stays deleted.\r
-\r
-## A server\r
-\r
-The server is one small program. It runs on Uberspace or in Docker; see \`server/README.md\` in the HourWarden source for the steps. It can serve several people: each has a user with their own password, devices and data, and nobody sees anyone else's.\r
-\r
-## Your account\r
-\r
-On the server's address you sign in with your user name and password to see your devices, show a pairing code, change your password or remove a lost phone. Add an email address there (or when you register) and **Forgot your password?** on the sign-in page sends you a link to set a new one. Depending on how the server is set up you can register there too; the administrator may approve new accounts first, or give an account an end date. An account that is not active (any more) cannot sync, but its data stays on the server.\r
-\r
-## Connecting this computer\r
-\r
-*Sync* (under Setup) → enter the server address, your user name (only needed when the server has several users) and your password → **Connect**. Everything on this computer is sent to the server; that can take a moment the first time.\r
-\r
-Changes are sent within a quarter of a minute and other devices' changes fetched every minute. **Sync now** does it at once. When the server cannot be reached, HourWarden keeps trying; after an hour it shows a warning with the time of the last successful sync.\r
-\r
-## End-to-end encryption\r
-\r
-*Sync* → **Turn on end-to-end encryption** encrypts your data on your devices with a key only you have (AES-256). The server stores it but cannot read it: not the customer names, tasks or hours. The copy that was on the server is replaced by an encrypted one.\r
-\r
-- **Store the key somewhere safe**: in your password manager (Bitwarden, 1Password, KeePass…), or use **Save as PDF** for a recovery sheet and keep it apart from your computer. **Show the key** shows it again later.\r
-- New devices need the key. The pairing QR code carries it, so scanning is enough; when you type the code instead, the device asks for the key.\r
-- If you lose the key while no device has it any more, nobody can read the data on the server, not even its administrator. Your devices keep everything they have.\r
-- **Turn off** replaces the encrypted copy with a readable one; your other devices ask you to turn it off there too.\r
-\r
-The server still sees which devices sync, when, and how many records there are, but not what is in them.\r
-\r
-## The phone\r
-\r
-1. Install the HourWarden app on the phone (the APK).\r
-2. On the computer: *Sync* → **Show a pairing code**.\r
-3. On the phone: **Scan code** and point the camera at the QR code; or type the server address and the code.\r
-\r
-The code works once, for 10 minutes. On the phone you can:\r
-\r
-- see what the computer tracks, and pause, resume or switch it;\r
-- start a timer for a workshop or visit, which also switches the computer to that customer;\r
-- add a meeting or other time in a few taps, with one-tap durations;\r
-- see and edit today's and this week's hours;\r
-- track phone calls with customers (see below).\r
-\r
-While the phone timer runs, a notification shows it with Pause and Stop. The phone syncs every 15 minutes in the background too, also when the app is closed.\r
-\r
-## Phone calls\r
-\r
-On the phone: *Sync* → **Track phone calls**. A finished call becomes time for a customer when the number is one of the customer's phone numbers (on the customer page; a shorter number such as +31 20 555 is a prefix for a whole office), or when the phone contact's company is the customer's name or an alias. Calls under a minute are left out. Other calls wait on the phone under **Unknown callers**, to assign (and remember the number), skip, or mark private. The call log stays on the phone.\r
-\r
-## Each minute counts once\r
-\r
-When entries overlap, every minute counts for one of them: what you added or changed yourself first, then a phone call, then a manual switch, then automatic tracking; between equals the later one. So a call during automatic tracking, or a meeting added on the phone, is not counted twice, and two computers tracking the same minutes count them once. The daily review still shows every entry as it was recorded; the hours, week, reports and customer totals count each minute once.\r
-\r
-## Devices\r
-\r
-*Sync* lists every paired device with its last sync. **Remove** locks a lost phone out at once; its own data stays on it. **Disconnect** stops syncing this computer; its data stays here.\r
-`,Qc=`# Aan de slag\r
-\r
-HourWarden houdt je uren per klant bij terwijl je werkt. Het kijkt naar wat je doet (het venster op de voorgrond, je Edge-profiel, bestanden, vergaderingen), bepaalt voor welke klant dat is en registreert de tijd. Als het twijfelt, verbeter je het; daar leert het van.\r
-\r
-Alles blijft op deze computer. Er wordt niets verstuurd.\r
-\r
-## De eerste tien minuten\r
-\r
-Bij een nieuwe installatie opent *Vandaag* met een korte welkomst die de eerste stappen met je doet: je klanten (met hun mail- of webdomeinen als je wilt), de plug-ins die op deze computer handig zijn (al aangevinkt, met één klik geïnstalleerd) en eventueel je telefoon. Daarna werkt HourWarden vanzelf: het start met je computer, houdt op de achtergrond bij en maakt elke dag een back-up.\r
-\r
-Om het zelf te doen, of later meer toe te voegen:\r
-\r
-1. **Voeg je klanten toe** onder *Klanten*. Een naam is genoeg om te beginnen. Elke klant krijgt een kleur, voor de rand om je scherm en de bovenbalk.\r
-2. **Vertel HourWarden hoe het ze herkent.** Voeg op de klantpagina onder *Herkenning* toe wat bij die klant hoort:\r
-   - het **Edge-profiel**, als je één browserprofiel per klant gebruikt (het sterkste signaal);\r
-   - de **mappen** waar je de bestanden van die klant bewaart;\r
-   - **aliassen**: afkortingen en projectnamen die in venstertitels staan;\r
-   - **domeinen en Microsoft-ID's**: maildomeinen, webdomeinen, de tenant-ID.\r
-3. **Werk zoals altijd.** De bovenbalk toont naar welke klant de tijd gaat. Als HourWarden het niet weet, vraagt het na een paar minuten; je antwoord kan worden onthouden voor die map, dat Edge-profiel of dat programma.\r
-4. **Aan het eind van de dag** open je *Tijd → Dag* om de dag na te kijken en te verbeteren wat niet klopt.\r
-\r
-## De weg vinden\r
-\r
-Het menu links is in groepen ingedeeld:\r
-\r
-| Groep | Scherm | Waarvoor |\r
-|---|---|---|\r
-| | Vandaag | Start: wat je nu doet, de uren van vandaag, deze week, je taken, Pomodoro en pauzes |\r
-| Werk | Taken | Je takenlijst: het werk van vandaag, een bord, de backlog |\r
-| | Klanten | Klanten, projecten en hoe ze worden herkend, met hun activiteit |\r
-| Tijd | Dag | Eén dag als tijdlijn; tijd splitsen, samenvoegen, wijzigen en toevoegen |\r
-| | Week | De urenstaat: een week per klant, om te kopiëren of te exporteren |\r
-| | Uren | Totalen per klant, project en taak |\r
-| | Rapporten | Grafieken, alle registraties en exports voor elke periode |\r
-| Inrichting | Plug-ins | Extra herkenning (Teams-vergaderingen, Outlook, servers, tickets) |\r
-| | Instellingen | Alle instellingen, back-ups en het logboek |\r
-| | Help | Deze documentatie, ook die van de plug-ins die je hebt geïnstalleerd |\r
-\r
-- **Zoeken** (Ctrl+K) vindt elk scherm, elke klant, taak, instelling of helppagina, en voert acties uit zoals *Pauzeren*, *Andere klant* of *Nu back-up maken*.\r
-- De **status** boven in het menu toont de klant en taak van nu; klik erop om naar Vandaag te gaan.\r
-- Het pijltje naast *HourWarden* maakt het menu smal (alleen pictogrammen, met hun naam als tooltip).\r
-- Wijs een pictogram aan om te zien wat het doet.\r
-\r
-## Taal en weergave\r
-\r
-Onder *Instellingen → Weergave* kies je de taal (Nederlands of Engels, of die van het systeem), licht of donker, en een thema: HourWarden, Windows 11 (met je accentkleur van Windows), Hoog contrast, Nord, Solarized, Bos en Papier. Een ander thema of licht/donker zie je meteen; een andere taal laadt de vensters opnieuw.\r
-\r
-## Tabellen en exports\r
-\r
-Klik op een kolomkop om een tabel te sorteren (nog eens voor de andere richting, een derde keer om te stoppen). De pictogrammen boven een tabel exporteren hem als **CSV** of als **Excel-werkmap**, met uren als getallen zodat een rekenblad ze kan optellen. *Tijd → Rapporten* exporteert alle registraties van een periode; *Tijd → Dag* exporteert één dag.\r
-\r
-## Waar alles zit\r
-\r
-- De **bovenbalk** boven in je scherm (of vastgezet aan een zijkant): klant, taak, tijd, Pomodoro en pauzes.\r
-- Het **pictogram in het systeemvak** (naast de klok): een menu met de uren van nu, pauzeren, wisselen en de schermen.\r
-- Een venster sluiten stopt HourWarden niet; het blijft in het systeemvak draaien. *HourWarden afsluiten* in dat menu stopt het.\r
-`,Zc=`# Hoe tijd wordt bijgehouden\r
-\r
-Elke seconde kijkt HourWarden naar het venster op de voorgrond en bepaalt bij welke klant het hoort. Tijd wordt vastgelegd in registraties: een stuk tijd voor één klant (of onbekend), met de reden waarom die klant is gekozen.\r
-\r
-## Hoe een klant wordt gekozen\r
-\r
-HourWarden probeert deze in volgorde en gebruikt de eerste die beslist:\r
-\r
-1. **Handmatig wisselen** dat je in de bovenbalk hebt gedaan.\r
-2. **Mappen**: een bestand of map binnen een klantmap.\r
-3. **Regels** op de klantpagina: Edge-profiel, programma, tekst in de venstertitel, externe server.\r
-4. **Domeinen en Microsoft-ID's**: mail- en webdomeinen, tenant-, abonnements- en werkruimte-ID's (met de Outlook- en webadressen-plug-ins).\r
-5. **Namen**: de naam of een alias van de klant als heel woord in de venstertitel, bestands- of mapnaam.\r
-6. **Recente bestanden** die in een klantmap zijn opgeslagen.\r
-7. **Netwerk**: de wifi of vpn, alleen als niets anders beslist.\r
-\r
-Als niets past, is de tijd **onbekend** (oranje rand). Als twee klanten even goed passen, vraagt HourWarden het.\r
-\r
-Een vergadering voor een bekende klant (Teams-vergaderingen-plug-in) krijgt de tijd, wat er ook op de voorgrond staat, ook als je alleen luistert.\r
-\r
-## Blikken, onderbrekingen en wissels\r
-\r
-- **Blikken**: een blik op het venster van een andere klant korter dan 10 seconden (*Wissels negeren korter dan*) telt voor de klant waarvoor je werkte.\r
-- **Korte onderbrekingen**: terwijl je voor een klant werkt, telt iets zonder klant (een collega antwoorden in Teams, de inbox) dat korter duurt dan 5 minuten nog voor die klant (*Korte onderbrekingen tellen voor de klant*). Duurt het langer, dan wordt de tijd vanaf het begin onbekend.\r
-- **Een andere klant** is na die 10 seconden een echte wissel.\r
-\r
-## Afwezig en inactief\r
-\r
-Zonder toetsenbord- of muisgebruik gedurende 5 minuten (*Inactief na*) telt de tijd niet meer, vanaf je laatste invoer. Twee dingen tellen als activiteit zonder invoer: een Teams-vergadering voor een klant (Teams-vergaderingen-plug-in), en een video die speelt in de browser, een videospeler of een vergaderprogramma op de voorgrond, tot twee uur lang (Windows; op Linux nog niet).\r
-\r
-- **Een korte pauze** (een document lezen, nadenken, even met een collega praten) korter dan 10 minuten telt voor de klant als je daarna met **dezelfde** klant verdergaat. Ga je met een andere klant verder, dan telt hij niet.\r
-- **Een langere pauze:** als je na 10 minuten of langer terugkomt (*Vragen naar afwezigheid na*), vraagt de bovenbalk wat die tijd was: een klant (een gesprek, een bezoek) of pauze. Naar afwezigheid tijdens een rustpauze of Pomodoro-pauze die HourWarden voorstelde, wordt niet gevraagd.\r
-\r
-## Vragen\r
-\r
-Als de klant 3 minuten onbekend is terwijl je werkt (*Vragen als onbekend na*), vraagt de bovenbalk welke klant het is. Je kunt:\r
-\r
-- een klant kiezen (de onbekende tijd tot nu toe gaat naar die klant);\r
-- het antwoord onthouden voor deze map, dit Edge-profiel of dit programma, zodat het niet opnieuw wordt gevraagd;\r
-- een nieuwe klant aanmaken: kies **Anders…** en typ de naam;\r
-- **Later** zeggen.\r
-\r
-## Handmatig wisselen\r
-\r
-Druk op **⇄** in de bovenbalk (of **Ctrl+Alt+K**) en kies een klant, eventueel met een taak: \`fab: ticket triage\`. Een handmatige wissel geldt tot je op **Auto** drukt, pauzeert of weg bent. *15 min geleden begonnen* zet de wissel terug als je pas later merkt dat je gewisseld bent (bijvoorbeeld een telefoongesprek); die tijd wordt genomen van wat er tussendoor is geregistreerd.\r
-\r
-## Pauzeren\r
-\r
-**❚❚** in de bovenbalk, het menu in het systeemvak of **Ctrl+Alt+P** pauzeert het bijhouden tot je hervat.\r
-`,Xc=`# De bovenbalk\r
-\r
-Een kleine balk boven in je scherm toont waar je tijd nu naartoe gaat, en zit je niet in de weg. De rand ervan en de rand om je scherm hebben de kleur van de klant; oranje betekent onbekend, grijs betekent gepauzeerd. De balk is zo breed als wat hij toont. Wijs iets aan om te zien wat het doet.\r
-\r
-## Wat hij toont\r
-\r
-- de **greep** (die verschijnt als je de balk aanwijst): sleep hem om de balk te verplaatsen;\r
-- een zacht pulserende **stip** en de **klant**, met het project als dat niet het standaardproject is. Klik om van klant te wisselen; wijs aan om te zien waarom deze klant is gekozen;\r
-- de **taak**: klik erop om een taak te kiezen of te typen wat je doet. Als je aan een taak uit je takenlijst werkt, vink je hem af met het vakje ervoor;\r
-- **Handmatig** nadat je zelf hebt gewisseld: klik erop om terug te gaan naar automatisch bijhouden;\r
-- een oranje **stip** als er vandaag 10 minuten of meer onbekende tijd is: klik erop om dat te verbeteren in *Tijd → Dag*;\r
-- een **ring** zolang een Pomodoro loopt, die leegloopt naarmate de tijd verstrijkt (rood tijdens focus, groen in een pauze), met de resterende minuten. Klik erop voor de Pomodoro-opties;\r
-- de **tijd** sinds de laatste wissel (wijs aan voor het totaal van vandaag en de tijd van de taak tegenover de schatting);\r
-- **pauzeren of hervatten**, **andere klant**, en **⋯** voor al het andere.\r
-\r
-## Het menu ⋯\r
-\r
-- een Pomodoro starten, of de lopende overslaan of stoppen, met het aantal van vandaag;\r
-- nu een rustpauze nemen (met wanneer de volgende komt);\r
-- de takenlijst, de tijd van vandaag (met de onbekende tijd) en HourWarden zelf;\r
-- de balkgrootte: **Volledig**, **Klein** (de klant en de tijd) of **Minimaal** (een gekleurde stip en de tijd; vragen wachten achter een oranje stip). Klik op een kleine of minimale balk om alles te zien tot de muis hem verlaat. Dezelfde keuze staat in *Instellingen → Grootte van de bovenbalk*.\r
-\r
-Het menu sluit als je iets kiest, op Esc drukt of de muis van de balk af beweegt.\r
-\r
-Onder de balk kun je een **ticketnummer** zien dat in het venster op de voorgrond staat (met *Als taak gebruiken*), een **vraag**, **afwezigheid**, een **pauze** met oefeningen of een **melding**. Vragen en pauzes openen altijd de hele balk.\r
-\r
-## Vastzetten aan de zijkant van het scherm\r
-\r
-Sleep de balk aan zijn greep en laat hem los dicht bij de **linker- of rechterrand** van een scherm: dan zet hij zich daar rechtop vast, met de naam van de klant, de tijd, de Pomodoro-ring, pauzeren en ⋯ onder elkaar. Vragen, de klantkeuze, het menu en pauzes openen ernaast. Sleep hem weg van de rand om hem weer horizontaal te maken.\r
-\r
-HourWarden onthoudt waar de balk stond, vastgezet of niet, ook na een herstart. *Bovenbalk terugzetten* in het menu in het systeemvak zet hem terug bovenaan in het midden.\r
-\r
-## De bovenbalk verbergen\r
-\r
-*Bovenbalk verbergen* in het menu in het systeemvak (of de instelling *De bovenbalk tonen*) verbergt hem. De sneltoetsen en het menu in het systeemvak blijven werken, en pauzes en de daglimiet tonen hem nog even.\r
-\r
-Als de balk (deels) buiten beeld raakt, bijvoorbeeld na het loskoppelen van een monitor, wordt hij teruggezet op een scherm.\r
-`,ev=`# Taken\r
-\r
-De takenlijst bevat wat je moet doen, per klant. Als je aan een taak werkt, gaat de tijd er vanzelf naartoe: je ziet per taak hoe lang hij duurde, tegenover je schatting, en hoeveel Pomodoro's hij kostte.\r
-\r
-## Taken toevoegen\r
-\r
-Typ in het vak boven aan het scherm *Taken* en druk op Enter. Een paar tekens vullen de details in:\r
-\r
-| Schrijf | Betekent | Voorbeeld |\r
-|---|---|---|\r
-| \`@naam\` | de klant (naam of alias; het begin van een woord is genoeg, \`-\` voor een spatie) | \`@contoso\`, \`@fabrikam-bv\` |\r
-| \`~tijd\` | de schatting | \`~45m\`, \`~1h30m\`, \`~2h\` |\r
-| \`#ID\` | het ticketnummer | \`#CON-123\` |\r
-| \`!dag\` | de deadline | \`!vandaag\`, \`!morgen\`, \`!vr\`, \`!vrijdag\`, \`!2026-11-20\` (Engelse namen als \`!fri\` werken ook) |\r
-\r
-Voorbeeld: \`Mailboxen migreren @contoso ~3h #CON-88 !vr\`.\r
-\r
-Een woord als \`CON-123\` in de titel wordt ook als ticketnummer gezien. Als er een klant in het filter is gekozen, zijn nieuwe taken voor die klant.\r
-\r
-Je kunt ook vanuit de bovenbalk een taak toevoegen: klik op de taak, typ en druk op Enter. Hij wordt aan je takenlijst toegevoegd en gestart.\r
-\r
-## Vandaag, Bord, Backlog, Klaar\r
-\r
-- **Vandaag**: taken die bezig zijn, taken gepland voor vandaag en backlogtaken die af moeten. Daaronder wat je vandaag hebt afgerond.\r
-- **Bord**: vier kolommen — *Backlog*, *Te doen*, *Bezig*, *Klaar*. **Sleep** kaarten tussen kolommen en omhoog en omlaag om ze te ordenen.\r
-- **Backlog**: alles voor later. *Plannen voor vandaag* zet een taak bij *Te doen*. Taken met een deadline verschijnen op *Vandaag* als ze af moeten.\r
-- **Klaar**: afgeronde taken per dag.\r
-\r
-Het filter beperkt alles tot één klant (of taken zonder klant); zoeken kijkt in titels, ticketnummers en notities.\r
-\r
-## Aan een taak werken\r
-\r
-Druk op **▶** bij een taak (of kies hem in de bovenbalk). Hij gaat naar *Bezig* en de tijd gaat ernaartoe:\r
-\r
-- Als de taak voor een klant is en je nu niet voor die klant werkt, wisselt HourWarden naar die klant, zoals bij handmatig wisselen.\r
-- Als je daarna voor een andere klant werkt, is die tijd niet van de taak. De bovenbalk toont **⏸ taak**; de taak gaat verder als je weer bij zijn klant bent.\r
-- Een taak zonder klant krijgt alle tijd tot je hem stopt.\r
-- Een taak met een project zet zijn tijd op dat project.\r
-\r
-**■** stopt het werken aan de taak. Afvinken (in de lijst of in de bovenbalk) rondt hem af en stopt hem.\r
-\r
-Een getypte tekst die geen taak is (↺ in de bovenbalk) geeft alleen de tijd een label, zoals in eerdere versies.\r
-\r
-## Details van een taak\r
-\r
-Klik op de titel van een taak om de details te openen: titel, klant en project, ticketnummer, schatting, deadline, notities en een **checklist** met stappen. De details tonen ook de bestede tijd (in totaal en vandaag) en de Pomodoro's eraan. **Verwijderen** haalt de taak weg; de tijd die erop is geregistreerd blijft, met de titel.\r
-\r
-## Tickets op het scherm\r
-\r
-Met de plug-in *Ticket IDs* wordt een ticketnummer dat in het venster op de voorgrond staat (Jira, TopDesk, ServiceNow) in de bovenbalk aangeboden. **Als taak gebruiken** start de open taak met dat ticketnummer voor de huidige klant, of voegt er een toe.\r
-`,tv=`# Pomodoro en pauzes\r
-\r
-Twee dingen helpen je in een gezond ritme te werken: de Pomodoro-timer voor focus, en pauzes met oefeningen tegen RSI (klachten aan arm, nek en schouder).\r
-\r
-## Pomodoro\r
-\r
-Een Pomodoro is 25 minuten geconcentreerd werken, gevolgd door 5 minuten pauze; na elke vierde een pauze van 15 minuten. Alle lengtes zijn instellingen (*Pomodoro*).\r
-\r
-- Start er een met **Starten** naast 🍅 in de bovenbalk of **Pomodoro starten** op het scherm *Taken*.\r
-- De bovenbalk telt af. In een pauze toont hij oefeningen (korte in een korte pauze, een reeks in een lange pauze).\r
-- Als de pauze voorbij is, vraagt de bovenbalk of je de volgende wilt starten.\r
-- **⏭** beëindigt de focusperiode eerder (die telt dan niet mee) of slaat de pauze over; **■** stopt de timer.\r
-- 🍅 toont hoeveel Pomodoro's je vandaag hebt afgerond. Elke Pomodoro telt ook mee bij de taak waaraan je werkte.\r
-\r
-De Pomodoro-timer verandert niets aan hoe tijd wordt bijgehouden; hij helpt je alleen focussen.\r
-\r
-## Pauzes tegen RSI\r
-\r
-Urenlang typen en muizen belast handen, armen, nek en ogen. HourWarden telt hoe lang je toetsenbord en muis echt gebruikt (tijd zonder invoer telt niet) en stelt pauzes voor:\r
-\r
-| Pauze | Standaard | Wat je doet |\r
-|---|---|---|\r
-| Micropauze | 20 seconden na elke 20 minuten gebruik | De 20-20-20-oogregel: kijk naar iets dat minstens 6 meter (20 voet) verderop is |\r
-| Rustpauze | 10 minuten na elke 50 minuten gebruik | Opstaan, strekken, lopen |\r
-| Daglimiet | een melding na 8 uur gebruik op een dag | Klaar voor vandaag |\r
-\r
-De **20-20-20-oogregel** (*Instellingen → Pauzes*, standaard aan) bepaalt de micropauzes: elke 20 minuten 20 seconden 6 meter verderop kijken, wat de oogspieren ontspant die zich inspannen om dichtbij scherp te stellen. Zet hem uit om zelf de lengte en het interval van micropauzes te kiezen, met om de beurt oog- en handoefeningen.\r
-\r
-Een pauze telt zolang je toetsenbord en muis **niet** aanraakt; de balk onder de titel loopt vol. Zelf even stoppen telt ook: een halve minuut lezen zonder iets aan te raken is een micropauze, tien minuten weg zijn een rustpauze, en de timers beginnen opnieuw.\r
-\r
-- **Later** vraagt het over een paar minuten opnieuw (2 bij een micropauze, 5 bij een rustpauze).\r
-- **Overslaan** slaat hem over; de timer begint opnieuw.\r
-- **Volgende oefening** toont een andere oefening.\r
-- **☕** in de bovenbalk start nu een rustpauze.\r
-\r
-Pauzes wachten zolang een Teams-vergadering loopt of een presentatie of programma op volledig scherm op de voorgrond staat. Naar afwezigheid tijdens een rustpauze wordt achteraf niet gevraagd.\r
-\r
-Elke pauze kun je wijzigen of uitzetten onder *Instellingen → Pauzes* (0 zet een pauze uit). *Oefeningen tonen* zet de animaties uit.\r
-\r
-## De oefeningen\r
-\r
-Elke oefening heeft een bewegend figuurtje en een aanwijzing eronder die meeloopt met de beweging (*Buig naar links*, *Vasthouden*, *Terug naar het midden*). Het figuurtje staat tegenover je als in een spiegel: buigt het naar jouw linkerkant, buig dan ook naar links. Als je in Windows minder beweging hebt gekozen, staat het figuurtje stil in de belangrijkste houding en lopen alleen de aanwijzingen door.\r
-\r
-| Oefening | Voor |\r
-|---|---|\r
-| Kijk in de verte | Ogen: scherpstellen op zes meter of verder |\r
-| Beweeg je ogen | Ogen: omhoog, rechts, omlaag, links |\r
-| Knipper | Droge ogen |\r
-| Maak je handen los | Handen en onderarmen |\r
-| Nekstrek | Nek en bovenrug |\r
-| Schouders rollen | Schouders |\r
-| Polsstrek | Polsen en onderarmen |\r
-| Spreid je vingers | Vingers en handen |\r
-| Reik omhoog | Rug en zijkanten |\r
-| Open je borst | Borst en schouderbladen |\r
-| Draai je rug | Onderrug |\r
-| Sta op en loop | Alles: bewegen helpt het meest |\r
-\r
-Stop met een oefening als het pijn doet. Heb je klachten, vraag het dan een arts of fysiotherapeut.\r
-\r
-## Sta-bureau\r
-\r
-Met een sta-bureau zet je *Instellingen → Sta-bureau → Herinner me om te gaan staan* aan. Na een tijd zitten achter de computer (45 minuten, tenzij je het wijzigt) vraagt de bovenbalk je te gaan staan:\r
-\r
-- **Ik sta**: de herinnering sluit; zitten telt weer na de statijd (15 minuten, tenzij je het wijzigt);\r
-- **Later**: vraagt het over 10 minuten opnieuw;\r
-- **Vandaag geen sta-bureau**: geen herinneringen meer tot morgen, voor dagen dat je ergens anders werkt. *Sta-herinneringen weer aan* in het menu **⋯** van de bovenbalk (of op *Vandaag*) maakt het ongedaan.\r
-\r
-De herinnering werkt alleen als je laptop **in het dock** zit: als er een extern scherm is aangesloten. Vijf minuten bij de computer weglopen telt als opstaan.\r
-`,nv=`# Tijd: dag, week, uren en rapporten\r
-\r
-Alles over geregistreerde tijd staat op één scherm, *Tijd*, met vier tabbladen: **Dag**, **Week**, **Uren** en **Rapporten**. Elk staat ook in het menu links. Alle tabellen sorteren als je op een kolomkop klikt en exporteren naar CSV of Excel.\r
-\r
-## Dag\r
-\r
-*Dag* toont een dag als tijdlijn met de totalen per klant. Gebruik het aan het eind van de dag om na te kijken wat er is geregistreerd.\r
-\r
-- **Open** een registratie door erop te klikken. Wijzig de klant, het project, de taak, het ticketnummer, het begin en het einde, en druk op **Opslaan** (Esc of **Sluiten** laat het zoals het was). Gewijzigde tijd is van jou en gaat voor automatische tijd.\r
-- **Tijden**: klik op een tijd voor de tijdkiezer. Typ hem (7:30, 0730, 19h), kies een uur en minuut, of ga 5 minuten verder met **−5** en **+5**; de pijltjestoetsen gaan een minuut verder (met Shift 5).\r
-- **Notities**: schrijf op wat je deed, afsprak of ontdekte. De editor toont de opmaak terwijl je typt en bewaart die als Markdown: de werkbalk, Ctrl+B en Ctrl+I, of typ aan het begin van een regel \`- \` voor een lijst, \`1. \` voor een genummerde lijst, \`## \` voor een kop en \`> \` voor een citaat. Notities staan onder de registratie in de lijst. Ook de registratie die nu loopt kan notities krijgen.\r
-- **Toevoegen**: tijd die niet aan de computer was: een bezoek, een telefoongesprek.\r
-- **Splitsen**: een registratie splitsen op een tijd naar keuze, bijvoorbeeld om een deel aan een andere klant te geven.\r
-- **Samenvoegen**: een registratie samenvoegen met de volgende voor dezelfde klant, inclusief het gat ertussen.\r
-- **Verwijderen**: een registratie weghalen.\r
-- **Uit je agenda** (Outlook-agenda-plug-in): afspraken worden aangeboden als tijd voor de klant van de deelnemers of het onderwerp.\r
-- **Exporteren**: de registraties van de dag als CSV of Excel, met de pictogrammen naast de datum.\r
-\r
-Onbekende tijd staat in het oranje. De bovenbalk herinnert je eraan als er vandaag 10 minuten of meer van is.\r
-\r
-## Week\r
-\r
-De urenstaat: een week per klant (of per project) en dag, met totalen, de onbekende tijd en je weekdoel (*Uren per week*).\r
-\r
-- *Uren afronden op* rondt de dag van elke klant af op de dichtstbijzijnde 6, 15 of 30 minuten, zoals veel urenstaten willen.\r
-- **Week kopiëren** zet decimale uren op het klembord, om in een rekenblad of de urenstaat van een klant te plakken. De pictogrammen boven de tabel exporteren hem als CSV of Excel.\r
-- Klik op de uren van een dag om die te openen in *Dag*.\r
-\r
-## Uren\r
-\r
-Uren per klant voor vandaag, deze week, deze maand of vorige maand, uit te klappen naar projecten en taken (gegroepeerd per ticketnummer).\r
-\r
-## Rapporten\r
-\r
-Kies een periode (of zelf een bereik) en eventueel een klant. Rapporten tonen de uren per klant, project, taak, programma en hoe ze zijn geregistreerd, de uren per dag, aantallen mails (Outlook-plug-in), **uren per ticket** en een tabel met **alle registraties**. Zoeken vindt registraties op taak, ticketnummer, venstertitel of programma. Elke tabel exporteert naar CSV of Excel; de export van de registraties bevat elke registratie van de periode, met uren als getallen.\r
-`,av=`# Klanten en projecten\r
-\r
-## De klantenlijst\r
-\r
-Het scherm *Klanten* toont je klanten met de uren van deze maand en wanneer je voor het laatst voor ze werkte.\r
-\r
-- **Zoeken** vindt klanten op naam, alias, domein, categorie of notities. Enter opent de eerste, Esc wist de zoekopdracht.\r
-- **Categorieën** groeperen klanten, zoals *Beheerde diensten*, *Projecten* of *Intern*. Gesorteerd van A tot Z toont de lijst een kop per categorie; het categoriefilter toont één categorie (of de klanten zonder categorie).\r
-- **Sorteren** van A tot Z, op de meeste uren deze maand, of op voor wie je het laatst werkte. De sortering wordt onthouden.\r
-- **Gearchiveerde tonen** laat ook klanten zien voor wie je niet meer werkt.\r
-- Onderaan: hoeveel klanten er getoond worden en hun uren deze maand samen.\r
-- Edge-profielen zonder klant worden aangeboden: met één klik maak je een klant met een regel voor dat Edge-profiel.\r
-\r
-## De pagina van een klant\r
-\r
-De pagina heeft vier tabbladen.\r
-\r
-### Overzicht\r
-\r
-Wat de geregistreerde tijd over deze klant zegt:\r
-\r
-- het totaal voor de periode (deze maand, vorige maand of de afgelopen 12 maanden) vergeleken met de periode ervoor, vandaag, deze week, wanneer je voor het laatst voor ze werkte, open taken en mails (Outlook-plug-in);\r
-- uren per dag (of per maand), met de weekenden gearceerd;\r
-- tijd per project, per taak of ticket, per programma, en hoe die is geregistreerd (automatisch, door handmatig wisselen, of door jou toegevoegd en gewijzigd);\r
-- open taken, met ▶ om er een te starten, en de laatst geregistreerde tijd;\r
-- de notities over de klant.\r
-\r
-### Herkenning\r
-\r
-Hoe HourWarden de klant herkent:\r
-\r
-- **Afkortingen en andere namen**: gevonden als hele woorden in venstertitels, bestands- en mapnamen, Remote Desktop Manager-mappen en Obsidian-tags. Namen korter dan 3 letters tellen alleen in bestands- en mapnamen.\r
-- **Domeinen en Microsoft-ID's**:\r
-  - maildomeinen (\`contoso.com\`): mail van of naar die domeinen telt voor de klant (Outlook-plug-in);\r
-  - webdomeinen (\`contoso.sharepoint.com\`, \`portal.contoso.com\`): pagina's daarop tellen (webadressen-plug-in);\r
-  - de Microsoft-tenant (\`contoso.onmicrosoft.com\` of de tenant-ID), Azure-abonnements-ID's en Power BI- of Fabric-werkruimte-ID's: gevonden in adressen van Azure Portal, Entra, Power BI en Fabric. De webadressen-plug-in zet elke ID die hij ziet in zijn logboek, zodat je hem hier kunt plakken.\r
-  Subdomeinen tellen ook.\r
-- **Telefoonnummers**: gesprekken met deze nummers tellen voor de klant in de HourWarden-app op je telefoon. Een korter nummer is een begin: \`+31 20 555\` past bij iedereen op dat kantoor. Nummers die je op de telefoon met "onthouden" toewijst, worden hier toegevoegd.\r
-- **Mappen**: bestanden en mappen daarin tellen voor de klant, ook als het venster alleen een bestandsnaam toont.\r
-- **Regels**: een Edge-profiel, een programma, tekst in de venstertitel, een externe server of een netwerk dat deze klant betekent. Regels worden meteen opgeslagen; namen, domeinen en mappen met **Opslaan**.\r
-\r
-### Projecten\r
-\r
-Elke klant heeft een standaardproject, *General*, waar de tijd naartoe gaat als er geen project wordt herkend. Voeg projecten toe met hun eigen afkortingen en mappen om de tijd van een klant verder te verdelen. Een taak kan een project hebben; werken aan die taak zet de tijd daar.\r
-\r
-### Instellingen\r
-\r
-Naam, categorie, randkleur en **notities** (contactpersonen, contract, tarieven, afspraken). **Archiveer** een klant voor wie je niet meer werkt: die wordt niet meer herkend, maar de uren blijven.\r
-\r
-## Interne tijd: studie, intern overleg\r
-\r
-Tijd die niet voor een klant is, gaat naar **je eigen bedrijf**, zodat die apart blijft van declarabele uren. Stel het in met de installatiehulp (*Instellingen → Installatiehulp openen*, stap 2), of met de hand: voeg je bedrijf toe als klant en vink **Dit is mijn eigen bedrijf** aan op de pagina ervan.\r
-\r
-- **Soorten interne tijd zijn projecten** van je bedrijf: *Intern overleg*, *Studie en training*, *Administratie*, *Verkoop en offertes*, of eigen soorten. Voeg er meer toe op de pagina, bij projecten.\r
-- **Wisselen:** in de klantkeuze van de bovenbalk staan de soorten van je bedrijf altijd ("Lumen IT · Studie en training"); kies er een, of typ de naam. Projecten van andere klanten verschijnen zodra je een deel van een naam typt.\r
-- **Automatisch herkend:** geef je bedrijf regels zoals elke klant, zoals de map met je cursusmateriaal, de site van je intranet of je eigen maildomein, zodat intern werk wordt geboekt zonder te wisselen.\r
-- **Niet-herkende tijd** kan als intern tellen: *Tijd waarvoor geen klant wordt herkend telt als intern* (installatiehulp, of de pagina van je bedrijf).\r
-- **Rapporten** tonen je bedrijf als een klant, zodat de uren per klant declarabele en interne tijd naast elkaar laten zien, en *Uren per project* de interne tijd per soort uitsplitst. Het maandoverzicht per klant laat die buiten de bladen van klanten.\r
-\r
-## Nieuwe klanten\r
-\r
-**+ Klant** opent het tabblad Instellingen; na **Klant aanmaken** ga je verder op Herkenning. Typ in de bovenbalk een nieuwe naam in de klantkeuze (ook via **Anders…** bij de vragen) en kies **+ Nieuwe klant “naam”**: die krijgt een vrije kleur en de tijd gaat er meteen naartoe. **Meer…** (of Ctrl+Enter) doet hetzelfde en opent dan de pagina op Herkenning, om de rest in te vullen. In de klantkeuze opent **Meer…** naast een klant de pagina van die klant.\r
-`,rv=`# Plug-ins\r
-\r
-Plug-ins voegen herkenning toe die bij een programma of manier van werken hoort: Teams-vergaderingen, het Outlook-item dat je leest, de server in SQL Server Management Studio, een ticketnummer in de venstertitel. Elke plug-in die je installeert voegt zijn eigen documentatie toe aan deze help, onder *Je plug-ins*; verwijderen haalt die weer weg.\r
-\r
-## De plug-inwinkel\r
-\r
-De plug-ins komen met HourWarden mee (*Built-in plugins*): ze werken offline en zijn ondertekend, zoals elke bron. Als een nieuwe versie van HourWarden nieuwere plug-ins meebrengt, worden de plug-ins die je hebt geïnstalleerd vanzelf bijgewerkt.\r
-\r
-*Plug-ins → Winkel* toont de plug-ins uit al je bronnen. Op elke kaart staat uit welke bron de plug-in komt. Voor het installeren zie je wat de plug-in leest en doet. Elk bestand wordt gecontroleerd tegen de index van de bron, en opnieuw voor elke start; een plug-in die na het installeren is gewijzigd, start niet.\r
-\r
-Op elke kaart staat ook waar de plug-in werkt: **Windows en Linux**, of **alleen Windows** voor plug-ins die Outlook, Office of andere onderdelen van Windows gebruiken. Een plug-in voor een ander besturingssysteem toont dat label in plaats van een knop Installeren. Op Linux hebben plug-ins PowerShell 7 (\`pwsh\`) nodig; de status van de plug-in zegt het als dat ontbreekt.\r
-\r
-## Bronnen voor plug-ins\r
-\r
-Boven in de winkel beheer je waar plug-ins vandaan komen. HourWarden begint met zijn ingebouwde plug-ins. Je kunt er meer toevoegen:\r
-\r
-- een **GitHub-repository**: plak het adres, zoals \`https://github.com/eigenaar/repository\` (voeg \`/tree/branch\` toe voor een andere branch dan de standaard);\r
-- elk **webadres** (https) van een map met een \`index.json\`;\r
-- een **map** op deze computer of een netwerkshare, met **Map toevoegen…**.\r
-\r
-Webbronnen worden gedownload als je de winkel voor het eerst opent, en opnieuw als je op **Vernieuwen** drukt; tot die tijd werkt HourWarden met zijn kopie, ook offline. Vink een bron uit om hem niet meer te gebruiken zonder hem te verwijderen, of gebruik de pijltjes om de volgorde te wijzigen. Als twee bronnen dezelfde plug-in hebben, wordt de nieuwste versie geïnstalleerd; bij gelijke versies die hoger in de lijst.\r
-\r
-De index van elke bron is ondertekend. Druk één keer op **vertrouw hem** voor een bron; vanaf dan installeert HourWarden er alleen uit als de index met die sleutel is ondertekend. De HourWarden-repository op GitHub wordt vanaf het begin vertrouwd.\r
-\r
-## Geïnstalleerde plug-ins\r
-\r
-Elke geïnstalleerde plug-in toont zijn status, zijn instellingen en zijn logboek. Plug-ins draaien als aparte programma's, worden na een crash opnieuw gestart en na herhaalde crashes gestopt. Als groepsbeleid PowerShell-scripts blokkeert, zegt de plug-in dat.\r
-\r
-**Installeren uit map** is om zelf een plug-in te schrijven: zie \`docs/protocol.md\` in de plug-in-repository.\r
-\r
-## Documentatie schrijven voor een plug-in\r
-\r
-Een plug-in noemt zijn documentatie in \`plugin.toml\`:\r
-\r
-\`\`\`toml\r
-docs = "README.md"\r
-\`\`\`\r
-\r
-Het bestand is Markdown in de map van de plug-in. Zodra de plug-in is geïnstalleerd, verschijnt het hier in de help.\r
-`,ov=`# Je gegevens en back-ups\r
-\r
-Alle gegevens blijven op deze computer, in \`%APPDATA%\\nl.hourwarden.desktop\` (op Linux \`~/.local/share/nl.hourwarden.desktop\`):\r
-\r
-| Bestand of map | Wat |\r
-|---|---|\r
-| \`hourwarden.db\` | Klanten, projecten, regels, tijd, taken, Pomodoro's, instellingen |\r
-| \`backups\\\` | Dagelijkse kopieën van de database |\r
-| \`logs\\hourwarden.log\` | Fouten, crashes en problemen met plug-ins |\r
-| \`plugins\\\` | Geïnstalleerde plug-ins |\r
-\r
-## Back-ups\r
-\r
-Elke dag kopieert HourWarden zijn database naar de back-upmap en bewaart de laatste 14 kopieën (*Te bewaren back-ups*).\r
-\r
-- *Back-upmap* zet de kopieën op een andere schijf of in een gesynchroniseerde map (Proton Drive, OneDrive), zodat een kapotte schijf je uren niet meeneemt.\r
-- *Nu back-up maken* maakt meteen een kopie.\r
-- **Terugzetten** naast een back-up vervangt alle gegevens erdoor, nadat eerst een back-up van de huidige gegevens is gemaakt.\r
-- *Back-upwachtwoord* versleutelt de kopieën (AES-256-GCM, sleutel uit het wachtwoord met Argon2id; bestanden eindigen op \`.tkb\`). Zonder het wachtwoord kan niemand ze lezen, ook niet in een cloudmap. Terugzetten vraagt hetzelfde wachtwoord, ook op een andere computer, dus bewaar het in je wachtwoordmanager. Kopieën van voordat je het instelde blijven onversleuteld.\r
-\r
-## Versleuteling\r
-\r
-- **Synchronisatie:** de verbinding met je server is HTTPS; de server houdt de gegevens van elke gebruiker gescheiden en laat alleen actieve accounts synchroniseren.\r
-- **Back-ups:** versleuteld met het back-upwachtwoord (hierboven).\r
-- **Deze computer:** de database zelf wordt beschermd door je Windows-account. Zet schijfversleuteling aan om hem te beschermen als de laptop wordt gestolen: *Instellingen → Privacy en beveiliging → Apparaatversleuteling* (of BitLocker op Windows Pro).\r
-- **De telefoon:** Android versleutelt zijn opslag standaard als de telefoon een schermvergrendeling heeft; stel een pincode of wachtwoord in.\r
-\r
-## Het logboek\r
-\r
-*Instellingen → Logmap openen* opent de map met \`hourwarden.log\`. Daarin staan fouten, crashes (met details), plug-ins die niet meer werken en waarom HourWarden is gestopt. Stuur het mee als je een probleem meldt.\r
-`,sv=`# Toetsen en het menu in het systeemvak\r
-\r
-## Sneltoetsen\r
-\r
-Deze werken overal, ook als HourWarden niet op de voorgrond staat.\r
-\r
-| Toetsen | Doet |\r
-|---|---|\r
-| Ctrl+Alt+P | Bijhouden pauzeren of hervatten |\r
-| Ctrl+Alt+K | De klantkeuze in de bovenbalk openen |\r
-\r
-### Een sneltoets wijzigen\r
-\r
-Druk onder *Instellingen → Sneltoetsen* op **Wijzigen…** en dan op de nieuwe combinatie: houd Ctrl, Alt, Shift of Win ingedrukt en druk op een toets. Je huidige sneltoetsen staan uit zolang je opneemt. **Deze gebruiken** slaat hem op, **Opnieuw** neemt een andere op, Esc of **Annuleren** houdt de oude. **Standaard** zet de standaard terug.\r
-\r
-HourWarden controleert de combinatie eerst:\r
-\r
-- er is Ctrl, Alt of Win nodig (F13–F24 mogen alleen), en Shift met een letter is gewoon typen;\r
-- combinaties die Windows of elk programma gebruikt (Ctrl+C, Ctrl+S, Alt+Tab, Win met één toets) worden geweigerd;\r
-- de twee sneltoetsen van HourWarden moeten verschillen;\r
-- er verschijnt een waarschuwing als de combinatie in de weg kan zitten, zoals Ctrl+Alt+E, die op veel Europese toetsenborden € typt.\r
-\r
-Als een ander programma de combinatie al heeft, weigert Windows hem; HourWarden zegt dat en houdt je oude sneltoets.\r
-\r
-Op Linux zijn de sneltoetsen algemene sneltoetsen van KDE: de toetsen die je hier instelt worden de eerste keer gebruikt, daarna onthoudt KDE ze; wijzig ze in *Systeeminstellingen → Toetsenbord → Sneltoetsen* onder KWin. Zie *HourWarden op Linux*.\r
-\r
-## In de bovenbalk\r
-\r
-| Toetsen | Doet |\r
-|---|---|\r
-| Enter | Naar de eerste klant wisselen, de taak starten of de klant aanmaken |\r
-| Esc | De klantkeuze of het taakvak sluiten |\r
-\r
-## In het venster van HourWarden\r
-\r
-| Toetsen | Doet |\r
-|---|---|\r
-| Ctrl+K | Zoeken: naar elk scherm, elke klant, taak, instelling of helppagina gaan, of een actie uitvoeren |\r
-| F1 | Deze help openen |\r
-| Ctrl+C, Ctrl+V | Kopiëren en plakken in tekstvelden |\r
-\r
-Browsertoetsen (afdrukken, zoeken, vernieuwen, zoomen) doen niets: HourWarden is een programma, geen webpagina.\r
-\r
-## Het menu in het systeemvak\r
-\r
-Klik met de rechtermuisknop op het pictogram van HourWarden naast de klok:\r
-\r
-- de huidige klant met de uren van vandaag, deze week en deze maand;\r
-- **HourWarden openen** (op Vandaag), **Taken**, **Dagoverzicht**, **Urenstaat**;\r
-- **Andere klant**, **Pauzeren / Hervatten**;\r
-- **Bovenbalk verbergen / Bovenbalk tonen**, **Bovenbalk terugzetten**;\r
-- **HourWarden afsluiten**.\r
-\r
-Het menu volgt de taal die je onder *Instellingen → Weergave* kiest.\r
-`,iv=`# Problemen oplossen\r
-\r
-## De tijd gaat naar de verkeerde klant\r
-\r
-Kijk naar de reden onder de bovenbalk (of in het dagoverzicht): die zegt waarom die klant is gekozen, bijvoorbeeld \`'CTS' in venstertitel\` of \`regel: Edge-profiel 'Contoso'\`. Dan:\r
-\r
-- verwijder of wijzig de alias of regel die paste;\r
-- voeg een specifieker signaal toe voor de juiste klant (een Edge-profiel of een map wint van een naam);\r
-- voor één keer: verbeter het in het dagoverzicht.\r
-\r
-## Het blijft vragen welke klant het is\r
-\r
-Kies bij je antwoord *Onthouden voor deze map / dit Edge-profiel / dit programma*, of voeg een regel toe op de klantpagina. Als het programma voor alle klanten wordt gebruikt (Teams, Outlook), installeer dan de bijbehorende plug-in in plaats van een regel voor het programma.\r
-\r
-## De bovenbalk is weg\r
-\r
-- *Bovenbalk tonen* in het menu in het systeemvak (misschien is hij verborgen).\r
-- *Bovenbalk terugzetten* in dat menu zet hem bovenaan in het midden van het hoofdscherm.\r
-\r
-## Een plug-in werkt niet\r
-\r
-Open *Plug-ins* en kijk naar de status en het logboek. Veelvoorkomende redenen: het programma dat hij leest draait niet, groepsbeleid blokkeert PowerShell-scripts, of de plug-in is na het installeren gewijzigd (installeer hem opnieuw uit de winkel).\r
-\r
-## Pauzes komen op een slecht moment\r
-\r
-Pauzes wachten tijdens Teams-vergaderingen en presentaties. Druk op **Later**, wijzig de tijden onder *Instellingen → Pauzes*, of zet een pauze op 0 om hem uit te zetten.\r
-\r
-## Iets anders\r
-\r
-*Instellingen → Logmap openen* en kijk in \`hourwarden.log\`; daarin staan fouten en crashes met details.\r
-`,lv=`# Afleiding\r
-\r
-HourWarden telt de tijd die je besteedt aan sociale media, video, nieuws, winkelen en games: Reddit, X, Facebook, Instagram, TikTok, YouTube, Netflix, Twitch, NU.nl, Tweakers, Bol, Steam, Epic Games, Discord, en elke game die via Steam, Epic, GOG, Xbox of Riot is geïnstalleerd. Het telt alleen zolang je de computer gebruikt, niet nadat je bent weggelopen.\r
-\r
-Afleiding is niet fout. 's Avonds of in het weekend is het je eigen tijd, en HourWarden telt het alleen. Alleen de site of game en de minuten worden bewaard, op deze computer.\r
-\r
-## Vandaag\r
-\r
-De kaart **Afleiding** op *Vandaag* toont het totaal van vandaag, de sites en games waar het naartoe ging, en de afgelopen zeven dagen. Het menu **⋯** van de bovenbalk toont ook het totaal van vandaag.\r
-\r
-## De herinnering tijdens werk\r
-\r
-Tijdens je **werktijden** (of zolang een Pomodoro loopt) vraagt de bovenbalk je na een paar minuten afleiding achter elkaar om te kiezen:\r
-\r
-- **Weer aan het werk**: de herinnering sluit en blijft 15 minuten weg;\r
-- **Een stukje lopen**: start een rustpauze. Sta op, loop rond, haal wat water, en kom terug met nieuwe energie;\r
-- **Verder met mijn cursus**: opent de cursus die je volgt, zodat de tijd naar leren gaat.\r
-\r
-Een minuut werken sluit de herinnering vanzelf.\r
-\r
-## Instellingen\r
-\r
-Onder *Instellingen → Afleiding*:\r
-\r
-- **Afleiding bijhouden**: zet de teller uit;\r
-- **Herinner me tijdens werk na**: de minuten afleiding voor de herinnering (0 zet de herinnering uit);\r
-- **Werkdagen** en **werktijd**: wanneer de herinnering mag komen;\r
-- **Je cursus**: het webadres van de cursus die je volgt (Microsoft Learn, Udemy, Pluralsight...);\r
-- **Ook afleiding**: meer sites (zoals hun naam in het browsertabblad staat) of programma's (\`game.exe\`);\r
-- **Voor mij geen afleiding**: sites of programma's die voor jou werk of leren zijn, zoals YouTube of Discord.\r
-`,dv=`# HourWarden op Linux\r
-\r
-HourWarden op Linux is hetzelfde programma als op Windows: dezelfde schermen, instellingen, klanten, regels en plug-ins. Alleen de manier waarop het aan het systeem vraagt welk venster op de voorgrond staat, verschilt. Het is gemaakt voor **KDE Plasma** (5.27 of 6, Wayland of X11).\r
-\r
-## Installeren\r
-\r
-Installeer het pakket \`.deb\` (Debian, Ubuntu, KDE neon) of \`.rpm\` (Fedora, openSUSE). HourWarden verschijnt in het programmamenu en start, als *Starten bij aanmelden* aan staat, met je sessie.\r
-\r
-Plug-ins zijn PowerShell-scripts; op Linux hebben ze **PowerShell 7** (\`pwsh\`) nodig, van je distributie of uit de pakketbron van Microsoft. Zonder werkt het programma, maar melden plug-ins dat PowerShell ontbreekt.\r
-\r
-## Hoe het het actieve venster ziet\r
-\r
-Wayland laat programma's geen andere vensters zien. Daarom laadt HourWarden bij het starten een klein **KWin-script** in Plasma. Het script vertelt HourWarden welk venster actief is en wat de titel is, houdt de bovenbalk boven andere vensters en registreert de sneltoetsen. Het wordt alleen in de lopende sessie geladen: er wordt niets in KDE geïnstalleerd en er worden geen instellingen gewijzigd. Als Plasma herstart, laadt HourWarden het binnen een halve minuut opnieuw.\r
-\r
-Programmanamen worden getoond zoals op Windows: Firefox is \`firefox.exe\`, VS Code \`code.exe\`. Regels die je voor een programma maakt, werken daardoor op beide systemen.\r
-\r
-Inactiviteit komt uit de inactiviteitsmeldingen van Plasma; een video die speelt telt niet als activiteit.\r
-\r
-## Verschillen met Windows\r
-\r
-| | Linux (KDE Plasma) |\r
-|---|---|\r
-| Sneltoetsen | Algemene sneltoetsen van KDE. De sneltoetsinstellingen van HourWarden geven de eerste keer de toetsen; daarna onthoudt KDE ze, dus wijzig ze in *Systeeminstellingen → Toetsenbord → Sneltoetsen → KWin* (zoek op "HourWarden"). |\r
-| Bovenbalk | Boven andere vensters gehouden en bovenaan gecentreerd door KWin. Vastzetten aan de zijkant kan niet op Wayland, omdat programma's hun eigen vensters daar niet kunnen plaatsen. |\r
-| Rand | Getekend boven alle vensters, ook die op volledig scherm; klikken gaan erdoorheen. Hij verdwijnt als het actieve venster op volledig scherm staat. |\r
-| Scherm delen | Wayland kan vensters niet verbergen voor schermdelen; de bovenbalk en rand zijn zichtbaar in gedeelde schermen. Verberg ze tijdens een presentatie via het menu in het systeemvak. |\r
-| In het dock | Er is een extern scherm aangesloten (de sta-bureau-herinnering gebruikt dit). |\r
-| Plug-ins | Outlook, Office, Teams desktop, Extern bureaublad en webadressen zijn alleen voor Windows. Ticketnummers, SSH-terminals, VS Code, netwerken, bestandswijzigingen en externe werkplekken werken. |\r
-| Thema Windows 11 | Gebruikt de accentkleur van KDE. |\r
-\r
-## Je gegevens\r
-\r
-Gegevens en back-ups staan in \`~/.local/share/nl.hourwarden.desktop\`, het logboek in de map \`logs\` daarin.\r
-\r
-## Als bijhouden niet werkt\r
-\r
-- **Geen KDE Plasma:** op GNOME en andere bureaubladen start HourWarden wel, maar ziet het het actieve venster niet. Handmatig wisselen, taken, Pomodoro en de urenstaat werken nog.\r
-- **Kijk in het logboek** in \`~/.local/share/nl.hourwarden.desktop/logs/hourwarden.log\`: daar staat "KWin script loaded" en "KWin script reports the active window" als alles goed is, of waarom niet.\r
-- **Zie wat HourWarden ziet:** start het vanuit een terminal met \`HOURWARDEN_DEBUG_PLATFORM=1 hourwarden-desktop\`; het logboek toont dan om de paar seconden het actieve venster, de inactiviteit en of de laptop in het dock zit.\r
-`,uv=`# Synchronisatie en de telefoon-app\r
-\r
-Met je eigen HourWarden-server delen je computers en je telefoon klanten, regels, taken, uren en waar je nu aan werkt. Elk apparaat bewaart alles zelf en werkt zonder verbinding; wijzigingen worden uitgewisseld zodra die terug is.\r
-\r
-## Wat er wordt gesynchroniseerd\r
-\r
-- Klanten, projecten en regels.\r
-- Taken, registraties (met hun taaktekst en notities) en Pomodoro's.\r
-- Waar je nu aan werkt: de telefoon toont het en kan het pauzeren, hervatten of wisselen, en de computer volgt.\r
-- Instellingen over hoe je werkt: bijhouden, vragen, Pomodoro, pauzes, afleiding en urenstaat.\r
-\r
-Wat op elk apparaat blijft: sneltoetsen, de bovenbalk en rand, plug-ins, back-ups, bestandsinstellingen, het sta-bureau, en taal en thema. Venstertitels en andere ruwe activiteit verlaten de computer nooit.\r
-\r
-Als hetzelfde op twee apparaten is gewijzigd, wint de laatste wijziging, per veld: een taaktekst gewijzigd op de laptop en een eindtijd gewijzigd op de telefoon blijven allebei bewaard. Een verwijderde registratie blijft verwijderd.\r
-\r
-## Een server\r
-\r
-De server is één klein programma. Hij draait op Uberspace of in Docker; zie \`server/README.md\` in de broncode van HourWarden voor de stappen. Hij kan meerdere mensen bedienen: elk heeft een gebruiker met een eigen wachtwoord, eigen apparaten en eigen gegevens, en niemand ziet die van een ander.\r
-\r
-## Je account\r
-\r
-Op het adres van de server log je in met je gebruikersnaam en wachtwoord om je apparaten te zien, een koppelcode te tonen, je wachtwoord te wijzigen of een verloren telefoon te verwijderen. Voeg daar (of bij het registreren) een e-mailadres toe; dan stuurt **Wachtwoord vergeten?** op de inlogpagina je een link om een nieuw wachtwoord in te stellen. Afhankelijk van hoe de server is ingericht kun je je daar ook registreren; de beheerder keurt nieuwe accounts misschien eerst goed, of geeft een account een einddatum. Een account dat niet (meer) actief is, kan niet synchroniseren, maar de gegevens blijven op de server.\r
-\r
-## Deze computer verbinden\r
-\r
-*Synchronisatie* (onder Inrichting) → vul het serveradres in, je gebruikersnaam (alleen nodig als de server meerdere gebruikers heeft) en je wachtwoord → **Verbinden**. Alles op deze computer wordt naar de server gestuurd; de eerste keer kan dat even duren.\r
-\r
-Wijzigingen worden binnen een kwart minuut verstuurd en die van andere apparaten elke minuut opgehaald. **Nu synchroniseren** doet het meteen. Als de server niet bereikbaar is, blijft HourWarden het proberen; na een uur toont het een waarschuwing met de tijd van de laatste geslaagde synchronisatie.\r
-\r
-## End-to-end versleuteling\r
-\r
-*Synchronisatie* → **End-to-end versleuteling aanzetten** versleutelt je gegevens op je apparaten met een sleutel die alleen jij hebt (AES-256). De server bewaart ze maar kan ze niet lezen: niet de klantnamen, taken of uren. De kopie die op de server stond, wordt vervangen door een versleutelde.\r
-\r
-- **Bewaar de sleutel op een veilige plek**: in je wachtwoordmanager (Bitwarden, 1Password, KeePass…), of gebruik **Opslaan als pdf** voor een herstelblad en bewaar dat los van je computer. **De sleutel tonen** toont hem later opnieuw.\r
-- Nieuwe apparaten hebben de sleutel nodig. De QR-code om te koppelen bevat hem, dus scannen is genoeg; typ je de code over, dan vraagt het apparaat om de sleutel.\r
-- Als je de sleutel kwijtraakt terwijl geen apparaat hem meer heeft, kan niemand de gegevens op de server lezen, ook de beheerder niet. Je apparaten houden alles wat ze hebben.\r
-- **Uitzetten** vervangt de versleutelde kopie door een leesbare; je andere apparaten vragen je het daar ook uit te zetten.\r
-\r
-De server ziet nog wel welke apparaten synchroniseren, wanneer, en hoeveel records er zijn, maar niet wat erin staat.\r
-\r
-## De telefoon\r
-\r
-1. Installeer de HourWarden-app op de telefoon (de APK).\r
-2. Op de computer: *Synchronisatie* → **Een koppelcode tonen**.\r
-3. Op de telefoon: **Code scannen** en richt de camera op de QR-code; of typ het serveradres en de code.\r
-\r
-De code werkt één keer, 10 minuten lang. Op de telefoon kun je:\r
-\r
-- zien wat de computer bijhoudt, en het pauzeren, hervatten of wisselen;\r
-- een timer starten voor een workshop of bezoek, die ook de computer naar die klant laat wisselen;\r
-- in een paar tikken een vergadering of andere tijd toevoegen, met duren van één tik;\r
-- de uren van vandaag en deze week zien en wijzigen;\r
-- telefoongesprekken met klanten bijhouden (zie hieronder).\r
-\r
-Zolang de timer op de telefoon loopt, toont een melding hem met Pauzeren en Stoppen. De telefoon synchroniseert ook elke 15 minuten op de achtergrond, ook als de app gesloten is.\r
-\r
-## Telefoongesprekken\r
-\r
-Op de telefoon: *Synchronisatie* → **Telefoongesprekken bijhouden**. Een afgelopen gesprek wordt tijd voor een klant als het nummer een van de telefoonnummers van die klant is (op de klantpagina; een korter nummer zoals +31 20 555 is het begin voor een heel kantoor), of als het bedrijf van het contact op je telefoon de naam of een alias van de klant is. Gesprekken korter dan een minuut tellen niet mee. Andere gesprekken wachten op de telefoon onder **Onbekende bellers**, om toe te wijzen (en het nummer te onthouden), over te slaan of als privé te markeren. De gesprekkenlijst blijft op de telefoon.\r
-\r
-## Elke minuut telt één keer\r
-\r
-Als registraties elkaar overlappen, telt elke minuut voor één ervan: eerst wat je zelf hebt toegevoegd of gewijzigd, dan een telefoongesprek, dan handmatig wisselen, dan automatisch bijhouden; bij gelijke de latere. Een gesprek tijdens automatisch bijhouden, of een vergadering die op de telefoon is toegevoegd, telt dus niet dubbel, en twee computers die dezelfde minuten bijhouden tellen ze één keer. Het dagoverzicht toont nog elke registratie zoals die is vastgelegd; de uren, de week, rapporten en klanttotalen tellen elke minuut één keer.\r
-\r
-## Apparaten\r
-\r
-*Synchronisatie* toont elk gekoppeld apparaat met de laatste synchronisatie. **Verwijderen** sluit een verloren telefoon meteen buiten; de eigen gegevens blijven erop staan. **Verbinding verbreken** stopt het synchroniseren van deze computer; de gegevens blijven hier.\r
+`}return Y.substring(0,Y.length-1)},w.renderTo2dContext=function(S,T){T=T||2;const x=w.getModuleCount();for(let O=0;O<x;O++)for(let k=0;k<x;k++)S.fillStyle=w.isDark(O,k)?"black":"white",S.fillRect(k*T,O*T,T,T)},w};Ln.stringToBytes=function(i){const r=[];for(let a=0;a<i.length;a+=1){const s=i.charCodeAt(a);r.push(s&255)}return r};Ln.createStringToBytes=function(i,r){const a=(function(){const d=vc(i),u=function(){const _=d.read();if(_==-1)throw"eof";return _};let c=0;const m={};for(;;){const _=d.read();if(_==-1)break;const z=u(),w=u(),b=u(),P=String.fromCharCode(_<<8|z),de=w<<8|b;m[P]=de,c+=1}if(c!=r)throw c+" != "+r;return m})(),s=63;return function(d){const u=[];for(let c=0;c<d.length;c+=1){const m=d.charCodeAt(c);if(m<128)u.push(m);else{const _=a[d.charAt(c)];typeof _=="number"?(_&255)==_?u.push(_):(u.push(_>>>8),u.push(_&255)):u.push(s)}}return u}};const ln={MODE_NUMBER:1,MODE_ALPHA_NUM:2,MODE_8BIT_BYTE:4,MODE_KANJI:8},Vn={L:1,M:0,Q:3,H:2},xn={PATTERN000:0,PATTERN001:1,PATTERN010:2,PATTERN011:3,PATTERN100:4,PATTERN101:5,PATTERN110:6,PATTERN111:7},jn=(function(){const i=[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],r=1335,a=7973,s=21522,d={},u=function(c){let m=0;for(;c!=0;)m+=1,c>>>=1;return m};return d.getBCHTypeInfo=function(c){let m=c<<10;for(;u(m)-u(r)>=0;)m^=r<<u(m)-u(r);return(c<<10|m)^s},d.getBCHTypeNumber=function(c){let m=c<<12;for(;u(m)-u(a)>=0;)m^=a<<u(m)-u(a);return c<<12|m},d.getPatternPosition=function(c){return i[c-1]},d.getMaskFunction=function(c){switch(c){case xn.PATTERN000:return function(m,_){return(m+_)%2==0};case xn.PATTERN001:return function(m,_){return m%2==0};case xn.PATTERN010:return function(m,_){return _%3==0};case xn.PATTERN011:return function(m,_){return(m+_)%3==0};case xn.PATTERN100:return function(m,_){return(Math.floor(m/2)+Math.floor(_/3))%2==0};case xn.PATTERN101:return function(m,_){return m*_%2+m*_%3==0};case xn.PATTERN110:return function(m,_){return(m*_%2+m*_%3)%2==0};case xn.PATTERN111:return function(m,_){return(m*_%3+(m+_)%2)%2==0};default:throw"bad maskPattern:"+c}},d.getErrorCorrectPolynomial=function(c){let m=ea([1],0);for(let _=0;_<c;_+=1)m=m.multiply(ea([1,zn.gexp(_)],0));return m},d.getLengthInBits=function(c,m){if(1<=m&&m<10)switch(c){case ln.MODE_NUMBER:return 10;case ln.MODE_ALPHA_NUM:return 9;case ln.MODE_8BIT_BYTE:return 8;case ln.MODE_KANJI:return 8;default:throw"mode:"+c}else if(m<27)switch(c){case ln.MODE_NUMBER:return 12;case ln.MODE_ALPHA_NUM:return 11;case ln.MODE_8BIT_BYTE:return 16;case ln.MODE_KANJI:return 10;default:throw"mode:"+c}else if(m<41)switch(c){case ln.MODE_NUMBER:return 14;case ln.MODE_ALPHA_NUM:return 13;case ln.MODE_8BIT_BYTE:return 16;case ln.MODE_KANJI:return 12;default:throw"mode:"+c}else throw"type:"+m},d.getLostPoint=function(c){const m=c.getModuleCount();let _=0;for(let b=0;b<m;b+=1)for(let P=0;P<m;P+=1){let de=0;const xe=c.isDark(b,P);for(let _e=-1;_e<=1;_e+=1)if(!(b+_e<0||m<=b+_e))for(let Le=-1;Le<=1;Le+=1)P+Le<0||m<=P+Le||_e==0&&Le==0||xe==c.isDark(b+_e,P+Le)&&(de+=1);de>5&&(_+=3+de-5)}for(let b=0;b<m-1;b+=1)for(let P=0;P<m-1;P+=1){let de=0;c.isDark(b,P)&&(de+=1),c.isDark(b+1,P)&&(de+=1),c.isDark(b,P+1)&&(de+=1),c.isDark(b+1,P+1)&&(de+=1),(de==0||de==4)&&(_+=3)}for(let b=0;b<m;b+=1)for(let P=0;P<m-6;P+=1)c.isDark(b,P)&&!c.isDark(b,P+1)&&c.isDark(b,P+2)&&c.isDark(b,P+3)&&c.isDark(b,P+4)&&!c.isDark(b,P+5)&&c.isDark(b,P+6)&&(_+=40);for(let b=0;b<m;b+=1)for(let P=0;P<m-6;P+=1)c.isDark(P,b)&&!c.isDark(P+1,b)&&c.isDark(P+2,b)&&c.isDark(P+3,b)&&c.isDark(P+4,b)&&!c.isDark(P+5,b)&&c.isDark(P+6,b)&&(_+=40);let z=0;for(let b=0;b<m;b+=1)for(let P=0;P<m;P+=1)c.isDark(P,b)&&(z+=1);const w=Math.abs(100*z/m/m-50)/5;return _+=w*10,_},d})(),zn=(function(){const i=new Array(256),r=new Array(256);for(let s=0;s<8;s+=1)i[s]=1<<s;for(let s=8;s<256;s+=1)i[s]=i[s-4]^i[s-5]^i[s-6]^i[s-8];for(let s=0;s<255;s+=1)r[i[s]]=s;const a={};return a.glog=function(s){if(s<1)throw"glog("+s+")";return r[s]},a.gexp=function(s){for(;s<0;)s+=255;for(;s>=256;)s-=255;return i[s]},a})(),ea=function(i,r){if(typeof i.length>"u")throw i.length+"/"+r;const a=(function(){let d=0;for(;d<i.length&&i[d]==0;)d+=1;const u=new Array(i.length-d+r);for(let c=0;c<i.length-d;c+=1)u[c]=i[c+d];return u})(),s={};return s.getAt=function(d){return a[d]},s.getLength=function(){return a.length},s.multiply=function(d){const u=new Array(s.getLength()+d.getLength()-1);for(let c=0;c<s.getLength();c+=1)for(let m=0;m<d.getLength();m+=1)u[c+m]^=zn.gexp(zn.glog(s.getAt(c))+zn.glog(d.getAt(m)));return ea(u,0)},s.mod=function(d){if(s.getLength()-d.getLength()<0)return s;const u=zn.glog(s.getAt(0))-zn.glog(d.getAt(0)),c=new Array(s.getLength());for(let m=0;m<s.getLength();m+=1)c[m]=s.getAt(m);for(let m=0;m<d.getLength();m+=1)c[m]^=zn.gexp(zn.glog(d.getAt(m))+u);return ea(c,0).mod(d)},s},br=(function(){const i=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12,7,37,13],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]],r=function(d,u){const c={};return c.totalCount=d,c.dataCount=u,c},a={},s=function(d,u){switch(u){case Vn.L:return i[(d-1)*4+0];case Vn.M:return i[(d-1)*4+1];case Vn.Q:return i[(d-1)*4+2];case Vn.H:return i[(d-1)*4+3];default:return}};return a.getRSBlocks=function(d,u){const c=s(d,u);if(typeof c>"u")throw"bad rs block @ typeNumber:"+d+"/errorCorrectionLevel:"+u;const m=c.length/3,_=[];for(let z=0;z<m;z+=1){const w=c[z*3+0],b=c[z*3+1],P=c[z*3+2];for(let de=0;de<w;de+=1)_.push(r(b,P))}return _},a})(),yr=function(){const i=[];let r=0;const a={};return a.getBuffer=function(){return i},a.getAt=function(s){const d=Math.floor(s/8);return(i[d]>>>7-s%8&1)==1},a.put=function(s,d){for(let u=0;u<d;u+=1)a.putBit((s>>>d-u-1&1)==1)},a.getLengthInBits=function(){return r},a.putBit=function(s){const d=Math.floor(r/8);i.length<=d&&i.push(0),s&&(i[d]|=128>>>r%8),r+=1},a},ic=function(i){const r=ln.MODE_NUMBER,a=i,s={};s.getMode=function(){return r},s.getLength=function(c){return a.length},s.write=function(c){const m=a;let _=0;for(;_+2<m.length;)c.put(d(m.substring(_,_+3)),10),_+=3;_<m.length&&(m.length-_==1?c.put(d(m.substring(_,_+1)),4):m.length-_==2&&c.put(d(m.substring(_,_+2)),7))};const d=function(c){let m=0;for(let _=0;_<c.length;_+=1)m=m*10+u(c.charAt(_));return m},u=function(c){if("0"<=c&&c<="9")return c.charCodeAt(0)-48;throw"illegal char :"+c};return s},lc=function(i){const r=ln.MODE_ALPHA_NUM,a=i,s={};s.getMode=function(){return r},s.getLength=function(u){return a.length},s.write=function(u){const c=a;let m=0;for(;m+1<c.length;)u.put(d(c.charAt(m))*45+d(c.charAt(m+1)),11),m+=2;m<c.length&&u.put(d(c.charAt(m)),6)};const d=function(u){if("0"<=u&&u<="9")return u.charCodeAt(0)-48;if("A"<=u&&u<="Z")return u.charCodeAt(0)-65+10;switch(u){case" ":return 36;case"$":return 37;case"%":return 38;case"*":return 39;case"+":return 40;case"-":return 41;case".":return 42;case"/":return 43;case":":return 44;default:throw"illegal char :"+u}};return s},dc=function(i){const r=ln.MODE_8BIT_BYTE,a=Ln.stringToBytes(i),s={};return s.getMode=function(){return r},s.getLength=function(d){return a.length},s.write=function(d){for(let u=0;u<a.length;u+=1)d.put(a[u],8)},s},uc=function(i){const r=ln.MODE_KANJI,a=Ln.stringToBytes;(function(u,c){const m=a(u);if(m.length!=2||(m[0]<<8|m[1])!=c)throw"sjis not supported."})("友",38726);const s=a(i),d={};return d.getMode=function(){return r},d.getLength=function(u){return~~(s.length/2)},d.write=function(u){const c=s;let m=0;for(;m+1<c.length;){let _=(255&c[m])<<8|255&c[m+1];if(33088<=_&&_<=40956)_-=33088;else if(57408<=_&&_<=60351)_-=49472;else throw"illegal char at "+(m+1)+"/"+_;_=(_>>>8&255)*192+(_&255),u.put(_,13),m+=2}if(m<c.length)throw"illegal char at "+(m+1)},d},to=function(){const i=[],r={};return r.writeByte=function(a){i.push(a&255)},r.writeShort=function(a){r.writeByte(a),r.writeByte(a>>>8)},r.writeBytes=function(a,s,d){s=s||0,d=d||a.length;for(let u=0;u<d;u+=1)r.writeByte(a[u+s])},r.writeString=function(a){for(let s=0;s<a.length;s+=1)r.writeByte(a.charCodeAt(s))},r.toByteArray=function(){return i},r.toString=function(){let a="";a+="[";for(let s=0;s<i.length;s+=1)s>0&&(a+=","),a+=i[s];return a+="]",a},r},cc=function(){let i=0,r=0,a=0,s="";const d={},u=function(m){s+=String.fromCharCode(c(m&63))},c=function(m){if(m<0)throw"n:"+m;if(m<26)return 65+m;if(m<52)return 97+(m-26);if(m<62)return 48+(m-52);if(m==62)return 43;if(m==63)return 47;throw"n:"+m};return d.writeByte=function(m){for(i=i<<8|m&255,r+=8,a+=1;r>=6;)u(i>>>r-6),r-=6},d.flush=function(){if(r>0&&(u(i<<6-r),i=0,r=0),a%3!=0){const m=3-a%3;for(let _=0;_<m;_+=1)s+="="}},d.toString=function(){return s},d},vc=function(i){const r=i;let a=0,s=0,d=0;const u={};u.read=function(){for(;d<8;){if(a>=r.length){if(d==0)return-1;throw"unexpected end of file./"+d}const _=r.charAt(a);if(a+=1,_=="=")return d=0,-1;if(_.match(/^\s$/))continue;s=s<<6|c(_.charCodeAt(0)),d+=6}const m=s>>>d-8&255;return d-=8,m};const c=function(m){if(65<=m&&m<=90)return m-65;if(97<=m&&m<=122)return m-97+26;if(48<=m&&m<=57)return m-48+52;if(m==43)return 62;if(m==47)return 63;throw"c:"+m};return u},pc=function(i,r){const a=i,s=r,d=new Array(i*r),u={};u.setPixel=function(z,w,b){d[w*a+z]=b},u.write=function(z){z.writeString("GIF87a"),z.writeShort(a),z.writeShort(s),z.writeByte(128),z.writeByte(0),z.writeByte(0),z.writeByte(0),z.writeByte(0),z.writeByte(0),z.writeByte(255),z.writeByte(255),z.writeByte(255),z.writeString(","),z.writeShort(0),z.writeShort(0),z.writeShort(a),z.writeShort(s),z.writeByte(0);const w=2,b=m(w);z.writeByte(w);let P=0;for(;b.length-P>255;)z.writeByte(255),z.writeBytes(b,P,255),P+=255;z.writeByte(b.length-P),z.writeBytes(b,P,b.length-P),z.writeByte(0),z.writeString(";")};const c=function(z){const w=z;let b=0,P=0;const de={};return de.write=function(xe,_e){if(xe>>>_e)throw"length over";for(;b+_e>=8;)w.writeByte(255&(xe<<b|P)),_e-=8-b,xe>>>=8-b,P=0,b=0;P=xe<<b|P,b=b+_e},de.flush=function(){b>0&&w.writeByte(P)},de},m=function(z){const w=1<<z,b=(1<<z)+1;let P=z+1;const de=_();for(let Ie=0;Ie<w;Ie+=1)de.add(String.fromCharCode(Ie));de.add(String.fromCharCode(w)),de.add(String.fromCharCode(b));const xe=to(),_e=c(xe);_e.write(w,P);let Le=0,Ee=String.fromCharCode(d[Le]);for(Le+=1;Le<d.length;){const Ie=String.fromCharCode(d[Le]);Le+=1,de.contains(Ee+Ie)?Ee=Ee+Ie:(_e.write(de.indexOf(Ee),P),de.size()<4095&&(de.size()==1<<P&&(P+=1),de.add(Ee+Ie)),Ee=Ie)}return _e.write(de.indexOf(Ee),P),_e.write(b,P),_e.flush(),xe.toByteArray()},_=function(){const z={};let w=0;const b={};return b.add=function(P){if(b.contains(P))throw"dup key:"+P;z[P]=w,w+=1},b.size=function(){return w},b.indexOf=function(P){return z[P]},b.contains=function(P){return typeof z[P]<"u"},b};return u},mc=function(i,r,a){const s=pc(i,r);for(let m=0;m<r;m+=1)for(let _=0;_<i;_+=1)s.setPixel(_,m,a(_,m));const d=to();s.write(d);const u=cc(),c=d.toByteArray();for(let m=0;m<c.length;m+=1)u.writeByte(c[m]);return u.flush(),"data:image/gif;base64,"+u};Ln.stringToBytes;function hc(i,r=Date.now()){return i?.connected?i.busy?"Syncing…":i.error?i.last_ok?t("Not synced since {ago}: {error}",{ago:Xn(i.last_ok,r),error:ia(i.error)}):t("Not synced yet: {error}",{error:ia(i.error)}):i.last_ok?t("Synced {ago}",{ago:Xn(i.last_ok,r)}):t("Waiting for the first sync"):t("Not connected")}function xr(i){return!i?.connected||!i.backlog?"":Dn(i.backlog,"1 change waiting to be sent","{n} changes waiting to be sent")}function jr(i,r=Date.now()){const a=Math.max(0,Math.floor((i-r)/1e3));return a?`${Math.floor(a/60)}:${String(a%60).padStart(2,"0")}`:""}function gc(i,r=5){const a=Ln(0,"M");return a.addData(i),a.make(),a.createSvgTag({cellSize:r,margin:r*2,scalable:!0})}function fc(i){return{windows:"Windows",linux:"Linux",android:"Android",macos:"macOS",ios:"iOS"}[i]||i||""}var kc=f('<p> </p> <form class="row svelte-qm4dwe"><input class="key-input svelte-qm4dwe" placeholder="ABCD-EFGH-…" autocomplete="off" autocapitalize="characters" spellcheck="false"/> <button class="primary" type="submit"> </button></form>',1),_c=f('<p> </p> <button class="primary"> </button>',1),wc=f('<label class="check no-print svelte-qm4dwe"><input type="checkbox" class="svelte-qm4dwe"/> </label>'),bc=f('<div class="sheet svelte-qm4dwe"><h2 class="print-only svelte-qm4dwe"> </h2> <p class="print-only svelte-qm4dwe"> </p> <div class="key svelte-qm4dwe"> </div> <div class="advice svelte-qm4dwe"><strong> </strong> </div></div> <div class="row no-print svelte-qm4dwe"><button><!> </button> <button><!> </button></div> <!> <div class="row no-print svelte-qm4dwe"><button class="primary"> </button></div>',1),yc=f('<div class="row svelte-qm4dwe"><button> </button> <button class="link danger svelte-qm4dwe"> </button></div>'),xc=f('<p><span class="on svelte-qm4dwe"> </span> </p> <!>',1),jc=f('<p class="muted"> </p> <button> </button>',1),zc=f('<p class="error"> </p>'),Tc=f('<section class="card svelte-qm4dwe"><h3 class="svelte-qm4dwe"><!> </h3> <!> <!></section>');function Sc(i,r){Yt(r,!0);let a=C(()=>r.status?.encryption||{}),s=Z(!1),d=Z(""),u=Z(""),c=Z(""),m=Z(!1),_=Z(!1),z=Z(!1);async function w(q,N){g(s,!0),g(d,"");try{return await be(q,N)}catch(pe){return g(d,String(pe),!0),null}finally{g(s,!1)}}async function b(){if(!await Nn(t("Turn on end-to-end encryption? Your data on the server is replaced by an encrypted copy that only your devices can read. You get a key to store safely: without it, a new device cannot read your data and the server cannot help you get it back."),{title:t("End-to-end encryption"),kind:"warning"}))return;const N=await w("sync_encryption_on");N&&(g(c,N,!0),g(m,!0),g(_,!1),r.onchange?.())}async function P(q){if(q?.preventDefault(),!e(u).trim())return;const N=await w("sync_encryption_key",{key:e(u)});N&&(g(u,""),r.onchange?.(N))}async function de(){const N=e(a).turned_off?t("Turn encryption off on this computer too? It then takes the server's data again."):t("Turn off end-to-end encryption? The encrypted copy on the server is replaced by a readable one, and your other devices are asked to turn it off too.");if(!await Nn(N,{title:t("End-to-end encryption"),kind:"warning"}))return;const pe=await w("sync_encryption_off");pe&&(g(c,""),r.onchange?.(pe))}async function xe(){try{await navigator.clipboard.writeText(e(c)),g(z,!0),setTimeout(()=>g(z,!1),2e3)}catch{g(d,t("Copying did not work; select the key and copy it yourself."),!0)}}function _e(){window.print()}let Le=new Date().toLocaleDateString();var Ee=Tc(),Ie=p(Ee),we=p(Ie);It(we,{name:"lock"});var vt=n(we),G=n(Ie,2);{var le=q=>{var N=kc(),pe=at(N),Ke=l(pe,!0),ae=n(pe,2),W=p(ae),Y=n(W,2),re=l(Y,!0);h((Me,Ue,ce,ne)=>{o(Ke,Me),F(W,"aria-label",Ue),Y.disabled=ce,o(re,ne)},[()=>t("This account's data is encrypted. Enter its encryption key to sync this device. It is in the password manager or on the recovery sheet where you stored it, or shown under Sync on a device that already has it."),()=>t("Encryption key"),()=>e(s)||!e(u).trim(),()=>t("Unlock")]),dn("submit",ae,P),Wt(W,()=>e(u),Me=>g(u,Me)),v(q,N)},S=q=>{var N=_c(),pe=at(N),Ke=l(pe,!0),ae=n(pe,2),W=l(ae,!0);h((Y,re)=>{o(Ke,Y),ae.disabled=e(s),o(W,re)},[()=>t("Encryption was turned off on another device. Turn it off here too to keep syncing."),()=>t("Turn off here too")]),ee("click",ae,de),v(q,N)},T=q=>{var N=xc(),pe=at(N),Ke=p(pe),ae=l(Ke,!0),W=n(Ke),Y=n(pe,2);{var re=Ue=>{var ce=bc(),ne=at(ce),Q=p(ne),ve=l(Q,!0),Te=n(Q,2),Pe=l(Te),Be=n(Te,2),he=l(Be,!0),Re=n(Be,2),He=p(Re),Ye=l(He,!0),H=n(He),V=n(ne,2),je=p(V),qe=p(je);It(qe,{name:"copy",size:13});var ze=n(qe),it=n(je,2),K=p(it);It(K,{name:"print",size:13});var De=n(K),ye=n(V,2);{var Ze=U=>{var oe=wc(),ke=p(oe),me=n(ke);h(M=>o(me,` ${M??""}`),[()=>t("I stored the key somewhere safe")]),qn(ke,()=>e(_),M=>g(_,M)),v(U,oe)};$(ye,U=>{e(m)&&U(Ze)})}var mt=n(ye,2),Ne=p(mt),lt=l(Ne,!0);h((U,oe,ke,me,M,D,J,$e)=>{o(ve,U),o(Pe,`${oe??""}: ${r.status.server??""} · ${Le??""}`),F(Be,"aria-label",ke),o(he,e(c)),o(Ye,me),o(H,` ${M??""}`),o(ze,` ${D??""}`),o(De,` ${J??""}`),Ne.disabled=e(m)&&!e(_),o(lt,$e)},[()=>t("HourWarden encryption key"),()=>t("Server"),()=>t("Encryption key"),()=>t("Store this key somewhere safe."),()=>t("Put it in your password manager (Bitwarden, 1Password, KeePass…), or save the recovery sheet as a PDF and keep it apart from this computer. New devices need it, and if you lose it while no device has it any more, nobody can read the data on the server — not even the server's administrator."),()=>e(z)?t("Copied"):t("Copy"),()=>t("Save as PDF"),()=>t("Done")]),ee("click",je,xe),ee("click",it,_e),ee("click",Ne,()=>(g(c,""),g(m,!1))),v(Ue,ce)},Me=Ue=>{var ce=yc(),ne=p(ce),Q=l(ne,!0),ve=n(ne,2),Te=l(ve,!0);h((Pe,Be)=>{o(Q,Pe),ve.disabled=e(s),o(Te,Be)},[()=>t("Show the key"),()=>t("Turn off")]),ee("click",ne,()=>g(c,e(a).key,!0)),ee("click",ve,de),v(Ue,ce)};$(Y,Ue=>{e(c)?Ue(re):Ue(Me,-1)})}h((Ue,ce)=>{o(ae,Ue),o(W,` ${ce??""}`)},[()=>t("On"),()=>t("Your data leaves this computer encrypted with your own key; the server stores it but cannot read it.")]),v(q,N)},x=q=>{var N=jc(),pe=at(N),Ke=l(pe,!0),ae=n(pe,2),W=l(ae,!0);h((Y,re)=>{o(Ke,Y),ae.disabled=e(s),o(W,re)},[()=>t("Encrypt your data on your devices with a key only you have, so the server stores it but cannot read it. New devices get the key from the pairing QR code."),()=>e(s)?t("Encrypting…"):t("Turn on end-to-end encryption")]),ee("click",ae,b),v(q,N)};$(G,q=>{e(a).needs_key?q(le):e(a).turned_off?q(S,1):e(a).key?q(T,2):q(x,-1)})}var O=n(G,2);{var k=q=>{var N=zc(),pe=l(N,!0);h(()=>o(pe,e(d))),v(q,N)};$(O,q=>{e(d)&&q(k)})}h(q=>o(vt,` ${q??""}`),[()=>t("End-to-end encryption")]),v(i,Ee),Jt()}Gt(["click"]);var zr=f('<p class="error"> </p>'),Dc=f('<section class="card svelte-1a80mlk"><h3 class="svelte-1a80mlk"><!> </h3> <p class="muted"> </p> <form class="svelte-1a80mlk"><label for="sync-server" class="svelte-1a80mlk"> </label> <input id="sync-server" placeholder="app.hourwarden.com" autocomplete="url"/> <label for="sync-user" class="svelte-1a80mlk"> <span class="optional svelte-1a80mlk"> </span></label> <input id="sync-user" autocomplete="username" autocapitalize="off"/> <label for="sync-secret" class="svelte-1a80mlk"> </label> <input id="sync-secret" type="password" autocomplete="off"/> <label for="sync-name" class="svelte-1a80mlk"> </label> <input id="sync-name"/> <div class="actions svelte-1a80mlk"><button class="primary" type="submit"> </button> <span class="muted small svelte-1a80mlk"> <em> </em> </span></div></form> <!></section>'),ja=f('<p class="muted small svelte-1a80mlk"> </p>'),Cc=f('<div class="pairing svelte-1a80mlk"><div class="qr svelte-1a80mlk"></div> <div><p> <strong> </strong> </p> <p class="muted small svelte-1a80mlk"> <code> </code> </p> <div class="code svelte-1a80mlk"> </div> <p class="muted small svelte-1a80mlk"> </p> <!></div></div>'),Ac=f('<p class="muted"> </p> <button> </button>',1),Ec=f('<span class="badge svelte-1a80mlk"> </span>'),Pc=f('<button class="link danger svelte-1a80mlk"> </button>'),qc=f('<div class="device svelte-1a80mlk"><!> <div class="dinfo svelte-1a80mlk"><strong> </strong> <!> <div class="muted small svelte-1a80mlk"> </div></div> <!></div>'),Wc=f('<section class="card svelte-1a80mlk"><h3 class="svelte-1a80mlk"><!> </h3> <p> </p> <!> <p class="muted small svelte-1a80mlk"> <strong> </strong> </p> <div class="actions svelte-1a80mlk"><button class="primary"><!> </button> <button> </button></div> <!></section> <!> <section class="card svelte-1a80mlk"><h3 class="svelte-1a80mlk"><!> </h3> <!></section> <section class="card svelte-1a80mlk"><h3 class="svelte-1a80mlk"> </h3> <!></section>',1),$c=f('<h1 class="svelte-1a80mlk"> </h1> <!>',1);function Mc(i,r){Yt(r,!0);let a=Z(null),s=Z(""),d=Z(""),u=Z(""),c=Z(""),m=Z(!1),_=Z(""),z=Z(null),w=Z(jt([])),b=Z(jt(Date.now()));async function P(){g(a,await be("sync_status"),!0),e(a).connected?de():(g(s,e(s)||e(a).server||"app.hourwarden.com",!0),g(c,e(c)||e(a).device_name||await be("sync_device_name"),!0))}async function de(){try{g(w,await be("sync_devices"),!0)}catch{g(w,[],!0)}}async function xe(x){if(x?.preventDefault(),!(!e(s).trim()||!e(u).trim())){g(m,!0),g(_,"");try{g(a,await be("sync_connect",{server:e(s),user:e(d),secret:e(u),deviceName:e(c)}),!0),g(u,""),de()}catch(O){g(_,String(O),!0)}finally{g(m,!1)}}}async function _e(){g(_,"");try{g(a,await be("sync_now"),!0),de()}catch(x){g(_,String(x),!0),g(a,await be("sync_status"),!0)}}async function Le(){await Nn(t("Stop syncing this computer? Everything stays on this computer; you can connect again later."),{title:t("Disconnect"),kind:"warning"})&&(g(a,await be("sync_disconnect"),!0),g(z,null),g(w,[],!0))}async function Ee(){g(_,"");try{g(z,await be("sync_pairing_code"),!0)}catch(x){g(_,String(x),!0)}}async function Ie(x){if(await Nn(t('Remove "{name}"? It stops syncing at once. Its own data stays on it.',{name:x.name}),{title:t("Remove device"),kind:"warning"}))try{await be("sync_revoke",{id:x.id}),de()}catch(O){g(_,String(O),!0)}}on(()=>{P();const x=setInterval(()=>{g(b,Date.now(),!0),e(z)&&!jr(e(z).expires_at,e(b))&&g(z,null)},1e3),O=Qn("sync",k=>g(a,k.payload,!0));return()=>{clearInterval(x),O.then(k=>k())}});var we=$c(),vt=at(we),G=l(vt,!0),le=n(vt,2);{var S=x=>{var O=Dc(),k=p(O),q=p(k);It(q,{name:"cloud"});var N=n(q),pe=n(k,2),Ke=l(pe,!0),ae=n(pe,2),W=p(ae),Y=l(W,!0),re=n(W,2),Me=n(re,2),Ue=p(Me),ce=n(Ue),ne=l(ce,!0),Q=n(Me,2),ve=n(Q,2),Te=l(ve,!0),Pe=n(ve,2),Be=n(Pe,2),he=l(Be,!0),Re=n(Be,2),He=n(Re,2),Ye=p(He),H=l(Ye,!0),V=n(Ye,2),je=p(V),qe=n(je),ze=l(qe,!0),it=n(qe),K=n(ae,2);{var De=ye=>{var Ze=zr(),mt=l(Ze,!0);h(()=>o(mt,e(_))),v(ye,Ze)};$(K,ye=>{e(_)&&ye(De)})}h((ye,Ze,mt,Ne,lt,U,oe,ke,me,M,D,J,$e)=>{o(N,` ${ye??""}`),o(Ke,Ze),o(Y,mt),o(Ue,`${Ne??""} `),o(ne,lt),o(Te,U),F(Pe,"placeholder",oe),o(he,ke),Ye.disabled=me,o(H,M),o(je,`${D??""} `),o(ze,J),o(it,` ${$e??""}`)},[()=>t("Connect to your server"),()=>t("With your own HourWarden server, this computer, a second computer and your phone share customers, rules, tasks and hours, and the phone can see and steer what this computer tracks. Everything keeps working without a connection; changes are exchanged when it is back."),()=>t("Server address"),()=>t("User name"),()=>t("(only when the server has several users)"),()=>t("Your password, or a pairing code from another device"),()=>t("password or ABCD-EFGH"),()=>t("Name of this computer"),()=>e(m)||!e(s).trim()||!e(u).trim(),()=>e(m)?t("Connecting…"):t("Connect"),()=>t("No server yet? See"),()=>t("Sync"),()=>t("in the help for Uberspace and Docker.")]),dn("submit",ae,xe),Wt(re,()=>e(s),ye=>g(s,ye)),Wt(Q,()=>e(d),ye=>g(d,ye)),Wt(Pe,()=>e(u),ye=>g(u,ye)),Wt(Re,()=>e(c),ye=>g(c,ye)),v(x,O)},T=x=>{var O=Wc(),k=at(O),q=p(k),N=p(q);It(N,{name:"cloud"});var pe=n(N),Ke=n(q,2);let ae;var W=l(Ke,!0),Y=n(Ke,2);{var re=U=>{var oe=ja(),ke=l(oe,!0);h(me=>o(ke,me),[()=>xr(e(a))]),v(U,oe)},Me=C(()=>xr(e(a)));$(Y,U=>{e(Me)&&U(re)})}var Ue=n(Y,2),ce=p(Ue),ne=n(ce),Q=l(ne,!0),ve=n(ne,1,!0),Te=n(Ue,2),Pe=p(Te),Be=p(Pe);It(Be,{name:"sync",size:13});var he=n(Be),Re=n(Pe,2),He=l(Re,!0),Ye=n(Te,2);{var H=U=>{var oe=zr(),ke=l(oe,!0);h(()=>o(ke,e(_))),v(U,oe)};$(Ye,U=>{e(_)&&U(H)})}var V=n(k,2);Sc(V,{get status(){return e(a)},onchange:U=>U?g(a,U,!0):P()});var je=n(V,2),qe=p(je),ze=p(qe);It(ze,{name:"phone"});var it=n(ze),K=n(qe,2);{var De=U=>{var oe=Cc(),ke=p(oe);Dr(ke,()=>gc(e(z).link),!0);var me=n(ke,2),M=p(me),D=p(M),J=n(D),$e=l(J,!0),E=n(J),I=n(M,2),te=p(I),R=n(te),ie=l(R,!0),ge=n(R),Ae=n(I,2),nt=l(Ae,!0),st=n(Ae,2),dt=l(st,!0),Fe=n(st,2);{var Xe=Ve=>{var A=ja(),B=l(A,!0);h(X=>o(B,X),[()=>t("The QR code also carries your encryption key. When you type the code instead, the other device asks for the key too.")]),v(Ve,A)};$(Fe,Ve=>{e(a).encryption?.key&&Ve(Xe)})}h((Ve,A,B,X,We,ut,et)=>{F(ke,"aria-label",Ve),o(D,`${A??""} `),o($e,B),o(E,` ${X??""}`),o(te,`${We??""} `),o(ie,e(z).server),o(ge,` ${ut??""}`),o(nt,e(z).code),o(dt,et)},[()=>t("QR code for the HourWarden app"),()=>t("In the HourWarden app on your phone, tap"),()=>t("Scan code"),()=>t("and point the camera here."),()=>t("Or enter the server address"),()=>t("and this code:"),()=>t("Works once, for {expiresat} more.",{expiresat:jr(e(z).expires_at,e(b))})]),v(U,oe)},ye=U=>{var oe=Ac(),ke=at(oe),me=l(ke,!0),M=n(ke,2),D=l(M,!0);h((J,$e)=>{o(me,J),o(D,$e)},[()=>t("A pairing code lets another device join without the password. It works once, for 10 minutes."),()=>t("Show a pairing code")]),ee("click",M,Ee),v(U,oe)};$(K,U=>{e(z)?U(De):U(ye,-1)})}var Ze=n(je,2),mt=p(Ze),Ne=l(mt,!0),lt=n(mt,2);ot(lt,17,()=>e(w),U=>U.id,(U,oe)=>{var ke=qc(),me=p(ke);{let ge=C(()=>e(oe).platform==="android"||e(oe).platform==="ios"?"phone":"pc");It(me,{get name(){return e(ge)}})}var M=n(me,2),D=p(M),J=l(D,!0),$e=n(D,2);{var E=ge=>{var Ae=Ec(),nt=l(Ae,!0);h(st=>o(nt,st),[()=>t("this computer")]),v(ge,Ae)};$($e,ge=>{e(oe).this_device&&ge(E)})}var I=n($e,2),te=l(I),R=n(M,2);{var ie=ge=>{var Ae=Pc(),nt=l(Ae,!0);h(st=>o(nt,st),[()=>t("Remove")]),ee("click",Ae,()=>Ie(e(oe))),v(ge,Ae)};$(R,ge=>{e(oe).this_device||ge(ie)})}h((ge,Ae)=>{o(J,e(oe).name),o(te,`${ge??""} · ${Ae??""}`)},[()=>fc(e(oe).platform),()=>e(oe).last_seen?t("synced {ago}",{ago:Xn(e(oe).last_seen,e(b))}):t("not synced yet")]),v(U,ke)},U=>{var oe=ja(),ke=l(oe,!0);h(me=>o(ke,me),[()=>t("The device list appears once the server can be reached.")]),v(U,oe)}),h((U,oe,ke,me,M,D,J)=>{o(pe,` ${e(a).server??""}`),ae=Tt(Ke,1,"",null,ae,{error:e(a).warn,muted:!e(a).warn}),o(W,U),o(ce,`${oe??""} `),o(Q,e(a).device_name),o(ve,ke),Pe.disabled=e(a).busy,o(he,` ${me??""}`),o(He,M),o(it,` ${D??""}`),o(Ne,J)},[()=>hc(e(a),e(b)),()=>t("This computer is"),()=>t(". Changes are sent within a quarter of a minute and others' changes fetched every minute."),()=>t("Sync now"),()=>t("Disconnect"),()=>t("Add a phone or computer"),()=>t("Devices")]),ee("click",Pe,_e),ee("click",Re,Le),v(x,O)};$(le,x=>{e(a)&&!e(a).connected?x(S):e(a)&&x(T,1)})}h(x=>o(G,x),[()=>t("Sync")]),v(i,we),Jt()}Gt(["click"]);const Ic=`# Getting started
+
+HourWarden keeps your hours per customer while you work. It looks at what you are doing (the window in front, your Edge profile, files, meetings), decides which customer that is for, and records the time. You correct it when it is unsure; it learns from that.
+
+Everything stays on this computer. Nothing is sent anywhere.
+
+## The first ten minutes
+
+On a new installation, *Today* opens with a short welcome that does the first steps with you: your customers (with their mail or web domains if you like), the plugins that are useful on this computer (ticked for you, installed with one click), and optionally your phone. After that HourWarden works by itself: it starts with your computer, tracks in the background and makes a backup every day.
+
+To do it by hand, or to add more later:
+
+1. **Add your customers** under *Customers*. A name is enough to start. Each customer gets a colour, used for the border around your screen and the top bar.
+2. **Tell HourWarden how to recognise them.** On the customer page, under *Recognition*, add what is specific to that customer:
+   - its **Edge profile**, if you use one browser profile per customer (the strongest signal);
+   - its **folders**, where you keep that customer's files;
+   - **aliases**: abbreviations and project names that appear in window titles;
+   - **domains and Microsoft IDs**: mail domains, web domains, the tenant ID.
+3. **Work as usual.** The top bar shows which customer the time goes to. When HourWarden does not know, it asks after a few minutes; your answer can be remembered for that folder, Edge profile or program.
+4. **At the end of the day** open *Time → Day* to check the day and fix anything that is off.
+
+## Finding your way
+
+The menu on the left is grouped:
+
+| Group | Screen | What it is for |
+|---|---|---|
+| | Today | Home: what you are doing now, today's hours, this week, your tasks, Pomodoro and breaks |
+| Work | Tasks | Your task list: today's work, a board, the backlog |
+| | Customers | Customers, projects and how they are recognised, with their activity |
+| Time | Day | One day as a timeline; split, join, change and add time |
+| | Week | The timesheet: a week per customer, to copy or export |
+| | Hours | Totals per customer, project and task |
+| | Reports | Charts, all entries and exports for any period |
+| Setup | Plugins | Extra detection (Teams meetings, Outlook, servers, tickets) |
+| | Settings | All settings, backups and the log |
+| | Help | This documentation, including that of the plugins you installed |
+
+- **Search** (Ctrl+K) finds any screen, customer, task, setting or help page, and runs actions such as *Pause*, *Switch customer* or *Back up now*.
+- The **status** at the top of the menu shows the customer and task now; click it to go to Today.
+- The arrow next to *HourWarden* makes the menu narrow (icons only, with their names as tooltips).
+- Hover any icon to see what it does.
+
+## Language and appearance
+
+Under *Settings → Appearance* you choose the language (English or Dutch, or the system's), light or dark, and a theme: HourWarden, Windows 11 (with your Windows accent colour), High contrast, Nord, Solarized, Forest and Paper. A new theme or light/dark shows at once; a new language reloads the windows.
+
+## Tables and exports
+
+Click a column heading to sort a table (again for the other direction, a third time to stop sorting). The icons above a table export it as **CSV** or as an **Excel workbook**, with hours as numbers so a spreadsheet can add them up. *Time → Reports* exports all entries of any period; *Time → Day* exports one day.
+
+## Where things are
+
+- The **top bar** at the top of your screen (or docked at a side): customer, task, time, Pomodoro and breaks.
+- The **tray icon** (next to the clock): a menu with the current hours, pause, switch and the screens.
+- Closing a window does not stop HourWarden; it keeps running in the tray. *Quit* in the tray menu stops it.
+`,Hc=`# How time is tracked
+
+Once a second HourWarden looks at the window in front and decides which customer it belongs to. Time is recorded in entries: a stretch of time for one customer (or unknown), with the reason it was chosen.
+
+## How a customer is chosen
+
+HourWarden tries these in order and uses the first that decides:
+
+1. **A manual switch** you made in the top bar.
+2. **Folders**: a file or folder inside a customer folder.
+3. **Rules** on the customer page: Edge profile, program, text in the window title, remote server.
+4. **Domains and Microsoft IDs**: mail and web domains, tenant, subscription and workspace IDs (with the Outlook and web addresses plugins).
+5. **Names**: the customer's name or an alias as a whole word in the window title, file or folder name.
+6. **Recent files** saved in a customer folder.
+7. **Network**: the Wi-Fi or VPN, only when nothing else decides.
+
+If nothing matches, the time is **unknown** (amber border). When two customers match equally, HourWarden asks.
+
+A meeting for a known customer (Teams meetings plugin) takes the time whatever is in front, also while you only listen.
+
+## Glances, interruptions and switches
+
+- **Glances**: a look at another customer's window shorter than 10 seconds (*Ignore switches shorter than*) counts for the customer you were working for.
+- **Short interruptions**: while you work for a customer, something without a customer (answering a colleague in Teams, the inbox) shorter than 5 minutes still counts for that customer (*Short interruptions count for the customer*). When it lasts longer, the time from its start becomes unknown.
+- **Another customer** is a real switch after those 10 seconds.
+
+## Away and idle
+
+Without keyboard or mouse input for 5 minutes (*Idle after*) the time stops counting, from your last input. Two things count as activity without input: a Teams meeting for a customer (Teams meetings plugin), and a video playing in the browser, a video player or a meeting app in front, for up to two hours (Windows; on Linux not yet).
+
+- **A short pause** (reading a document, thinking, a word with a colleague) shorter than 10 minutes counts for the customer when you carry on with the **same** customer afterwards. When you carry on with another customer, it does not count.
+- **A longer pause:** when you come back after 10 minutes or more (*Ask about time away after*), the top bar asks what that time was: a customer (a call, a visit) or a break. Time away during a rest break or a Pomodoro break that HourWarden suggested is not asked about.
+
+## Questions
+
+When the customer has been unknown for 3 minutes while you work (*Ask when unknown after*), the top bar asks which customer it is. You can:
+
+- pick a customer (the unknown time so far goes to it);
+- remember the answer for this folder, this Edge profile or this program, so it is not asked again;
+- create a new customer: choose **Other…** and type its name;
+- say **Later**.
+
+## Manual switch
+
+Press **⇄** in the top bar (or **Ctrl+Alt+K**) and pick a customer, optionally with a task: \`fab: ticket triage\`. A manual switch holds until you press **Auto**, pause, or are away. *Started 15 min ago* moves the switch back when you notice late that you switched (for example a phone call); that time is taken from what was recorded in between.
+
+## Pause
+
+**❚❚** in the top bar, the tray menu or **Ctrl+Alt+P** pauses tracking until you resume.
+`,Nc=`# The top bar
+
+A small bar at the top of your screen shows where your time goes right now, and stays out of the way. Its edge and the border around your screen have the customer's colour; amber means unknown, grey means paused. The bar is as wide as what it shows. Hover anything on it for what it does.
+
+## What it shows
+
+- the **grip** (it shows when you hover the bar): drag it to move the bar;
+- a softly pulsing **dot** and the **customer**, with the project when it is not the default one. Click to switch customer; hover to see why this customer was chosen;
+- the **task**: click it to pick a task or type what you are doing. When you work on a task from your task list, a checkbox in front of it checks it off;
+- **Manual** after you switched by hand: click it to go back to automatic tracking;
+- an amber **dot** when today has 10 minutes or more of unknown time: click it to fix that in *Time → Day*;
+- a **ring** while a Pomodoro runs, emptying as time passes (red while focusing, green in a break), with the minutes left. Click it for the Pomodoro options;
+- the **time** since the last switch (hover for today's total and the task's time against its estimate);
+- **pause or resume**, **switch customer**, and **⋯** for everything else.
+
+## The ⋯ menu
+
+- start a Pomodoro, or skip or stop the running one, with today's count;
+- take a rest break now (with when the next one is due);
+- the task list, today's time (with the unknown time), and HourWarden itself;
+- the bar size: **Full**, **Small** (the customer and the time) or **Minimal** (a coloured dot and the time; questions wait behind an amber dot). Click a small or minimal bar to see everything until the mouse leaves it. The same choice is in *Settings → Top bar size*.
+
+The menu closes when you pick something, press Esc, or move the mouse away from the bar.
+
+Below the bar you may see a **ticket ID** seen in the window in front (with *Use as task*), a **question**, **time away**, a **break** with exercises or a **notice**. Questions and breaks always open the full bar.
+
+## Docking at the side of the screen
+
+Drag the bar by its grip and let go close to the **left or right edge** of a screen and it docks there, upright: the customer's name, the time, the Pomodoro ring, pause and ⋯, one below the other. Questions, the switcher, the menu and breaks open beside it. Drag it away from the edge to make it horizontal again.
+
+HourWarden remembers where the bar was, docked or not, also after a restart. *Put the top bar back* in the tray menu returns it to the top centre.
+
+## Hiding the top bar
+
+*Hide top bar* in the tray menu (or the setting *Show the top bar*) hides it. The hotkeys and the tray menu keep working, and breaks and the daily limit still show it for a moment.
+
+If the bar ends up (partly) off screen, for example after unplugging a monitor, it is moved back onto a screen.
+`,Oc=`# Tasks
+
+The task list holds what you have to do, per customer. When you work on a task, the time goes to it automatically: you see per task how long it took, against your estimate, and how many Pomodoros it cost.
+
+## Adding tasks
+
+Type in the box at the top of the *Tasks* screen and press Enter. A few marks fill in the details:
+
+| Write | Means | Example |
+|---|---|---|
+| \`@name\` | the customer (name or alias; the start of a word is enough, \`-\` for a space) | \`@contoso\`, \`@fabrikam-ltd\` |
+| \`~time\` | the estimate | \`~45m\`, \`~1h30m\`, \`~2h\` |
+| \`#ID\` | the ticket ID | \`#CON-123\` |
+| \`!day\` | the due date | \`!today\`, \`!tomorrow\`, \`!fri\`, \`!2026-11-20\` |
+
+Example: \`Migrate mailboxes @contoso ~3h #CON-88 !fri\`.
+
+A word like \`CON-123\` in the title is taken as the ticket ID too. With a customer chosen in the filter, new tasks are for that customer.
+
+You can also add a task from the top bar: click the task, type and press Enter. It is added to your task list and started.
+
+## Today, Board, Backlog, Done
+
+- **Today**: tasks in progress, tasks planned for today, and backlog tasks that are due. Below, what you finished today.
+- **Board**: four columns — *Backlog*, *To do*, *In progress*, *Done*. **Drag** cards between columns and up and down to put them in order.
+- **Backlog**: everything for later. *Plan for today* moves a task to *To do*. Tasks with a due date appear on *Today* when they are due.
+- **Done**: finished tasks per day.
+
+The filter limits everything to one customer (or tasks without one); search looks in titles, ticket IDs and notes.
+
+## Working on a task
+
+Press **▶** on a task (or pick it in the top bar). It moves to *In progress* and the time goes to it:
+
+- When the task is for a customer and you are not working for that customer now, HourWarden switches to it, as a manual switch does.
+- When you then work for another customer, that time is not the task's. The top bar shows **⏸ task**; the task picks up again when you are back at its customer.
+- A task without a customer takes all time until you stop it.
+- A task with a project puts its time on that project.
+
+**■** stops working on the task. Checking it off (in the list or in the top bar) finishes it and stops it.
+
+A typed text that is not a task (↺ in the top bar) only labels the time, as in earlier versions.
+
+## Task details
+
+Click a task's title to open its details: title, customer and project, ticket ID, estimate, due date, notes and a **checklist** of steps. The details also show the time spent (all time and today) and the Pomodoros on it. **Delete** removes the task; the time recorded on it stays, with its title.
+
+## Tickets on screen
+
+With the *Ticket IDs* plugin, a ticket ID seen in the window in front (Jira, TopDesk, ServiceNow) is offered in the top bar. **Use as task** starts the open task with that ticket ID for the current customer, or adds one.
+`,Lc=`# Pomodoro and breaks
+
+Two things help you work in a healthy rhythm: the Pomodoro timer for focus, and breaks against RSI (repetitive strain injury) with exercises.
+
+## Pomodoro
+
+A Pomodoro is 25 minutes of focused work followed by a 5 minute break; after every fourth one, a 15 minute break. All lengths are settings (*Pomodoro*).
+
+- Start one with **Start** next to 🍅 in the top bar or **Start Pomodoro** on the *Tasks* screen.
+- The top bar counts down. In a break it shows exercises (short ones in a short break, a series in a long break).
+- When the break is over, the top bar asks to start the next one.
+- **⏭** ends the focus period early (it then does not count) or skips the break; **■** stops the timer.
+- 🍅 shows how many Pomodoros you finished today. Each one is also counted on the task you were working on.
+
+The Pomodoro timer does not change how time is tracked; it only helps you focus.
+
+## Breaks against RSI
+
+Typing and using the mouse for hours strains hands, arms, neck and eyes. HourWarden counts how long you actually use the keyboard and mouse (time without input does not count) and suggests breaks:
+
+| Break | Default | What to do |
+|---|---|---|
+| Micro-break | 20 seconds after every 20 minutes of use | The 20-20-20 eye rule: look at something at least 6 metres (20 feet) away |
+| Rest break | 10 minutes after every 50 minutes of use | Stand up, stretch, walk |
+| Daily limit | a notice after 8 hours of use in a day | Call it a day |
+
+The **20-20-20 eye rule** (*Settings → Breaks*, on by default) sets the micro-breaks: every 20 minutes, 20 seconds looking 20 feet away, which relaxes the eye muscles that strain to focus close by. Turn it off to choose your own micro-break length and interval, with eye and hand exercises in turn.
+
+A break counts while you do **not** touch the keyboard or mouse; the bar below the title fills up. Pausing on your own counts too: reading without touching anything for half a minute is a micro-break, being away for ten minutes is a rest break, and the timers start over.
+
+- **Later** asks again in a few minutes (2 for a micro-break, 5 for a rest break).
+- **Skip** skips it; the timer starts over.
+- **Next exercise** shows another exercise.
+- **☕** in the top bar starts a rest break now.
+
+Breaks wait while a Teams meeting runs or a presentation or full-screen program is in front. Time away during a rest break is not asked about afterwards.
+
+Every break can be changed or turned off under *Settings → Breaks* (0 turns a break off). *Show exercises* turns the animations off.
+
+## The exercises
+
+Each exercise has an animated figure and a cue below it that follows the movement (*Lean to the left*, *Hold*, *Back to the middle*). The figure faces you like a mirror: when it leans to your left, lean to your left. When you chose less motion in Windows, the figure stands still in its main position and only the cues move on.
+
+| Exercise | For |
+|---|---|
+| Look far away | Eyes: focus at six metres or more |
+| Move your eyes | Eyes: up, right, down, left |
+| Blink | Dry eyes |
+| Loosen your hands | Hands and forearms |
+| Neck stretch | Neck and upper back |
+| Shoulder rolls | Shoulders |
+| Wrist stretch | Wrists and forearms |
+| Spread your fingers | Fingers and hands |
+| Reach up | Back and sides |
+| Open your chest | Chest and shoulder blades |
+| Turn your back | Lower back |
+| Stand up and walk | Everything: moving does the most |
+
+Stop an exercise when it hurts. If you have complaints, ask a doctor or physiotherapist.
+
+## Standing desk
+
+With a standing desk, turn on *Settings → Standing desk → Remind me to stand up*. After a while of sitting at the computer (45 minutes unless you change it), the top bar asks you to stand up:
+
+- **I'm standing**: the reminder closes; sitting counts again after the standing time (15 minutes unless you change it);
+- **Later**: asks again in 10 minutes;
+- **No standing desk today**: no more reminders until tomorrow, for days you work elsewhere. *Stand-up reminders back on* in the top bar's **⋯** menu (or on *Today*) undoes it.
+
+The reminder only runs while your laptop is **docked**: when an external screen is connected. Walking away from the computer for five minutes counts as getting up.
+`,Bc=`# Time: day, week, hours and reports
+
+Everything about recorded time is on one screen, *Time*, with four tabs: **Day**, **Week**, **Hours** and **Reports**. Each is also in the menu on the left. All tables sort on a click on a column heading and export to CSV or Excel.
+
+## Day
+
+*Day* shows a day as a timeline with the totals per customer. Use it at the end of the day to check what was recorded.
+
+- **Open** an entry by clicking it. Change the customer, project, task, ticket ID, start and end, and press **Save** (Esc or **Close** keeps it as it was). Changed time is yours and wins over automatic time.
+- **Times**: click a time for the picker. Type it (7:30, 0730, 19h), pick an hour and minute, or step 5 minutes with **−5** and **+5**; the arrow keys step a minute (with Shift 5).
+- **Notes**: write what you did, agreed or found out. The editor shows formatting as you type and keeps it as Markdown: the toolbar, Ctrl+B and Ctrl+I, or type \`- \` for a list, \`1. \` for a numbered list, \`## \` for a heading and \`> \` for a quote at the start of a line. Notes show under the entry in the list. The entry being recorded can get notes too.
+- **Add** time that was not on the computer: a visit, a phone call.
+- **Split** an entry at a time of your choice, for example to give part of it to another customer.
+- **Join** an entry with the next one for the same customer, including the gap.
+- **Delete** an entry.
+- **From your calendar** (Outlook calendar plugin): appointments are offered as time for the customer of the attendees or subject.
+- **Export** the day's entries as CSV or Excel with the icons next to the date.
+
+Unknown time is shown in amber. The top bar reminds you when today has 10 minutes or more of it.
+
+## Week
+
+The timesheet: a week per customer (or per project) and day, with totals, the unknown time and your weekly target (*Hours per week*).
+
+- *Round hours to* rounds each customer's day to the nearest 6, 15 or 30 minutes, as many timesheets want.
+- **Copy week** puts decimal hours on the clipboard, for pasting into a spreadsheet or a customer's timesheet. The icons above the table export it as CSV or Excel.
+- Click the hours of a day to open it in *Day*.
+
+## Hours
+
+Hours per customer for today, this week, this month or last month, expandable to projects and tasks (grouped by ticket ID).
+
+## Reports
+
+Choose a period (or a custom range) and optionally a customer. Reports show the hours by customer, project, task, application and how it was recorded, the hours per day, mail counts (Outlook plugin), **hours per ticket**, and a table of **all entries**. Search finds entries by task, ticket ID, window title or application. Each table exports to CSV or Excel; the entries export has every entry of the period, with hours as numbers.
+`,Rc=`# Customers and projects
+
+## The customer list
+
+The *Customers* screen lists your customers with the hours this month and when you last worked for them.
+
+- **Search** finds customers by name, alias, domain, category or notes. Enter opens the first one, Esc clears the search.
+- **Categories** group customers, such as *Managed services*, *Projects* or *Internal*. Sorted A–Z, the list shows a heading per category; the category filter shows one category (or the customers without one).
+- **Sort** A–Z, by most hours this month, or by who you worked for most recently. The sort order is remembered.
+- **Show archived** includes customers you no longer work for.
+- At the bottom: how many customers are shown and their hours this month together.
+- Edge profiles without a customer are offered: one click makes a customer with an Edge profile rule.
+
+## A customer's page
+
+The page has four tabs.
+
+### Overview
+
+What the recorded time says about this customer:
+
+- the total for the period (this month, last month or the last 12 months) compared with the period before, today, this week, when you last worked for them, open tasks and mails (Outlook plugin);
+- hours per day (or per month), weekends shaded;
+- time per project, per task or ticket, per application, and how it was recorded (automatically, by a manual switch, or added and changed by you);
+- open tasks, with ▶ to start one, and the latest time recorded;
+- the customer's notes.
+
+### Recognition
+
+How HourWarden recognises the customer:
+
+- **Abbreviations and other names**: found as whole words in window titles, file and folder names, Remote Desktop Manager folders and Obsidian tags. Names shorter than 3 letters only count in file and folder names.
+- **Domains and Microsoft IDs**:
+  - mail domains (\`contoso.com\`): mail from or to them counts for the customer (Outlook plugin);
+  - web domains (\`contoso.sharepoint.com\`, \`portal.contoso.com\`): pages on them count (web addresses plugin);
+  - the Microsoft tenant (\`contoso.onmicrosoft.com\` or the tenant ID), Azure subscription IDs and Power BI or Fabric workspace IDs: found in Azure portal, Entra, Power BI and Fabric addresses. The web addresses plugin writes each ID it sees to its log, so you can copy it here.
+  Subdomains count too.
+- **Phone numbers**: calls with these numbers count for the customer in the HourWarden app on your phone. A shorter number is a prefix: \`+31 20 555\` matches everyone at that office. Numbers you assign on the phone with "remember" are added here.
+- **Folders**: files and folders inside them count for the customer, also when the window only shows a file name.
+- **Rules**: an Edge profile, a program, text in the window title, a remote server or a network that means this customer. Rules are saved at once; names, domains and folders with **Save**.
+
+### Projects
+
+Each customer has a default project, *General*, where its time goes when no project is recognised. Add projects with their own abbreviations and folders to split a customer's time further. A task can have a project; working on it puts the time there.
+
+### Settings
+
+Name, category, border colour and **notes** (contacts, contract, rates, agreements). **Archive** a customer you no longer work for: it is no longer recognised, but its hours stay.
+
+## Internal time: studying, internal meetings
+
+Time that is not for a customer goes to **your own company**, so it stays apart from billable hours. Set it up in the setup guide (*Settings → Open the setup guide*, step 2), or by hand: add your company as a customer and tick **This is my own company** on its page.
+
+- **Kinds of internal time are projects** of your company: *Internal meetings*, *Study and training*, *Administration*, *Sales and quotes*, or your own. Add more on its page under projects.
+- **Switching:** in the top bar's switcher your company's kinds are always listed ("Lumen IT · Study and training"); pick one, or type its name. Other customers' projects show up once you type part of a name.
+- **Recognised automatically:** give your company rules like any customer, such as the folder with your course material, your intranet's site or your own mail domain, so internal work is booked without switching.
+- **Unrecognised time** can count as internal: *Time for which no customer is recognised counts as internal* (setup guide, or your company's page).
+- **Reports** list your company like a customer, so the hours by customer show billable and internal time side by side, and *Hours by project* splits internal time by kind. The monthly report per customer leaves it out of customers' sheets.
+
+## New customers
+
+**+ Customer** opens the Settings tab; after **Create customer** you continue on Recognition. In the top bar, type a new name in the switcher (also via **Other…** in the questions) and choose **+ New customer “name”**: it gets a free colour and the time goes to it straight away. **More…** (or Ctrl+Enter) does the same and then opens its page on Recognition, to fill in the rest. In the switcher, **More…** next to a customer opens its page.
+`,Kc=`# Plugins
+
+Plugins add detection that is specific to a program or way of working: Teams meetings, the Outlook item you read, the server in SQL Server Management Studio, a ticket ID in the window title. Each plugin you installed adds its own documentation to this help, under *Your plugins*; uninstalling it removes it again.
+
+## The plugin store
+
+The plugins come with HourWarden (*Built-in plugins*): they work offline and are signed, like any repository. When a new version of HourWarden brings newer plugins, the ones you installed are updated by themselves.
+
+*Plugins → Store* lists the plugins of all your plugin repositories. Each plugin card says which repository it comes from. Before installing you see what the plugin reads and does. Every file is checked against its repository's index, and checked again before each start; a plugin that was changed after installing does not start.
+
+Each card also says where the plugin works: **Windows and Linux**, or **Windows only** for plugins that use Outlook, Office or other parts of Windows. A plugin for another operating system shows that label instead of an Install button. On Linux, plugins need PowerShell 7 (\`pwsh\`); the plugin's status says so when it is missing.
+
+## Plugin repositories
+
+At the top of the store you manage where plugins come from. HourWarden starts with its built-in plugins. You can add more:
+
+- a **GitHub repository**: paste its address, like \`https://github.com/owner/repository\` (add \`/tree/branch\` for another branch than the default);
+- any **web address** (https) of a folder with an \`index.json\`;
+- a **folder** on this computer or a network share, with **Add folder…**.
+
+Web repositories are downloaded the first time you open the store, and again when you press **Refresh**; until then HourWarden works from its copy, also offline. Untick a repository to stop using it without removing it, or use the arrows to change the order. When two repositories have the same plugin, the newest version is installed; with equal versions, the one higher in the list.
+
+Each repository's index is signed. Press **trust it** once for a repository; from then on HourWarden only installs from it when it is signed with that key. The HourWarden repository on GitHub is trusted from the start.
+
+## Installed plugins
+
+Each installed plugin shows its status, its settings and its log. Plugins run as separate programs, are restarted after a crash and stopped after repeated crashes. When group policy blocks PowerShell scripts, the plugin says so.
+
+**Install from folder** is for writing your own plugin: see \`docs/protocol.md\` in the plugin repository.
+
+## Writing documentation for a plugin
+
+A plugin names its documentation in \`plugin.toml\`:
+
+\`\`\`toml
+docs = "README.md"
+\`\`\`
+
+The file is Markdown inside the plugin folder. Once the plugin is installed, it appears here in the help.
+`,Uc=`# Your data and backups
+
+All data stays on this computer, in \`%APPDATA%\\nl.hourwarden.desktop\` (on Linux \`~/.local/share/nl.hourwarden.desktop\`):
+
+| File or folder | What |
+|---|---|
+| \`hourwarden.db\` | Customers, projects, rules, time, tasks, Pomodoros, settings |
+| \`backups\\\` | Daily copies of the database |
+| \`logs\\hourwarden.log\` | Errors, crashes and plugin problems |
+| \`plugins\\\` | Installed plugins |
+
+## Backups
+
+Once a day HourWarden copies its database to the backups folder and keeps the last 14 copies (*Backups to keep*).
+
+- *Backup folder* puts the copies on another disk or in a synced folder (Proton Drive, OneDrive), so a broken disk does not take your hours with it.
+- *Back up now* makes a copy straight away.
+- **Restore** next to a backup replaces all data with it, after making a backup of the current data first.
+- *Backup password* encrypts the copies (AES-256-GCM, key from the password with Argon2id; files end in \`.tkb\`). Without the password nobody can read them, also not in a cloud folder. Restoring one needs the same password, also on another computer, so keep it in your password manager. Copies made before you set it stay plain.
+
+## Encryption
+
+- **Sync:** the connection to your server is HTTPS; the server keeps each user's data apart and only lets active accounts sync.
+- **Backups:** encrypted with the backup password (above).
+- **This computer:** the database itself is protected by your Windows account. To protect it if the laptop is stolen, turn on disk encryption: *Settings → Privacy & security → Device encryption* (or BitLocker on Windows Pro).
+- **The phone:** Android encrypts its storage by default when the phone has a screen lock; set a PIN or password.
+
+## The log
+
+*Settings → Open log folder* opens the folder with \`hourwarden.log\`. It records errors, crashes (with details), plugins that stop working and why HourWarden quit. Include it when you report a problem.
+`,Fc=`# Keys and the tray menu
+
+## Hotkeys
+
+These work everywhere, also when HourWarden is not in front.
+
+| Keys | Does |
+|---|---|
+| Ctrl+Alt+P | Pause or resume tracking |
+| Ctrl+Alt+K | Open the switcher in the top bar |
+
+### Changing a hotkey
+
+Under *Settings → Hotkeys*, press **Change…** and then the new combination: hold Ctrl, Alt, Shift or Win and press a key. Your current hotkeys are off while you record. **Use this** saves it, **Again** records another, Esc or **Cancel** keeps the old one. **Reset** goes back to the default.
+
+HourWarden checks the combination first:
+
+- it needs Ctrl, Alt or Win (F13–F24 may be used alone), and Shift with a letter is just typing;
+- combinations Windows or every app uses (Ctrl+C, Ctrl+S, Alt+Tab, Win with one key) are refused;
+- both HourWarden hotkeys must differ;
+- a warning appears when it may get in the way, such as Ctrl+Alt+E, which types € on many European keyboards.
+
+When another program already has the combination, Windows refuses it; HourWarden says so and keeps your old hotkey.
+
+On Linux the hotkeys are KDE global shortcuts: the keys set here are used the first time, after which KDE remembers them; change them in *System Settings → Keyboard → Shortcuts* under KWin. See *HourWarden on Linux*.
+
+## In the top bar
+
+| Keys | Does |
+|---|---|
+| Enter | Switch to the first customer, start the task, or create the customer |
+| Esc | Close the switcher or task box |
+
+## In the HourWarden window
+
+| Keys | Does |
+|---|---|
+| Ctrl+K | Search: go to any screen, customer, task, setting or help page, or run an action |
+| F1 | Open this help |
+| Ctrl+C, Ctrl+V | Copy and paste in text fields |
+
+Browser keys (print, find, reload, zoom) do nothing: HourWarden is an app, not a web page.
+
+## The tray menu
+
+Right-click the HourWarden icon next to the clock:
+
+- the current customer with today's, this week's and this month's hours;
+- **Open HourWarden** (on Today), **Tasks**, **Daily review**, **Timesheet**;
+- **Switch customer**, **Pause / Resume**;
+- **Hide top bar / Show top bar**, **Put the top bar back**;
+- **Quit**.
+
+The menu follows the language you choose under *Settings → Appearance*.
+`,Vc=`# Troubleshooting
+
+## Time goes to the wrong customer
+
+Look at the reason below the top bar (or in the daily review): it says why that customer was chosen, for example \`'CTS' in window title\` or \`rule: Edge profile 'Contoso'\`. Then:
+
+- remove or change the alias or rule that matched;
+- add a more specific signal for the right customer (an Edge profile or a folder beats a name);
+- for a one-off, fix it in the daily review.
+
+## It keeps asking which customer it is
+
+Choose *Remember for this folder / Edge profile / program* when you answer, or add a rule on the customer page. If the program is used for all customers (Teams, Outlook), install the matching plugin instead of a program rule.
+
+## The top bar is gone
+
+- *Show top bar* in the tray menu (it may be hidden).
+- *Put the top bar back* in the tray menu moves it to the top centre of the main screen.
+
+## A plugin does not work
+
+Open *Plugins* and look at its status and log. Common reasons: the program it reads is not running, group policy blocks PowerShell scripts, or the plugin was changed after installing (install it again from the store).
+
+## Breaks come at a bad moment
+
+Breaks wait during Teams meetings and presentations. Press **Later**, change the times under *Settings → Breaks*, or set a break to 0 to turn it off.
+
+## Something else
+
+*Settings → Open log folder* and look at \`hourwarden.log\`; it records errors and crashes with details.
+`,Gc=`# Slack time
+
+HourWarden counts the time you spend on social media, video, news, shopping and games: Reddit, X, Facebook, Instagram, TikTok, YouTube, Netflix, Twitch, NU.nl, Tweakers, Bol, Steam, Epic Games, Discord, and any game installed through Steam, Epic, GOG, Xbox or Riot. It counts only while you use the computer, not after you walked away.
+
+Slack is not wrong. In the evening or at the weekend it is your own time, and HourWarden only counts it. Only the site or game and the minutes are kept, on this computer.
+
+## Today
+
+The **Slack** card on *Today* shows today's total, the sites and games it went to, and the last seven days. The top bar's **⋯** menu shows today's total too.
+
+## The reminder during work
+
+During your **work hours** (or while a Pomodoro runs), after a few minutes of slack in a row the top bar asks you to choose:
+
+- **Back to work**: the reminder closes, and stays away for 15 minutes;
+- **Take a walk**: starts a rest break. Stand up, walk around, get some water, and come back with new energy;
+- **Continue my course**: opens the course you are following, so the time goes to learning instead.
+
+A minute of work closes the reminder by itself.
+
+## Settings
+
+Under *Settings → Slack*:
+
+- **Count slack time**: turns the counter off;
+- **Remind me during work after**: the minutes of slack before the reminder (0 turns the reminder off);
+- **Work days** and **work hours**: when the reminder may come up;
+- **Your course**: the web address of the course you are following (Microsoft Learn, Udemy, Pluralsight...);
+- **Also slack**: more sites (as their name shows in the browser tab) or programs (\`game.exe\`);
+- **Not slack for me**: sites or programs that are work or learning for you, such as YouTube or Discord.`,Yc=`# HourWarden on Linux
+
+HourWarden on Linux is the same app as on Windows: the same screens, settings, customers, rules and plugins. Only the way it asks the system which window is in front differs. It is made for **KDE Plasma** (5.27 or 6, Wayland or X11).
+
+## Installing
+
+Install the \`.deb\` (Debian, Ubuntu, KDE neon) or \`.rpm\` (Fedora, openSUSE) package. HourWarden appears in the application menu and, when *Start at login* is on, starts with your session.
+
+Plugins are PowerShell scripts; on Linux they need **PowerShell 7** (\`pwsh\`), from your distribution or Microsoft's package repository. Without it the app works, but plugins report that PowerShell is missing.
+
+## How it sees the active window
+
+Wayland does not let apps see other windows. HourWarden therefore loads a small **KWin script** into Plasma when it starts. The script tells HourWarden which window is active and its title, keeps the top bar above other windows and registers the hotkeys. It is loaded into the running session only: nothing is installed in KDE and no settings are changed. When Plasma restarts, HourWarden loads it again within half a minute.
+
+Program names are shown as on Windows: Firefox is \`firefox.exe\`, VS Code \`code.exe\`. Rules you make for a program therefore work on both systems.
+
+Idle time comes from Plasma's idle notifications; a playing video does not count as activity.
+
+## Differences from Windows
+
+| | Linux (KDE Plasma) |
+|---|---|
+| Hotkeys | KDE global shortcuts. HourWarden's hotkey settings give the keys the first time; after that KDE remembers them, so change them in *System Settings → Keyboard → Shortcuts → KWin* (search for "HourWarden"). |
+| Top bar | Kept above other windows and centred at the top by KWin. Docking to the side is not available on Wayland, as apps cannot place their own windows there. |
+| Border | Drawn above all windows, also full-screen ones; clicks go through it. It hides when the active window is full screen. |
+| Screen sharing | Wayland cannot hide windows from a screen share; the top bar and border are visible in shared screens. Hide them with the tray menu while presenting. |
+| Docked | An external screen is connected (the standing desk reminder uses this). |
+| Plugins | Outlook, Office, Teams desktop, Remote Desktop and web addresses are Windows only. Ticket IDs, SSH terminals, VS Code, networks, file changes and remote workplaces work. |
+| Windows 11 theme | Uses the KDE accent colour. |
+
+## Your data
+
+Data and backups are in \`~/.local/share/nl.hourwarden.desktop\`, the log in its \`logs\` folder.
+
+## When tracking does not work
+
+- **Not KDE Plasma:** on GNOME and other desktops HourWarden starts, but cannot see the active window. Manual switching, tasks, Pomodoro and the timesheet still work.
+- **Check the log** in \`~/.local/share/nl.hourwarden.desktop/logs/hourwarden.log\`: it says "KWin script loaded" and "KWin script reports the active window" when all is well, or why not.
+- **See what HourWarden sees:** start it from a terminal with \`HOURWARDEN_DEBUG_PLATFORM=1 hourwarden-desktop\`; the log then shows the active window, idle time and docking every few seconds.
+`,Jc=`# Sync and the phone app
+
+With your own HourWarden server, your computers and your phone share customers, rules, tasks, hours and what you are working on right now. Each device keeps everything itself and works without a connection; changes are exchanged when it is back.
+
+## What syncs
+
+- Customers, projects and rules.
+- Tasks, entries (with their task text and notes) and Pomodoros.
+- What you are working on right now: the phone shows it and can pause, resume or switch it, and the computer follows.
+- Settings that are about how you work: tracking, questions, Pomodoro, breaks, slack and timesheet.
+
+What stays on each device: hotkeys, the top bar and border, plugins, backups, file settings, the standing desk, and language and theme. Window titles and other raw activity never leave the computer.
+
+When the same thing was changed on two devices, the latest change wins, per field: a task text changed on the laptop and an end time changed on the phone both survive. A deleted entry stays deleted.
+
+## A server
+
+The server is one small program. It runs on Uberspace or in Docker; see \`server/README.md\` in the HourWarden source for the steps. It can serve several people: each has a user with their own password, devices and data, and nobody sees anyone else's.
+
+## Your account
+
+On the server's address you sign in with your user name and password to see your devices, show a pairing code, change your password or remove a lost phone. Add an email address there (or when you register) and **Forgot your password?** on the sign-in page sends you a link to set a new one. Depending on how the server is set up you can register there too; the administrator may approve new accounts first, or give an account an end date. An account that is not active (any more) cannot sync, but its data stays on the server.
+
+## Connecting this computer
+
+*Sync* (under Setup) → enter the server address, your user name (only needed when the server has several users) and your password → **Connect**. Everything on this computer is sent to the server; that can take a moment the first time.
+
+Changes are sent within a quarter of a minute and other devices' changes fetched every minute. **Sync now** does it at once. When the server cannot be reached, HourWarden keeps trying; after an hour it shows a warning with the time of the last successful sync.
+
+## End-to-end encryption
+
+*Sync* → **Turn on end-to-end encryption** encrypts your data on your devices with a key only you have (AES-256). The server stores it but cannot read it: not the customer names, tasks or hours. The copy that was on the server is replaced by an encrypted one.
+
+- **Store the key somewhere safe**: in your password manager (Bitwarden, 1Password, KeePass…), or use **Save as PDF** for a recovery sheet and keep it apart from your computer. **Show the key** shows it again later.
+- New devices need the key. The pairing QR code carries it, so scanning is enough; when you type the code instead, the device asks for the key.
+- If you lose the key while no device has it any more, nobody can read the data on the server, not even its administrator. Your devices keep everything they have.
+- **Turn off** replaces the encrypted copy with a readable one; your other devices ask you to turn it off there too.
+
+The server still sees which devices sync, when, and how many records there are, but not what is in them.
+
+## The phone
+
+1. Install the HourWarden app on the phone (the APK).
+2. On the computer: *Sync* → **Show a pairing code**.
+3. On the phone: **Scan code** and point the camera at the QR code; or type the server address and the code.
+
+The code works once, for 10 minutes. On the phone you can:
+
+- see what the computer tracks, and pause, resume or switch it;
+- start a timer for a workshop or visit, which also switches the computer to that customer;
+- add a meeting or other time in a few taps, with one-tap durations;
+- see and edit today's and this week's hours;
+- track phone calls with customers (see below).
+
+While the phone timer runs, a notification shows it with Pause and Stop. The phone syncs every 15 minutes in the background too, also when the app is closed.
+
+## Phone calls
+
+On the phone: *Sync* → **Track phone calls**. A finished call becomes time for a customer when the number is one of the customer's phone numbers (on the customer page; a shorter number such as +31 20 555 is a prefix for a whole office), or when the phone contact's company is the customer's name or an alias. Calls under a minute are left out. Other calls wait on the phone under **Unknown callers**, to assign (and remember the number), skip, or mark private. The call log stays on the phone.
+
+## Each minute counts once
+
+When entries overlap, every minute counts for one of them: what you added or changed yourself first, then a phone call, then a manual switch, then automatic tracking; between equals the later one. So a call during automatic tracking, or a meeting added on the phone, is not counted twice, and two computers tracking the same minutes count them once. The daily review still shows every entry as it was recorded; the hours, week, reports and customer totals count each minute once.
+
+## Devices
+
+*Sync* lists every paired device with its last sync. **Remove** locks a lost phone out at once; its own data stays on it. **Disconnect** stops syncing this computer; its data stays here.
+`,Qc=`# Aan de slag
+
+HourWarden houdt je uren per klant bij terwijl je werkt. Het kijkt naar wat je doet (het venster op de voorgrond, je Edge-profiel, bestanden, vergaderingen), bepaalt voor welke klant dat is en registreert de tijd. Als het twijfelt, verbeter je het; daar leert het van.
+
+Alles blijft op deze computer. Er wordt niets verstuurd.
+
+## De eerste tien minuten
+
+Bij een nieuwe installatie opent *Vandaag* met een korte welkomst die de eerste stappen met je doet: je klanten (met hun mail- of webdomeinen als je wilt), de plug-ins die op deze computer handig zijn (al aangevinkt, met één klik geïnstalleerd) en eventueel je telefoon. Daarna werkt HourWarden vanzelf: het start met je computer, houdt op de achtergrond bij en maakt elke dag een back-up.
+
+Om het zelf te doen, of later meer toe te voegen:
+
+1. **Voeg je klanten toe** onder *Klanten*. Een naam is genoeg om te beginnen. Elke klant krijgt een kleur, voor de rand om je scherm en de bovenbalk.
+2. **Vertel HourWarden hoe het ze herkent.** Voeg op de klantpagina onder *Herkenning* toe wat bij die klant hoort:
+   - het **Edge-profiel**, als je één browserprofiel per klant gebruikt (het sterkste signaal);
+   - de **mappen** waar je de bestanden van die klant bewaart;
+   - **aliassen**: afkortingen en projectnamen die in venstertitels staan;
+   - **domeinen en Microsoft-ID's**: maildomeinen, webdomeinen, de tenant-ID.
+3. **Werk zoals altijd.** De bovenbalk toont naar welke klant de tijd gaat. Als HourWarden het niet weet, vraagt het na een paar minuten; je antwoord kan worden onthouden voor die map, dat Edge-profiel of dat programma.
+4. **Aan het eind van de dag** open je *Tijd → Dag* om de dag na te kijken en te verbeteren wat niet klopt.
+
+## De weg vinden
+
+Het menu links is in groepen ingedeeld:
+
+| Groep | Scherm | Waarvoor |
+|---|---|---|
+| | Vandaag | Start: wat je nu doet, de uren van vandaag, deze week, je taken, Pomodoro en pauzes |
+| Werk | Taken | Je takenlijst: het werk van vandaag, een bord, de backlog |
+| | Klanten | Klanten, projecten en hoe ze worden herkend, met hun activiteit |
+| Tijd | Dag | Eén dag als tijdlijn; tijd splitsen, samenvoegen, wijzigen en toevoegen |
+| | Week | De urenstaat: een week per klant, om te kopiëren of te exporteren |
+| | Uren | Totalen per klant, project en taak |
+| | Rapporten | Grafieken, alle registraties en exports voor elke periode |
+| Inrichting | Plug-ins | Extra herkenning (Teams-vergaderingen, Outlook, servers, tickets) |
+| | Instellingen | Alle instellingen, back-ups en het logboek |
+| | Help | Deze documentatie, ook die van de plug-ins die je hebt geïnstalleerd |
+
+- **Zoeken** (Ctrl+K) vindt elk scherm, elke klant, taak, instelling of helppagina, en voert acties uit zoals *Pauzeren*, *Andere klant* of *Nu back-up maken*.
+- De **status** boven in het menu toont de klant en taak van nu; klik erop om naar Vandaag te gaan.
+- Het pijltje naast *HourWarden* maakt het menu smal (alleen pictogrammen, met hun naam als tooltip).
+- Wijs een pictogram aan om te zien wat het doet.
+
+## Taal en weergave
+
+Onder *Instellingen → Weergave* kies je de taal (Nederlands of Engels, of die van het systeem), licht of donker, en een thema: HourWarden, Windows 11 (met je accentkleur van Windows), Hoog contrast, Nord, Solarized, Bos en Papier. Een ander thema of licht/donker zie je meteen; een andere taal laadt de vensters opnieuw.
+
+## Tabellen en exports
+
+Klik op een kolomkop om een tabel te sorteren (nog eens voor de andere richting, een derde keer om te stoppen). De pictogrammen boven een tabel exporteren hem als **CSV** of als **Excel-werkmap**, met uren als getallen zodat een rekenblad ze kan optellen. *Tijd → Rapporten* exporteert alle registraties van een periode; *Tijd → Dag* exporteert één dag.
+
+## Waar alles zit
+
+- De **bovenbalk** boven in je scherm (of vastgezet aan een zijkant): klant, taak, tijd, Pomodoro en pauzes.
+- Het **pictogram in het systeemvak** (naast de klok): een menu met de uren van nu, pauzeren, wisselen en de schermen.
+- Een venster sluiten stopt HourWarden niet; het blijft in het systeemvak draaien. *HourWarden afsluiten* in dat menu stopt het.
+`,Zc=`# Hoe tijd wordt bijgehouden
+
+Elke seconde kijkt HourWarden naar het venster op de voorgrond en bepaalt bij welke klant het hoort. Tijd wordt vastgelegd in registraties: een stuk tijd voor één klant (of onbekend), met de reden waarom die klant is gekozen.
+
+## Hoe een klant wordt gekozen
+
+HourWarden probeert deze in volgorde en gebruikt de eerste die beslist:
+
+1. **Handmatig wisselen** dat je in de bovenbalk hebt gedaan.
+2. **Mappen**: een bestand of map binnen een klantmap.
+3. **Regels** op de klantpagina: Edge-profiel, programma, tekst in de venstertitel, externe server.
+4. **Domeinen en Microsoft-ID's**: mail- en webdomeinen, tenant-, abonnements- en werkruimte-ID's (met de Outlook- en webadressen-plug-ins).
+5. **Namen**: de naam of een alias van de klant als heel woord in de venstertitel, bestands- of mapnaam.
+6. **Recente bestanden** die in een klantmap zijn opgeslagen.
+7. **Netwerk**: de wifi of vpn, alleen als niets anders beslist.
+
+Als niets past, is de tijd **onbekend** (oranje rand). Als twee klanten even goed passen, vraagt HourWarden het.
+
+Een vergadering voor een bekende klant (Teams-vergaderingen-plug-in) krijgt de tijd, wat er ook op de voorgrond staat, ook als je alleen luistert.
+
+## Blikken, onderbrekingen en wissels
+
+- **Blikken**: een blik op het venster van een andere klant korter dan 10 seconden (*Wissels negeren korter dan*) telt voor de klant waarvoor je werkte.
+- **Korte onderbrekingen**: terwijl je voor een klant werkt, telt iets zonder klant (een collega antwoorden in Teams, de inbox) dat korter duurt dan 5 minuten nog voor die klant (*Korte onderbrekingen tellen voor de klant*). Duurt het langer, dan wordt de tijd vanaf het begin onbekend.
+- **Een andere klant** is na die 10 seconden een echte wissel.
+
+## Afwezig en inactief
+
+Zonder toetsenbord- of muisgebruik gedurende 5 minuten (*Inactief na*) telt de tijd niet meer, vanaf je laatste invoer. Twee dingen tellen als activiteit zonder invoer: een Teams-vergadering voor een klant (Teams-vergaderingen-plug-in), en een video die speelt in de browser, een videospeler of een vergaderprogramma op de voorgrond, tot twee uur lang (Windows; op Linux nog niet).
+
+- **Een korte pauze** (een document lezen, nadenken, even met een collega praten) korter dan 10 minuten telt voor de klant als je daarna met **dezelfde** klant verdergaat. Ga je met een andere klant verder, dan telt hij niet.
+- **Een langere pauze:** als je na 10 minuten of langer terugkomt (*Vragen naar afwezigheid na*), vraagt de bovenbalk wat die tijd was: een klant (een gesprek, een bezoek) of pauze. Naar afwezigheid tijdens een rustpauze of Pomodoro-pauze die HourWarden voorstelde, wordt niet gevraagd.
+
+## Vragen
+
+Als de klant 3 minuten onbekend is terwijl je werkt (*Vragen als onbekend na*), vraagt de bovenbalk welke klant het is. Je kunt:
+
+- een klant kiezen (de onbekende tijd tot nu toe gaat naar die klant);
+- het antwoord onthouden voor deze map, dit Edge-profiel of dit programma, zodat het niet opnieuw wordt gevraagd;
+- een nieuwe klant aanmaken: kies **Anders…** en typ de naam;
+- **Later** zeggen.
+
+## Handmatig wisselen
+
+Druk op **⇄** in de bovenbalk (of **Ctrl+Alt+K**) en kies een klant, eventueel met een taak: \`fab: ticket triage\`. Een handmatige wissel geldt tot je op **Auto** drukt, pauzeert of weg bent. *15 min geleden begonnen* zet de wissel terug als je pas later merkt dat je gewisseld bent (bijvoorbeeld een telefoongesprek); die tijd wordt genomen van wat er tussendoor is geregistreerd.
+
+## Pauzeren
+
+**❚❚** in de bovenbalk, het menu in het systeemvak of **Ctrl+Alt+P** pauzeert het bijhouden tot je hervat.
+`,Xc=`# De bovenbalk
+
+Een kleine balk boven in je scherm toont waar je tijd nu naartoe gaat, en zit je niet in de weg. De rand ervan en de rand om je scherm hebben de kleur van de klant; oranje betekent onbekend, grijs betekent gepauzeerd. De balk is zo breed als wat hij toont. Wijs iets aan om te zien wat het doet.
+
+## Wat hij toont
+
+- de **greep** (die verschijnt als je de balk aanwijst): sleep hem om de balk te verplaatsen;
+- een zacht pulserende **stip** en de **klant**, met het project als dat niet het standaardproject is. Klik om van klant te wisselen; wijs aan om te zien waarom deze klant is gekozen;
+- de **taak**: klik erop om een taak te kiezen of te typen wat je doet. Als je aan een taak uit je takenlijst werkt, vink je hem af met het vakje ervoor;
+- **Handmatig** nadat je zelf hebt gewisseld: klik erop om terug te gaan naar automatisch bijhouden;
+- een oranje **stip** als er vandaag 10 minuten of meer onbekende tijd is: klik erop om dat te verbeteren in *Tijd → Dag*;
+- een **ring** zolang een Pomodoro loopt, die leegloopt naarmate de tijd verstrijkt (rood tijdens focus, groen in een pauze), met de resterende minuten. Klik erop voor de Pomodoro-opties;
+- de **tijd** sinds de laatste wissel (wijs aan voor het totaal van vandaag en de tijd van de taak tegenover de schatting);
+- **pauzeren of hervatten**, **andere klant**, en **⋯** voor al het andere.
+
+## Het menu ⋯
+
+- een Pomodoro starten, of de lopende overslaan of stoppen, met het aantal van vandaag;
+- nu een rustpauze nemen (met wanneer de volgende komt);
+- de takenlijst, de tijd van vandaag (met de onbekende tijd) en HourWarden zelf;
+- de balkgrootte: **Volledig**, **Klein** (de klant en de tijd) of **Minimaal** (een gekleurde stip en de tijd; vragen wachten achter een oranje stip). Klik op een kleine of minimale balk om alles te zien tot de muis hem verlaat. Dezelfde keuze staat in *Instellingen → Grootte van de bovenbalk*.
+
+Het menu sluit als je iets kiest, op Esc drukt of de muis van de balk af beweegt.
+
+Onder de balk kun je een **ticketnummer** zien dat in het venster op de voorgrond staat (met *Als taak gebruiken*), een **vraag**, **afwezigheid**, een **pauze** met oefeningen of een **melding**. Vragen en pauzes openen altijd de hele balk.
+
+## Vastzetten aan de zijkant van het scherm
+
+Sleep de balk aan zijn greep en laat hem los dicht bij de **linker- of rechterrand** van een scherm: dan zet hij zich daar rechtop vast, met de naam van de klant, de tijd, de Pomodoro-ring, pauzeren en ⋯ onder elkaar. Vragen, de klantkeuze, het menu en pauzes openen ernaast. Sleep hem weg van de rand om hem weer horizontaal te maken.
+
+HourWarden onthoudt waar de balk stond, vastgezet of niet, ook na een herstart. *Bovenbalk terugzetten* in het menu in het systeemvak zet hem terug bovenaan in het midden.
+
+## De bovenbalk verbergen
+
+*Bovenbalk verbergen* in het menu in het systeemvak (of de instelling *De bovenbalk tonen*) verbergt hem. De sneltoetsen en het menu in het systeemvak blijven werken, en pauzes en de daglimiet tonen hem nog even.
+
+Als de balk (deels) buiten beeld raakt, bijvoorbeeld na het loskoppelen van een monitor, wordt hij teruggezet op een scherm.
+`,ev=`# Taken
+
+De takenlijst bevat wat je moet doen, per klant. Als je aan een taak werkt, gaat de tijd er vanzelf naartoe: je ziet per taak hoe lang hij duurde, tegenover je schatting, en hoeveel Pomodoro's hij kostte.
+
+## Taken toevoegen
+
+Typ in het vak boven aan het scherm *Taken* en druk op Enter. Een paar tekens vullen de details in:
+
+| Schrijf | Betekent | Voorbeeld |
+|---|---|---|
+| \`@naam\` | de klant (naam of alias; het begin van een woord is genoeg, \`-\` voor een spatie) | \`@contoso\`, \`@fabrikam-bv\` |
+| \`~tijd\` | de schatting | \`~45m\`, \`~1h30m\`, \`~2h\` |
+| \`#ID\` | het ticketnummer | \`#CON-123\` |
+| \`!dag\` | de deadline | \`!vandaag\`, \`!morgen\`, \`!vr\`, \`!vrijdag\`, \`!2026-11-20\` (Engelse namen als \`!fri\` werken ook) |
+
+Voorbeeld: \`Mailboxen migreren @contoso ~3h #CON-88 !vr\`.
+
+Een woord als \`CON-123\` in de titel wordt ook als ticketnummer gezien. Als er een klant in het filter is gekozen, zijn nieuwe taken voor die klant.
+
+Je kunt ook vanuit de bovenbalk een taak toevoegen: klik op de taak, typ en druk op Enter. Hij wordt aan je takenlijst toegevoegd en gestart.
+
+## Vandaag, Bord, Backlog, Klaar
+
+- **Vandaag**: taken die bezig zijn, taken gepland voor vandaag en backlogtaken die af moeten. Daaronder wat je vandaag hebt afgerond.
+- **Bord**: vier kolommen — *Backlog*, *Te doen*, *Bezig*, *Klaar*. **Sleep** kaarten tussen kolommen en omhoog en omlaag om ze te ordenen.
+- **Backlog**: alles voor later. *Plannen voor vandaag* zet een taak bij *Te doen*. Taken met een deadline verschijnen op *Vandaag* als ze af moeten.
+- **Klaar**: afgeronde taken per dag.
+
+Het filter beperkt alles tot één klant (of taken zonder klant); zoeken kijkt in titels, ticketnummers en notities.
+
+## Aan een taak werken
+
+Druk op **▶** bij een taak (of kies hem in de bovenbalk). Hij gaat naar *Bezig* en de tijd gaat ernaartoe:
+
+- Als de taak voor een klant is en je nu niet voor die klant werkt, wisselt HourWarden naar die klant, zoals bij handmatig wisselen.
+- Als je daarna voor een andere klant werkt, is die tijd niet van de taak. De bovenbalk toont **⏸ taak**; de taak gaat verder als je weer bij zijn klant bent.
+- Een taak zonder klant krijgt alle tijd tot je hem stopt.
+- Een taak met een project zet zijn tijd op dat project.
+
+**■** stopt het werken aan de taak. Afvinken (in de lijst of in de bovenbalk) rondt hem af en stopt hem.
+
+Een getypte tekst die geen taak is (↺ in de bovenbalk) geeft alleen de tijd een label, zoals in eerdere versies.
+
+## Details van een taak
+
+Klik op de titel van een taak om de details te openen: titel, klant en project, ticketnummer, schatting, deadline, notities en een **checklist** met stappen. De details tonen ook de bestede tijd (in totaal en vandaag) en de Pomodoro's eraan. **Verwijderen** haalt de taak weg; de tijd die erop is geregistreerd blijft, met de titel.
+
+## Tickets op het scherm
+
+Met de plug-in *Ticket IDs* wordt een ticketnummer dat in het venster op de voorgrond staat (Jira, TopDesk, ServiceNow) in de bovenbalk aangeboden. **Als taak gebruiken** start de open taak met dat ticketnummer voor de huidige klant, of voegt er een toe.
+`,tv=`# Pomodoro en pauzes
+
+Twee dingen helpen je in een gezond ritme te werken: de Pomodoro-timer voor focus, en pauzes met oefeningen tegen RSI (klachten aan arm, nek en schouder).
+
+## Pomodoro
+
+Een Pomodoro is 25 minuten geconcentreerd werken, gevolgd door 5 minuten pauze; na elke vierde een pauze van 15 minuten. Alle lengtes zijn instellingen (*Pomodoro*).
+
+- Start er een met **Starten** naast 🍅 in de bovenbalk of **Pomodoro starten** op het scherm *Taken*.
+- De bovenbalk telt af. In een pauze toont hij oefeningen (korte in een korte pauze, een reeks in een lange pauze).
+- Als de pauze voorbij is, vraagt de bovenbalk of je de volgende wilt starten.
+- **⏭** beëindigt de focusperiode eerder (die telt dan niet mee) of slaat de pauze over; **■** stopt de timer.
+- 🍅 toont hoeveel Pomodoro's je vandaag hebt afgerond. Elke Pomodoro telt ook mee bij de taak waaraan je werkte.
+
+De Pomodoro-timer verandert niets aan hoe tijd wordt bijgehouden; hij helpt je alleen focussen.
+
+## Pauzes tegen RSI
+
+Urenlang typen en muizen belast handen, armen, nek en ogen. HourWarden telt hoe lang je toetsenbord en muis echt gebruikt (tijd zonder invoer telt niet) en stelt pauzes voor:
+
+| Pauze | Standaard | Wat je doet |
+|---|---|---|
+| Micropauze | 20 seconden na elke 20 minuten gebruik | De 20-20-20-oogregel: kijk naar iets dat minstens 6 meter (20 voet) verderop is |
+| Rustpauze | 10 minuten na elke 50 minuten gebruik | Opstaan, strekken, lopen |
+| Daglimiet | een melding na 8 uur gebruik op een dag | Klaar voor vandaag |
+
+De **20-20-20-oogregel** (*Instellingen → Pauzes*, standaard aan) bepaalt de micropauzes: elke 20 minuten 20 seconden 6 meter verderop kijken, wat de oogspieren ontspant die zich inspannen om dichtbij scherp te stellen. Zet hem uit om zelf de lengte en het interval van micropauzes te kiezen, met om de beurt oog- en handoefeningen.
+
+Een pauze telt zolang je toetsenbord en muis **niet** aanraakt; de balk onder de titel loopt vol. Zelf even stoppen telt ook: een halve minuut lezen zonder iets aan te raken is een micropauze, tien minuten weg zijn een rustpauze, en de timers beginnen opnieuw.
+
+- **Later** vraagt het over een paar minuten opnieuw (2 bij een micropauze, 5 bij een rustpauze).
+- **Overslaan** slaat hem over; de timer begint opnieuw.
+- **Volgende oefening** toont een andere oefening.
+- **☕** in de bovenbalk start nu een rustpauze.
+
+Pauzes wachten zolang een Teams-vergadering loopt of een presentatie of programma op volledig scherm op de voorgrond staat. Naar afwezigheid tijdens een rustpauze wordt achteraf niet gevraagd.
+
+Elke pauze kun je wijzigen of uitzetten onder *Instellingen → Pauzes* (0 zet een pauze uit). *Oefeningen tonen* zet de animaties uit.
+
+## De oefeningen
+
+Elke oefening heeft een bewegend figuurtje en een aanwijzing eronder die meeloopt met de beweging (*Buig naar links*, *Vasthouden*, *Terug naar het midden*). Het figuurtje staat tegenover je als in een spiegel: buigt het naar jouw linkerkant, buig dan ook naar links. Als je in Windows minder beweging hebt gekozen, staat het figuurtje stil in de belangrijkste houding en lopen alleen de aanwijzingen door.
+
+| Oefening | Voor |
+|---|---|
+| Kijk in de verte | Ogen: scherpstellen op zes meter of verder |
+| Beweeg je ogen | Ogen: omhoog, rechts, omlaag, links |
+| Knipper | Droge ogen |
+| Maak je handen los | Handen en onderarmen |
+| Nekstrek | Nek en bovenrug |
+| Schouders rollen | Schouders |
+| Polsstrek | Polsen en onderarmen |
+| Spreid je vingers | Vingers en handen |
+| Reik omhoog | Rug en zijkanten |
+| Open je borst | Borst en schouderbladen |
+| Draai je rug | Onderrug |
+| Sta op en loop | Alles: bewegen helpt het meest |
+
+Stop met een oefening als het pijn doet. Heb je klachten, vraag het dan een arts of fysiotherapeut.
+
+## Sta-bureau
+
+Met een sta-bureau zet je *Instellingen → Sta-bureau → Herinner me om te gaan staan* aan. Na een tijd zitten achter de computer (45 minuten, tenzij je het wijzigt) vraagt de bovenbalk je te gaan staan:
+
+- **Ik sta**: de herinnering sluit; zitten telt weer na de statijd (15 minuten, tenzij je het wijzigt);
+- **Later**: vraagt het over 10 minuten opnieuw;
+- **Vandaag geen sta-bureau**: geen herinneringen meer tot morgen, voor dagen dat je ergens anders werkt. *Sta-herinneringen weer aan* in het menu **⋯** van de bovenbalk (of op *Vandaag*) maakt het ongedaan.
+
+De herinnering werkt alleen als je laptop **in het dock** zit: als er een extern scherm is aangesloten. Vijf minuten bij de computer weglopen telt als opstaan.
+`,nv=`# Tijd: dag, week, uren en rapporten
+
+Alles over geregistreerde tijd staat op één scherm, *Tijd*, met vier tabbladen: **Dag**, **Week**, **Uren** en **Rapporten**. Elk staat ook in het menu links. Alle tabellen sorteren als je op een kolomkop klikt en exporteren naar CSV of Excel.
+
+## Dag
+
+*Dag* toont een dag als tijdlijn met de totalen per klant. Gebruik het aan het eind van de dag om na te kijken wat er is geregistreerd.
+
+- **Open** een registratie door erop te klikken. Wijzig de klant, het project, de taak, het ticketnummer, het begin en het einde, en druk op **Opslaan** (Esc of **Sluiten** laat het zoals het was). Gewijzigde tijd is van jou en gaat voor automatische tijd.
+- **Tijden**: klik op een tijd voor de tijdkiezer. Typ hem (7:30, 0730, 19h), kies een uur en minuut, of ga 5 minuten verder met **−5** en **+5**; de pijltjestoetsen gaan een minuut verder (met Shift 5).
+- **Notities**: schrijf op wat je deed, afsprak of ontdekte. De editor toont de opmaak terwijl je typt en bewaart die als Markdown: de werkbalk, Ctrl+B en Ctrl+I, of typ aan het begin van een regel \`- \` voor een lijst, \`1. \` voor een genummerde lijst, \`## \` voor een kop en \`> \` voor een citaat. Notities staan onder de registratie in de lijst. Ook de registratie die nu loopt kan notities krijgen.
+- **Toevoegen**: tijd die niet aan de computer was: een bezoek, een telefoongesprek.
+- **Splitsen**: een registratie splitsen op een tijd naar keuze, bijvoorbeeld om een deel aan een andere klant te geven.
+- **Samenvoegen**: een registratie samenvoegen met de volgende voor dezelfde klant, inclusief het gat ertussen.
+- **Verwijderen**: een registratie weghalen.
+- **Uit je agenda** (Outlook-agenda-plug-in): afspraken worden aangeboden als tijd voor de klant van de deelnemers of het onderwerp.
+- **Exporteren**: de registraties van de dag als CSV of Excel, met de pictogrammen naast de datum.
+
+Onbekende tijd staat in het oranje. De bovenbalk herinnert je eraan als er vandaag 10 minuten of meer van is.
+
+## Week
+
+De urenstaat: een week per klant (of per project) en dag, met totalen, de onbekende tijd en je weekdoel (*Uren per week*).
+
+- *Uren afronden op* rondt de dag van elke klant af op de dichtstbijzijnde 6, 15 of 30 minuten, zoals veel urenstaten willen.
+- **Week kopiëren** zet decimale uren op het klembord, om in een rekenblad of de urenstaat van een klant te plakken. De pictogrammen boven de tabel exporteren hem als CSV of Excel.
+- Klik op de uren van een dag om die te openen in *Dag*.
+
+## Uren
+
+Uren per klant voor vandaag, deze week, deze maand of vorige maand, uit te klappen naar projecten en taken (gegroepeerd per ticketnummer).
+
+## Rapporten
+
+Kies een periode (of zelf een bereik) en eventueel een klant. Rapporten tonen de uren per klant, project, taak, programma en hoe ze zijn geregistreerd, de uren per dag, aantallen mails (Outlook-plug-in), **uren per ticket** en een tabel met **alle registraties**. Zoeken vindt registraties op taak, ticketnummer, venstertitel of programma. Elke tabel exporteert naar CSV of Excel; de export van de registraties bevat elke registratie van de periode, met uren als getallen.
+`,av=`# Klanten en projecten
+
+## De klantenlijst
+
+Het scherm *Klanten* toont je klanten met de uren van deze maand en wanneer je voor het laatst voor ze werkte.
+
+- **Zoeken** vindt klanten op naam, alias, domein, categorie of notities. Enter opent de eerste, Esc wist de zoekopdracht.
+- **Categorieën** groeperen klanten, zoals *Beheerde diensten*, *Projecten* of *Intern*. Gesorteerd van A tot Z toont de lijst een kop per categorie; het categoriefilter toont één categorie (of de klanten zonder categorie).
+- **Sorteren** van A tot Z, op de meeste uren deze maand, of op voor wie je het laatst werkte. De sortering wordt onthouden.
+- **Gearchiveerde tonen** laat ook klanten zien voor wie je niet meer werkt.
+- Onderaan: hoeveel klanten er getoond worden en hun uren deze maand samen.
+- Edge-profielen zonder klant worden aangeboden: met één klik maak je een klant met een regel voor dat Edge-profiel.
+
+## De pagina van een klant
+
+De pagina heeft vier tabbladen.
+
+### Overzicht
+
+Wat de geregistreerde tijd over deze klant zegt:
+
+- het totaal voor de periode (deze maand, vorige maand of de afgelopen 12 maanden) vergeleken met de periode ervoor, vandaag, deze week, wanneer je voor het laatst voor ze werkte, open taken en mails (Outlook-plug-in);
+- uren per dag (of per maand), met de weekenden gearceerd;
+- tijd per project, per taak of ticket, per programma, en hoe die is geregistreerd (automatisch, door handmatig wisselen, of door jou toegevoegd en gewijzigd);
+- open taken, met ▶ om er een te starten, en de laatst geregistreerde tijd;
+- de notities over de klant.
+
+### Herkenning
+
+Hoe HourWarden de klant herkent:
+
+- **Afkortingen en andere namen**: gevonden als hele woorden in venstertitels, bestands- en mapnamen, Remote Desktop Manager-mappen en Obsidian-tags. Namen korter dan 3 letters tellen alleen in bestands- en mapnamen.
+- **Domeinen en Microsoft-ID's**:
+  - maildomeinen (\`contoso.com\`): mail van of naar die domeinen telt voor de klant (Outlook-plug-in);
+  - webdomeinen (\`contoso.sharepoint.com\`, \`portal.contoso.com\`): pagina's daarop tellen (webadressen-plug-in);
+  - de Microsoft-tenant (\`contoso.onmicrosoft.com\` of de tenant-ID), Azure-abonnements-ID's en Power BI- of Fabric-werkruimte-ID's: gevonden in adressen van Azure Portal, Entra, Power BI en Fabric. De webadressen-plug-in zet elke ID die hij ziet in zijn logboek, zodat je hem hier kunt plakken.
+  Subdomeinen tellen ook.
+- **Telefoonnummers**: gesprekken met deze nummers tellen voor de klant in de HourWarden-app op je telefoon. Een korter nummer is een begin: \`+31 20 555\` past bij iedereen op dat kantoor. Nummers die je op de telefoon met "onthouden" toewijst, worden hier toegevoegd.
+- **Mappen**: bestanden en mappen daarin tellen voor de klant, ook als het venster alleen een bestandsnaam toont.
+- **Regels**: een Edge-profiel, een programma, tekst in de venstertitel, een externe server of een netwerk dat deze klant betekent. Regels worden meteen opgeslagen; namen, domeinen en mappen met **Opslaan**.
+
+### Projecten
+
+Elke klant heeft een standaardproject, *General*, waar de tijd naartoe gaat als er geen project wordt herkend. Voeg projecten toe met hun eigen afkortingen en mappen om de tijd van een klant verder te verdelen. Een taak kan een project hebben; werken aan die taak zet de tijd daar.
+
+### Instellingen
+
+Naam, categorie, randkleur en **notities** (contactpersonen, contract, tarieven, afspraken). **Archiveer** een klant voor wie je niet meer werkt: die wordt niet meer herkend, maar de uren blijven.
+
+## Interne tijd: studie, intern overleg
+
+Tijd die niet voor een klant is, gaat naar **je eigen bedrijf**, zodat die apart blijft van declarabele uren. Stel het in met de installatiehulp (*Instellingen → Installatiehulp openen*, stap 2), of met de hand: voeg je bedrijf toe als klant en vink **Dit is mijn eigen bedrijf** aan op de pagina ervan.
+
+- **Soorten interne tijd zijn projecten** van je bedrijf: *Intern overleg*, *Studie en training*, *Administratie*, *Verkoop en offertes*, of eigen soorten. Voeg er meer toe op de pagina, bij projecten.
+- **Wisselen:** in de klantkeuze van de bovenbalk staan de soorten van je bedrijf altijd ("Lumen IT · Studie en training"); kies er een, of typ de naam. Projecten van andere klanten verschijnen zodra je een deel van een naam typt.
+- **Automatisch herkend:** geef je bedrijf regels zoals elke klant, zoals de map met je cursusmateriaal, de site van je intranet of je eigen maildomein, zodat intern werk wordt geboekt zonder te wisselen.
+- **Niet-herkende tijd** kan als intern tellen: *Tijd waarvoor geen klant wordt herkend telt als intern* (installatiehulp, of de pagina van je bedrijf).
+- **Rapporten** tonen je bedrijf als een klant, zodat de uren per klant declarabele en interne tijd naast elkaar laten zien, en *Uren per project* de interne tijd per soort uitsplitst. Het maandoverzicht per klant laat die buiten de bladen van klanten.
+
+## Nieuwe klanten
+
+**+ Klant** opent het tabblad Instellingen; na **Klant aanmaken** ga je verder op Herkenning. Typ in de bovenbalk een nieuwe naam in de klantkeuze (ook via **Anders…** bij de vragen) en kies **+ Nieuwe klant “naam”**: die krijgt een vrije kleur en de tijd gaat er meteen naartoe. **Meer…** (of Ctrl+Enter) doet hetzelfde en opent dan de pagina op Herkenning, om de rest in te vullen. In de klantkeuze opent **Meer…** naast een klant de pagina van die klant.
+`,rv=`# Plug-ins
+
+Plug-ins voegen herkenning toe die bij een programma of manier van werken hoort: Teams-vergaderingen, het Outlook-item dat je leest, de server in SQL Server Management Studio, een ticketnummer in de venstertitel. Elke plug-in die je installeert voegt zijn eigen documentatie toe aan deze help, onder *Je plug-ins*; verwijderen haalt die weer weg.
+
+## De plug-inwinkel
+
+De plug-ins komen met HourWarden mee (*Built-in plugins*): ze werken offline en zijn ondertekend, zoals elke bron. Als een nieuwe versie van HourWarden nieuwere plug-ins meebrengt, worden de plug-ins die je hebt geïnstalleerd vanzelf bijgewerkt.
+
+*Plug-ins → Winkel* toont de plug-ins uit al je bronnen. Op elke kaart staat uit welke bron de plug-in komt. Voor het installeren zie je wat de plug-in leest en doet. Elk bestand wordt gecontroleerd tegen de index van de bron, en opnieuw voor elke start; een plug-in die na het installeren is gewijzigd, start niet.
+
+Op elke kaart staat ook waar de plug-in werkt: **Windows en Linux**, of **alleen Windows** voor plug-ins die Outlook, Office of andere onderdelen van Windows gebruiken. Een plug-in voor een ander besturingssysteem toont dat label in plaats van een knop Installeren. Op Linux hebben plug-ins PowerShell 7 (\`pwsh\`) nodig; de status van de plug-in zegt het als dat ontbreekt.
+
+## Bronnen voor plug-ins
+
+Boven in de winkel beheer je waar plug-ins vandaan komen. HourWarden begint met zijn ingebouwde plug-ins. Je kunt er meer toevoegen:
+
+- een **GitHub-repository**: plak het adres, zoals \`https://github.com/eigenaar/repository\` (voeg \`/tree/branch\` toe voor een andere branch dan de standaard);
+- elk **webadres** (https) van een map met een \`index.json\`;
+- een **map** op deze computer of een netwerkshare, met **Map toevoegen…**.
+
+Webbronnen worden gedownload als je de winkel voor het eerst opent, en opnieuw als je op **Vernieuwen** drukt; tot die tijd werkt HourWarden met zijn kopie, ook offline. Vink een bron uit om hem niet meer te gebruiken zonder hem te verwijderen, of gebruik de pijltjes om de volgorde te wijzigen. Als twee bronnen dezelfde plug-in hebben, wordt de nieuwste versie geïnstalleerd; bij gelijke versies die hoger in de lijst.
+
+De index van elke bron is ondertekend. Druk één keer op **vertrouw hem** voor een bron; vanaf dan installeert HourWarden er alleen uit als de index met die sleutel is ondertekend. De HourWarden-repository op GitHub wordt vanaf het begin vertrouwd.
+
+## Geïnstalleerde plug-ins
+
+Elke geïnstalleerde plug-in toont zijn status, zijn instellingen en zijn logboek. Plug-ins draaien als aparte programma's, worden na een crash opnieuw gestart en na herhaalde crashes gestopt. Als groepsbeleid PowerShell-scripts blokkeert, zegt de plug-in dat.
+
+**Installeren uit map** is om zelf een plug-in te schrijven: zie \`docs/protocol.md\` in de plug-in-repository.
+
+## Documentatie schrijven voor een plug-in
+
+Een plug-in noemt zijn documentatie in \`plugin.toml\`:
+
+\`\`\`toml
+docs = "README.md"
+\`\`\`
+
+Het bestand is Markdown in de map van de plug-in. Zodra de plug-in is geïnstalleerd, verschijnt het hier in de help.
+`,ov=`# Je gegevens en back-ups
+
+Alle gegevens blijven op deze computer, in \`%APPDATA%\\nl.hourwarden.desktop\` (op Linux \`~/.local/share/nl.hourwarden.desktop\`):
+
+| Bestand of map | Wat |
+|---|---|
+| \`hourwarden.db\` | Klanten, projecten, regels, tijd, taken, Pomodoro's, instellingen |
+| \`backups\\\` | Dagelijkse kopieën van de database |
+| \`logs\\hourwarden.log\` | Fouten, crashes en problemen met plug-ins |
+| \`plugins\\\` | Geïnstalleerde plug-ins |
+
+## Back-ups
+
+Elke dag kopieert HourWarden zijn database naar de back-upmap en bewaart de laatste 14 kopieën (*Te bewaren back-ups*).
+
+- *Back-upmap* zet de kopieën op een andere schijf of in een gesynchroniseerde map (Proton Drive, OneDrive), zodat een kapotte schijf je uren niet meeneemt.
+- *Nu back-up maken* maakt meteen een kopie.
+- **Terugzetten** naast een back-up vervangt alle gegevens erdoor, nadat eerst een back-up van de huidige gegevens is gemaakt.
+- *Back-upwachtwoord* versleutelt de kopieën (AES-256-GCM, sleutel uit het wachtwoord met Argon2id; bestanden eindigen op \`.tkb\`). Zonder het wachtwoord kan niemand ze lezen, ook niet in een cloudmap. Terugzetten vraagt hetzelfde wachtwoord, ook op een andere computer, dus bewaar het in je wachtwoordmanager. Kopieën van voordat je het instelde blijven onversleuteld.
+
+## Versleuteling
+
+- **Synchronisatie:** de verbinding met je server is HTTPS; de server houdt de gegevens van elke gebruiker gescheiden en laat alleen actieve accounts synchroniseren.
+- **Back-ups:** versleuteld met het back-upwachtwoord (hierboven).
+- **Deze computer:** de database zelf wordt beschermd door je Windows-account. Zet schijfversleuteling aan om hem te beschermen als de laptop wordt gestolen: *Instellingen → Privacy en beveiliging → Apparaatversleuteling* (of BitLocker op Windows Pro).
+- **De telefoon:** Android versleutelt zijn opslag standaard als de telefoon een schermvergrendeling heeft; stel een pincode of wachtwoord in.
+
+## Het logboek
+
+*Instellingen → Logmap openen* opent de map met \`hourwarden.log\`. Daarin staan fouten, crashes (met details), plug-ins die niet meer werken en waarom HourWarden is gestopt. Stuur het mee als je een probleem meldt.
+`,sv=`# Toetsen en het menu in het systeemvak
+
+## Sneltoetsen
+
+Deze werken overal, ook als HourWarden niet op de voorgrond staat.
+
+| Toetsen | Doet |
+|---|---|
+| Ctrl+Alt+P | Bijhouden pauzeren of hervatten |
+| Ctrl+Alt+K | De klantkeuze in de bovenbalk openen |
+
+### Een sneltoets wijzigen
+
+Druk onder *Instellingen → Sneltoetsen* op **Wijzigen…** en dan op de nieuwe combinatie: houd Ctrl, Alt, Shift of Win ingedrukt en druk op een toets. Je huidige sneltoetsen staan uit zolang je opneemt. **Deze gebruiken** slaat hem op, **Opnieuw** neemt een andere op, Esc of **Annuleren** houdt de oude. **Standaard** zet de standaard terug.
+
+HourWarden controleert de combinatie eerst:
+
+- er is Ctrl, Alt of Win nodig (F13–F24 mogen alleen), en Shift met een letter is gewoon typen;
+- combinaties die Windows of elk programma gebruikt (Ctrl+C, Ctrl+S, Alt+Tab, Win met één toets) worden geweigerd;
+- de twee sneltoetsen van HourWarden moeten verschillen;
+- er verschijnt een waarschuwing als de combinatie in de weg kan zitten, zoals Ctrl+Alt+E, die op veel Europese toetsenborden € typt.
+
+Als een ander programma de combinatie al heeft, weigert Windows hem; HourWarden zegt dat en houdt je oude sneltoets.
+
+Op Linux zijn de sneltoetsen algemene sneltoetsen van KDE: de toetsen die je hier instelt worden de eerste keer gebruikt, daarna onthoudt KDE ze; wijzig ze in *Systeeminstellingen → Toetsenbord → Sneltoetsen* onder KWin. Zie *HourWarden op Linux*.
+
+## In de bovenbalk
+
+| Toetsen | Doet |
+|---|---|
+| Enter | Naar de eerste klant wisselen, de taak starten of de klant aanmaken |
+| Esc | De klantkeuze of het taakvak sluiten |
+
+## In het venster van HourWarden
+
+| Toetsen | Doet |
+|---|---|
+| Ctrl+K | Zoeken: naar elk scherm, elke klant, taak, instelling of helppagina gaan, of een actie uitvoeren |
+| F1 | Deze help openen |
+| Ctrl+C, Ctrl+V | Kopiëren en plakken in tekstvelden |
+
+Browsertoetsen (afdrukken, zoeken, vernieuwen, zoomen) doen niets: HourWarden is een programma, geen webpagina.
+
+## Het menu in het systeemvak
+
+Klik met de rechtermuisknop op het pictogram van HourWarden naast de klok:
+
+- de huidige klant met de uren van vandaag, deze week en deze maand;
+- **HourWarden openen** (op Vandaag), **Taken**, **Dagoverzicht**, **Urenstaat**;
+- **Andere klant**, **Pauzeren / Hervatten**;
+- **Bovenbalk verbergen / Bovenbalk tonen**, **Bovenbalk terugzetten**;
+- **HourWarden afsluiten**.
+
+Het menu volgt de taal die je onder *Instellingen → Weergave* kiest.
+`,iv=`# Problemen oplossen
+
+## De tijd gaat naar de verkeerde klant
+
+Kijk naar de reden onder de bovenbalk (of in het dagoverzicht): die zegt waarom die klant is gekozen, bijvoorbeeld \`'CTS' in venstertitel\` of \`regel: Edge-profiel 'Contoso'\`. Dan:
+
+- verwijder of wijzig de alias of regel die paste;
+- voeg een specifieker signaal toe voor de juiste klant (een Edge-profiel of een map wint van een naam);
+- voor één keer: verbeter het in het dagoverzicht.
+
+## Het blijft vragen welke klant het is
+
+Kies bij je antwoord *Onthouden voor deze map / dit Edge-profiel / dit programma*, of voeg een regel toe op de klantpagina. Als het programma voor alle klanten wordt gebruikt (Teams, Outlook), installeer dan de bijbehorende plug-in in plaats van een regel voor het programma.
+
+## De bovenbalk is weg
+
+- *Bovenbalk tonen* in het menu in het systeemvak (misschien is hij verborgen).
+- *Bovenbalk terugzetten* in dat menu zet hem bovenaan in het midden van het hoofdscherm.
+
+## Een plug-in werkt niet
+
+Open *Plug-ins* en kijk naar de status en het logboek. Veelvoorkomende redenen: het programma dat hij leest draait niet, groepsbeleid blokkeert PowerShell-scripts, of de plug-in is na het installeren gewijzigd (installeer hem opnieuw uit de winkel).
+
+## Pauzes komen op een slecht moment
+
+Pauzes wachten tijdens Teams-vergaderingen en presentaties. Druk op **Later**, wijzig de tijden onder *Instellingen → Pauzes*, of zet een pauze op 0 om hem uit te zetten.
+
+## Iets anders
+
+*Instellingen → Logmap openen* en kijk in \`hourwarden.log\`; daarin staan fouten en crashes met details.
+`,lv=`# Afleiding
+
+HourWarden telt de tijd die je besteedt aan sociale media, video, nieuws, winkelen en games: Reddit, X, Facebook, Instagram, TikTok, YouTube, Netflix, Twitch, NU.nl, Tweakers, Bol, Steam, Epic Games, Discord, en elke game die via Steam, Epic, GOG, Xbox of Riot is geïnstalleerd. Het telt alleen zolang je de computer gebruikt, niet nadat je bent weggelopen.
+
+Afleiding is niet fout. 's Avonds of in het weekend is het je eigen tijd, en HourWarden telt het alleen. Alleen de site of game en de minuten worden bewaard, op deze computer.
+
+## Vandaag
+
+De kaart **Afleiding** op *Vandaag* toont het totaal van vandaag, de sites en games waar het naartoe ging, en de afgelopen zeven dagen. Het menu **⋯** van de bovenbalk toont ook het totaal van vandaag.
+
+## De herinnering tijdens werk
+
+Tijdens je **werktijden** (of zolang een Pomodoro loopt) vraagt de bovenbalk je na een paar minuten afleiding achter elkaar om te kiezen:
+
+- **Weer aan het werk**: de herinnering sluit en blijft 15 minuten weg;
+- **Een stukje lopen**: start een rustpauze. Sta op, loop rond, haal wat water, en kom terug met nieuwe energie;
+- **Verder met mijn cursus**: opent de cursus die je volgt, zodat de tijd naar leren gaat.
+
+Een minuut werken sluit de herinnering vanzelf.
+
+## Instellingen
+
+Onder *Instellingen → Afleiding*:
+
+- **Afleiding bijhouden**: zet de teller uit;
+- **Herinner me tijdens werk na**: de minuten afleiding voor de herinnering (0 zet de herinnering uit);
+- **Werkdagen** en **werktijd**: wanneer de herinnering mag komen;
+- **Je cursus**: het webadres van de cursus die je volgt (Microsoft Learn, Udemy, Pluralsight...);
+- **Ook afleiding**: meer sites (zoals hun naam in het browsertabblad staat) of programma's (\`game.exe\`);
+- **Voor mij geen afleiding**: sites of programma's die voor jou werk of leren zijn, zoals YouTube of Discord.
+`,dv=`# HourWarden op Linux
+
+HourWarden op Linux is hetzelfde programma als op Windows: dezelfde schermen, instellingen, klanten, regels en plug-ins. Alleen de manier waarop het aan het systeem vraagt welk venster op de voorgrond staat, verschilt. Het is gemaakt voor **KDE Plasma** (5.27 of 6, Wayland of X11).
+
+## Installeren
+
+Installeer het pakket \`.deb\` (Debian, Ubuntu, KDE neon) of \`.rpm\` (Fedora, openSUSE). HourWarden verschijnt in het programmamenu en start, als *Starten bij aanmelden* aan staat, met je sessie.
+
+Plug-ins zijn PowerShell-scripts; op Linux hebben ze **PowerShell 7** (\`pwsh\`) nodig, van je distributie of uit de pakketbron van Microsoft. Zonder werkt het programma, maar melden plug-ins dat PowerShell ontbreekt.
+
+## Hoe het het actieve venster ziet
+
+Wayland laat programma's geen andere vensters zien. Daarom laadt HourWarden bij het starten een klein **KWin-script** in Plasma. Het script vertelt HourWarden welk venster actief is en wat de titel is, houdt de bovenbalk boven andere vensters en registreert de sneltoetsen. Het wordt alleen in de lopende sessie geladen: er wordt niets in KDE geïnstalleerd en er worden geen instellingen gewijzigd. Als Plasma herstart, laadt HourWarden het binnen een halve minuut opnieuw.
+
+Programmanamen worden getoond zoals op Windows: Firefox is \`firefox.exe\`, VS Code \`code.exe\`. Regels die je voor een programma maakt, werken daardoor op beide systemen.
+
+Inactiviteit komt uit de inactiviteitsmeldingen van Plasma; een video die speelt telt niet als activiteit.
+
+## Verschillen met Windows
+
+| | Linux (KDE Plasma) |
+|---|---|
+| Sneltoetsen | Algemene sneltoetsen van KDE. De sneltoetsinstellingen van HourWarden geven de eerste keer de toetsen; daarna onthoudt KDE ze, dus wijzig ze in *Systeeminstellingen → Toetsenbord → Sneltoetsen → KWin* (zoek op "HourWarden"). |
+| Bovenbalk | Boven andere vensters gehouden en bovenaan gecentreerd door KWin. Vastzetten aan de zijkant kan niet op Wayland, omdat programma's hun eigen vensters daar niet kunnen plaatsen. |
+| Rand | Getekend boven alle vensters, ook die op volledig scherm; klikken gaan erdoorheen. Hij verdwijnt als het actieve venster op volledig scherm staat. |
+| Scherm delen | Wayland kan vensters niet verbergen voor schermdelen; de bovenbalk en rand zijn zichtbaar in gedeelde schermen. Verberg ze tijdens een presentatie via het menu in het systeemvak. |
+| In het dock | Er is een extern scherm aangesloten (de sta-bureau-herinnering gebruikt dit). |
+| Plug-ins | Outlook, Office, Teams desktop, Extern bureaublad en webadressen zijn alleen voor Windows. Ticketnummers, SSH-terminals, VS Code, netwerken, bestandswijzigingen en externe werkplekken werken. |
+| Thema Windows 11 | Gebruikt de accentkleur van KDE. |
+
+## Je gegevens
+
+Gegevens en back-ups staan in \`~/.local/share/nl.hourwarden.desktop\`, het logboek in de map \`logs\` daarin.
+
+## Als bijhouden niet werkt
+
+- **Geen KDE Plasma:** op GNOME en andere bureaubladen start HourWarden wel, maar ziet het het actieve venster niet. Handmatig wisselen, taken, Pomodoro en de urenstaat werken nog.
+- **Kijk in het logboek** in \`~/.local/share/nl.hourwarden.desktop/logs/hourwarden.log\`: daar staat "KWin script loaded" en "KWin script reports the active window" als alles goed is, of waarom niet.
+- **Zie wat HourWarden ziet:** start het vanuit een terminal met \`HOURWARDEN_DEBUG_PLATFORM=1 hourwarden-desktop\`; het logboek toont dan om de paar seconden het actieve venster, de inactiviteit en of de laptop in het dock zit.
+`,uv=`# Synchronisatie en de telefoon-app
+
+Met je eigen HourWarden-server delen je computers en je telefoon klanten, regels, taken, uren en waar je nu aan werkt. Elk apparaat bewaart alles zelf en werkt zonder verbinding; wijzigingen worden uitgewisseld zodra die terug is.
+
+## Wat er wordt gesynchroniseerd
+
+- Klanten, projecten en regels.
+- Taken, registraties (met hun taaktekst en notities) en Pomodoro's.
+- Waar je nu aan werkt: de telefoon toont het en kan het pauzeren, hervatten of wisselen, en de computer volgt.
+- Instellingen over hoe je werkt: bijhouden, vragen, Pomodoro, pauzes, afleiding en urenstaat.
+
+Wat op elk apparaat blijft: sneltoetsen, de bovenbalk en rand, plug-ins, back-ups, bestandsinstellingen, het sta-bureau, en taal en thema. Venstertitels en andere ruwe activiteit verlaten de computer nooit.
+
+Als hetzelfde op twee apparaten is gewijzigd, wint de laatste wijziging, per veld: een taaktekst gewijzigd op de laptop en een eindtijd gewijzigd op de telefoon blijven allebei bewaard. Een verwijderde registratie blijft verwijderd.
+
+## Een server
+
+De server is één klein programma. Hij draait op Uberspace of in Docker; zie \`server/README.md\` in de broncode van HourWarden voor de stappen. Hij kan meerdere mensen bedienen: elk heeft een gebruiker met een eigen wachtwoord, eigen apparaten en eigen gegevens, en niemand ziet die van een ander.
+
+## Je account
+
+Op het adres van de server log je in met je gebruikersnaam en wachtwoord om je apparaten te zien, een koppelcode te tonen, je wachtwoord te wijzigen of een verloren telefoon te verwijderen. Voeg daar (of bij het registreren) een e-mailadres toe; dan stuurt **Wachtwoord vergeten?** op de inlogpagina je een link om een nieuw wachtwoord in te stellen. Afhankelijk van hoe de server is ingericht kun je je daar ook registreren; de beheerder keurt nieuwe accounts misschien eerst goed, of geeft een account een einddatum. Een account dat niet (meer) actief is, kan niet synchroniseren, maar de gegevens blijven op de server.
+
+## Deze computer verbinden
+
+*Synchronisatie* (onder Inrichting) → vul het serveradres in, je gebruikersnaam (alleen nodig als de server meerdere gebruikers heeft) en je wachtwoord → **Verbinden**. Alles op deze computer wordt naar de server gestuurd; de eerste keer kan dat even duren.
+
+Wijzigingen worden binnen een kwart minuut verstuurd en die van andere apparaten elke minuut opgehaald. **Nu synchroniseren** doet het meteen. Als de server niet bereikbaar is, blijft HourWarden het proberen; na een uur toont het een waarschuwing met de tijd van de laatste geslaagde synchronisatie.
+
+## End-to-end versleuteling
+
+*Synchronisatie* → **End-to-end versleuteling aanzetten** versleutelt je gegevens op je apparaten met een sleutel die alleen jij hebt (AES-256). De server bewaart ze maar kan ze niet lezen: niet de klantnamen, taken of uren. De kopie die op de server stond, wordt vervangen door een versleutelde.
+
+- **Bewaar de sleutel op een veilige plek**: in je wachtwoordmanager (Bitwarden, 1Password, KeePass…), of gebruik **Opslaan als pdf** voor een herstelblad en bewaar dat los van je computer. **De sleutel tonen** toont hem later opnieuw.
+- Nieuwe apparaten hebben de sleutel nodig. De QR-code om te koppelen bevat hem, dus scannen is genoeg; typ je de code over, dan vraagt het apparaat om de sleutel.
+- Als je de sleutel kwijtraakt terwijl geen apparaat hem meer heeft, kan niemand de gegevens op de server lezen, ook de beheerder niet. Je apparaten houden alles wat ze hebben.
+- **Uitzetten** vervangt de versleutelde kopie door een leesbare; je andere apparaten vragen je het daar ook uit te zetten.
+
+De server ziet nog wel welke apparaten synchroniseren, wanneer, en hoeveel records er zijn, maar niet wat erin staat.
+
+## De telefoon
+
+1. Installeer de HourWarden-app op de telefoon (de APK).
+2. Op de computer: *Synchronisatie* → **Een koppelcode tonen**.
+3. Op de telefoon: **Code scannen** en richt de camera op de QR-code; of typ het serveradres en de code.
+
+De code werkt één keer, 10 minuten lang. Op de telefoon kun je:
+
+- zien wat de computer bijhoudt, en het pauzeren, hervatten of wisselen;
+- een timer starten voor een workshop of bezoek, die ook de computer naar die klant laat wisselen;
+- in een paar tikken een vergadering of andere tijd toevoegen, met duren van één tik;
+- de uren van vandaag en deze week zien en wijzigen;
+- telefoongesprekken met klanten bijhouden (zie hieronder).
+
+Zolang de timer op de telefoon loopt, toont een melding hem met Pauzeren en Stoppen. De telefoon synchroniseert ook elke 15 minuten op de achtergrond, ook als de app gesloten is.
+
+## Telefoongesprekken
+
+Op de telefoon: *Synchronisatie* → **Telefoongesprekken bijhouden**. Een afgelopen gesprek wordt tijd voor een klant als het nummer een van de telefoonnummers van die klant is (op de klantpagina; een korter nummer zoals +31 20 555 is het begin voor een heel kantoor), of als het bedrijf van het contact op je telefoon de naam of een alias van de klant is. Gesprekken korter dan een minuut tellen niet mee. Andere gesprekken wachten op de telefoon onder **Onbekende bellers**, om toe te wijzen (en het nummer te onthouden), over te slaan of als privé te markeren. De gesprekkenlijst blijft op de telefoon.
+
+## Elke minuut telt één keer
+
+Als registraties elkaar overlappen, telt elke minuut voor één ervan: eerst wat je zelf hebt toegevoegd of gewijzigd, dan een telefoongesprek, dan handmatig wisselen, dan automatisch bijhouden; bij gelijke de latere. Een gesprek tijdens automatisch bijhouden, of een vergadering die op de telefoon is toegevoegd, telt dus niet dubbel, en twee computers die dezelfde minuten bijhouden tellen ze één keer. Het dagoverzicht toont nog elke registratie zoals die is vastgelegd; de uren, de week, rapporten en klanttotalen tellen elke minuut één keer.
+
+## Apparaten
+
+*Synchronisatie* toont elk gekoppeld apparaat met de laatste synchronisatie. **Verwijderen** sluit een verloren telefoon meteen buiten; de eigen gegevens blijven erop staan. **Verbinding verbreken** stopt het synchroniseren van deze computer; de gegevens blijven hier.
 `,Tr=Object.assign({"../docs/01-getting-started.md":Ic,"../docs/02-tracking.md":Hc,"../docs/03-top-bar.md":Nc,"../docs/04-tasks.md":Oc,"../docs/05-pomodoro-and-breaks.md":Lc,"../docs/06-review-timesheet-reports.md":Bc,"../docs/07-customers.md":Rc,"../docs/08-plugins.md":Kc,"../docs/09-data-and-backups.md":Uc,"../docs/10-keys-and-tray.md":Fc,"../docs/11-troubleshooting.md":Vc,"../docs/12-slack.md":Gc,"../docs/13-linux.md":Yc,"../docs/14-sync.md":Jc}),cv=Object.assign({"../docs/nl/01-getting-started.md":Qc,"../docs/nl/02-tracking.md":Zc,"../docs/nl/03-top-bar.md":Xc,"../docs/nl/04-tasks.md":ev,"../docs/nl/05-pomodoro-and-breaks.md":tv,"../docs/nl/06-review-timesheet-reports.md":nv,"../docs/nl/07-customers.md":av,"../docs/nl/08-plugins.md":rv,"../docs/nl/09-data-and-backups.md":ov,"../docs/nl/10-keys-and-tray.md":sv,"../docs/nl/11-troubleshooting.md":iv,"../docs/nl/12-slack.md":lv,"../docs/nl/13-linux.md":dv,"../docs/nl/14-sync.md":uv}),za=i=>i.split("/").pop().replace(/\.md$/,"");function no(){const i=Co()==="nl"?Object.fromEntries(Object.entries(cv).map(([r,a])=>[za(r),a])):{};return Object.keys(Tr).sort().map(r=>[za(r),i[za(r)]||Tr[r]])}var Sr=f("<button> </button>"),vv=f('<span class="group svelte-xnyhjk"> </span> <!>',1),pv=f('<p class="muted"> </p>'),mv=f('<p class="muted small svelte-xnyhjk"> <!></p>'),hv=f('<div class="help svelte-xnyhjk"><nav class="toc svelte-xnyhjk"><input class="svelte-xnyhjk"/> <span class="group svelte-xnyhjk"> </span> <!> <!> <!></nav> <article class="doc selectable svelte-xnyhjk"><!> <!></article></div>');function gv(i,r){Yt(r,!0);const a=no().map(([k,q])=>({id:"app:"+k,title:Lr(q,k),body:q,group:"app"}));let s=Kt(r,"start",3,null),d=Z(jt([])),u=Z(jt(Cn(()=>s())||a[0]?.id)),c=Z("");on(async()=>{try{const k=await be("plugin_docs");g(d,k.map(q=>({id:"plugin:"+q.id,title:q.name,group:"plugin",version:q.version,fromStore:q.from_store,body:q.docs||`# ${q.name}
 
 ${q.description}

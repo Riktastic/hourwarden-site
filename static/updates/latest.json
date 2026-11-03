@@ -1,0 +1,11 @@
+{
+  "version": "0.24.0",
+  "notes": "Releases on hourwarden.com; Licences of third-party code; Smaller and faster; Top bar; Plugins",
+  "pub_date": "2026-11-03T08:36:51Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSWmNra2MyZVNuaU1OZkNHcmVXRTJSaDlNa2RiaVNobU0xVDJ3RTJ3Ynk3eXVuTnRYQ2MrYmpRWG5qK3EremJ1Z0hUeUd4c3IxZ3NxSmVMcGNSY3lXeFRLaWxXQWNJN2dnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjk0NDA0CWZpbGU6SG91cldhcmRlbl8wLjI0LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMjQuMApobHNUb05xdm5NMGIxdGc3ajRTSThBQU10N29PSTE4L0Z6MWcrN0ExTmZhbmZWeTFVRTRNUFlPLzVPVEpqSVFrck9SakxMQ2QwUm5QWlZhL2ZzcDJCUT09Cg==",
+      "url": "https://github.com/Riktastic/hourwarden-site/releases/download/v0.24.0/HourWarden_0.24.0_x64-setup.exe"
+    }
+  }
+}
