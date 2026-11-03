@@ -8,9 +8,12 @@ disableKinds = ["taxonomy", "term", "RSS"]
 [params]
   # The hosted sync service.
   app = "https://app.hourwarden.com"
-  # Download links; empty shows "coming soon".
-  downloadWindows = "/downloads/HourWarden-setup.exe"
-  downloadAndroid = "/downloads/HourWarden.apk"
+  # Download links; empty shows "coming soon". The release workflows of the
+  # app repositories upload these files to the latest release of this repository.
+  downloadWindows = "https://github.com/Riktastic/hourwarden-site/releases/latest/download/HourWarden-setup.exe"
+  downloadAndroid = "https://github.com/Riktastic/hourwarden-site/releases/latest/download/HourWarden.apk"
+  downloadDeb = "https://github.com/Riktastic/hourwarden-site/releases/latest/download/HourWarden-amd64.deb"
+  downloadRpm = "https://github.com/Riktastic/hourwarden-site/releases/latest/download/HourWarden-x86_64.rpm"
   contact = ""
 
 [languages]

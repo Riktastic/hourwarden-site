@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{/* The notes are written in English by the release workflows; the Dutch
+     page lists the same ones. */}}
+<article class="page">
+  <div class="wrap narrow">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    <p class="downloads">
+      <a href="{{ site.Params.downloadWindows }}">Windows</a> ·
+      <a href="{{ site.Params.downloadAndroid }}">Android</a> ·
+      <a href="{{ site.Params.downloadDeb }}">Linux (.deb)</a> ·
+      <a href="{{ site.Params.downloadRpm }}">Linux (.rpm)</a>
+    </p>
+    {{ $notes := where (site.Sites.Default.RegularPages) "Section" "releases" }}
+    {{ range sort $notes "Params.date" "desc" }}
+    <section class="release">
+      <h2 id="v{{ .Params.version }}">{{ .Params.version }} <small>{{ .Date.Format "2006-01-02" }}</small></h2>
+      {{ .Content }}
+      <p><a href="{{ .Params.release }}">{{ i18n "allFiles" }}</a></p>
+    </section>
+    {{ end }}
+  </div>
+</article>
+{{ end }}

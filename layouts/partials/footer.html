@@ -3,6 +3,7 @@
     <span>© {{ now.Year }} HourWarden · {{ i18n "madeIn" }}</span>
     <span class="links">
       {{ with site.GetPage "/privacy" }}<a href="{{ .RelPermalink }}">{{ i18n "privacyPolicy" }}</a>{{ end }}
+      {{ with site.GetPage "/releases" }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
       <a href="{{ site.Params.app }}/login">{{ i18n "signIn" }}</a>
       {{ with site.Params.contact }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
     </span>
