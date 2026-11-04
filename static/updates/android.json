@@ -1,5 +1,5 @@
 {
-  "version": "0.25.0",
-  "notes": "",
-  "url": "https://github.com/Riktastic/hourwarden-site/releases/tag/v0.25.0"
+  "version": "0.27.0",
+  "notes": "One version for everything; New version notice on Linux and Android; Portable Windows version; PowerShell plugins removed",
+  "url": "https://github.com/Riktastic/hourwarden-site/releases/tag/v0.27.0"
 }
