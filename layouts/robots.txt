@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+# The live demos load inside the home page; the update feed is for the app.
+Disallow: /demo/
+Disallow: /updates/
+
+Sitemap: {{ "sitemap.xml" | absURL }}

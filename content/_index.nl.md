@@ -1,11 +1,12 @@
 ---
 title: "HourWarden: urenregistratie per klant, zonder timers"
-description: "HourWarden kijkt elke seconde voor welke klant je werkt en registreert de uren. Windows, Linux (KDE Plasma) en Android, in het Nederlands en Engels. Synchronisatie kan end-to-end versleuteld."
+description: "Automatische urenregistratie per klant voor consultants en zzp'ers. HourWarden herkent de klant aan waar je aan werkt, houdt een activiteitenlogboek bij, toont declarabele uren en budgetten en vult je urenstaat. Windows, Linux en Android; privacy voorop."
 hero:
   title: "Je urenstaat vult zich terwijl je werkt"
   text: "HourWarden leest elke seconde welk venster je voor je hebt en boekt de tijd op de klant waar het bij hoort: aan het Edge-profiel, de documentmap, de server van het extern bureaublad, het maildomein of de Teams-vergadering. Op vrijdag kijk je de week na en kopieer je hem als uren met decimalen."
   shot: "today.png"
   alt: "Het scherm Vandaag van HourWarden, dat tijd registreert voor de verzonnen klant Northwind Traders"
+  topbarAlt: "De bovenbalk van HourWarden: de klant waarvoor je werkt en de tijd sinds je begon"
 features:
   - icon: "radar"
     title: "Weet voor wie je werkt"
@@ -31,6 +32,15 @@ features:
   - icon: "heart"
     title: "Pauzes die helpen"
     text: "De 20-20-20-regel laat je ogen rusten, en langere pauzes tonen korte geanimeerde oefeningen voor handen, nek en rug."
+  - icon: "chart"
+    title: "Een activiteitenlogboek dat je notities schrijft"
+    text: "Elk document, elke pagina, mail en vergadering met de tijd, gegroepeerd per soort werk. Met één klik staat het in de notities van een registratie, zodat een urenstaat zegt waar de uren voor waren."
+  - icon: "coin"
+    title: "Declarabele uren en budgetten"
+    text: "Zie hoeveel van je week declarabel is, geef een klant een budget per week en zie ontbrekende uren ten opzichte van je werkdag vóór vrijdag."
+  - icon: "cloud"
+    title: "Gemaakt voor werk in de Microsoft-cloud"
+    text: "Herkent rapporten en semantische modellen in Fabric en Power BI, Azure-resources, Entra, Data Factory, Databricks en werkitems in Azure DevOps, en leert welke tenant bij welke klant hoort."
   - icon: "plug"
     title: "Plugins voor je tools"
     text: "Outlook, Teams, VS Code, SSH, extern bureaublad, ticketnummers en meer. Ondertekend, open source, en jij kiest wat er draait."
@@ -53,10 +63,25 @@ security:
 steps:
   title: "Zo begin je"
   items:
-    - "Installeer HourWarden op Windows 11, of op Linux met KDE Plasma."
+    - "Installeer HourWarden op Windows 11 (of pak de versie zonder installatie uit), of op Linux met KDE Plasma."
     - "De installatiehulp vraagt naar je klanten en hun maildomeinen. Je kunt hem overslaan."
     - "Werk zoals altijd. Weet hij 3 minuten lang niet welke klant het is, dan vraagt de bovenbalk het één keer."
     - "Optioneel: maak een account om je laptop, pc en telefoon te synchroniseren."
+faq:
+  title: "Vragen"
+  items:
+    - q: "Hoe weet HourWarden voor welke klant ik werk?"
+      a: "Hij kijkt elke seconde naar het venster vooraan: het document en de map, de website en de Microsoft-tenant, de mail die je leest, de server van het extern bureaublad of de Teams-vergadering. Dat vergelijkt hij met wat je hem over je klanten vertelde, en hij leert bij als je af en toe een vraag beantwoordt."
+    - q: "Gaan mijn gegevens van mijn computer af?"
+      a: "Waar je aan werkt, de venstertitels en het activiteitenlogboek, blijft op je computer. Alleen klanten, taken en uren worden tussen je apparaten gesynchroniseerd, en alleen als je een account maakt; gesynchroniseerde gegevens kunnen end-to-end versleuteld worden."
+    - q: "Kan ik het zonder klanten gebruiken, voor mijn eigen werk?"
+      a: "Ja. Kies 'Ik houd mijn eigen werk bij' in de installatiehulp: alle tijd gaat naar je eigen bedrijf, en HourWarden toont wat je deed per programma, website en soort werk."
+    - q: "Op welke systemen werkt het?"
+      a: "Windows 11 (installatie of zip zonder installatie), Linux met KDE Plasma (.deb en .rpm) en Android. De app en de hulp zijn in het Nederlands en Engels."
+    - q: "Wat kost het?"
+      a: "De app is gratis te downloaden en werkt zonder account. Een account voegt synchronisatie tussen je laptop, pc en telefoon toe."
+    - q: "Hoe blijf ik op de hoogte van nieuwe versies?"
+      a: "De Windows-app biedt updates zelf aan; op Linux, Android en de versie zonder installatie meldt een bericht dat er een nieuwe versie is. De versienotities staan op deze site, ook als RSS-feed."
 cta:
   title: "Probeer het op je eigen week"
   text: "De app werkt ook zonder account. Een account voegt synchronisatie tussen je apparaten toe."

@@ -10,7 +10,7 @@
       <a class="btn ghost" href="#demo">{{ i18n "tryDemo" }}</a>
     </div>
     {{ partial "downloads.html" "" }}
-    <img class="topbar-shot" src="{{ $img }}topbar.png" alt="" width="582" height="40">
+    <img class="topbar-shot" src="{{ $img }}topbar.png" alt="{{ $p.hero.topbarAlt }}" width="582" height="40">
     {{/* The live desktop demo (static/demo/desktop), not a screenshot. */}}
     <figure class="screen live"><iframe src="{{ "demo/desktop/index.html" | relURL }}?lang={{ site.Language.Lang }}" title="{{ $p.hero.alt }}"></iframe></figure>
   </div>
@@ -75,6 +75,20 @@
     </ul>
   </div>
 </section>
+
+{{ with $p.faq }}
+<section id="faq" class="faq">
+  <div class="wrap narrow">
+    <h2>{{ .title }}</h2>
+    {{ range .items }}
+    <details>
+      <summary>{{ .q }}</summary>
+      <p>{{ .a }}</p>
+    </details>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
 
 <section class="steps">
   <div class="wrap">

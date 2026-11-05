@@ -1,0 +1,24 @@
+{{- /* The release notes as RSS: every version with its full notes. */ -}}
+{{- $notes := sort (where hugo.Sites.Default.RegularPages "Section" "releases") "Date" "desc" -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>{{ site.Title }} releases</title>
+    <link>{{ .Permalink }}</link>
+    <description>What changed in each version of HourWarden, the time tracker that books your hours to the right customer by itself.</description>
+    <language>en</language>
+    <copyright>{{ site.Copyright }}</copyright>
+    {{ with index $notes 0 }}<lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    {{ with .OutputFormats.Get "RSS" }}<atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml" />{{ end }}
+    {{ range first site.Config.Services.RSS.Limit $notes }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <guid isPermaLink="true">{{ .Permalink }}</guid>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <description>{{ .Summary | plainify | htmlEscape }}</description>
+      <content:encoded>{{ printf "<![CDATA[%s<p><a href=\"%s\">All files of this version</a></p>]]>" .Content .Params.release | safeHTML }}</content:encoded>
+    </item>
+    {{ end }}
+  </channel>
+</rss>

@@ -7,11 +7,13 @@
     {{ .Content }}
     <p class="downloads">
       <a href="{{ site.Params.downloadWindows }}">Windows</a> ·
+      <a href="{{ site.Params.downloadPortable }}">{{ i18n "portable" }}</a> ·
       <a href="{{ site.Params.downloadAndroid }}">Android</a> ·
       <a href="{{ site.Params.downloadDeb }}">Linux (.deb)</a> ·
       <a href="{{ site.Params.downloadRpm }}">Linux (.rpm)</a>
     </p>
-    {{ $notes := where (site.Sites.Default.RegularPages) "Section" "releases" }}
+    {{ with hugo.Sites.Default.GetPage "/releases" }}{{ with .OutputFormats.Get "rss" }}<p class="muted"><a href="{{ .Permalink }}" type="application/rss+xml">{{ i18n "releasesFeed" }}</a></p>{{ end }}{{ end }}
+    {{ $notes := where (hugo.Sites.Default.RegularPages) "Section" "releases" }}
     {{ range sort $notes "Params.date" "desc" }}
     <section class="release">
       <h2 id="v{{ .Params.version }}">{{ .Params.version }} <small>{{ .Date.Format "2006-01-02" }}</small></h2>

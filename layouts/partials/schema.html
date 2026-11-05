@@ -1,0 +1,31 @@
+{{/* Structured data (schema.org, JSON-LD): the app, the site and the
+     organisation on the home page; release notes as articles. */}}
+{{ $latest := index (sort (where hugo.Sites.Default.RegularPages "Section" "releases") "Date" "desc") 0 }}
+{{ if .IsHome }}
+{{ $app := dict
+  "@context" "https://schema.org"
+  "@type" "SoftwareApplication"
+  "name" site.Title
+  "description" (.Description | plainify)
+  "url" site.Home.Permalink
+  "applicationCategory" "BusinessApplication"
+  "applicationSubCategory" "Time tracking"
+  "operatingSystem" "Windows 11, Linux (KDE Plasma), Android"
+  "inLanguage" (slice "en" "nl")
+  "image" (site.Params.ogImage | absURL)
+  "screenshot" (slice ("img/today.png" | absURL) ("img/week.png" | absURL) ("img/reports.png" | absURL))
+  "downloadUrl" (slice site.Params.downloadWindows site.Params.downloadAndroid site.Params.downloadDeb site.Params.downloadRpm site.Params.downloadPortable)
+  "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "EUR")
+  "publisher" (dict "@type" "Organization" "name" site.Title "url" site.Home.Permalink "logo" ("favicon.svg" | absURL))
+}}
+{{ with $latest }}{{ $app = merge $app (dict "softwareVersion" .Params.version "datePublished" (.Date.Format "2006-01-02")) }}{{ end }}
+<script type="application/ld+json">{{ $app | jsonify | safeJS }}</script>
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "WebSite" "name" site.Title "url" site.Home.Permalink "inLanguage" site.Language.Lang | jsonify | safeJS }}</script>
+{{ with .Params.faq }}
+{{ $items := slice }}
+{{ range .items }}{{ $items = $items | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) }}{{ end }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $items | jsonify | safeJS }}</script>
+{{ end }}
+{{ else if and .IsPage (eq .Section "releases") }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "TechArticle" "headline" .Title "datePublished" (.Date.Format "2006-01-02") "url" .Permalink "inLanguage" "en" "about" (dict "@type" "SoftwareApplication" "name" site.Title "softwareVersion" .Params.version) "publisher" (dict "@type" "Organization" "name" site.Title) | jsonify | safeJS }}</script>
+{{ end }}

@@ -1,11 +1,12 @@
 ---
 title: "HourWarden: time tracking per customer, without timers"
-description: "HourWarden checks once a second which customer you work for and records the hours. Windows, Linux (KDE Plasma) and Android, in English and Dutch. Sync can be end-to-end encrypted."
+description: "Automatic time tracking per customer for consultants and freelancers. HourWarden recognises the customer from what you work on, keeps an activity log, shows billable hours and budgets, and fills in your timesheet. Windows, Linux and Android; private by design."
 hero:
   title: "Your timesheet, filled in while you work"
   text: "HourWarden reads the window in front of you once a second and books the time to the customer it belongs to: by Edge profile, document folder, remote desktop server, mail domain or Teams meeting. On Friday you check the week and copy it as decimal hours."
   shot: "today.png"
   alt: "The HourWarden Today screen, recording time for the fictional customer Northwind Traders"
+  topbarAlt: "The HourWarden top bar: the customer you work for and the time since you started"
 features:
   - icon: "radar"
     title: "Knows who you work for"
@@ -31,9 +32,18 @@ features:
   - icon: "heart"
     title: "Breaks that help"
     text: "The 20-20-20 rule rests your eyes, and longer breaks show short animated exercises for hands, neck and back."
+  - icon: "chart"
+    title: "An activity log that writes your notes"
+    text: "Every document, page, mail and meeting with its time, grouped into kinds of work. One click puts it in an entry's notes, so a timesheet says what the hours were for."
+  - icon: "coin"
+    title: "Billable hours and budgets"
+    text: "See how much of your week is billable, give a customer a budget per week, and spot missing hours against your working day before Friday."
+  - icon: "cloud"
+    title: "Made for Microsoft cloud work"
+    text: "Recognises Fabric and Power BI reports and semantic models, Azure resources, Entra, Data Factory, Databricks and Azure DevOps work items, and learns which tenant belongs to which customer."
   - icon: "plug"
     title: "Plugins for your tools"
-    text: "Outlook, Teams, VS Code, SSH, remote desktop, ticket numbers and more. Signed, open source, and you choose what runs."
+    text: "Outlook, Teams, VS Code, SSH, remote desktop, SharePoint, ticket numbers and more. Sandboxed, signed and open source; you choose what runs."
 demo:
   title: "Try it in your browser"
   text: "These are the real screens of HourWarden, running on a made-up week with fictional customers. Click around: switch customers, open the week, edit an entry. Nothing is saved, and nothing leaves this page."
@@ -53,10 +63,25 @@ security:
 steps:
   title: "Getting started"
   items:
-    - "Install HourWarden on Windows 11, or on Linux with KDE Plasma."
+    - "Install HourWarden on Windows 11 (or unzip the portable version), or on Linux with KDE Plasma."
     - "The setup guide asks for your customers and their mail domains. You can skip it."
     - "Work as usual. When it cannot tell the customer for 3 minutes, the top bar asks once."
     - "Optional: create an account to sync your laptop, desktop and phone."
+faq:
+  title: "Questions"
+  items:
+    - q: "How does HourWarden know which customer I work for?"
+      a: "It looks at the window in front once a second: the document and its folder, the website and its Microsoft tenant, the mail you read, the remote desktop server or the Teams meeting. It matches those with what you told it about your customers, and learns more as you answer its occasional questions."
+    - q: "Does my data leave my computer?"
+      a: "What you work on, the window titles and the activity log, stays on your computer. Only customers, tasks and hours are synced between your devices, and only if you create an account; synced data can be end-to-end encrypted."
+    - q: "Can I use it without customers, to track my own work?"
+      a: "Yes. Choose 'I track my own work' in the setup guide: all time goes to your own company, and HourWarden shows what you did per program, website and kind of work."
+    - q: "Which systems does it run on?"
+      a: "Windows 11 (installer or portable zip), Linux with KDE Plasma (.deb and .rpm) and Android. The app and the help are in English and Dutch."
+    - q: "What does it cost?"
+      a: "The app is free to download and works without an account. An account adds sync between your laptop, desktop and phone."
+    - q: "How do I keep up with new versions?"
+      a: "The Windows app offers updates itself; on Linux, Android and the portable version a notice says when a new version is out. The release notes are on this site, also as an RSS feed."
 cta:
   title: "Try it on your own week"
   text: "The app works on its own without an account. An account adds sync between your devices."

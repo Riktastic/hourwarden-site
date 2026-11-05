@@ -1,0 +1,33 @@
+{{/* Everything search engines and link previews read: title, description,
+     canonical address, languages, Open Graph, Twitter, feed and structured data. */}}
+{{ $desc := .Description | default site.Home.Description | plainify | truncate 300 }}
+{{ $title := cond .IsHome .Title (printf "%s · %s" .Title site.Title) }}
+{{ $image := site.Params.ogImage | absURL }}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{ end }}
+{{ $default := . }}{{ range .AllTranslations }}{{ if eq .Language.Lang "en" }}{{ $default = . }}{{ end }}{{ end }}
+<link rel="alternate" hreflang="x-default" href="{{ $default.Permalink }}">
+<meta name="theme-color" content="{{ site.Params.themeColor }}">
+<meta name="robots" content="{{ if eq .Kind "404" }}noindex, follow{{ else }}index, follow, max-image-preview:large{{ end }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:type" content="{{ if eq .Section "releases" }}{{ if .IsPage }}article{{ else }}website{{ end }}{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="{{ site.Language.Params.locale | default "en_GB" }}">
+{{ range .Translations }}<meta property="og:locale:alternate" content="{{ .Language.Params.locale }}">
+{{ end }}
+<meta property="og:image" content="{{ $image }}">
+<meta property="og:image:alt" content="{{ site.Params.ogImageAlt }}">
+{{ if and .IsPage (eq .Section "releases") }}<meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}">
+{{ end }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $image }}">
+{{ with site.GetPage "/releases" }}{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="{{ site.Title }} releases" href="{{ .Permalink }}">
+{{ end }}{{ end }}
+{{ partial "schema.html" . }}

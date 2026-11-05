@@ -3,7 +3,21 @@ title = "HourWarden"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
-disableKinds = ["taxonomy", "term", "RSS"]
+disableKinds = ["taxonomy", "term"]
+copyright = "HourWarden"
+
+# The release notes have an RSS feed (/releases/index.xml); other pages do not.
+[outputs]
+  home = ["html"]
+  section = ["html", "rss"]
+  page = ["html"]
+
+[services.rss]
+  limit = 30
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
 
 [params]
   # The hosted sync service.
@@ -14,15 +28,25 @@ disableKinds = ["taxonomy", "term", "RSS"]
   downloadAndroid = "https://github.com/Riktastic/hourwarden-site/releases/latest/download/HourWarden.apk"
   downloadDeb = "https://github.com/Riktastic/hourwarden-site/releases/latest/download/HourWarden-amd64.deb"
   downloadRpm = "https://github.com/Riktastic/hourwarden-site/releases/latest/download/HourWarden-x86_64.rpm"
+  downloadPortable = "https://github.com/Riktastic/hourwarden-site/releases/latest/download/HourWarden-portable.zip"
+  # Search engines and link previews.
+  ogImage = "img/today.png"
+  ogImageAlt = "The HourWarden Today screen with the hours of the week per customer"
+  themeColor = "#1f3a52"
+  repository = "https://github.com/Riktastic/hourwarden-site"
   contact = ""
 
 [languages]
   [languages.en]
-    languageName = "English"
+    label = "English"
     weight = 1
+    [languages.en.params]
+      locale = "en_GB"
   [languages.nl]
-    languageName = "Nederlands"
+    label = "Nederlands"
     weight = 2
+    [languages.nl.params]
+      locale = "nl_NL"
 
 [markup.goldmark.renderer]
   unsafe = false
