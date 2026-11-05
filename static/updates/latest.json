@@ -1,11 +1,11 @@
 {
-  "version": "0.27.0",
-  "notes": "One version for everything; New version notice on Linux and Android; Portable Windows version; PowerShell plugins removed",
-  "pub_date": "2026-11-04T07:50:58Z",
+  "version": "0.28.0",
+  "notes": "Ask before switching customer; Missing hours; Billable or internal; SharePoint and OneDrive sites as customer folders; The customer by tenant, workspace or project; Plugins' log of unknown pages is off by default; Activity log for everyone; Activity log privacy; Plugins note pages they do not know; Activity log; Azure DevOps plugin; Azure plugin; Microsoft Fabric and Power BI plugin; Slack you choose; Calmer switching",
+  "pub_date": "2026-11-05T19:11:45Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSWmNra2MyZVNuaUVNamJCY1ZjbmlMVGxqdERPQU0xNkFjUlI2TURuODlVdllEaGZLaU1VaEVDbWl5SnNTazlpYW5COVBXbmhwTDhsTlRmTFEveXF1WTV3SVF5cU9TNWc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzc4NTYwCWZpbGU6SG91cldhcmRlbl8wLjI3LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMjcuMAoxbEZFZkZwR3FQNXJPRUtYblQxeER2QmJxUk1KRzMyZzIxVTB2SlBWR2JRclh2TkE3Z05WRUVhMHdTNGdqYVdRZ2RCdmx6RkZJK0JLSDFDS0I5MnBEQT09Cg==",
-      "url": "https://github.com/Riktastic/hourwarden-site/releases/download/v0.27.0/HourWarden_0.27.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSWmNra2MyZVNuaVAzWDRxQmJTRmlXOFVmV2d0S3VjQUJxWVAwNVVFeXNaNXQ3ekxtYnIyN3owV2QvNmh5WHMvS2xjdUtmVGU0Z1ZpSjhqMVFCM1hHYm5HRkJ5b1VleWd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzOTA1NzM1CWZpbGU6SG91cldhcmRlbl8wLjI4LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMjguMApFa2YyMjZoNENoSVNKSFFxZ01RZ1EyK3pJKzFzcTF5OGNaWG0zQW5xQXlLSnplS1lUbmVKUUFlR2xrTGx6RFFDeFZpbEs5am5qUHYyeHVkeGFmZThDdz09Cg==",
+      "url": "https://github.com/Riktastic/hourwarden-site/releases/download/v0.28.0/HourWarden_0.28.0_x64-setup.exe"
     }
   }
 }
