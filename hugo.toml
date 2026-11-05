@@ -33,6 +33,8 @@ copyright = "HourWarden"
   ogImage = "img/today.png"
   ogImageAlt = "The HourWarden Today screen with the hours of the week per customer"
   themeColor = "#1f3a52"
+  # Shows the beta notice on every page; remove at version 1.0.
+  beta = true
   repository = "https://github.com/Riktastic/hourwarden-site"
   contact = ""
 

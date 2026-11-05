@@ -10,6 +10,7 @@
 </head>
 <body>
   {{ partial "header.html" . }}
+  {{ if site.Params.beta }}<div class="beta" role="note"><div class="wrap"><strong>{{ i18n "betaTitle" }}</strong> {{ i18n "betaText" }} {{ with site.GetPage "/releases" }}<a href="{{ .RelPermalink }}">{{ i18n "betaLink" }}</a>{{ end }}</div></div>{{ end }}
   <main>{{ block "main" . }}{{ end }}</main>
   {{ partial "footer.html" . }}
 </body>

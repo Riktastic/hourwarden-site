@@ -125,3 +125,6 @@ nav a:hover { color: var(--ink); }
 .faq details { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 18px; margin: 10px 0; }
 .faq summary { cursor: pointer; font-weight: 600; }
 .faq details p { color: var(--muted); margin: 10px 0 0; }
+.beta { background: #fff4d6; color: #5c4400; border-bottom: 1px solid #f0d58a; font-size: .92rem; padding: 9px 0; }
+.beta a { color: inherit; text-decoration: underline; }
+@media (prefers-color-scheme: dark) { .beta { background: #3a2f12; color: #f5dfa0; border-color: #5c4a1c; } }
