@@ -65,7 +65,7 @@ steps:
   items:
     - "Install HourWarden on Windows or Linux."
     - "Add your customers, or let it learn them as you work."
-    - "Work as usual. HourWarden books every hour to the right customer; you check and copy them at the end of the week."
+    - "Work as usual. HourWarden books every hour to the right customer; at the end of the week you check them and copy them into your timesheet or invoice, or export them to Excel."
 faq:
   title: "Questions"
   items:
