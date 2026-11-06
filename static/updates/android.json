@@ -1,5 +1,5 @@
 {
-  "version": "0.29.0",
-  "notes": "Suggestions on Today; Track your own work; Fix unknown time in one go; Questions at the end of the day; Why this customer?; Budget per week; Quieter settings; Phone",
-  "url": "https://github.com/Riktastic/hourwarden-site/releases/tag/v0.29.0"
+  "version": "0.30.0",
+  "notes": "End-to-end encryption on by default; Plans on the server; Messages to the administrator; Support page per account; Admin panel only from your address; Account page from the app; @ lists your customers; Month tab; A calmer Today",
+  "url": "https://github.com/Riktastic/hourwarden-site/releases/tag/v0.30.0"
 }
