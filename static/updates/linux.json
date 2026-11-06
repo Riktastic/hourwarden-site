@@ -1,5 +1,5 @@
 {
-  "version": "0.30.1",
-  "notes": "A tidier admin panel; An icon",
-  "url": "https://github.com/Riktastic/hourwarden-site/releases/tag/v0.30.1"
+  "version": "0.31.0",
+  "notes": "Reports; Your plan in the app; Mail through Brevo; Encrypted off-site backups; Restore one account",
+  "url": "https://github.com/Riktastic/hourwarden-site/releases/tag/v0.31.0"
 }
