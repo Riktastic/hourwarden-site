@@ -63,10 +63,9 @@ security:
 steps:
   title: "Zo begin je"
   items:
-    - "Installeer HourWarden op Windows 11 (of pak de versie zonder installatie uit), of op Linux met KDE Plasma."
-    - "De installatiehulp vraagt naar je klanten en hun maildomeinen. Je kunt hem overslaan."
-    - "Werk zoals altijd. Weet hij 3 minuten lang niet welke klant het is, dan vraagt de bovenbalk het één keer."
-    - "Optioneel: maak een account om je laptop, pc en telefoon te synchroniseren."
+    - "Installeer HourWarden op Windows of Linux."
+    - "Voeg je klanten toe, of laat hem ze leren terwijl je werkt."
+    - "Werk zoals altijd. Kijk op vrijdag je week na en kopieer de uren."
 faq:
   title: "Vragen"
   items:

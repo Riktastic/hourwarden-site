@@ -63,10 +63,9 @@ security:
 steps:
   title: "Getting started"
   items:
-    - "Install HourWarden on Windows 11 (or unzip the portable version), or on Linux with KDE Plasma."
-    - "The setup guide asks for your customers and their mail domains. You can skip it."
-    - "Work as usual. When it cannot tell the customer for 3 minutes, the top bar asks once."
-    - "Optional: create an account to sync your laptop, desktop and phone."
+    - "Install HourWarden on Windows or Linux."
+    - "Add your customers, or let it learn them as you work."
+    - "Work as usual. On Friday, check your week and copy the hours."
 faq:
   title: "Questions"
   items:
