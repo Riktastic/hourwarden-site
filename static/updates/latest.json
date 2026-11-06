@@ -1,11 +1,11 @@
 {
-  "version": "0.30.0",
-  "notes": "End-to-end encryption on by default; Plans on the server; Messages to the administrator; Support page per account; Admin panel only from your address; Account page from the app; @ lists your customers; Month tab; A calmer Today",
-  "pub_date": "2026-11-06T07:40:37Z",
+  "version": "0.30.1",
+  "notes": "A tidier admin panel; An icon",
+  "pub_date": "2026-11-06T07:57:06Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSWmNra2MyZVNuaU9TSTJIVW4yRFVGUk9oSkNxdnZNYlROdElFaTdQOWoxUjVsRmN5YXZXc24zUkh2WTgzMVNyM0xBRm92VUpVbmkzK0dFMFBzQnZValZLT1NJVTV1clFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzOTUwNjk2CWZpbGU6SG91cldhcmRlbl8wLjMwLjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMzAuMApieHVtVEFXdjZoSjRMZER6MFFpSTBoQmwrMXNPc01CN1hVMjl1NjF2cEVFNFBPSGZvSEN0anprU09scGdpTTk3RGplWUVQYmVkSlVhMTRXSngvdlpCUT09Cg==",
-      "url": "https://github.com/Riktastic/hourwarden-site/releases/download/v0.30.0/HourWarden_0.30.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSWmNra2MyZVNuaU9xZVZVVGZBSk1Eby81MFN5bWthNFFyQzQzWHhkM3B0VFYvNGMvYlp1cVFUNE9PNDhQVVdsNmRFelNNdG8xUVJ6WnBhN29KeHFUR0JxOWl6VkJZRXdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzOTUxNzM1CWZpbGU6SG91cldhcmRlbl8wLjMwLjFfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMzAuMQpqL1d4aEViU3Vud0UxRStDZkF4dWxza1hyUEVuS2FseHFvTDlhRW5XR2piaE15SUtjaUUrTVEvL0lrRU96ZnBvbmxIM1NSb1FZUWVWSFZUcGd3VFhBUT09Cg==",
+      "url": "https://github.com/Riktastic/hourwarden-site/releases/download/v0.30.1/HourWarden_0.30.1_x64-setup.exe"
     }
   }
 }

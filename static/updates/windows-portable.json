@@ -1,5 +1,5 @@
 {
-  "version": "0.30.0",
-  "notes": "End-to-end encryption on by default; Plans on the server; Messages to the administrator; Support page per account; Admin panel only from your address; Account page from the app; @ lists your customers; Month tab; A calmer Today",
-  "url": "https://github.com/Riktastic/hourwarden-site/releases/tag/v0.30.0"
+  "version": "0.30.1",
+  "notes": "A tidier admin panel; An icon",
+  "url": "https://github.com/Riktastic/hourwarden-site/releases/tag/v0.30.1"
 }
