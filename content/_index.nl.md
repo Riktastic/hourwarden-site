@@ -86,5 +86,4 @@ faq:
       a: "De Windows-app biedt updates zelf aan; op Linux, Android en de versie zonder installatie meldt een bericht dat er een nieuwe versie is. De versienotities staan op deze site, ook als RSS-feed."
 cta:
   title: "Probeer het op je eigen week"
-  text: "De app werkt ook zonder account. Een account voegt synchronisatie tussen je apparaten toe."
 ---

@@ -86,5 +86,4 @@ faq:
       a: "The Windows app offers updates itself; on Linux, Android and the portable version a notice says when a new version is out. The release notes are on this site, also as an RSS feed."
 cta:
   title: "Try it on your own week"
-  text: "The app works on its own without an account. An account adds sync between your devices."
 ---

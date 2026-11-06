@@ -2,7 +2,6 @@
      The context is the extra button class ("" or "light"). */}}
 {{ $cls := . }}
 <div class="downloads">
-  <span class="downloads-label">{{ i18n "download" }}</span>
   {{ with site.Params.downloadWindows }}<a class="btn ghost small {{ $cls }}" href="{{ . }}">Windows</a>{{ end }}
   {{ with site.Params.downloadPortable }}<a class="btn ghost small {{ $cls }}" href="{{ . }}" title=".zip">{{ i18n "portable" }}</a>{{ end }}
   {{ with site.Params.downloadDeb }}<a class="btn ghost small {{ $cls }}" href="{{ . }}" title=".deb (Debian, Ubuntu)">Linux</a>{{ end }}

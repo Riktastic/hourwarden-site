@@ -6,10 +6,13 @@
     <h1>{{ $p.hero.title }}</h1>
     <p class="lead">{{ $p.hero.text }}</p>
     <div class="actions">
-      <a class="btn" href="{{ site.Params.app }}/register">{{ i18n "createAccount" }}</a>
+      {{ with site.Params.downloadWindows }}<a class="btn" href="{{ . }}">{{ i18n "downloadWindows" }}</a>{{ end }}
       <a class="btn ghost" href="#demo">{{ i18n "tryDemo" }}</a>
     </div>
-    {{ partial "downloads.html" "" }}
+    <p class="also">{{ i18n "alsoFor" }}
+      {{ with site.Params.downloadDeb }}<a href="{{ . }}" title=".deb (Debian, Ubuntu)">Linux</a>{{ end }} ·
+      {{ with site.Params.downloadAndroid }}<a href="{{ . }}">Android</a>{{ end }} ·
+      {{ with site.Params.downloadPortable }}<a href="{{ . }}" title=".zip">{{ i18n "portable" }}</a>{{ end }}</p>
     <img class="topbar-shot" src="{{ $img }}topbar.png" alt="{{ $p.hero.topbarAlt }}" width="582" height="40">
     {{/* The live desktop demo (static/demo/desktop), not a screenshot. */}}
     <figure class="screen live"><iframe src="{{ "demo/desktop/index.html" | relURL }}?lang={{ site.Language.Lang }}" title="{{ $p.hero.alt }}"></iframe></figure>
@@ -100,11 +103,18 @@
 <section class="cta">
   <div class="wrap">
     <h2>{{ $p.cta.title }}</h2>
-    <p>{{ $p.cta.text }}</p>
-    <div class="actions">
-      <a class="btn light" href="{{ site.Params.app }}/register">{{ i18n "createAccount" }}</a>
+    <div class="cta-cards">
+      <div class="cta-card">
+        <h3>{{ i18n "ctaDownloadTitle" }}</h3>
+        <p>{{ i18n "ctaDownloadText" }}</p>
+        {{ partial "downloads.html" "light" }}
+      </div>
+      <div class="cta-card">
+        <h3>{{ i18n "ctaSyncTitle" }} <span class="tag">{{ i18n "optional" }}</span></h3>
+        <p>{{ i18n "ctaSyncText" }}</p>
+        <a class="btn light small" href="{{ site.Params.app }}/register">{{ i18n "createAccount" }}</a>
+      </div>
     </div>
-    {{ partial "downloads.html" "light" }}
   </div>
 </section>
 {{ end }}
