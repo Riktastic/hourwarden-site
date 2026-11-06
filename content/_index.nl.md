@@ -65,7 +65,7 @@ steps:
   items:
     - "Installeer HourWarden op Windows of Linux."
     - "Voeg je klanten toe, of laat hem ze leren terwijl je werkt."
-    - "Werk zoals altijd. Kijk op vrijdag je week na en kopieer de uren."
+    - "Werk zoals altijd. HourWarden boekt elk uur op de juiste klant; aan het eind van de week controleer en kopieer je ze."
 faq:
   title: "Vragen"
   items:

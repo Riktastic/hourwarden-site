@@ -65,7 +65,7 @@ steps:
   items:
     - "Install HourWarden on Windows or Linux."
     - "Add your customers, or let it learn them as you work."
-    - "Work as usual. On Friday, check your week and copy the hours."
+    - "Work as usual. HourWarden books every hour to the right customer; you check and copy them at the end of the week."
 faq:
   title: "Questions"
   items:
