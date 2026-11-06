@@ -1,11 +1,11 @@
 {
-  "version": "0.29.0",
-  "notes": "Suggestions on Today; Track your own work; Fix unknown time in one go; Questions at the end of the day; Why this customer?; Budget per week; Quieter settings; Phone",
-  "pub_date": "2026-11-05T20:14:34Z",
+  "version": "0.30.0",
+  "notes": "End-to-end encryption on by default; Plans on the server; Messages to the administrator; Support page per account; Admin panel only from your address; Account page from the app; @ lists your customers; Month tab; A calmer Today",
+  "pub_date": "2026-11-06T07:40:37Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSWmNra2MyZVNuaU9qdDFrdm1wRGlkclF0NEJUcUx5OGQ0YzJUK2x2MGV4b1JwUVBiZHhBY0N6LzQzc2lRaUgwWlhUNndFZ1RYaURHZ3N2d2tqenBRcW9Dd00wS3lvMEFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzOTA4NTczCWZpbGU6SG91cldhcmRlbl8wLjI5LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMjkuMApRRmRhQ2FVWFJYZEt1ZXU2U3ZqaVJKRnlCanU0QTNaVWx6Wm10RklLNGZmbit2VHluZktqR2xaT3BXeUoxRnpTQkhvMEN3K1lnOWdKNDk0WktFQW1CUT09Cg==",
-      "url": "https://github.com/Riktastic/hourwarden-site/releases/download/v0.29.0/HourWarden_0.29.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSWmNra2MyZVNuaU9TSTJIVW4yRFVGUk9oSkNxdnZNYlROdElFaTdQOWoxUjVsRmN5YXZXc24zUkh2WTgzMVNyM0xBRm92VUpVbmkzK0dFMFBzQnZValZLT1NJVTV1clFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzOTUwNjk2CWZpbGU6SG91cldhcmRlbl8wLjMwLjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMzAuMApieHVtVEFXdjZoSjRMZER6MFFpSTBoQmwrMXNPc01CN1hVMjl1NjF2cEVFNFBPSGZvSEN0anprU09scGdpTTk3RGplWUVQYmVkSlVhMTRXSngvdlpCUT09Cg==",
+      "url": "https://github.com/Riktastic/hourwarden-site/releases/download/v0.30.0/HourWarden_0.30.0_x64-setup.exe"
     }
   }
 }
