@@ -1,0 +1,10 @@
+{{/* Every language, also on pages without a translation (then its home page). */}}
+{{ $page := . }}
+<span class="langs">
+  {{ range hugo.Sites }}
+  {{ $lang := .Language.Lang }}
+  {{ $to := .Home }}
+  {{ range where $page.AllTranslations "Lang" $lang }}{{ $to = . }}{{ end }}
+  <a href="{{ $to.RelPermalink }}" hreflang="{{ $lang }}" lang="{{ $lang }}" title="{{ .Language.Label }}" aria-current="{{ eq $lang $page.Lang }}">{{ upper $lang }}</a>
+  {{ end }}
+</span>

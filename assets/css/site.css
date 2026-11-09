@@ -137,3 +137,16 @@ nav a:hover { color: var(--ink); }
 .cta-card .tag { font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; padding: 2px 7px; border-radius: 999px; background: rgba(255,255,255,.18); vertical-align: middle; }
 .cta-card .downloads, .cta-card .btn { margin-top: auto; }
 .cta-card .downloads-more { flex-basis: 100%; text-align: center; }
+
+/* Menu: a row on wide screens; on phones the phone app's tabs at the bottom. */
+.phone-langs, .tabs { display: none; }
+@media (max-width: 760px) {
+  .wide-nav { display: none; }
+  .phone-langs { display: block; }
+  .top .row { flex-wrap: nowrap; min-height: 56px; }
+  body { padding-bottom: calc(66px + env(safe-area-inset-bottom)); }
+  .tabs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; gap: 0; flex-wrap: nowrap; background: var(--bg); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom); }
+  .tabs a { flex: 1; min-width: 0; min-height: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; color: var(--muted); font-size: 12px; }
+  .tabs a:active { color: var(--accent); }
+  .tabs a span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}
