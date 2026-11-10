@@ -1,5 +1,5 @@
 {
-  "version": "0.31.0",
-  "notes": "Reports; Your plan in the app; Mail through Brevo; Encrypted off-site backups; Restore one account",
-  "url": "https://github.com/Riktastic/hourwarden-site/releases/tag/v0.31.0"
+  "version": "0.32.0",
+  "notes": "Quicker tasks; A calmer Tasks screen; Undo; Customer lists with search; A floating task list; Pomodoro; Tasks on the phone; Account pages; Admin panel; Fixes",
+  "url": "https://github.com/Riktastic/hourwarden-site/releases/tag/v0.32.0"
 }

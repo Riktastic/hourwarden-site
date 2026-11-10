@@ -1,11 +1,11 @@
 {
-  "version": "0.31.0",
-  "notes": "Reports; Your plan in the app; Mail through Brevo; Encrypted off-site backups; Restore one account",
-  "pub_date": "2026-11-06T12:36:07Z",
+  "version": "0.32.0",
+  "notes": "Quicker tasks; A calmer Tasks screen; Undo; Customer lists with search; A floating task list; Pomodoro; Tasks on the phone; Account pages; Admin panel; Fixes",
+  "pub_date": "2026-11-10T07:22:35Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSWmNra2MyZVNuaUJnKzhxMzFlazJBQ2Jtak9wU1Y5L2ZobGJKc0pNYnJad0FpVHJzRzZIWFFUaFIxUTJqSFd0MmhlY2xrczhQdDB0TUZ2T0RUMEpXM2I0NTgzNk03aXdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzOTY3NDcxCWZpbGU6SG91cldhcmRlbl8wLjMxLjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMzEuMApqWWFwZG8rcDQ4aW5QaVo5UWJpZGRrMVJSY29OOWxrUlEzWmllTklaTXVPNXdSOXJiTFJGQThEVFhTS3Y3OXdFYjhkTG9oOTZ0RDVGS3Z5VFdpbDZCdz09Cg==",
-      "url": "https://github.com/Riktastic/hourwarden-site/releases/download/v0.31.0/HourWarden_0.31.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSWmNra2MyZVNuaVBTMC9PWkR5LytaMFNDZ3puNlVmMUxBT3JVaHRxMk1zaHl0bWdMS0dxR0cyUDNHWFZEajFqSC9wcXBjMzVLT3ZwTWw2MFphSnBkZzNHWnUwWE1HcFF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0Mjk1MTg4CWZpbGU6SG91cldhcmRlbl8wLjMyLjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMzIuMApJYzVpRWU5eVRReVEzcDROTFRFczZvVDJlbnYrL1kra0xpZklYOWx2emZMaWI0aUs2eHVtcVpPMXZheUhPSnBlaFRuWUJIUzc3T1Azai9CQXBRSnVDQT09Cg==",
+      "url": "https://github.com/Riktastic/hourwarden-site/releases/download/v0.32.0/HourWarden_0.32.0_x64-setup.exe"
     }
   }
 }
